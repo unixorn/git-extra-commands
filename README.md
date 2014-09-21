@@ -8,7 +8,7 @@ If you wrote one of these and want it removed from this repository, please file 
 # Credits
 * git-big-file - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) repository
 * git-changes - [https://github.com/cofi/dotfiles](https://github.com/cofi/dotfiles)
-* git-credit - Zach Holman's [dotfiles-old](https://github.com/markupboy/dotfiles-old) repository
+* git-credit - Zach Holman's [dotfiles](https://github.com/holman/dotfiles) repository
 * git-delete-local-merged - https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ
 * git-improved-merge - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) repository
 * git-incoming - [https://github.com/cofi/dotfiles](https://github.com/cofi/dotfiles)
