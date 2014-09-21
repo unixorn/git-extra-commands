@@ -1,0 +1,84 @@
+#!/bin/sh
+
+## Usage: github-open FILE [LINE]
+## Open GitHub file/blob page for FILE on LINE. FILE is the path to the
+## file on disk; it must exist and be tracked with the current HEAD
+## revision. LINE is the line number or line number range (e.g., 10-50).
+##
+## Open foo/bar.rb in browser:
+##   $ github-open foo/bar.rb
+##
+## Open foo/bar in browser w/ lines 50-57 highlighted:
+##   $ github-open foo/bar.rb 50-57
+##
+## Open current file in vim on line 20:
+##   :!github-open % 20
+
+set -e
+
+FILE="$1"
+LINE="$2"
+
+# usage and help
+test -z "$FILE" -o "$FILE" = '--help' && {
+  cat "$0" | grep '^##' | cut -c4- 1>&2
+  exit 1
+}
+
+# bail out with message to stderr and exit status 1
+die() {
+    echo "$(basename $0):" "$@" 1>&2
+    exit 1
+}
+
+# figure out relative path to the file from the root
+# of the work tree
+path="$(basename $FILE)"
+cd $(dirname $FILE)
+while test ! -d .git ;
+do
+  test "$(pwd)" = / && {
+    echo "error: git repository not found" 1>&2
+    exit 1
+  }
+  path="$(basename $(pwd))/$path"
+  cd ..
+done
+
+# get the current branch in refs/heads/<branch> form
+ref=$(git symbolic-ref -q HEAD)
+test -n "$ref" ||
+die "you're not on a branch"
+
+# just the branch name please
+branch=$(echo "$ref" | sed 's@^refs/heads/@@')
+test -n "$branch" ||
+die "you're in a weird place; get on a local branch"
+
+# remote we're tracking
+remote=$(git config --get "branch.$branch.remote" || true)
+test -n "$remote" ||
+die "you're not tracking a remote branch"
+
+# remote branch we're tracking
+merge=$(
+    (git config --get "branch.$branch.merge") |
+    sed 's@refs/heads/@@'
+)
+test -n "$merge" ||
+die "you're not tracking a remote branch"
+
+# at this point we're in root of the work tree and $path is
+# the relative path to file.
+remote_url=$(git config --get remote.$remote.url)
+repo=$(echo "$remote_url" | sed 's/^.*:\(.*\)\.git/\1/')
+url="http://github.com/$repo/blob/$branch/$path"
+
+# debugging
+# echo "url: $remote_url"
+# echo "repo: $repo"
+
+# throw the line number on there if specified
+test -n "$LINE" && url="$url#L$LINE"
+
+open "$url"

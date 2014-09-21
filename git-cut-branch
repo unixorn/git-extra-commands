@@ -1,0 +1,67 @@
+#!/bin/sh
+#
+# https://github.com/rtomayko/dotfiles
+#
+#/ Usage: git-cut-branch <name>
+#/ Create a new branch named <name> pointed at HEAD and reset the current branch
+#/ to the head of its tracking branch. This is useful when working on master and
+#/ you realize you should be on a topic branch.
+set -e
+
+# bail out with message to stderr and exit status 1
+die() {
+    echo "$(basename $0):" "$@" 1>&2
+    exit 1
+}
+
+# write a short sha for the given sha
+shortsha() {
+    echo "$1" |cut -c1-7
+}
+
+# show usage
+[ -z "$1" -o "$1" = "--help" ] && {
+    grep '^#/' "$0" |cut -c4-
+    exit 2
+}
+
+# first argument is the new branch name
+branch="$1"
+
+# get the current branch for HEAD in refs/heads/<branch> form
+ref=$(git symbolic-ref -q HEAD)
+sha=$(git rev-parse HEAD)
+[ -n "$ref" ] ||
+die "you're not on a branch"
+
+# just the branch name please
+current=$(echo "$ref" |sed 's@^refs/heads/@@')
+[ -n "$current" ] ||
+die "you're in a weird place; get on a local branch"
+
+# figure out what branch we're currently tracking
+remote=$(git config --get "branch.$current.remote" || true)
+merge=$(git config --get "branch.$current.merge" | sed 's@refs/heads/@@')
+
+# build up a sane <remote>/<branch> name
+if [ -n "$remote" -a -n "$merge" ]
+then tracking="$remote/$merge"
+elif [ -n "$merge" ]
+then tracking="$merge"
+else die "$current is not tracking anything"
+fi
+
+# make sure there's no changes before we reset hard
+if ! git diff-index --quiet --cached HEAD || ! git diff-files --quiet
+then die "cannot cut branch with changes to index or working directory"
+fi
+
+# reset the current branch to its tracking branch, create the new branch also
+# tracking the original branch, and switch to it.
+git branch "$branch"
+git reset -q --hard "$tracking"
+git checkout -q "$branch"
+git branch --set-upstream "$branch" "$tracking"
+git reset -q --hard "$sha"
+echo "[$(shortsha "$sha")...$(shortsha $(git rev-parse $tracking))] $current"
+echo "[0000000...$(shortsha $(git rev-parse HEAD))] $branch"

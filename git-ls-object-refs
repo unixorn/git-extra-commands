@@ -1,0 +1,27 @@
+#!/bin/sh
+# Usage: git-ls-object-refs <object>
+# Find references to <object> SHA1 in refs, commits, and trees. All of them.
+o="$1"
+
+# rawdawgn' it
+set +e
+
+# echo "refs:"
+# git show-ref |grep "$o"
+# echo
+
+git log --all --pretty=oneline --decorate |grep "$o" |
+sed 's|^\([0-9a-f]\{40\}\)|commit referenced from at least one ref: \1|'
+
+for ref in $(git for-each-ref --format='%(refname)')
+do
+    (git rev-list "$ref" | grep "$o") 2>&1 |
+    sed "s|^[0-9a-f]\{40\}$|commit referenced from $ref|"
+done
+
+for p in $(git rev-list --all)
+do
+    (git ls-tree -r "$p" |grep "$o") 2>&1 |
+    sed "s|^|object referenced from tree of commit $p:\n|"
+done
+echo

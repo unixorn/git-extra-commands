@@ -1,0 +1,4 @@
+#!/bin/sh
+# Usage: git-object-deflate <file>
+# Deflate an loose object file and write to standard output.
+exec perl -MCompress::Zlib -e 'undef $/; print uncompress(<>)'

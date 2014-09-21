@@ -1,0 +1,22 @@
+#!/bin/sh
+
+[ $# -eq 0 ] && {
+	echo "usage: git-grab username [repo]"
+	exit 1
+}
+
+username="$1"
+
+if [ -n "$2" ] ; then
+	repo="$2"
+else
+	repo=$(basename $(pwd))
+fi
+
+command="git remote add $username git://github.com/$username/$repo.git"
+echo $command
+$command
+
+command="git fetch $username"
+echo $command
+$command

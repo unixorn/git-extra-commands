@@ -1,0 +1,43 @@
+#!/bin/sh
+# Usage: git-rel [<ref>]
+# Shows the relationship between the current branch and <ref>. With no <ref>,
+# the current branch's remote tracking branch is used.
+#
+# Examples:
+#
+#   $ git-rel
+#     15 ahead
+#     11 behind
+#
+#   $ git-rel v1.1
+#     230 ahead
+
+strip_prefix () {
+    echo "$@" |
+    sed 's@refs/heads/@@'
+}
+
+current_branch () {
+    git symbolic-ref -q HEAD |
+    sed 's@refs/heads/@@'
+}
+
+tracking_branch () {
+    remote=$(git config --get branch.$(current_branch).remote)
+    merge=$(git config --get branch.$(current_branch).merge)
+    echo "$remote/$(strip_prefix $merge)"
+}
+
+ref="${1:-$(tracking_branch)}"
+
+git rev-list --left-right --abbrev-commit --abbrev $ref...HEAD |
+cut -c1         |
+sort            |
+uniq -c         |
+tr '\n' ','     |
+sed "
+  s/>/ahead/
+  s/</behind/
+  s/,$//g
+  s/,/, /g
+"
