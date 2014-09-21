@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# Copied from Danielle Sucher's blog post at
+# http://www.daniellesucher.com/2014/05/08/git-shamend/
+
+set -o nounset
+
+SHA_TO_AMEND=$(git rev-parse "$@")
+
+if git merge-base --is-ancestor $SHA_TO_AMEND HEAD
+then
+  BOLD=$(tput bold)
+  RED=$(tput setaf 1)
+  NORMAL=$(tput sgr0)
+
+  echo "${BOLD}Warning: your unstaged changes will be stashed during this process${NORMAL}"
+
+  git commit --fixup $SHA_TO_AMEND > /dev/null
+  git stash > /dev/null
+
+  GIT_EDITOR=true git rebase -i --autosquash "$SHA_TO_AMEND^"
+
+  if [[ $? -ne 0 ]]
+  then
+    git rebase --abort
+    git reset --soft HEAD^
+    echo "${RED}${BOLD}Whoops, that didn't work! Cleaning up after this attempt now, but"
+    echo "it looks like you'll have to interactive rebase this one manually.${NORMAL}"
+  fi
+
+  git stash pop > /dev/null
+else
+  echo
+  echo "git-shamend amends your staged changes as a fixup (keeping the pre-existing"
+  echo "commit message) to the specified older commit in the current branch."
+  echo
+  echo "USAGE:"
+  echo "stage the changes you want to amend into an earlier commit, then run:"
+  echo "\`git shamend SHA_TO_AMEND\`"
+  echo "(where SHA_TO_AMEND must be the SHA for a commit in the current branch)"
+  echo
+  exit 1
+fi

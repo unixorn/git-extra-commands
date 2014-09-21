@@ -1,0 +1,22 @@
+#! /bin/bash
+#
+# https://github.com/cofi/dotfiles/blob/master/bin
+
+remote=$1
+current_branch="$(git branch | grep '^*' | sed s/\*\ //)"
+branch=${2:-$current_branch}
+
+if [ -z $remote ]; then
+    echo "need at least remote to publish to"
+    echo "usage: git publish remote [remote-branch]"
+    exit 1
+fi
+
+if [ -d ".git" ] && [ ! -d ".git/refs/remotes/$remote" ]; then
+    echo "remote $remote is not configured; try git remote add $remote \$THE-URL"
+    exit 1
+fi
+
+git push $remote $branch && \
+    git config branch.$current_branch.remote $remote && \
+    git config branch.$current_branch.merge $branch

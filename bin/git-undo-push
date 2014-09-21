@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# Undo your last push to brach ($1) of origin
+
+git push -f origin HEAD^:$1

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Author: Mislav Marohnić  <mislav.marohnic@gmail.com>
+# https://github.com/mislav/dotfiles
+#
+# Shows git commits since the last tagged version. If library code appears to
+# be contained in `lib` or `libexec` directories, show changes pertaining to just that code.
+set -e
+
+paths=""
+num_libfiles="$(git ls-files -- lib libexec | wc -l)"
+if [ $num_libfiles -gt 0 ]; then
+  paths="bin lib libexec"
+fi
+
+format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar)%Creset'
+
+show_log() {
+  git log --graph --format="$format" ${1:+${1}..} -- $paths
+}
+
+desc="$(git describe --tags HEAD 2>/dev/null)" || {
+  echo "no releases exist; showing all changes"
+  show_log
+  exit
+}
+
+# check for "<tag>-<num_commits>-<sha>" format
+if [[ "$desc" == *-*-g* ]]; then
+  tag_with_num="${desc%-*}"
+  num_commits="${tag_with_num##*-}"
+  tag="${tag_with_num%-*}"
+else
+  num_commits=0
+  tag="$desc"
+fi
+
+if [ $num_commits -gt 0 ]; then
+  echo "${num_commits} commits since ${tag}"
+  show_log "$tag"
+else
+  echo "no commits since ${tag}"
+fi
