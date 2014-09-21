@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Copied from Danielle Sucher's blog post at
 # http://www.daniellesucher.com/2014/05/08/git-shamend/

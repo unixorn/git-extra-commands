@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Delete all local branches that have been merged into HEAD. Stolen from
 # our favorite @tekkub:

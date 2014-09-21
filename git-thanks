@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Author: Mislav Marohnić  <mislav.marohnic@gmail.com>
 # https://github.com/mislav/dotfiles
 #
