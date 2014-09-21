@@ -13,5 +13,5 @@
 # limitations under the License.
 
 # Add our plugin's bin diretory to user's path
-PLUGIN_BIN="$(dirname $0)/bin"
-export PATH=${PATH}:${PLUGIN_BIN}
+PLUGIN_D="$(dirname $0)"
+export PATH=${PATH}:${PLUGIN_D}
