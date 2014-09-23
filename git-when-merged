@@ -1,0 +1,430 @@
+#! /bin/sh
+# -*- mode: python; coding: utf-8 -*-
+
+# This file is used as both a shell script and as a Python script.
+
+""":"
+# This part is run by the shell.  It looks for an appropriate Python
+# interpreter then uses it to re-exec this script.
+
+path=$(which python2 || which python)
+if [ -x "$path" ]
+then
+  PYTHON=$path
+else
+  echo 1>&2 "No usable Python interpreter was found!"
+  exit 1
+fi
+
+exec $PYTHON "$0" "$@"
+" """
+
+# Copyright (c) 2013 Michael Haggerty
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, see <http://www.gnu.org/licenses/>
+
+# Run "git when-merged --help for the documentation.
+
+__doc__ = \
+"""Find when a commit was merged into one or more branches.
+
+Find the merge commit that brought COMMIT into the specified
+BRANCH(es).  Specificially, look for the oldest commit on the
+first-parent history of BRANCH that contains the COMMIT as an
+ancestor.
+
+"""
+
+USAGE = r"""git when-merged [OPTIONS] COMMIT [BRANCH...]
+"""
+
+EPILOG = r"""
+  COMMIT
+      a commit whose destiny you would like to determine (this
+      argument is required)
+
+  BRANCH...
+      the destination branches into which <commit> might have been
+      merged.  (Actually, BRANCH can be an arbitrary commit, specified
+      in any way that is understood by git-rev-parse(1).) If neither
+      <branch> nor -p/--pattern nor -s/--default is specified, then
+      HEAD is used
+
+Examples:
+  git when-merged 0a1b                     # Find merge into current branch
+  git when-merged 0a1b feature-1 feature-2 # Find merge into given branches
+  git when-merged 0a1b -p feature-[0-9]+   # Specify branches by regex
+  git when-merged 0a1b -n releases         # Use whenmerged.releases.pattern
+  git when-merged 0a1b -s                  # Use whenmerged.default.pattern
+
+  git when-merged 0a1b -d feature-1        # Show diff for each merge commit
+  git when-merged 0a1b -v feature-1        # Display merge commit in gitk
+
+Configuration:
+  whenmerged.<name>.pattern
+      Regular expressions that match reference names for the pattern
+      called <name>.  A regexp is sought in the full reference name,
+      in the form "refs/heads/master".  This option can be
+      multivalued, in which case references matching any of the
+      patterns are considered.  Typically you will use pattern(s) that
+      match master and/or significant release branches, or perhaps
+      their remote-tracking equivalents.  For example,
+
+          git config whenmerged.default.pattern \
+                  '^refs/heads/master$'
+
+      or
+
+          git config whenmerged.releases.pattern \
+                  '^refs/remotes/origin/release\-\d+\.\d+$'
+
+  whenmerged.abbrev
+      If this value is set to a positive integer, then Git SHA1s are
+      abbreviated to this number of characters (or longer if needed to
+      avoid ambiguity).  This value can be overridden using --abbrev=N
+      or --no-abbrev.
+
+Based on:
+  http://stackoverflow.com/questions/8475448/find-merge-commit-which-include-a-specific-commit
+"""
+
+import sys
+import re
+import subprocess
+import optparse
+
+
+# This upper end of this test doesn't actually work, because the
+# syntax of this script is not valid Python 3.
+if not (0x02050000 <= sys.hexversion < 0x03000000):
+    sys.exit('Python 2, version 2.5 or later is required')
+
+
+# Backwards compatibility:
+try:
+    from subprocess import CalledProcessError
+except ImportError:
+    # Use definition from Python 2.7 subprocess module:
+    class CalledProcessError(Exception):
+        def __init__(self, returncode, cmd, output=None):
+            self.returncode = returncode
+            self.cmd = cmd
+            self.output = output
+        def __str__(self):
+            return "Command '%s' returned non-zero exit status %d" % (self.cmd, self.returncode)
+
+try:
+    from subprocess import check_output
+except ImportError:
+    # Use definition from Python 2.7 subprocess module:
+    def check_output(*popenargs, **kwargs):
+        if 'stdout' in kwargs:
+            raise ValueError('stdout argument not allowed, it will be overridden.')
+        process = subprocess.Popen(stdout=subprocess.PIPE, *popenargs, **kwargs)
+        output, unused_err = process.communicate()
+        retcode = process.poll()
+        if retcode:
+            cmd = kwargs.get("args")
+            if cmd is None:
+                cmd = popenargs[0]
+            try:
+                raise CalledProcessError(retcode, cmd, output=output)
+            except TypeError:
+                # Python 2.6's CalledProcessError has no 'output' kw
+                raise CalledProcessError(retcode, cmd)
+        return output
+
+
+class Failure(Exception):
+    pass
+
+
+def read_refpatterns(name):
+    key = 'whenmerged.%s.pattern' % (name,)
+    try:
+        out = check_output(['git', 'config', '--get-all', '--null', key])
+    except CalledProcessError:
+        raise Failure('There is no configuration setting for %r!' % (key,))
+    retval = []
+    for value in out.split('\0'):
+        if value:
+            try:
+                retval.append(re.compile(value))
+            except re.error, e:
+                sys.stderr.write(
+                    'Error compiling branch pattern %r; ignoring: %s\n'
+                    % (value, e.message,)
+                    )
+    return retval
+
+
+def iter_commit_refs():
+    """Iterate over the names of references that refer to commits.
+
+    (This includes references that refer to annotated tags that refer
+    to commits.)"""
+
+    process = subprocess.Popen(
+        [
+            'git', 'for-each-ref',
+            '--format=%(refname) %(objecttype) %(*objecttype)',
+            ],
+        stdout=subprocess.PIPE,
+        )
+    for line in process.stdout:
+        words = line.strip().split()
+        refname = words.pop(0)
+        if words == ['commit'] or words == ['tag', 'commit']:
+            yield refname
+
+    retcode = process.wait()
+    if retcode:
+        raise Failure('git for-each-ref failed')
+
+
+def matches_any(refname, refpatterns):
+    return any(
+        refpattern.search(refname)
+        for refpattern in refpatterns
+        )
+
+
+def rev_parse(arg, abbrev=None):
+    if abbrev:
+        cmd = ['git', 'rev-parse', '--verify', '-q', '--short=%d' % (abbrev,), arg]
+    else:
+        cmd = ['git', 'rev-parse', '--verify', '-q', arg]
+
+    try:
+        return check_output(cmd).strip()
+    except CalledProcessError:
+        raise Failure('%r is not a valid commit!' % (arg,))
+
+
+def rev_list(*args):
+    process = subprocess.Popen(
+        ['git', 'rev-list'] + list(args) + ['--'],
+        stdout=subprocess.PIPE,
+        )
+    for line in process.stdout:
+        yield line.strip()
+
+    retcode = process.wait()
+    if retcode:
+        raise Failure('git rev-list %s failed' % (' '.join(args),))
+
+
+FORMAT = '%(refname)-38s %(msg)s\n'
+
+def find_merge(commit, branch, abbrev):
+    """Return the SHA1 of the commit that merged commit into branch.
+
+    It is assumed that content is always merged in via the second or
+    subsequent parents of a merge commit."""
+
+    try:
+        branch_sha1 = rev_parse(branch)
+    except Failure, e:
+        sys.stdout.write(FORMAT % dict(refname=branch, msg='Is not a valid commit!'))
+        return None
+
+    branch_commits = set(
+        rev_list('--first-parent', branch_sha1, '--not', '%s^@' % (commit,))
+        )
+
+    if commit in branch_commits:
+        sys.stdout.write(FORMAT % dict(refname=branch, msg='Commit is directly on this branch.'))
+        return None
+
+    last = None
+    for commit in rev_list('--ancestry-path', '%s..%s' % (commit, branch_sha1,)):
+        if commit in branch_commits:
+            last = commit
+
+    if not last:
+        sys.stdout.write(FORMAT % dict(refname=branch, msg='Does not contain commit.'))
+    else:
+        if abbrev is not None:
+            msg = rev_parse(last, abbrev=abbrev)
+        else:
+            msg = last
+        sys.stdout.write(FORMAT % dict(refname=branch, msg=msg))
+
+    return last
+
+
+class Parser(optparse.OptionParser):
+    """An OptionParser that doesn't reflow usage and epilog."""
+
+    def get_usage(self):
+        return self.usage
+
+    def format_epilog(self, formatter):
+        return self.epilog
+
+
+def get_full_name(branch):
+    """Return the full name of the specified commit.
+
+    If branch is a symbolic reference, return the name of the
+    reference that it refers to.  If it is an abbreviated reference
+    name (e.g., "master"), return the full reference name (e.g.,
+    "refs/heads/master").  Otherwise, just verify that it is valid,
+    but return the original value."""
+
+    try:
+        full = check_output(
+            ['git', 'rev-parse', '--verify', '-q', '--symbolic-full-name', branch]
+            ).strip()
+        # The above call exits successfully, with no output, if branch
+        # is not a reference at all.  So only use the value if it is
+        # not empty.
+        if full:
+            return full
+    except CalledProcessError:
+        pass
+
+    # branch was not a reference, so just verify that it is valid but
+    # leave it in its original form:
+    rev_parse(branch)
+    return branch
+
+
+def main(args):
+    parser = Parser(
+        prog='git when-merged',
+        description=__doc__,
+        usage=USAGE,
+        epilog=EPILOG,
+        )
+
+    try:
+        default_abbrev = int(
+            check_output(['git', 'config', '--int', 'whenmerged.abbrev']).strip()
+            )
+    except CalledProcessError:
+        default_abbrev = None
+
+    parser.add_option(
+        '--pattern', '-p', metavar='PATTERN',
+        action='append', dest='patterns', default=[],
+        help=(
+            'Show when COMMIT was merged to the references matching '
+            'the specified regexp.  If the regexp has parentheses for '
+            'grouping, then display in the output the part of the '
+            'reference name matching the first group.'
+            ),
+        )
+    parser.add_option(
+        '--name', '-n', metavar='NAME',
+        action='append', dest='names', default=[],
+        help=(
+            'Show when COMMIT was merged to the references matching the '
+            'configured pattern(s) with the given name (see '
+            'whenmerged.<name>.pattern below under CONFIGURATION).'
+            ),
+        )
+    parser.add_option(
+        '--default', '-s',
+        action='append_const', dest='names', const='default',
+        help='Shorthand for "--name=default".',
+        )
+    parser.add_option(
+        '--abbrev', metavar='N',
+        action='store', type='int', default=default_abbrev,
+        help=(
+            'Abbreviate commit SHA1s to the specified number of characters '
+            '(or more if needed to avoid ambiguity).  '
+            'See also whenmerged.abbrev below under CONFIGURATION.'
+            ),
+        )
+    parser.add_option(
+        '--no-abbrev', dest='abbrev', action='store_const', const=None,
+        help='Do not abbreviate commit SHA1s.',
+        )
+    parser.add_option(
+        '--diff', '-d', action='store_true', default=False,
+        help='Show the diff for the merge commit.',
+        )
+    parser.add_option(
+        '--visualize', '-v', action='store_true', default=False,
+        help='Visualize the merge commit using gitk.',
+        )
+
+    (options, args) = parser.parse_args(args)
+
+    if not args:
+        parser.error('You must specify a COMMIT argument')
+
+    if options.abbrev is not None and options.abbrev <= 0:
+        options.abbrev = None
+
+    commit = args.pop(0)
+    # Convert commit into a SHA1:
+    try:
+        commit = rev_parse(commit)
+    except Failure, e:
+        sys.exit(e.message)
+
+    refpatterns = []
+
+    for value in options.patterns:
+        try:
+            refpatterns.append(re.compile(value))
+        except re.error, e:
+            sys.stderr.write(
+                'Error compiling pattern %r; ignoring: %s\n'
+                % (value, e.message,)
+                )
+
+    for value in options.names:
+        try:
+            refpatterns.extend(read_refpatterns(value))
+        except Failure, e:
+            sys.exit(e.message)
+
+    branches = set()
+
+    if refpatterns:
+        branches.update(
+            refname
+            for refname in iter_commit_refs()
+            if matches_any(refname, refpatterns)
+            )
+
+    for branch in args:
+        try:
+            branches.add(get_full_name(branch))
+        except Failure, e:
+            sys.exit(e.message)
+
+    if not branches:
+        branches.add(get_full_name('HEAD'))
+
+    for branch in sorted(branches):
+        try:
+            merge = find_merge(commit, branch, options.abbrev)
+        except Failure, e:
+            sys.stderr.write('%s\n' % (e.message,))
+            continue
+
+        if merge:
+            if options.diff:
+                subprocess.check_call(['git', 'show', merge])
+
+            if options.visualize:
+                subprocess.check_call(['gitk', '--all', '--select-commit=%s' % (merge,)])
+
+
+main(sys.argv[1:])

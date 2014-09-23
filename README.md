@@ -13,7 +13,7 @@ add `antigen bundle unixorn/git-extra-commands` to your .zshrc
 
 ### Without using any frameworks
 
-git clone this repository, then add it to your $PATH.
+git clone this repository, then add it to your $PATH. Nothing here actually requires you to use ZSH and antigen, that's just a convenient distribution method for me. I use many instances, and having them automatically load the tooling scripts I expect makes life easier.
 
 ## Credits
 
@@ -44,6 +44,7 @@ git clone this repository, then add it to your $PATH.
 * git-unpushed - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-unreleased - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-up - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
+* git-when-merged - Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged)
 * git-where - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-wtf - William Morgan <wmorgan at the masanjin dot nets>
 * github-open Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
