@@ -50,6 +50,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-where - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-wtf - William Morgan <wmorgan at the masanjin dot nets>
 * github-open Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
+* git-winner - Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner)
 
 ## Contributing
 
