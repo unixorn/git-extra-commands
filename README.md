@@ -19,10 +19,12 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 
 * git-big-file - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-changes - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
+* git-churn - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
 * git-copy-branch-name - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-credit - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-cut-branch - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-delete-local-merged - https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ
+* git-divergence - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
 * git-grab - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-improved-merge - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-incoming - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
