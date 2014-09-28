@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+# This came from Greg V's dotfiles:
+#      https://github.com/myfreeweb/dotfiles
+# Feel free to steal it, but attribution is nice
+#
+# thanks: http://stackoverflow.com/a/7646931/239140
+
+if [[ -e $(pwd)/.gitmodules ]]; then
+  if [[ $# -eq 0 ]]; then
+    echo 'Usage: git submodulerm <path ...>'
+  else
+    for submodulepath in $@; do
+      git config -f .git/config --remove-section submodule.$submodulepath
+      git config -f .gitmodules --remove-section submodule.$submodulepath
+      git rm --cached $submodulepath
+    done
+  fi
+else
+  echo 'Run this from the root of your repo (which must have .gitmodules)'
+fi

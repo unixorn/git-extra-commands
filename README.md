@@ -40,6 +40,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-rel - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
 * git-shamend - Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post
 * git-show-overwritten - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
+* git-submodule-rm - Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles)
 * git-thanks - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-track - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-undo-push - 
@@ -48,9 +49,9 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-up - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
 * git-when-merged - Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged)
 * git-where - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
+* git-winner - Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner)
 * git-wtf - William Morgan <wmorgan at the masanjin dot nets>
 * github-open Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
-* git-winner - Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner)
 
 ## Contributing
 
