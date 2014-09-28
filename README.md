@@ -38,6 +38,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-rank-contributors - William Morgan <wmorgan-git-wt-add@masanjin.net>
 * git-rebase-authors - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-rel - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
+* git-run-command-on-revisions Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles)
 * git-shamend - Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post
 * git-show-overwritten - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-submodule-rm - Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles)
