@@ -1,0 +1,26 @@
+#!/bin/sh -e
+#
+# https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail
+#
+# git trail [-r] [-t] [COMMIT] - show all branching points in Git history
+
+[ "$1" = -r ] && shift || REMOTES="-e refs/remotes/"
+[ "$1" = -t ] && shift || TAGS="-e refs/tags/"
+COMMIT=$(git rev-parse --no-flags --default HEAD "$@")
+
+{ git for-each-ref | grep -v -e '^$' $TAGS $REMOTES
+  git log --date=short --format="%cd %h %H" "$@"
+} | awk '
+    $2 == "commit" || $2 == "tag" {
+      "git merge-base '$COMMIT' " $1 | getline mb
+      merge[mb] = merge[mb] " " $3
+    }
+    {
+      if ($3 in merge) {
+        split(merge[$3], mbs, " ")
+        for (i in mbs) {
+          "git name-rev --name-only --refs=\"" mbs[i] "\" " $3 | getline nr
+          if (nr != "undefined") print $1, $2, nr   # skip unreachable commits
+        }
+      } 
+    }' | git -p column   # paginate output

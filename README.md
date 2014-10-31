@@ -7,6 +7,9 @@ If you wrote one of these and want it removed from this repository, please file 
 
 ## Installing
 
+### Pre-requisites
+Some of these scripts use dash. `brew install dash` if you're on OS X.
+
 ### Antigen
 
 add `antigen bundle unixorn/git-extra-commands` to your .zshrc
@@ -44,6 +47,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-submodule-rm - Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles)
 * git-thanks - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-track - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
+* git-trail - Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail)
 * git-undo-push - 
 * git-unpushed - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-unreleased - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
