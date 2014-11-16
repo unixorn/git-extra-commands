@@ -26,7 +26,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-copy-branch-name - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-credit - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-cut-branch - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
-* git-delete-local-merged - https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ
+* git-delete-local-merged - [https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ)
 * git-divergence - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
 * git-grab - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-improved-merge - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
@@ -41,7 +41,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-rank-contributors - William Morgan <wmorgan-git-wt-add@masanjin.net>
 * git-rebase-authors - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-rel - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
-* git-run-command-on-revisions Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles)
+* git-run-command-on-revisions - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles)
 * git-shamend - Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post
 * git-show-overwritten - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-submodule-rm - Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles)
@@ -56,7 +56,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-where - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-winner - Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner)
 * git-wtf - William Morgan <wmorgan at the masanjin dot nets>
-* github-open Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
+* github-open - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
 
 ## Contributing
 
