@@ -12,11 +12,42 @@ Some of these scripts use dash. `brew install dash` if you're on OS X.
 
 ### Antigen
 
-add `antigen bundle unixorn/git-extra-commands` to your .zshrc
+1. Add `antigen bundle unixorn/git-extra-commands` to your .zshrc where you've listed your other plugins.
+2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle unixorn/git-extra-commands` in a running shell to have antigen load the new plugin.
+
+### oh-my-zsh
+
+If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
+
+1. In the command line, change to _oh-my-zsh_'s custom plugin directory :
+
+    ```
+    cd ~/.oh-my-zsh/custom/plugins/
+    ```
+2. Clone the repository into a new `git-extra-commands` directory:
+
+    ```
+    git clone https://github.com/unixorn/git-extra-commands.git git-extra-commands
+    ```
+3. Edit your `~/.zshrc` and add `git-extra-commands` – same as clone directory– to the list of plugins to enable:
+
+    ```
+    plugins=( ... git-extra-commands )
+    ```
+4. Then, restart your terminal application to **refresh context** and use the plugin. Alternatively, you can source your current shell configuration:
+
+    ```
+    source ~/.zshrc
+    ```
 
 ### Without using any frameworks, or if you're a bash user
 
 git clone this repository, then add it to your $PATH. Nothing here actually requires you to use ZSH and antigen, that's just a convenient distribution method for me. I use many instances, and having them automatically load the tooling scripts I expect makes life easier.
+
+## Other useful git stuff
+Check out Peter Hurford's [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) plugin. It adds a gitit command that will open your current directory on github, in your current branch.
+
+Peter also wrote [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
 
 ## Credits
 
@@ -28,6 +59,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-cut-branch - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-delete-local-merged - [https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ)
 * git-divergence - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
+* git-find-diry - Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository
 * git-grab - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-improved-merge - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-incoming - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
