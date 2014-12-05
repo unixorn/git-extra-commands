@@ -59,7 +59,7 @@ Peter also wrote [git-aliases.zsh](https://github.com/peterhurford/git-aliases.z
 * git-cut-branch - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-delete-local-merged - [https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ)
 * git-divergence - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
-* git-find-diry - Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository
+* git-find-dirty - Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository
 * git-grab - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-improved-merge - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-incoming - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
