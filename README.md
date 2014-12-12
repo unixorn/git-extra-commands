@@ -46,11 +46,11 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 
 ## Other useful git stuff
 
-Check out Peter Hurford's [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) plugin. It adds a gitit command that will open your current directory on github, in your current branch.
+* Peter Hurford's [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) plugin. It adds a gitit command that will open your current directory on github, in your current branch.
 
-Peter also wrote [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
+* Peter also wrote [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
 
-Also check out [gitsh](https://github.com/thoughtbot/gitsh) - it's an interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
+* [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 
 ## Credits
 
