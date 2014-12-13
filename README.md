@@ -46,9 +46,15 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 
 ## Other useful git stuff
 
+* Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of git.
+
 * Peter Hurford's [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) plugin. It adds a gitit command that will open your current directory on github, in your current branch.
 
 * Peter also wrote [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
+
+* Zach Dennis has a great [blog post](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
+** [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
+** [gitimmersion.com/](http://gitimmersion.com/)
 
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 
