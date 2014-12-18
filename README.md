@@ -1,7 +1,7 @@
 # git-extra-commands
 ==================
 
-An [Antigen](https://github.com/zsh-users/antigen) plugin that packages so extra git commands I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but a plugin makes it more convenient for me when I'm dealing with multiple machines.
+An [Antigen](https://github.com/zsh-users/antigen) plugin that packages so extra git commands I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me when I'm dealing with multiple machines.
 
 If you wrote one of these and want it removed from this repository, please file an issue against the repo and I will remove it.
 
@@ -39,6 +39,12 @@ If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
     ```
     source ~/.zshrc
     ```
+
+### zgen
+
+If you're using [zgen](https://github.com/tarjoilija/zgen):
+1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
+2. `rm ${ZGEN_INIT}/init.zsh && zgen save`
 
 ### Without using any frameworks, or if you're a bash user
 
