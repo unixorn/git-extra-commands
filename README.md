@@ -1,7 +1,7 @@
 # git-extra-commands
 ==================
 
-An [Antigen](https://github.com/zsh-users/antigen) plugin that packages so extra git commands I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me when I'm dealing with multiple machines.
+An zsh plugin that packages so extra git commands I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me when I'm dealing with multiple machines.
 
 If you wrote one of these and want it removed from this repository, please file an issue against the repo and I will remove it.
 
@@ -11,6 +11,8 @@ If you wrote one of these and want it removed from this repository, please file 
 Some of these scripts use dash. `brew install dash` if you're on OS X.
 
 ### Antigen
+
+If you're using [Antigen](https://github.com/zsh-users/antigen):
 
 1. Add `antigen bundle unixorn/git-extra-commands` to your .zshrc where you've listed your other plugins.
 2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle unixorn/git-extra-commands` in a running shell to have antigen load the new plugin.
