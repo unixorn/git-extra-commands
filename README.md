@@ -1,5 +1,4 @@
 # git-extra-commands
-==================
 
 An zsh plugin that packages so extra git commands I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me when I'm dealing with multiple machines.
 
@@ -8,6 +7,7 @@ If you wrote one of these and want it removed from this repository, please file 
 ## Installing
 
 ### Pre-requisites
+
 Some of these scripts use dash. `brew install dash` if you're on OS X.
 
 ### Antigen
@@ -23,24 +23,19 @@ If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
 
 1. In the command line, change to _oh-my-zsh_'s custom plugin directory :
 
-    ```
-    cd ~/.oh-my-zsh/custom/plugins/
-    ```
+    `cd ~/.oh-my-zsh/custom/plugins/`
+
 2. Clone the repository into a new `git-extra-commands` directory:
 
-    ```
-    git clone https://github.com/unixorn/git-extra-commands.git git-extra-commands
-    ```
+    `git clone https://github.com/unixorn/git-extra-commands.git git-extra-commands`
+
 3. Edit your `~/.zshrc` and add `git-extra-commands` – same as clone directory– to the list of plugins to enable:
 
-    ```
-    plugins=( ... git-extra-commands )
-    ```
+    `plugins=( ... git-extra-commands )`
+
 4. Then, restart your terminal application to **refresh context** and use the plugin. Alternatively, you can source your current shell configuration:
 
-    ```
-    source ~/.zshrc
-    ```
+    `source ~/.zshrc`
 
 ### zgen
 
@@ -62,8 +57,8 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * Peter also wrote [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
 
 * Zach Dennis has a great [blog post](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
-** [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
-** [gitimmersion.com/](http://gitimmersion.com/)
+    * [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
+    * [gitimmersion.com/](http://gitimmersion.com/)
 
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 
