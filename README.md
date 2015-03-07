@@ -1,6 +1,6 @@
 # git-extra-commands
 
-An zsh plugin that packages so extra git commands I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me when I'm dealing with multiple machines.
+An zsh plugin that packages some extra git helper scripts I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me since I'm dealing with multiple machines.
 
 If you wrote one of these and want it removed from this repository, please file an issue against the repo and I will remove it.
 
@@ -46,7 +46,7 @@ If you're using [zgen](https://github.com/tarjoilija/zgen):
 
 ### Without using any frameworks, or if you're a bash user
 
-git clone this repository, then add it to your $PATH. Nothing here actually requires you to use ZSH and antigen, that's just a convenient distribution method for me. I use many instances, and having them automatically load the tooling scripts I expect makes life easier.
+git clone this repository, then add it to your $PATH. Nothing here actually requires you to use ZSH and zgen, that's just a convenient distribution method for me. I use many instances, and having them automatically load the tooling scripts I expect makes life easier.
 
 ## Other useful git stuff
 
