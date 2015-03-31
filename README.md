@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [git-extra-commands](#git-extra-commands)
+  - [Installing](#installing)
+    - [Pre-requisites](#pre-requisites)
+    - [Antigen](#antigen)
+    - [oh-my-zsh](#oh-my-zsh)
+    - [zgen](#zgen)
+    - [Without using any frameworks, or if you're a bash user](#without-using-any-frameworks-or-if-youre-a-bash-user)
+  - [Other useful git stuff](#other-useful-git-stuff)
+  - [Credits](#credits)
+  - [Contributing](#contributing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # git-extra-commands
 
 An zsh plugin that packages some extra git helper scripts I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me since I'm dealing with multiple machines.
