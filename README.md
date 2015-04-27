@@ -19,7 +19,7 @@
 
 An zsh plugin that packages some extra git helper scripts I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me since I'm dealing with multiple machines.
 
-If you wrote one of these and want it removed from this repository, please file an issue against the repo and I will remove it.
+If you wrote one of these and want it removed from this repository, please either make a PR or file an issue against the repo and I will remove it.
 
 ## Installing
 
