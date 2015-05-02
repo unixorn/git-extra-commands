@@ -17,9 +17,9 @@
 
 # git-extra-commands
 
-An zsh plugin that packages some extra git helper scripts I've found. I didn't write these, and they each have whatever licensing is included in the file. This doesn't actually require zsh, but packaging as a plugin makes it more convenient for me since I'm dealing with multiple machines.
+A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file. This collection doesn't actually require zsh, but packaging as a ZSH plugin makes it more convenient for anyone using a ZSH framework to use this collection.
 
-If you wrote one of these and want it removed from this repository, please either make a PR or file an issue against the repo and I will remove it.
+If you wrote one of these scripts and want it removed from this repository, please either make a PR or file an issue against the repo and I will remove it.
 
 ## Installing
 
@@ -31,7 +31,7 @@ Some of these scripts use dash. `brew install dash` if you're on OS X.
 
 If you're using [Antigen](https://github.com/zsh-users/antigen):
 
-1. Add `antigen bundle unixorn/git-extra-commands` to your .zshrc where you've listed your other plugins.
+1. Add `antigen bundle unixorn/git-extra-commands` to your `.zshrc` where you've listed your other plugins.
 2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle unixorn/git-extra-commands` in a running shell to have antigen load the new plugin.
 
 ### oh-my-zsh
@@ -63,7 +63,7 @@ If you're using [zgen](https://github.com/tarjoilija/zgen):
 
 ### Without using any frameworks, or if you're a bash user
 
-git clone this repository, then add it to your $PATH. Nothing here actually requires you to use ZSH and zgen, that's just a convenient distribution method for me. I use many instances, and having them automatically load the tooling scripts I expect makes life easier.
+git clone this repository, then add it to your `$PATH`. Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
 
 ## Other useful git stuff
 
@@ -78,6 +78,8 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
     * [gitimmersion.com/](http://gitimmersion.com/)
 
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
+
+* Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
 
 ## Credits
 
@@ -110,7 +112,7 @@ git clone this repository, then add it to your $PATH. Nothing here actually requ
 * git-thanks - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-track - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-trail - Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail)
-* git-undo-push - 
+* git-undo-push -
 * git-unpushed - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-unreleased - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-up - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
