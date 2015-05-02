@@ -2,7 +2,7 @@
 # Author: Mislav Marohnić
 # https://github.com/mislav/dotfiles
 #
-# rebase-authors` adds authorship info to interactive git rebase output
+# rebase-authors adds authorship info to interactive git rebase output
 
 set -e
 
