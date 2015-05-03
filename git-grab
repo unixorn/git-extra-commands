@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# https://github.com/rtomayko/dotfiles
 
 [ $# -eq 0 ] && {
 	echo "usage: git-grab username [repo]"
