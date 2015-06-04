@@ -81,6 +81,8 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 
 * Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
 
+* [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
+
 ## Credits
 
 * git-big-file - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
