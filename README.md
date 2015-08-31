@@ -83,6 +83,8 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 
 * [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
+* There’s a quick [introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com
+
 ## Credits
 
 * git-big-file - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
