@@ -73,6 +73,8 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 
 * Peter also wrote [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
 
+* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
+
 * Zach Dennis has a great [blog post](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
     * [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
     * [gitimmersion.com/](http://gitimmersion.com/)
