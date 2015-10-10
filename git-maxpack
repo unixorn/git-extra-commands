@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Original source: https://github.com/jwiegley/git-scripts/blob/master/git-maxpack
+
+git config pack.compression 9
+git gc --prune=now
+git repack -a -d --depth=250 --window=250

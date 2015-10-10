@@ -103,6 +103,7 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 * git-incoming - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
 * git-incoming-commits - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-ls-object-refs - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
+* git-maxpack - John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)
 * git-nuke - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-object-deflate - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-outgoing - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
