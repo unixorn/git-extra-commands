@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+# Original source: https://github.com/jwiegley/git-scripts/blob/master/git-flush
+#
+# The job of git-flush is to recompactify your repository to be as small
+# as possible, by dropping all reflogs, stashes, and other cruft that may
+# be bloating your pack files.
+
+/bin/rm -fr .git/refs/original
+/bin/rm -fr .git/refs/snapshots
+
+if [ -f .git/info/refs ]; then
+    perl -i -ne 'print unless /refs\/original/;' .git/info/refs
+    perl -i -ne 'print unless /refs\/snapshots/;' .git/info/refs
+fi
+if [ -f .git/packed-refs ]; then
+    perl -i -ne 'print unless /refs\/original/;' .git/packed-refs
+    perl -i -ne 'print unless /refs\/snapshots/;' .git/packed-refs
+fi
+
+git reflog expire --expire=0 --all
+
+if [ "$1" = "-f" ]; then
+    git stash clear
+fi
+
+git maxpack

@@ -98,6 +98,7 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 * git-delete-local-merged - [https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ)
 * git-divergence - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
 * git-find-dirty - Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository
+* git-flush - John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)
 * git-grab - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-improved-merge - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-incoming - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
