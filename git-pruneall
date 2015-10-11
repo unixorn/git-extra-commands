@@ -2,18 +2,6 @@
 # Usage: git-pruneall [<remote>...]
 # Prune branches from specified remotes, or all remotes when
 # <remote> not specified.
-
-REMOTES="$@"
-
-test -z "$REMOTES" &&
-REMOTES=$(git remote)
-
-for remote in $REMOTES
-do
-    echo "pruning: $remote"
-    git remote prune "$remote" || true
-done
-
 # Copyright (c) 2009 Ryan Tomayko <tomayko.com/about>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,3 +21,14 @@ done
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
+
+REMOTES="$@"
+
+test -z "$REMOTES" &&
+REMOTES=$(git remote)
+
+for remote in $REMOTES
+do
+    echo "pruning: $remote"
+    git remote prune "$remote" || true
+done
