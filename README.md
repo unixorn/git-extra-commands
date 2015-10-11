@@ -90,6 +90,7 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 ## Credits
 
 * git-big-file - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
+* git-change-author - Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author)
 * git-changes - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
 * git-churn - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
 * git-copy-branch-name - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)

@@ -1,0 +1,52 @@
+#!/bin/sh
+# Author: Michael Demmer https://github.com/demmer
+# License: MIT
+# Original source: https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author
+
+prog=`basename $0`
+
+force=
+if [ "$1" == "-f" ] ; then
+    force="-f"
+    shift;
+fi
+
+old_email=$1; shift;
+new_author=$1; shift;
+new_email=$1; shift;
+
+if test -z "$old_email" -o -z "$new_author" -o -z "$new_email" ; then
+   echo "usage: $prog <old_email> <new_author> <new_email>"
+   echo ""
+   echo "example: $prog [-f] user@old.server.com \"User Name\" user2@new.server.com"
+   exit 1
+fi
+
+echo "Rewriting commits for $old_email to $new_author <$new_email>"
+
+export old_email
+export new_author
+export new_email
+
+git filter-branch $force --env-filter '
+an="$GIT_AUTHOR_NAME"
+am="$GIT_AUTHOR_EMAIL"
+cn="$GIT_COMMITTER_NAME"
+cm="$GIT_COMMITTER_EMAIL"
+
+if [ "$GIT_COMMITTER_EMAIL" = "$old_email" ]
+then
+    cn=$new_author
+    cm=$new_email
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$old_email" ]
+then
+    an=$new_author
+    am=$new_email
+fi
+
+export GIT_AUTHOR_NAME="$an"
+export GIT_AUTHOR_EMAIL="$am"
+export GIT_COMMITTER_NAME="$cn"
+export GIT_COMMITTER_EMAIL="$cm"
+' $*
