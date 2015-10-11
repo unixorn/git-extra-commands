@@ -9,6 +9,10 @@
 #
 # Then it prunes all branches that no longer exist at each upstream
 # remote.
+#
+# Author: Michael Demmer https://github.com/demmer
+# License: MIT
+# Original source: https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches
 
 merged=`git branch --no-color --merged master | grep -v master | sed 's/\*/ /'`
 
@@ -38,7 +42,7 @@ if [ ! -z "$merged" ] ; then
 	fi
     done
 fi
-	    
+
 remotes=`git remote`
 for remote in $remotes ; do
     prompt=n
