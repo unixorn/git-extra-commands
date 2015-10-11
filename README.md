@@ -110,6 +110,7 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 * git-object-deflate - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-outgoing - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
 * git-promote - Trevor's [Improving My git Workflow](http://hoth.entp.com/2008/11/10/improving-my-git-workflow) blog post
+* git-prune-branches - Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches)
 * git-publish - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
 * git-purge-from-history - David Underhill’s [blog](http://dound.com/2009/04/git-forever-remove-files-or-folders-from-history/)
 * git-rank-contributors - William Morgan <wmorgan-git-wt-add@masanjin.net>
