@@ -110,6 +110,7 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 * git-outgoing - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
 * git-promote - Trevor's [Improving My git Workflow](http://hoth.entp.com/2008/11/10/improving-my-git-workflow) blog post
 * git-publish - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
+* git-purge-from-history - David Underhill’s [blog](http://dound.com/2009/04/git-forever-remove-files-or-folders-from-history/)
 * git-rank-contributors - William Morgan <wmorgan-git-wt-add@masanjin.net>
 * git-rebase-authors - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-rel - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
