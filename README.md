@@ -17,7 +17,7 @@
 
 # git-extra-commands
 
-A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file. This collection doesn't actually require zsh, but packaging as a ZSH plugin makes it more convenient for anyone using a ZSH framework to use this collection.
+A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file. This collection doesn't actually require zsh, but packaging as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
 
 If you wrote one of these scripts and want it removed from this repository, please either make a PR or file an issue against the repo and I will remove it.
 
@@ -46,7 +46,7 @@ If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
 
     `git clone https://github.com/unixorn/git-extra-commands.git git-extra-commands`
 
-3. Edit your `~/.zshrc` and add `git-extra-commands` – same as clone directory– to the list of plugins to enable:
+3. Edit your `~/.zshrc` and add `git-extra-commands` – same as clone directory – to the list of plugins to enable:
 
     `plugins=( ... git-extra-commands )`
 
@@ -133,4 +133,4 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 
 ## Contributing
 
-Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly.
+Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly. Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (OS X, I'm looking at you) are stale.
