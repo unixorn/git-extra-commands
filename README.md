@@ -85,6 +85,8 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 
 * [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
+* [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
+
 * There’s a quick [introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com
 
 ## Credits
