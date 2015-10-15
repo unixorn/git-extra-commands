@@ -129,6 +129,7 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 * git-unpushed - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-unreleased - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-up - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
+* git-upstream-sync - One of my personal scripts
 * git-when-merged - Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged)
 * git-where - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
 * git-winner - Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner)

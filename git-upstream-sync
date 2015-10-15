@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#
+# Author: Joe Block <jpb@unixorn.net>
+# License: Apache 2.0
+# https://github.com/unixorn/git-extra-commands/blob/master/LICENSE
+#
+# Sync to upstream/yourforkname and rebase into your local fork. then push
+#
+# Assumes that your upstream fork's remote is named upstream
+
+branch_name=$(git symbolic-ref --short -q HEAD)
+
+git fetch upstream && \
+  git rebase upstream/${branch_name} && \
+  git push && \
+  git fetch -p
