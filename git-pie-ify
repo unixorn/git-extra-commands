@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#
+# https://gist.github.com/jeebak/f9088cede18d31f2d3a0
+#
+
+[[ $# -ne 2 ]] && echo "Usage: git pie-ify pattern replacement" 1>&2 && exit 1
+
+pattern="$(sed 's;/;\\/;g' <<< "$1")"
+replacement="$(sed 's;/;\\/;g' <<< "$2")"
+
+while read -r file; do
+  if [[ -f "$file" ]]; then
+    echo "Processing: '$file'"
+    # TODO: fall back to sed, if perl's not available, accounting for different
+    # (osx/linux) versions.
+    perl -p -i -e 's/'"$pattern"'/'"$replacement"'/g' "$file"
+  fi
+done <<< "$(git grep --name-only "$pattern")"
