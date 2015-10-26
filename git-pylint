@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# This script runs pylint on each of the modified python files in a git status
+# command. It will auto backup a modified file in BACKUP_DIR. It will then
+# run lindent over the modified file. Finally it will open a file compare
+# utility, so that the user can go over the changes made.
+
+FILE_CMP_UTIL=meld
+INDENT="lindent -nbbo"
+BACKUP_DIR="/t"
+
+
+if [ ! -e "$BACKUP_DIR" ]; then
+  echo "BACKUP_DIR $BACKUP_DIR is not present"
+  exit
+fi
+
+MODIFIED_FILE_LIST=`git status  | grep modified: | grep  -E '*\.[h|c]' | awk '{print $3}'`
+
+if [ ! "${PIPESTATUS[0]}" == "0" ]; then
+  echo "Some error with the command ..."
+  exit ${PIPESTATUS[0]}
+fi
+
+
+for file in $MODIFIED_FILE_LIST
+do
+  printf "Processing ... [\033[32;1m $file\033[0m ]\n\r"
+  DEST_FILE=$BACKUP_DIR/`basename $file`.bak
+  cp -v $file $DEST_FILE
+  $INDENT $file
+  meld $file $DEST_FILE
+done

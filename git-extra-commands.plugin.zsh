@@ -32,6 +32,7 @@ zstyle ':completion:*:*:git:*' user-commands \
   find-dirty:'Recurse current directory, listing "dirty" git clones' \
   flush:'Recompactify your repo to be as small as possible' \
   grab:'Add github remote, by username and repo' \
+  ignored:'List files currently being ignored by .gitignore' \
   improved-merge:'Sophisticated git merge with integrated CI check and automatic cleanup upon completion' \
   incoming:'Fetch remote tracking branch, and list incoming commits' \
   ls-object-refs:'Find references to <object> SHA1 in refs, commits, and trees. All of them' \
