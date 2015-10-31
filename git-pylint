@@ -1,33 +1,22 @@
 #!/bin/bash
-
+#
+# Author: Joe Block <jpb@unixorn.net>
+#
 # This script runs pylint on each of the modified python files in a git status
-# command. It will auto backup a modified file in BACKUP_DIR. It will then
-# run lindent over the modified file. Finally it will open a file compare
-# utility, so that the user can go over the changes made.
+# command.
+#
+# This code is under the Apache license (see LICENSE in this repository)
 
-FILE_CMP_UTIL=meld
-INDENT="lindent -nbbo"
-BACKUP_DIR="/t"
+NEW_FILES=$(git status | grep 'new file:' | grep -e '.py$' | awk '{print $3}')
+MODIFIED_FILES=$(git status | grep 'modified:' | grep -e '.py$' | awk '{print $2}')
 
-
-if [ ! -e "$BACKUP_DIR" ]; then
-  echo "BACKUP_DIR $BACKUP_DIR is not present"
-  exit
+if [[ -z $MODIFIED_FILES ]] && [[ -z $NEW_FILES ]]; then
+  echo "No modified or new files found"
 fi
 
-MODIFIED_FILE_LIST=`git status  | grep modified: | grep  -E '*\.[h|c]' | awk '{print $3}'`
-
-if [ ! "${PIPESTATUS[0]}" == "0" ]; then
-  echo "Some error with the command ..."
-  exit ${PIPESTATUS[0]}
-fi
-
-
-for file in $MODIFIED_FILE_LIST
+for file in $MODIFIED_FILES $NEW_FILES
 do
-  printf "Processing ... [\033[32;1m $file\033[0m ]\n\r"
-  DEST_FILE=$BACKUP_DIR/`basename $file`.bak
-  cp -v $file $DEST_FILE
-  $INDENT $file
-  meld $file $DEST_FILE
+  printf "Pylinting ... [\033[32;1m $file\033[0m ]\n\r"
+  pylint "${file}"
+  echo
 done
