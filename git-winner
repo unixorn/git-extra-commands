@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Copyright © 2008 Garry C. Dolley
 # https://github.com/up_the_irons/git-winner
@@ -27,7 +27,7 @@ HIGHEST_COMMIT_COUNT=0
 HIGHEST_COMMIT_LINES=0
 
 echo "Activity after $DATE"
-echo "" 
+echo ""
 
 if [ -z "$PLAYERS" ]; then
   echo "No players!"
@@ -70,10 +70,10 @@ if [ "$HIGHEST_COMMIT_COUNT" -gt 0 ]; then
   echo ""
   echo "$HIGHEST_COMMIT_COUNT_PLAYER wins in commit count with $HIGHEST_COMMIT_COUNT commits!"
   echo "$HIGHEST_COMMIT_LINES_PLAYER wins in number of lines commited with $HIGHEST_COMMIT_LINES lines!"
-  
+
   if [ "$HIGHEST_COMMIT_COUNT_PLAYER" = "$HIGHEST_COMMIT_LINES_PLAYER" ]; then
     FIRST_NAME=$(echo $HIGHEST_COMMIT_COUNT_PLAYER | awk '{ print $1 }')
-  
+
     echo ""
     echo "$FIRST_NAME is the overall winner!!"
   fi

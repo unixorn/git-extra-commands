@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # https://github.com/garybernhardt/dotfiles/blob/master/bin/git-divergence
 
@@ -51,7 +51,7 @@ set -e
     for rev in `git rev-list $LOCAL..$REMOTE`; do
         show_rev $rev
     done
-    
+
     echo
     echo outgoing:
     echo
