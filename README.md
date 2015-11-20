@@ -63,9 +63,14 @@ If you're using [zgen](https://github.com/tarjoilija/zgen):
 1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
 2. `rm ${ZGEN_INIT}/init.zsh && zgen save`
 
-### Without using any frameworks, or if you're a bash user
+### Manual Installation
 
-git clone this repository, then add it to your `$PATH`. Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
+Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
+
+If you aren't using any zsh frameworks, or if you're a bash user, do the following steps:
+
+1. git clone this repository
+2. Add it to your `$PATH`.
 
 ## Other useful git stuff
 
