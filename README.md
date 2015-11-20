@@ -17,7 +17,9 @@
 
 # git-extra-commands
 
-A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file. This collection doesn't actually require zsh, but packaging as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
+A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file.
+
+This collection doesn't actually require zsh, but packaging as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
 
 If you wrote one of these scripts and want it removed from this repository, please either make a PR or file an issue against the repo and I will remove it.
 
@@ -86,6 +88,8 @@ git clone this repository, then add it to your `$PATH`. Nothing here actually re
 * [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
+
+* [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 
 * There’s a quick [introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com
 
