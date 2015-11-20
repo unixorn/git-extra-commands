@@ -8,7 +8,7 @@
     - [Antigen](#antigen)
     - [oh-my-zsh](#oh-my-zsh)
     - [zgen](#zgen)
-    - [Without using any frameworks, or if you're a bash user](#without-using-any-frameworks-or-if-youre-a-bash-user)
+    - [Manual Installation](#manual-installation)
   - [Other useful git stuff](#other-useful-git-stuff)
   - [Credits](#credits)
   - [Contributing](#contributing)
