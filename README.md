@@ -27,7 +27,7 @@ If you wrote one of these scripts and want it removed from this repository, plea
 
 ### Pre-requisites
 
-Some of these scripts use dash. `brew install dash` if you're on OS X.
+The version of git Apple includes in OS X is stale. `brew install git` if you're on OS X.
 
 ### Antigen
 
