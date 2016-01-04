@@ -1,3 +1,11 @@
+# git-extra-commands
+
+A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file.
+
+This collection doesn't actually require zsh, but packaging as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
+
+If you wrote one of these scripts and want it removed from this repository, please either make a PR or file an issue against the repo and I will remove it.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -14,14 +22,6 @@
   - [Contributing](#contributing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# git-extra-commands
-
-A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file.
-
-This collection doesn't actually require zsh, but packaging as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
-
-If you wrote one of these scripts and want it removed from this repository, please either make a PR or file an issue against the repo and I will remove it.
 
 ## Installing
 
