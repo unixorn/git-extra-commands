@@ -10,16 +10,15 @@ If you wrote one of these scripts and want it removed from this repository, plea
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [git-extra-commands](#git-extra-commands)
-  - [Installing](#installing)
-    - [Pre-requisites](#pre-requisites)
-    - [Antigen](#antigen)
-    - [oh-my-zsh](#oh-my-zsh)
-    - [zgen](#zgen)
-    - [Manual Installation](#manual-installation)
-  - [Other useful git stuff](#other-useful-git-stuff)
-  - [Credits](#credits)
-  - [Contributing](#contributing)
+- [Installing](#installing)
+  - [Pre-requisites](#pre-requisites)
+  - [Antigen](#antigen)
+  - [oh-my-zsh](#oh-my-zsh)
+  - [zgen](#zgen)
+  - [Manual Installation](#manual-installation)
+- [Other useful git stuff](#other-useful-git-stuff)
+- [Credits](#credits)
+- [Contributing](#contributing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
