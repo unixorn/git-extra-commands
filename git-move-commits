@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# Original source: https://github.com/coordt/git-scripts/blob/master/git-move-commits
+#
+# git move-commits num-commits correct-branch
+#
+# moves the last n commits to correct-branch
+# if correct-branch doesn't exist, it creates it
+# if correct-branch does exist, it merges the commits
+set -e
+
+if [ $1 ]
+then
+    if [ ! $(echo "$1" | grep -E "^[0-9]+$") ]
+    then
+        echo "$1 is not a number."
+        echo "Usage: git move-commits <num-commits> <correct-branch>";
+        exit 1;
+    else
+        # The count is 0 based, so to move the last 1 commit, we need HEAD~0
+        NUM_COMMITS=$1
+        ((NUM_COMMITS--))
+        echo "num commits $NUM_COMMITS"
+    fi
+else
+    echo "Usage: git move-commits <num-commits> <correct-branch>";
+    exit 1;
+fi
+if [ -z $2 ]
+then
+    echo "Usage: git move-commits <num-commits> <correct-branch>";
+    exit 1;
+else
+    BRANCH=$2
+fi
+
+CURRENT_BRANCH=`git branch | grep '*' | perl -e '<STDIN> =~ /^..(.+)$/;print $1'`
+
+# If the branch already exists, we have to merge it with the current branch
+if ! [ -z `git branch -a | grep $BRANCH` ]
+then
+    echo "$BRANCH already exists. Switching to it and merging $CURRENT_BRANCH"
+    git checkout $BRANCH
+    git merge $CURRENT_BRANCH
+else
+    echo "Creating $BRANCH"
+    git branch $BRANCH
+fi
+git reset --hard $CURRENT_BRANCH~$NUM_COMMITS
+git checkout $BRANCH

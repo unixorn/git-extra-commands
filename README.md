@@ -119,6 +119,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * git-incoming-commits - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-ls-object-refs - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-maxpack - John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)
+* git-move-commits - Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits)
 * git-nuke - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
 * git-object-deflate - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-outgoing - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
