@@ -91,6 +91,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
+* [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
+
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
