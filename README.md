@@ -97,6 +97,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 
+* [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
+
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 
 * There’s a quick [introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com
