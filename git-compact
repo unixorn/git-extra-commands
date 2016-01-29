@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Compact a git repo
+
+git reflog expire --expire=now --all
+git gc --prune=now
+git gc --aggressive --prune=now
