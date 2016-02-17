@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#
+# Another one I need just often enough to be annoying, but not enough
+# to actually remember when I do need it.
+#
+# Get the number of commits on the current branch
+
+exec git rev-list HEAD --count
