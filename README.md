@@ -17,6 +17,8 @@ If you wrote one of these scripts and want it removed from this collection, plea
   - [zgen](#zgen)
   - [Manual Installation](#manual-installation)
 - [Other useful git stuff](#other-useful-git-stuff)
+  - [Articles / Blog posts / Books](#articles--blog-posts--books)
+  - [Utilities](#utilities)
 - [Credits](#credits)
 - [Contributing](#contributing)
 
