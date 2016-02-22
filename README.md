@@ -2,9 +2,9 @@
 
 A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file.
 
-This collection doesn't actually require zsh, but packaging as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
+This collection doesn't actually require zsh, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
 
-If you wrote one of these scripts and want it removed from this repository, please either make a PR or file an issue against the repo and I will remove it.
+If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repo and I will remove it.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -73,35 +73,39 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ## Other useful git stuff
 
+### Articles / Blog posts / Books
+
 * Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of git.
-
-* Peter Hurford's [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) plugin. It adds a gitit command that will open your current directory on github, in your current branch.
-
-* Peter also wrote [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
-
-* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
 
 * Zach Dennis has a great [blog post](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
     * [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
     * [gitimmersion.com/](http://gitimmersion.com/)
 
-* [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
+* There’s a quick [introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com, and a more detailed git tutorial at [http://www.learnenough.com/git-tutorial](http://www.learnenough.com/git-tutorial).
 
 * Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
 
 * [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
+### Utilities
+
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 
-* [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
+* Peter Hurford's [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
 
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 
+* [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
+
+* Peter also wrote the [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) plugin. It adds a gitit command that will open your current directory on github, in your current branch.
+
+* [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
+
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 
-* [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
+* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
 
-* There’s a quick [introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com
+* [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 
 ## Credits
 
@@ -157,4 +161,4 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ## Contributing
 
-Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly. Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (OS X, I'm looking at you) are stale.
+Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly. Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (OS X and CentOS, I'm looking at you) are stale.
