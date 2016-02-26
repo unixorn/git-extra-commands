@@ -163,4 +163,5 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ## Contributing
 
-Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly. Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (OS X and CentOS, I'm looking at you) are stale.
+* Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly.
+* Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (OS X and CentOS, I'm looking at you) are stale.
