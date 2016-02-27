@@ -135,6 +135,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * git-object-deflate - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
 * git-outgoing - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
 * git-pie-ify - JeeBak Kim's [gist](https://gist.github.com/jeebak/f9088cede18d31f2d3a0)
+* git-plotrepo - Matthew McCullogh's [scripts collection](https://github.com/matthewmccullough/scripts/blob/master/git-plotrepo.rb)
 * git-promote - Trevor's [Improving My git Workflow](http://hoth.entp.com/2008/11/10/improving-my-git-workflow) blog post
 * git-prune-branches - Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches)
 * git-publish - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
