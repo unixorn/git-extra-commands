@@ -97,6 +97,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 
+* [git-graph](https://github.com/jerith666/git-graph) - creates a Graphviz graph showing the high-level structure of a repository's history
+
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 
 * Peter also wrote the [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) plugin. It adds a gitit command that will open your current directory on github, in your current branch.
@@ -108,6 +110,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
 
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
+
 
 ## Credits
 
