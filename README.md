@@ -105,6 +105,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 
+* [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories.
+
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 
 * [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
