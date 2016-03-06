@@ -91,6 +91,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ### Utilities
 
+* [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
+
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 
 * Peter Hurford's [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
