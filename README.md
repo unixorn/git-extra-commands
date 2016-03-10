@@ -91,6 +91,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ### Utilities
 
+* [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
+
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
 
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
