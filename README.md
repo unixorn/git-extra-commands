@@ -95,6 +95,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
 
+* [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
+
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 
 * Peter Hurford's [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
