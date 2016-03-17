@@ -97,6 +97,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
 
+* [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
+
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 
 * Peter Hurford's [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
