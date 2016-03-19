@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Rebase commits that haven't been pushed to the tracked branch
+
+git rebase -i $(git rev-parse --abbrev-ref --symbolic-full-name @{u})
