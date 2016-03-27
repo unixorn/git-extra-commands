@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Average commits per day
+
+git log --format=format:"%cd" --date=short --no-merges --all | uniq -c | awk '{ total += $1; count++ } END { print total/count }'
