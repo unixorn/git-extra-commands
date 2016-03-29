@@ -115,6 +115,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories.
 
+* [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
+
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 
 * [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
