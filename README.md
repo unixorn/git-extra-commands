@@ -92,36 +92,21 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 ### Utilities
 
 * [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
-
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
-
+* [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's git plugin which you may prefer to the git plugin from oh-my-zsh.
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
-
 * [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
-
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
-
-* Peter Hurford's [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh), which you may prefer to the git plugin from oh-my-zsh.
-
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
-
 * [git-graph](https://github.com/jerith666/git-graph) - creates a Graphviz graph showing the high-level structure of a repository's history
-
-* [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
-
-* Peter also wrote the [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) plugin. It adds a gitit command that will open your current directory on github, in your current branch.
-
-* [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
-
+* [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) Another plugin by Peter Hurford that adds a gitit command that will open your current directory on github, in your current branch.
 * [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories.
-
-* [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
-
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
-
+* [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
 * [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
-
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
+* [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
+* [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 
 
 ## Credits
