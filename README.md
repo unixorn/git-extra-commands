@@ -103,6 +103,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories.
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
+* [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo
 * [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
