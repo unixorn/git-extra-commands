@@ -71,7 +71,7 @@ Nothing here actually requires you to use ZSH or zgen, that's just a convenient 
 If you aren't using any zsh frameworks, or if you're a bash user, do the following steps:
 
 1. git clone this repository
-2. Add it to your `$PATH`.
+2. Add `cloneDirectory/bin` to your `$PATH`.
 
 ## Other useful git stuff
 

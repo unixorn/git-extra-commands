@@ -1,4 +1,4 @@
-# Copyright 2006-2015 Joseph Block <jpb@apesseekingknowledge.net>
+# Copyright 2006-2016 Joseph Block <jpb@apesseekingknowledge.net>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 
 # Add our plugin's bin diretory to user's path
 PLUGIN_D="$(dirname $0)"
-export PATH=${PATH}:${PLUGIN_D}
+export PATH="${PATH}:${PLUGIN_D}/bin"
 
 # Skipped:
 #   incoming-commits  (appears to be a dupe of grab)
