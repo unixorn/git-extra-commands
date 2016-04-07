@@ -96,6 +96,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's git plugin which you may prefer to the git plugin from oh-my-zsh.
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
 * [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
+* [git-chart](https://github.com/flashcode/gitchart) - python script that builds charts from a git repository
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 * [git-graph](https://github.com/jerith666/git-graph) - creates a Graphviz graph showing the high-level structure of a repository's history
