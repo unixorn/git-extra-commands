@@ -91,6 +91,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ### Utilities
 
+* [bitbucket-git-helpers](https://github.com/unixorn/bitbucket-git-helpers.plugin.zsh) - Helper scripts to allow you to create bitbucket PRs from a shell session.
 * [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
 * [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's git plugin which you may prefer to the git plugin from oh-my-zsh.
