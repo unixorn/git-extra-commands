@@ -101,7 +101,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 * [git-graph](https://github.com/jerith666/git-graph) - creates a Graphviz graph showing the high-level structure of a repository's history
-* [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) Another plugin by Peter Hurford that adds a gitit command that will open your current directory on github, in your current branch.
+* [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) - Another plugin by Peter Hurford that adds a gitit command that will open your current directory on github, in your current branch.
 * [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories.
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
