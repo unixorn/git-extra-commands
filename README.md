@@ -64,7 +64,7 @@ If you're using [zgen](https://github.com/tarjoilija/zgen):
 1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
 2. `rm ${ZGEN_INIT}/init.zsh && zgen save`
 
-### Manual Installation
+### Bash / Manual Installation
 
 Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
 
@@ -107,6 +107,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
 * [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo
 * [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
+* [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
