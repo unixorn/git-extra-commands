@@ -77,17 +77,18 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ### Articles / Blog posts / Books
 
+* [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
+
 * Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of git.
 
 * Zach Dennis has a great [blog post](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
     * [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
     * [gitimmersion.com/](http://gitimmersion.com/)
 
-* There’s a quick [introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com, and a more detailed git tutorial at [http://www.learnenough.com/git-tutorial](http://www.learnenough.com/git-tutorial).
+* There’s a quick [Introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com, and a more detailed [git tutorial](http://www.learnenough.com/git-tutorial).
 
 * Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
 
-* [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
 ### Utilities
 
