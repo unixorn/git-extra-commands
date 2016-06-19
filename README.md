@@ -89,6 +89,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
 
+* [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips
 
 ### Utilities
 
@@ -97,6 +98,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
 * [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's git plugin which you may prefer to the git plugin from oh-my-zsh.
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
+* [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches
 * [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
 * [git-chart](https://github.com/flashcode/gitchart) - python script that builds charts from a git repository
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
