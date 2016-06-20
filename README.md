@@ -96,10 +96,11 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [bitbucket-git-helpers](https://github.com/unixorn/bitbucket-git-helpers.plugin.zsh) - Helper scripts to allow you to create bitbucket PRs from a shell session.
 * [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
+* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking git diffs
 * [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's git plugin which you may prefer to the git plugin from oh-my-zsh.
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
-* [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches
 * [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
+* [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches
 * [git-chart](https://github.com/flashcode/gitchart) - python script that builds charts from a git repository
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
@@ -109,8 +110,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
 * [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo
-* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
 * [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
+* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
