@@ -1,26 +1,105 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 #
 # Copied from Danielle Sucher's blog post at
 # http://www.daniellesucher.com/2014/05/08/git-shamend/
+# source: https://github.com/DanielleSucher/dotfiles/blob/master/git/git-shamend
 
 set -o nounset
 
-SHA_TO_AMEND=$(git rev-parse "$@")
+# Copyright (c) 2014 Danielle E. Sucher <dsucher@gmail.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
+PrintGitShamendUsage() {
+  echo "Usage: git shamend [options] [<revision>]"
+  echo "Amends your staged changes as a fixup (keeping the pre-existing commit"
+  echo "message) to the specified commit, or HEAD if no revision is specified."
+  echo
+  echo "Options:"
+  echo "    -a, --all             Commit unchanged files, same as git commit."
+  echo "    -h, --help            Print this help."
+}
+
+ALL=""
+SHA_TO_AMEND=""
+
+# parse arguments
+while [ "$#" -gt 0 ]; do
+  case $1 in
+    -h | --help)
+      PrintGitShamendUsage
+      exit 0
+      ;;
+    -a | --all)
+      ALL="--all"
+      ;;
+    *)
+      if [ -n "$SHA_TO_AMEND" ]; then
+        echo "ERROR: unknown parameter \"$1\""
+        PrintGitShamendUsage
+        exit 1
+      fi
+      SHA_TO_AMEND=$(git rev-parse "$1")
+      if [ ! $? ]; then
+        echo "ERROR: unparsable revision \"$1\""
+        PrintGitShamendUsage
+        exit 1
+      fi
+      ;;
+  esac
+  shift
+done
+
+# fall back to HEAD if no SHA was given
+if [ -z "$SHA_TO_AMEND" ]; then
+  SHA_TO_AMEND="HEAD"
+fi
+
+# shortcut the HEAD case for simplicity
+if [ "$SHA_TO_AMEND" = "HEAD" ]; then
+  git commit --amend --no-edit $ALL
+  exit 0
+fi
+
+BOLD=$(tput bold)
+RED=$(tput setaf 1)
+NORMAL=$(tput sgr0)
 
 if git merge-base --is-ancestor $SHA_TO_AMEND HEAD
 then
-  BOLD=$(tput bold)
-  RED=$(tput setaf 1)
-  NORMAL=$(tput sgr0)
 
-  echo "${BOLD}Warning: your unstaged changes will be stashed during this process${NORMAL}"
+  if [ -z "$ALL" ]; then
+    echo "${BOLD}Warning: your unstaged changes will be stashed during this process${NORMAL}"
+  fi
 
-  git commit --fixup $SHA_TO_AMEND > /dev/null
-  git stash > /dev/null
+  git commit $ALL --fixup $SHA_TO_AMEND > /dev/null
+
+  git diff-index --quiet HEAD
+  NOTHING_TO_STASH=$?
+  if [ $NOTHING_TO_STASH -ne 0 ]
+  then
+    git stash > /dev/null
+  fi
 
   GIT_EDITOR=true git rebase -i --autosquash "$SHA_TO_AMEND^"
 
-  if [[ $? -ne 0 ]]
+  if [ $? -ne 0 ]
   then
     git rebase --abort
     git reset --soft HEAD^
@@ -28,16 +107,12 @@ then
     echo "it looks like you'll have to interactive rebase this one manually.${NORMAL}"
   fi
 
-  git stash pop > /dev/null
+  if [ $NOTHING_TO_STASH -ne 0 ]
+  then
+    git stash pop > /dev/null
+  fi
 else
-  echo
-  echo "git-shamend amends your staged changes as a fixup (keeping the pre-existing"
-  echo "commit message) to the specified older commit in the current branch."
-  echo
-  echo "USAGE:"
-  echo "stage the changes you want to amend into an earlier commit, then run:"
-  echo "\`git shamend SHA_TO_AMEND\`"
-  echo "(where SHA_TO_AMEND must be the SHA for a commit in the current branch)"
-  echo
+  echo "${RED}${BOLD}${SHA_TO_AMEND} is not an ancestor of HEAD.${NORMAL}"
+  PrintGitShamendUsage
   exit 1
 fi
