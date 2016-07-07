@@ -124,24 +124,24 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | ------ | --------------- | ----------- |
 | git-big-file | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repo larger than a threshold size |
 | git-change-author | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another |
-| git-changes | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | List author in the repo in descending commit-count order |
+| git-changes | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | List authors in the repo in descending commit-count order |
 | git-churn | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Show which files are getting changed most often in the repository |
 | git-copy-branch-name | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch name to the clipboard (OS X Only) |
 | git-credit | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit|
-| git-cut-branch | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch named <name> pointed at HEAD and reset the current branch to the head of its tracking branch |
+| git-cut-branch | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at HEAD and reset the current branch to the head of its tracking branch |
 | git-delete-local-merged | [@tekkub](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ) | Delete all local branches that have been merged into HEAD |
-| git-delete-merged-branches | ? | Purges all branches that have been merged to a target branch (defaults ones merged to master) |
-| git-divergence | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Shows differences between local branch and it's tracking branch |
+| git-delete-merged-branches | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master) |
+| git-divergence | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Shows differences between local branch and its tracking branch |
 | git-find-dirty | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository | |
 | git-flush | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your reposistory by dropping all reflogs, stashes, and other cruft that may be bloating your pack files|
-| git-forest | Jan Engelhardt | text-based tree visualisation |
+| git-forest | Jan Engelhardt | Prints a text-based tree visualisation of your repository |
 | git-git | Mine. | Typing `git git foo` will make git do a `git foo` instead of complaining |
 | git-github-open | ? | Open GitHub file/blob page for FILE on LINE |
 | git-ignored | ? | Show files being ignored by git in the repo |
 | git-improved-merge | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Sophisticated git merge with integrated CI check and automatic cleanup |
-| git-incoming | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in tracking branch that are not in the local branch |
+| git-incoming | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in the tracking branch that are not in the local branch |
 | git-incoming-commits | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Adds a remote for the current repository for the given github username |
-| git-ls-object-refs | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Find references to <object> SHA1 in refs, commits, and trees. All of them. |
+| git-ls-object-refs | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
 | git-maxpack | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repo's pack files as much as possible |
 | git-move-commits | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | `git move-commits num-commits correct-branch` moves the last n commits to correct-branch (creating it if necessary) |
 | git-nuke | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Nukes a branch locally and on the origin remote |
@@ -152,21 +152,21 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | git-promote | Trevor's Improving My git Workflow blog post (404 now) | Promotes a local topic branch to a remote tracking branch of the same name |
 | git-prune-branches | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches) | Deletes each fully merged branch after prompting for confirmation, than asks if you want the deleted branches deleted from your upstream remotes |
 | git-pruneall | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Prune branches from specified remotes, or all remotes when no remote is specified |
-| git-publish | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | git publish remote [remote-branch] |
+| git-publish | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | `git publish remote [remote-branch]`` |
 | git-purge-from-history | David Underhill’s blog | Script to permanently delete files/folders from your git repository |
 | git-pylint | Joe Block <jpb@unixorn.net> | Runs pylint on any .py files modified or added in the git status output |
 | git-rank-contributors | William Morgan <wmorgan-git-wt-add@masanjin.net> | Rummages through the changlog and orders contributors by the size of the diffs they're responsible for |
-| git-rebase-authors | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | rebase-authors adds authorship info to interactive git rebase output |
-| git-rel | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and <ref>. With no <ref>, the current branch's remote tracking branch is used|
+| git-rebase-authors | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Adds authorship info to interactive git rebase output |
+| git-rel | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*>*. With no *ref*, the current branch's remote tracking branch is used|
 | git-root-directory | Joe Block <jpb@unixorn.net> | Prints the root of the git repository you're in |
 | git-run-command-on-revisions | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles) | Runs a given command over a range of Git revisions |
 | git-shamend | Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post | Amends your staged changes as a fixup (keeping the pre-existing commit message) to the specified commit, or HEAD if no revision is specified |
-| git-show-overwritten | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Aggregates git blame information about original owners of lines changed or removed in the '<base>...<head>' diff.|
+| git-show-overwritten | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Aggregates `git blame` information about the original owners of lines changed or removed in the '<base>...<head>' diff.|
 | git-submodule-rm | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule` |
 | git-thanks | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced |
 | git-track | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean origin/localbranchname |
 | git-trail | Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail) | Show all branching points in the repo's Git history |
-| git-undo-push | ? | Undo your last push to branch ($1) of origin |
+| git-undo-push | ? | Undoes your last push to branch ($1) of origin |
 | git-unpushed | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
 | git-unreleased | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows git commits since the last tagged version |
 | git-up | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
