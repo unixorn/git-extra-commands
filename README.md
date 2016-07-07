@@ -28,7 +28,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 
 ### Pre-requisites
 
-The version of git Apple includes in OS X is stale. `brew install git` if you're on OS X.
+A relatively recent version of git. The version of git Apple includes in OS X is stale. `brew install git` if you're on OS X.
 
 ### Antigen
 
@@ -91,7 +91,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips
 
-### Utilities
+### External Git Utilities
 
 * [bitbucket-git-helpers](https://github.com/unixorn/bitbucket-git-helpers.plugin.zsh) - Helper scripts to allow you to create bitbucket PRs from a shell session.
 * [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
