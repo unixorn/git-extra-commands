@@ -120,8 +120,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ## Credits
 
-| Script | Author | Description |
-| ------ | ------ | ----------- |
+| Script | Original Source | Description |
+| ------ | --------------- | ----------- |
 | git-big-file | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repo larger than a threshold size |
 | git-change-author | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another |
 | git-changes | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | List author in the repo in descending commit-count order |
