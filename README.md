@@ -15,11 +15,11 @@ If you wrote one of these scripts and want it removed from this collection, plea
   - [Antigen](#antigen)
   - [oh-my-zsh](#oh-my-zsh)
   - [zgen](#zgen)
-  - [Manual Installation](#manual-installation)
+  - [Bash / Manual Installation](#bash--manual-installation)
 - [Other useful git stuff](#other-useful-git-stuff)
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
-  - [Utilities](#utilities)
-- [Credits](#credits)
+  - [External Git Utilities](#external-git-utilities)
+- [Included Scripts](#included-scripts)
 - [Contributing](#contributing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -118,7 +118,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
 
-## Credits
+## Included Scripts
 
 | Script | Original Source | Description |
 | ------ | --------------- | ----------- |
