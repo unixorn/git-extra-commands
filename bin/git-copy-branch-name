@@ -4,4 +4,7 @@
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 echo $branch
-echo $branch | tr -d '\n' | tr -d ' ' | pbcopy
+
+if [[ "$(uname -s)" = "Darwin" ]]; then
+  echo $branch | tr -d '\n' | tr -d ' ' | pbcopy
+fi
