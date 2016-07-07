@@ -162,19 +162,19 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | git-run-command-on-revisions | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles) | Runs a given command over a range of Git revisions |
 | git-shamend | Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post | Amends your staged changes as a fixup (keeping the pre-existing commit message) to the specified commit, or HEAD if no revision is specified |
 | git-show-overwritten | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Aggregates git blame information about original owners of lines changed or removed in the '<base>...<head>' diff.|
-| git-submodule-rm | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) | |
-| git-thanks | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
-| git-track | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | |
-| git-trail | Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail) | |
-| git-undo-push | |
-| git-unpushed | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | |
-| git-unreleased | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
+| git-submodule-rm | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule` |
+| git-thanks | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced |
+| git-track | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean origin/localbranchname |
+| git-trail | Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail) | Show all branching points in the repo's Git history |
+| git-undo-push | ? | Undo your last push to branch ($1) of origin |
+| git-unpushed | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
+| git-unreleased | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows git commits since the last tagged version |
 | git-up | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
-| git-upstream-sync | One of my personal scripts | |
-| git-when-merged | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | |
-| git-where | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
-| git-winner | Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner) | |
-| git-wtf | William Morgan <wmorgan at the masanjin dot nets> | |
+| git-upstream-sync | Joe Block <jpb@unixorn.net> | Fetches upstream/yourforkname and rebases into your local fork, then pushes to your origin  |
+| git-when-merged | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | Find when a commit was merged into one or more branches |
+| git-where | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows where a particular commit falls between releases |
+| git-winner | Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner) | Shows what authors have made the most commits, both by number of commits and by number of lines changed |
+| git-wtf | William Morgan <wmorgan at the masanjin dot nets> | git-wtf displays the state of your repository in a readable, easy-to-scan format. It's useful for getting a summary of how a branch relates to a remote server, and for wrangling many topic branches. |
 | github-open | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
 
 ## Contributing
