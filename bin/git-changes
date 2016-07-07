@@ -2,4 +2,4 @@
 #
 # https://github.com/cofi/dotfiles/blob/master/bin
 
-git log --pretty=format:'%an <%ae>' $1 | sort | uniq -c
+git log --pretty=format:'%an <%ae>' $1 | sort | uniq -c | sort -nr
