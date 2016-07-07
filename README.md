@@ -120,56 +120,58 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ## Credits
 
-* git-big-file - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
-* git-change-author - Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author)
-* git-changes - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
-* git-churn - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
-* git-copy-branch-name - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
-* git-credit - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
-* git-cut-branch - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
-* git-delete-local-merged - [https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ)
-* git-divergence - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn)
-* git-find-dirty - Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository
-* git-flush - John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)
-* git-forest - Jan Engelhardt
-* git-git - Mine.
-* git-grab - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
-* git-improved-merge - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
-* git-incoming - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
-* git-incoming-commits - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
-* git-ls-object-refs - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
-* git-maxpack - John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)
-* git-move-commits - Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits)
-* git-nuke - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
-* git-object-deflate - Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles)
-* git-outgoing - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
-* git-pie-ify - JeeBak Kim's [gist](https://gist.github.com/jeebak/f9088cede18d31f2d3a0)
-* git-plotrepo - Matthew McCullogh's [scripts collection](https://github.com/matthewmccullough/scripts/blob/master/git-plotrepo.rb)
-* git-promote - Trevor's Improving My git Workflow blog post (404 now)
-* git-prune-branches - Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches)
-* git-publish - Michael Markert's [dotfiles](https://github.com/cofi/dotfiles)
-* git-purge-from-history - David Underhill’s blog
-* git-pylint - Runs pylint on any .py files modified or added in the git status
-* git-rank-contributors - William Morgan <wmorgan-git-wt-add@masanjin.net>
-* git-rebase-authors - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
-* git-rel - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
-* git-run-command-on-revisions - Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles)
-* git-shamend - Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post
-* git-show-overwritten - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
-* git-submodule-rm - Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles)
-* git-thanks - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
-* git-track - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
-* git-trail - Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail)
-* git-undo-push -
-* git-unpushed - Zach Holman's [dotfiles](https://github.com/holman/dotfiles)
-* git-unreleased - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
-* git-up - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
-* git-upstream-sync - One of my personal scripts
-* git-when-merged - Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged)
-* git-where - Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles)
-* git-winner - Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner)
-* git-wtf - William Morgan <wmorgan at the masanjin dot nets>
-* github-open - Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles)
+| Script | Author | Description |
+| ------ | ------ | ----------- |
+| git-big-file | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repo larger than a threshold size |
+| git-change-author | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change the one author/email to another in the history |
+| git-changes | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | List author in the repo in descending commit-count order |
+| git-churn | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | |
+| git-copy-branch-name | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | |
+| git-credit | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | |
+| git-cut-branch | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | |
+| git-delete-local-merged | [https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ) | |
+| git-divergence | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | |
+| git-find-dirty | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository | |
+| git-flush | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | |
+| git-forest | Jan Engelhardt | |
+| git-git | Mine. | |
+| git-grab | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | |
+| git-improved-merge | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
+| git-incoming | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | |
+| git-incoming-commits | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | |
+| git-ls-object-refs | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | |
+| git-maxpack | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | |
+| git-move-commits | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | |
+| git-nuke | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | |
+| git-object-deflate | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | |
+| git-outgoing | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | |
+| git-pie-ify | JeeBak Kim's [gist](https://gist.github.com/jeebak/f9088cede18d31f2d3a0) | |
+| git-plotrepo | Matthew McCullogh's [scripts collection](https://github.com/matthewmccullough/scripts/blob/master/git-plotrepo.rb) | |
+| git-promote | Trevor's Improving My git Workflow blog post (404 now) | |
+| git-prune-branches | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches) | |
+| git-publish | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | |
+| git-purge-from-history | David Underhill’s blog | |
+| git-pylint | Runs pylint on any .py files modified or added in the git status | |
+| git-rank-contributors | William Morgan <wmorgan-git-wt-add@masanjin.net> | |
+| git-rebase-authors | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
+| git-rel | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
+| git-run-command-on-revisions | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles) | |
+| git-shamend | Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post | |
+| git-show-overwritten | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
+| git-submodule-rm | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) | |
+| git-thanks | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
+| git-track | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | |
+| git-trail | Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail) | |
+| git-undo-push | |
+| git-unpushed | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | |
+| git-unreleased | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
+| git-up | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
+| git-upstream-sync | One of my personal scripts | |
+| git-when-merged | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | |
+| git-where | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | |
+| git-winner | Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner) | |
+| git-wtf | William Morgan <wmorgan at the masanjin dot nets> | |
+| github-open | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
 
 ## Contributing
 
