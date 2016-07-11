@@ -147,6 +147,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | git-nuke | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Nukes a branch locally and on the origin remote |
 | git-object-deflate | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Deflate an loose object file and write to standard output |
 | git-outgoing | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits that are on the local branch that have not been pushed to the tracking branch |
+| git-overwritten | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Aggregates git blame information about original owners of lines changed or removed in the '<base>...<head>' diff. |
 | git-pie-ify | JeeBak Kim's [gist](https://gist.github.com/jeebak/f9088cede18d31f2d3a0) | `git pie-ify pattern replacement` |
 | git-plotrepo | Matthew McCullogh's [scripts collection](https://github.com/matthewmccullough/scripts/blob/master/git-plotrepo.rb) | Uses dot to draw a graph of the repository |
 | git-promote | Trevor's Improving My git Workflow blog post (404 now) | Promotes a local topic branch to a remote tracking branch of the same name |
