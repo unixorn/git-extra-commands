@@ -1,0 +1,150 @@
+#!/bin/bash
+#
+# git-clone-subset - clones a subset of a git repository
+#
+#    Copyright (C) 2012 Rodrigo Silva (MestreLion) <linux@rodrigosilva.com>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program. If not see <http://www.gnu.org/licenses/gpl.html>
+#
+# Uses git clone and git filter-branch to remove from the clone all files but
+# the ones requested, along with their associated commit history.
+
+usage() {
+	cat <<- USAGE
+	Usage: $myname [options] <repository> <destination-dir> <pattern>
+	USAGE
+	if [[ "$1" ]] ; then
+		cat >&2 <<- USAGE
+		Try '$myname --help' for more information.
+		USAGE
+		exit 1
+	fi
+	cat <<-USAGE
+
+	Clones a <repository> into a <destination-dir> and runs on the clone
+	git filter-branch --prune-empty --tree-filter 'git rm ...' -- --all
+	to prune from history all files except the ones matching <pattern>,
+	effectively creating a clone with a subset of files (and history) of the
+	original repository.
+
+	Useful for creating a new repository out of a set of files from another
+	repository, migrating (only) their associated history. Very similar to
+	what git filter-branch --subdirectory-filter does, but for a file
+	pattern instead of just a single directory.
+
+	Options:
+	  -h, --help
+	     show this page.
+
+	  <repository>
+	    URL or local path to the git repository to be cloned.
+
+	  <destination-dir>
+	    Directory to create the clone. Same rules for git-clone applies: it
+	    will be created if it does not exist and it must be empty otherwise.
+	    But, unlike git-clone, this argument is not optional: git-clone uses
+	    several rules to determine the "Humane" dir name of a cloned repo,
+	    and $myname will not risk parse its output, let alone
+	    predict the chosen name.
+
+	  <pattern>
+	    Glob pattern to match the desired files/dirs. It will be ultimately
+	    evaluated by a call to bash, NOT git or sh, using extended glob
+	    '!(<pattern>)' rule. Quote it or escape it on command line, so it
+	    does not get evaluated prematurely by your current shell. Only a
+	    single pattern is allowed: if more are required, use extglob's "|"
+	    syntax. Globs will be evaluated with bash's shopt dotglob set, so
+	    beware. Patterns should not contain spaces or special chars like
+	    " ' \$ ( ) { } \`, not even quoted or escaped, since that might
+	    interphere with the !() syntax after pattern expansion.
+
+	    Pattern Examples:
+	       "*.png"
+	       "*.png|*icon*"
+	       "*.h|src/|lib"
+
+	Limitations:
+
+	- Renames are NOT followed. As a workaround, list the rename history with
+	  'git log --follow --name-status --format='%H' -- file | grep "^[RAD]"'
+	  and include all multiple names of a file in the pattern, as in
+	  "currentname|oldname|initialname". As a side efect, if a different
+	  file has taken place of an old name, it will be preserved too, and
+	  there is no way around this using this tool.
+
+	- There is no (easy) way to keep some files in a dir: using 'dir/foo*'
+	  as pattern will not work. So keep the whole dir and remove files
+	  afterwards, using git filter-branch and a (quite complex) combination
+	  of cloning, remote add, rebases, etc.
+
+	- Pattern matching is quite limited, and many of bash's escaping and
+	  quoting does not work properly when pattern is expanded inside !().
+
+	Copyright (C) 2013 Rodrigo Silva (MestreLion) <linux@rodrigosilva.com>
+	License: GPLv3 or later. See <http://www.gnu.org/licenses/gpl.html>
+	USAGE
+	exit 0
+}
+
+# Helper functions
+myname="${0##*/}"
+argerr()  { printf "%s: %s\n" "${0##*/}" "${1:-error}" >&2 ; usage 1 ; }
+invalid() { argerr "invalid option: $1" ; }
+missing() { argerr "missing ${2:+$2 }operand${1:+ from $1}." ; }
+
+# Argument handling
+for arg in "$@"; do case "$arg" in -h|--help) usage ;; esac; done
+
+repo=$1
+dir=$2
+pattern=$3
+
+[[ "$repo"    ]] || missing "" "<repository>"
+[[ "$dir"     ]] || missing "" "<destination-dir>"
+[[ "$pattern" ]] || missing "" "<pattern>"
+
+(($# > 3)) && argerr "too many arguments: $4"
+
+# Clone the repo and enter it
+git clone --no-hardlinks "$repo" "$dir" && cd "$dir" &&
+
+# Remove remotes (a clone is meant to be a different repository)
+while read -r remote; do
+	git remote rm "$remote" || break
+done < <(git remote) &&
+
+# The heart of the script
+git filter-branch --prune-empty --tree-filter \
+"bash -O dotglob -O extglob -c "\
+"'git rm -rf --ignore-unmatch -- !($pattern)'" \
+-- --all &&
+
+# fix a bug in filter-branch where empty root commits are not removed
+# even with --prune-empty. First we loop each root commit
+while read -r root; do
+
+	# Test if it's an non-empty commit
+	if [[ "$(git ls-tree "$root")" ]]; then continue; fi
+
+	# Now "remove" it by deleting its child's parent reference
+	git filter-branch --force --parent-filter "sed 's/-p $root//'" -- --all
+
+done < <(git rev-list --max-parents=0 HEAD) &&
+
+# Deletes backups and reflogs, not needed in a clone
+if [[ -e .git/refs/original/ ]] ; then
+	git "for-each-ref" --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+fi &&
+git reflog expire --expire=now --all &&
+git gc --prune=now
