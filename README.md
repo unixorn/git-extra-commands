@@ -131,11 +131,12 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | git-cut-branch | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at HEAD and reset the current branch to the head of its tracking branch |
 | git-delete-local-merged | [@tekkub](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ) | Delete all local branches that have been merged into HEAD |
 | git-delete-merged-branches | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master) |
+| git-delete-tag | Joe Block <jpb@unixorn.net> | Delete a tag, both locally and from the origin remote |
 | git-divergence | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Shows differences between local branch and its tracking branch |
 | git-find-dirty | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository | |
 | git-flush | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your reposistory by dropping all reflogs, stashes, and other cruft that may be bloating your pack files|
 | git-forest | Jan Engelhardt | Prints a text-based tree visualisation of your repository |
-| git-git | Mine. | Typing `git git foo` will make git do a `git foo` instead of complaining |
+| git-git | Joe Block <jpb@unixorn.net> | Typing `git git foo` will make git do a `git foo` instead of complaining |
 | git-github-open | ? | Open GitHub file/blob page for FILE on LINE |
 | git-ignored | ? | Show files being ignored by git in the repo |
 | git-improved-merge | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Sophisticated git merge with integrated CI check and automatic cleanup |
