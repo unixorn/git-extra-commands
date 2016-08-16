@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+if ENV.has_key?('VISUAL')
+  edit=ENV['VISUAL']
+elsif ENV.has_key?('EDITOR')
+  edit=ENV['EDITOR']
+else
+  puts "$VISUAL and $EDITOR are both unset, aborting"
+  exit 1
+end
+
+conflicts = `git diff --name-only | uniq`.gsub(/\n/,' ')
+exec("#{edit} #{conflicts}")
