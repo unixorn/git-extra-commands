@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Cleanse your working directory with fire
+
+git reset --hard HEAD && git clean -fdx

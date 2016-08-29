@@ -163,6 +163,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | git-rebase-authors | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Adds authorship info to interactive git rebase output |
 | git-recently-checkedout-branches | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order |
 | git-rel | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*>*. With no *ref*, the current branch's remote tracking branch is used|
+| git-reset-with-fire | Joe Block <jpb@unixorn.net> | Hard reset the working directory, then zap any files not in git |
 | git-root-directory | Joe Block <jpb@unixorn.net> | Prints the root of the git repository you're in |
 | git-run-command-on-revisions | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles) | Runs a given command over a range of Git revisions |
 | git-shamend | Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post | Amends your staged changes as a fixup (keeping the pre-existing commit message) to the specified commit, or HEAD if no revision is specified |
