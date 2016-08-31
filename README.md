@@ -162,6 +162,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | git-pylint | Joe Block <jpb@unixorn.net> | Runs pylint on any .py files modified or added in the git status output |
 | git-rank-contributors | William Morgan <wmorgan-git-wt-add@masanjin.net> | Rummages through the changlog and orders contributors by the size of the diffs they're responsible for |
 | git-rebase-authors | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Adds authorship info to interactive git rebase output |
+| git-rebase-theirs | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Resolve rebase conflicts by favoring 'theirs' version |
 | git-recently-checkedout-branches | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order |
 | git-rel | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*>*. With no *ref*, the current branch's remote tracking branch is used|
 | git-reset-with-fire | Joe Block <jpb@unixorn.net> | Hard reset the working directory, then zap any files not in git |

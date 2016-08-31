@@ -1,0 +1,128 @@
+#!/bin/bash
+#
+# git-rebase-theirs - Resolve rebase conflicts by favoring 'theirs' version
+#
+#    Copyright (C) 2012 Rodrigo Silva (MestreLion) <linux@rodrigosilva.com>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program. If not see <http://www.gnu.org/licenses/gpl.html>
+
+#Defaults:
+verbose=0
+backup=1
+inplace=0
+ext=".bak"
+
+message() { printf "%s\n" "$1" >&2 ; }
+skip()    { message "skipping ${2:-$file}${1:+: $1}"; continue ; }
+argerr()  { printf "%s: %s\n" "$myname" "${1:-error}" >&2 ; usage 1 ; }
+invalid() { argerr "invalid option: $1" ; }
+missing() { argerr "missing${1:+ $1} operand." ; }
+
+usage() {
+	cat <<- USAGE
+	Usage: $myname [options] [--] FILE...
+	USAGE
+	if [[ "$1" ]] ; then
+		cat >&2 <<- USAGE
+		Try '$myname --help' for more information.
+		USAGE
+		exit 1
+	fi
+	cat <<-USAGE
+
+	Resolve git rebase conflicts in FILE(s) by favoring 'theirs' version
+
+	When using git rebase, conflicts are usually wanted to be resolved
+	by favoring the <working branch> version (the branch being rebased,
+	'theirs' side in a rebase), instead of the <upstream> version (the
+	base branch, 'ours' side)
+
+	But git rebase --strategy -X theirs is only available from git 1.7.3
+	For older versions, $myname is the solution. And Despite the name,
+	it's also useful for fixing failed cherry-picks
+
+	It works by discarding all lines between '<<<<<<< ' and '========'
+	inclusive, and also the the '>>>>>> commit' marker.
+
+	By default it outputs to stdout, but files can be edited in-place
+	using --in-place, which, unlike sed, creates a backup by default.
+
+	Options:
+	  -h|--help            show this page.
+	  -v|--verbose         print more details in stderr.
+
+	  --in-place[=SUFFIX]  edit files in place, creating a backup with
+	                       SUFFIX extension. Default if blank is "$ext"
+
+	  --no-backup          disables backup
+
+	Copyright (C) 2012 Rodrigo Silva (MestreLion) <linux@rodrigosilva.com>
+	License: GPLv3 or later. See <http://www.gnu.org/licenses/gpl.html>
+	USAGE
+	exit 0
+}
+myname="${0##*/}"
+
+# Option handling
+files=()
+while (( $# )); do
+	case "$1" in
+	-h|--help     ) usage            ;;
+	-v|--verbose  ) verbose=1        ;;
+	--no-backup   ) backup=0         ;;
+	--in-place    ) inplace=1        ;;
+	--in-place=*  ) inplace=1
+	                suffix="${1#*=}" ;;
+	--            ) shift ; break    ;;
+	-*            ) invalid "$1"     ;;
+	*             ) files+=( "$1" )  ;;
+	esac
+	shift
+done
+files+=( "$@" )
+
+if ! (( "${#files[@]}" )); then missing "FILE"; fi
+
+ext=${suffix:-$ext}
+
+for file in "${files[@]}"; do
+
+	if ! [[ -f "$file" ]]; then skip "not a valid file"; fi
+
+	if ((inplace)); then
+		outfile=$(mktemp) || skip "could not create temporary file"
+		trap "rm -f -- '$outfile'" EXIT
+		cp "$file" "$outfile" || skip
+		exec 3>"$outfile"
+	else
+		exec 3>&1
+	fi
+
+	# Do the magic :)
+	awk '/^<<<<<<<+ .+$/,/^=+$/{next} /^>>>>>>>+ /{next} 1' "$file" >&3
+
+	exec 3>&-
+
+	if ! ((inplace)); then continue; fi
+
+	diff "$file" "$outfile" >/dev/null && skip "no conflict markers found"
+
+	if ((backup)); then cp "$file" "$file$ext" || skip "could not backup"; fi
+
+	cp "$outfile" "$file" || skip "could not edit in-place"
+	rm -f -- "$outfile"
+	trap - EXIT
+
+	if ((verbose)); then message "resolved ${file}"; fi
+done
