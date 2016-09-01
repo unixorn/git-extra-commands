@@ -138,6 +138,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | git-edit-conflicts | Joe Block <jpb@unixorn.net> | Edit the files that are marked as conflicted during a merge/rebase in your $EDITOR/$VISUAL |
 | git-find-dirty | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository | |
 | git-flush | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your reposistory by dropping all reflogs, stashes, and other cruft that may be bloating your pack files|
+| git-force-mtimes | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets mtimes of all files in the reprository their last change date based on git's log. Useful to avoid too new dates after a checkout. |
 | git-forest | Jan Engelhardt | Prints a text-based tree visualisation of your repository |
 | git-git | Joe Block <jpb@unixorn.net> | Typing `git git foo` will make git do a `git foo` instead of complaining |
 | git-github-open | ? | Open GitHub file/blob page for FILE on LINE |
