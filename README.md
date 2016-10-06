@@ -85,13 +85,15 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
     * [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
     * [gitimmersion.com/](http://gitimmersion.com/)
 
-* There’s a quick [Introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com, and a more detailed [git tutorial](http://www.learnenough.com/git-tutorial).
+* There’s a quick [Introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com
+
+* There's a more detailed git tutorial on [learnenough.com](http://www.learnenough.com/git-tutorial)
 
 * Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
 
 * [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips
 
-Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
+* Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
 
 ### External Git Utilities
 
