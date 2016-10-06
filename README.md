@@ -91,6 +91,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips
 
+Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
+
 ### External Git Utilities
 
 * [bitbucket-git-helpers](https://github.com/unixorn/bitbucket-git-helpers.plugin.zsh) - Helper scripts to allow you to create bitbucket PRs from a shell session.
