@@ -9,14 +9,15 @@ set -o errexit
 #  retrieved from: http://dound.com/2009/04/git-forever-remove-files-or-folders-from-history/
 #
 
-if [ $# -eq 0 ]; then
-    exit 0are still
+if [[ $# -eq 0 ]]; then
+  echo "You must specify a file/directory to purge from your git history"
+  exit 1
 fi
 
 # make sure we're at the root of git repo
-if [ ! -d .git ]; then
-    echo "Error: must run this script from the root of a git repository"
-    exit 1
+if [[ ! -d .git ]]; then
+  echo "Error: must run this script from the root of a git repository"
+  exit 1
 fi
 
 # remove all paths passed as arguments from the history of the repo
