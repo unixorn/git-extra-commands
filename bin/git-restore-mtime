@@ -1,0 +1,418 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# git-restore-mtime - Change mtime of files based on commit date of last change
+#
+#    Copyright (C) 2012 Rodrigo Silva (MestreLion) <linux@rodrigosilva.com>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program. See <http://www.gnu.org/licenses/gpl.html>
+#
+# Change the modification time (mtime) of all files in work tree, based on the
+# date of the most recent commit that modified the file.
+#
+# Useful prior to generating release tarballs, so each file is archived with a
+# date that resembles the date when the file was actually last modified.
+# (assuming the actual modification date and its commit date are close)
+
+# By default ignores all ignored and untracked files, and also refuses to work
+# on trees with uncommitted changes.
+
+if __name__ != "__main__":
+    raise ImportError("%s should not be used as a module." % __name__)
+
+import subprocess, shlex
+import sys, os.path
+import logging as logger
+import argparse
+import time
+
+if sys.version_info[:2] >= (3, 0):
+    def text(s):
+        return s.decode('utf-8')
+else:
+    def text(s):
+        return s
+
+parser = argparse.ArgumentParser(
+    description='Restore original modification time of files based on '
+                'the date of the most recent commit that modified them. '
+                'Useful when generating release tarballs.')
+
+parser.add_argument('--quiet', '-q',
+                    action="store_true",
+                    help='suppress informative messages and summary statistics.')
+
+parser.add_argument('--verbose', '-v',
+                    action="store_true",
+                    help='print additional information for each processed file. '
+                    'Overwrites --quiet.')
+
+parser.add_argument('--force', '-f',
+                    action="store_true",
+                    help='force execution on trees with uncommitted changes.')
+
+parser.add_argument('--merge', '-m',
+                    action="store_true",
+                    help='include merge commits. Leads to more recent mtimes '
+                        'and more files per commit, thus with the same mtime '
+                        '(which may or may not be what you want). Including '
+                        'merge commits may lead to less commits being evaluated '
+                        '(all files are found sooner), which improves performance, '
+                        'sometimes substantially. But since merge commits are '
+                        'usually huge, processing them may also take longer, '
+                        'sometimes substantially. By default merge logs are only '
+                        'used for files missing from regular commit logs.')
+
+parser.add_argument('--first-parent',
+                    action="store_true",
+                    help='pass --first-parent to git whatchanged to hide the '
+                        'second parent from the merge commit logs. Only has any '
+                        'effect if --merge is also specified or --skip-missing '
+                        'is not specified and there were files not found in regular '
+                        'commit logs.')
+
+parser.add_argument('--skip-missing', '-s',
+                    action="store_false", default=True, dest='missing',
+                    help='do not try to find missing files. If some files were '
+                        'not found in regular commit logs, by default it re-tries '
+                        'using merge commit logs for these files (if --merge was '
+                        'not used already). This option disables this behavior, '
+                        'which may slightly improve performance, but files '
+                        'found only in merge commits will not be updated.')
+
+parser.add_argument('--no-directories', '-D',
+                    action="store_false", default=True, dest='dirs',
+                    help='do not update directory mtime for files created, '
+                        'renamed or deleted in it. Note: just modifying a file '
+                        'will not update its directory mtime.')
+
+parser.add_argument('--test', '-t',
+                    action="store_true", default=False, dest='test',
+                    help='test run: do not actually update any file')
+
+parser.add_argument('--commit-time', '-c',
+                    action='store_const', const='%ct', default='%at', dest='timeformat',
+                    help='use commit time instead of author time')
+
+parser.add_argument('pathspec',
+                    nargs='*', default=[os.path.curdir],
+                    help='only modify paths (dirs or files) matching PATHSPEC, '
+                        'relative to current directory. '
+                        'Default is to modify all non-ignored, tracked files.')
+
+parser.add_argument('--work-tree',
+                    dest='workdir',
+                    help='specify where the work tree is. '
+                        'Default for most repositories is current directory.')
+
+parser.add_argument('--git-dir',
+                    dest='gitdir',
+                    help='specify where the git repository is. '
+                        'Default for most repositories <work-tree>/.git')
+
+args = parser.parse_args()
+
+gitcmd = ['git']
+if args.workdir: gitcmd.append("--work-tree=%s" % args.workdir)
+if args.gitdir : gitcmd.append("--git-dir=%s"   % args.gitdir)
+
+if   args.verbose: level = logger.DEBUG
+elif args.quiet:   level = logger.WARN
+else:              level = logger.INFO
+
+logger.basicConfig(level=level, format='%(message)s')
+
+
+# UI done, it's show time!
+start = time.time()  # yes, Wall time. CPU time is not realistic for users.
+
+lines = loglines = commits = totalfiles = \
+ignoredfiles = files = touches = errors = 0
+stepmissing = 100
+
+
+# First things first: Where and Who are we?
+try:
+    workdir, gitdir = text(subprocess.check_output(gitcmd + shlex.split(
+                    'rev-parse --show-toplevel --git-dir'))).split('\n')[:2]
+
+    workdir = os.path.abspath(workdir)
+    gitdir  = os.path.abspath(gitdir)
+
+except subprocess.CalledProcessError as e:
+    # rev-parse couldn't find git repo, and already informed user.
+    # So we just...
+    sys.exit(e.returncode)
+
+
+# Get the files managed by git
+lsfileslist = set()
+gitobj = subprocess.Popen(gitcmd + shlex.split('ls-files --full-name') +
+                          ['--'] + args.pathspec,
+                          stdout=subprocess.PIPE)
+for line in gitobj.stdout:
+    lsfileslist.add(os.path.relpath(line.strip(), workdir))
+
+# List files matching user pathspec, relative to current directory
+# git commands always print paths relative to work tree root
+filelist = set()
+dirlist  = set()
+for path in args.pathspec:
+
+    # Normalize user input so ./doc = doc/ = doc/../doc/. = doc
+    path = os.path.normpath(path)
+
+    # Is path inside the work tree?
+    if os.path.commonprefix([workdir, os.path.abspath(path)]) != workdir:
+        logger.warn("WARNING: Skipping pathspec outside work tree: %s", path)
+        continue
+
+    # git does not care if it's a broken symlink, hence lexists
+    if not os.path.lexists(path):
+        logger.warn("WARNING: Skipping non-existing pathspec: %s", path)
+        continue
+
+    # file or symlink (to file, to dir or broken - git handles the same way)
+    if os.path.isfile(path) or os.path.islink(path):
+        # Always add them relative to worktree root
+        filelist.add(os.path.relpath(path, workdir))
+
+    # dir
+    else:
+        for root, subdirs, files in os.walk(path):
+            if gitdir in [os.path.abspath(os.path.join(root, subdir))
+                          for subdir in subdirs]:
+                subdirs.remove(os.path.basename(gitdir))
+
+            if os.path.abspath(root) == workdir and '.git' in files:
+                files.remove('.git')
+
+            if args.dirs:
+                dir = os.path.relpath(root, workdir)
+                if dir == '.':
+                    dir = ''
+                dirlist.add(dir)
+
+            for file in files:
+                # Always add them relative to worktree root
+                filelist.add(os.path.relpath(os.path.join(root, file), workdir))
+
+filelist &= lsfileslist
+
+totaldirs  = dirs  = len(dirlist)
+totalfiles = files = len(filelist)
+logger.info("{:,} files to be processed in work dir".format(totalfiles))
+
+
+# Discard untracked and ignored files
+ignoredlist = set()
+gitobj = subprocess.Popen(gitcmd + shlex.split('status --porcelain --ignored') +
+                          ['--'] + args.pathspec,
+                          stdout=subprocess.PIPE)
+for line in gitobj.stdout:
+    line = text(line.strip())
+    status = line[:2]
+    filespec = line[3:]
+
+    # Make sure the slash matches the os; for Windows we need a backslash
+    if not os.sep == '/':
+        filespec = filespec.replace('/', os.sep)
+
+    if status in ['??', '!!']: # also safe to ignore: 'A ', ' M'
+        # filespec can be a dir, so we must iterate on filelist
+        for file in filelist:
+            if ( (filespec.endswith(os.sep) and  file.startswith(filespec)) or
+                 (file == filespec) ):
+                logger.debug("Ignoring: %s", file)
+                ignoredlist.add(file)
+                files -= 1
+                ignoredfiles += 1
+    elif not args.force:
+        logger.critical(
+         "ERROR: There are local changes in the working directory.\n"
+         "This could lead to undesirable results for modified files.\n"
+         "Please, commit your changes (or use --force) and try again.\n"
+         "Aborting")
+        gitobj.kill()
+        sys.exit(1)
+
+if ignoredfiles:
+    filelist -= ignoredlist
+    logger.info("{:,} files to process after ignoring {:,}"
+                "".format(files, ignoredfiles))
+
+
+# Process the log until all files are 'touched'
+logger.debug("Line #\tLog #\tFiles\tmtime\tFile")
+def parselog(merge=False, filterlist=[]):
+    global loglines, dirs, files, touches, errors, commits
+
+    gitobj = subprocess.Popen(gitcmd + shlex.split('whatchanged --pretty={}'.format(args.timeformat)) +
+                              (['-m'] if merge else []) +
+                              (['--first-parent'] if args.first_parent else []) +
+                              ['--'] + filterlist,
+                              stdout=subprocess.PIPE)
+    for line in gitobj.stdout:
+        loglines += 1
+        line = text(line.strip())
+
+        # Blank line between Date and list of files
+        if not line: continue
+
+        # File line
+        if line.startswith(':'):
+            # If line describes a rename, linetok has three tokens, otherwise
+            # two.
+            linetok = line.split('\t')
+            status = linetok[0]
+            file = linetok[-1]
+
+            # Make sure the slash matches the os; for Windows we need a backslash
+            if not os.sep == '/':
+                file = file.replace('/',os.sep)
+
+            if file.startswith('"'):
+                file = file[1:-1].decode("string-escape")
+
+            if file in filelist:
+                logger.debug("%d\t%d\t%d\t%s\t%s",
+                             loglines, commits, files,
+                             time.ctime(mtime), file)
+                filelist.remove(file)
+                files -= 1
+                try:
+                    if not args.test:
+                        os.utime(os.path.join(workdir, file), (mtime, mtime))
+                    touches += 1
+                except Exception as e:
+                    logger.error("ERROR: %s\n", e)
+                    errors += 1
+
+            if args.dirs:
+                dir = os.path.dirname(file)
+                if status[-1] in ['A', 'D'] and dir in dirlist:
+                    logger.debug("%d\t%d\t-\t%s\t%s",
+                                 loglines, commits,
+                                 time.ctime(mtime), dir)
+                    dirlist.remove(dir)
+                    try:
+                        if not args.test:
+                            os.utime(os.path.join(workdir, dir), (mtime, mtime))
+                        dirs -= 1
+                    except Exception as e:
+                        logger.error("ERROR: %s\n", e)
+
+        # Date line
+        else:
+            commits += 1
+            mtime = int(line)
+
+        # All files done?
+        if not files:
+            break
+
+    try:
+        gitobj.terminate()
+    except OSError:
+        pass
+
+
+parselog(args.merge, args.pathspec)
+
+# Missing files
+if filelist:
+
+    # Try to find them in merge logs, if not done already
+    # (usually HUGE, thus MUCH slower!)
+    if args.missing and not args.merge:
+        filterlist = list(filelist)
+        for i in range(0, len(filterlist), stepmissing):
+            parselog(merge=True, filterlist=filterlist[i:i+stepmissing])
+
+    # Still missing some?
+    for file in filelist:
+        logger.warn("WARNING: not found in log: %s", file)
+
+
+# Final statistics
+# TODO: use git-log --before=mtime to brag about skipped log entries
+logger.info(
+    "Statistics:\n"
+    "{:13,.2f} seconds\n"
+    "{:13,} log lines processed\n"
+    "{:13,} commits evaluated"
+    "".format(time.time()-start, loglines, commits))
+
+if touches != totalfiles:
+                 logger.info("{:13,} total files".format(totalfiles))
+if ignoredfiles: logger.info("{:13,} ignored files".format(ignoredfiles))
+if files:        logger.info("{:13,} missing files".format(files))
+if errors:       logger.info("{:13,} update errors".format(errors))
+
+logger.info("{:13,} updated files".format(touches))
+
+if args.dirs:
+    logger.info("{:13,} updated directories".format(totaldirs - dirs))
+
+if args.test:
+        logger.info("TEST RUN - No files modified!")
+
+# Statistics for some large projects
+
+#bash
+#         0.27 seconds
+#        5,750 log lines processed
+#           62 commits evaluated
+#        1,155 updated files
+
+#git
+#         3.71 seconds
+#       96,702 log lines processed
+#       24,217 commits evaluated
+#        2,495 updated files
+
+#git (--merge)
+#         0.19 seconds
+#        2,586 log lines processed
+#            3 commits evaluated
+#        2,495 updated files
+
+#wine
+#        13.53 seconds
+#      443,979 log lines processed
+#       91,703 commits evaluated
+#        6,005 updated files
+
+#linux kernel
+#        59.11 seconds
+#    1,484,567 log lines processed
+#      313,164 commits evaluated
+#       40,902 updated files
+
+#linux kernel (--skip-missing)
+#WARNING: not found in log: arch/arm/mach-sa1100/include/mach/reset.h
+#WARNING: not found in log: lib/raid6/unroll.awk
+#Statistics:
+#        51.88 seconds
+#    1,484,558 log lines processed
+#      313,161 commits evaluated
+#       40,902 total files
+#            2 missing files
+#       40,900 updated files
+
+#linux kernel (--merge)
+#       501.17 seconds
+#   34,495,300 log lines processed
+#      238,711 commits evaluated
+#       40,902 updated files
