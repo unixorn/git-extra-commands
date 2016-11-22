@@ -102,6 +102,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking git diffs
 * [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's git plugin which you may prefer to the git plugin from oh-my-zsh.
+* [git-also](https://github.com/anvaka/git-also) - Shows what files are most often committed with a given file in the repository.
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
 * [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
 * [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches
