@@ -62,7 +62,7 @@ If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
 If you're using [zgen](https://github.com/tarjoilija/zgen):
 
 1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
-2. `rm ${ZGEN_INIT}/init.zsh && zgen save`
+2. `zgen reset && zgen save`
 
 ### Bash / Manual Installation
 
