@@ -118,9 +118,9 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-standup](https://github.com/kamranahmedse/git-standup) - Recall what you did on the last working day. Can work in a directory full of git repos to see a consolidated view of all work in all the repos.
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
-* [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo
+* [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo.
 * [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
-* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
+* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
