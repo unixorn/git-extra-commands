@@ -132,7 +132,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | ------ | --------------- | ----------- |
 | `git-big-file` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repo larger than a threshold size |
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another |
-| `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | turn "git log" output into a complete Changelog for projects that haven't been maintaining one |
+| `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | turn `git log` output into a complete Changelog for projects that haven't been maintaining one |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | List authors in the repo in descending commit-count order |
 | `git-churn` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Show which files are getting changed most often in the repository |
 | `git-clone-subset` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Uses git clone and git filter-branch to remove from the clone all files but the ones requested, along with their associated commit history. |
