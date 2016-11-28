@@ -62,7 +62,7 @@ If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
 If you're using [zgen](https://github.com/tarjoilija/zgen):
 
 1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
-2. `rm ${ZGEN_INIT}/init.zsh && zgen save`
+2. `zgen reset && zgen save`
 
 ### Bash / Manual Installation
 
@@ -118,9 +118,9 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-standup](https://github.com/kamranahmedse/git-standup) - Recall what you did on the last working day. Can work in a directory full of git repos to see a consolidated view of all work in all the repos.
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
-* [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo
+* [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo.
 * [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
-* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches
+* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
@@ -132,10 +132,10 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | ------ | --------------- | ----------- |
 | `git-big-file` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repo larger than a threshold size |
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another |
-| `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | turn "git log" output into a complete Changelog for projects that haven't been maintaining one |
+| `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | turn `git log` output into a complete Changelog for projects that haven't been maintaining one |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | List authors in the repo in descending commit-count order |
 | `git-churn` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Show which files are getting changed most often in the repository |
-| `git-clone-subset` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Uses git clone and git filter-branch to remove from the clone all files but the ones requested, along with their associated commit history. |
+| `git-clone-subset` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Uses `git clone` and `git filter-branch` to remove from the clone all files but the ones requested, along with their associated commit history. |
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch name to the clipboard (OS X Only) |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit|
 | `git-cut-branch` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at HEAD and reset the current branch to the head of its tracking branch |
@@ -143,7 +143,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-delete-merged-branches` | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master) |
 | `git-delete-tag` | Joe Block <jpb@unixorn.net> | Delete a tag, both locally and from the origin remote |
 | `git-divergence` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Shows differences between local branch and its tracking branch |
-| `git-edit-conflicts` | Joe Block <jpb@unixorn.net> | Edit the files that are marked as conflicted during a merge/rebase in your $EDITOR/$VISUAL |
+| `git-edit-conflicts` | Joe Block <jpb@unixorn.net> | Edit the files that are marked as conflicted during a merge/rebase in your `$EDITOR/$VISUAL` |
 | `git-find-dirty` | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository | |
 | `git-flush` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your reposistory by dropping all reflogs, stashes, and other cruft that may be bloating your pack files|
 | `git-force-mtimes` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets mtimes of all files in the reprository their last change date based on git's log. Useful to avoid too new dates after a checkout. |
@@ -169,8 +169,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-publish` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | `git publish remote [remote-branch]`` |
 | `git-purge-from-history` | David Underhill’s blog | Script to permanently delete files/folders from your git repository |
 | `git-pylint` | Joe Block <jpb@unixorn.net> | Runs pylint on any .py files modified or added in the git status output |
-| `git-rank-contributors` | William Morgan <wmorgan-git-wt-add@masanjin.net> | Rummages through the changlog and orders contributors by the size of the diffs they're responsible for |
-| `git-rebase-authors` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Adds authorship info to interactive git rebase output |
+| `git-rank-contributors` | William Morgan <wmorgan-git-wt-add@masanjin.net> | Rummages through the changelog and orders contributors by the size of the diffs they're responsible for |
+| `git-rebase-authors` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Adds authorship info to interactive `git rebase` output |
 | `git-rebase-theirs` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Resolve rebase conflicts by favoring 'theirs' version |
 | `git-recently-checkedout-branches` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order |
 | `git-rel` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*>*. With no *ref*, the current branch's remote tracking branch is used|
@@ -193,7 +193,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-when-merged` | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | Find when a commit was merged into one or more branches |
 | `git-where` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows where a particular commit falls between releases |
 | `git-winner` | Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner) | Shows what authors have made the most commits, both by number of commits and by number of lines changed |
-| `git-wtf` | William Morgan <wmorgan at the masanjin dot nets> | git-wtf displays the state of your repository in a readable, easy-to-scan format. It's useful for getting a summary of how a branch relates to a remote server, and for wrangling many topic branches. |
+| `git-wtf` | William Morgan <wmorgan at the masanjin dot nets> | `git-wtf` displays the state of your repository in a readable, easy-to-scan format. It's useful for getting a summary of how a branch relates to a remote server, and for wrangling many topic branches. |
 | `github-open` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
 
 ## Contributing
