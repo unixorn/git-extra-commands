@@ -97,6 +97,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ### External Git Utilities
 
+* [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like git-filter-branch does, but faster.
 * [bitbucket-git-helpers](https://github.com/unixorn/bitbucket-git-helpers.plugin.zsh) - Helper scripts to allow you to create bitbucket PRs from a shell session.
 * [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
