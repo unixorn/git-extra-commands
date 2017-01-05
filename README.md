@@ -197,6 +197,15 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-wtf` | William Morgan <wmorgan at the masanjin dot nets> | `git-wtf` displays the state of your repository in a readable, easy-to-scan format. It's useful for getting a summary of how a branch relates to a remote server, and for wrangling many topic branches. |
 | `github-open` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
 
+## Useful git aliases
+
+Here are some helpful aliases for your `~/.gitconfig`
+
+| alias | Description |
+| ----- | ----------- |
+| `ahead-of-master = log --oneline origin/master..HEAD` | Show commits that haven't made it to master yet |
+| `wip = rebase -i @{u}` | Starts an interactive rebase of all the commits you haven't pushed yet. Handy for collapsing a bunch of WIP snapshots into logical commits before pushing, without having to worry about accidentally squashing a commit someone else has already referred to |
+
 ## Contributing
 
 * Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly.
