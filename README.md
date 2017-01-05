@@ -199,7 +199,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 ## Useful git aliases
 
-These are helpful aliases for your `~/.gitconfig`
+Here are some helpful aliases for your `~/.gitconfig`
 
 | alias | Description |
 | ----- | ----------- |
