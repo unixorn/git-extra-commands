@@ -106,8 +106,9 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-also](https://github.com/anvaka/git-also) - Shows what files are most often committed with a given file in the repository.
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
 * [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
-* [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches
-* [git-chart](https://github.com/flashcode/gitchart) - python script that builds charts from a git repository
+* [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches.
+* [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a git repository
+* [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a git repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 * [git-flow-completion](https://github.com/bobthecow/git-flow-completion) - Bash, Fish and Zsh completion support for [git-flow](http://github.com/nvie/gitflow)
@@ -141,7 +142,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch name to the clipboard (OS X Only) |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit|
 | `git-cut-branch` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at HEAD and reset the current branch to the head of its tracking branch |
-| `git-delete-local-merged` | [@tekkub](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ) | Delete all local branches that have been merged into HEAD |
+| `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into HEAD |
 | `git-delete-merged-branches` | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master) |
 | `git-delete-tag` | Joe Block <jpb@unixorn.net> | Delete a tag, both locally and from the origin remote |
 | `git-divergence` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Shows differences between local branch and its tracking branch |
