@@ -142,7 +142,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch name to the clipboard (OS X Only) |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit|
 | `git-cut-branch` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at HEAD and reset the current branch to the head of its tracking branch |
-| `git-delete-local-merged` | [@tekkub](https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ) | Delete all local branches that have been merged into HEAD |
+| `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into HEAD |
 | `git-delete-merged-branches` | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master) |
 | `git-delete-tag` | Joe Block <jpb@unixorn.net> | Delete a tag, both locally and from the origin remote |
 | `git-divergence` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Shows differences between local branch and its tracking branch |
