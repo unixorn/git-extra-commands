@@ -95,6 +95,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
 
+* And when you manage to get your git working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to man, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway. [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them.
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like git-filter-branch does, but faster.
