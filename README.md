@@ -111,6 +111,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
 * [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
 * [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches.
+* [git-bump](https://github.com/arrdem/git-bump) - Hook scripts to automatically bump the version file in a repository
 * [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a git repository
 * [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a git repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
 * [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your git repo's assets in sync with Amazon S3.
