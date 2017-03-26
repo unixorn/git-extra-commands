@@ -135,6 +135,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 * [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your git repositories
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
+* [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects
 
 ## Included Scripts
 
