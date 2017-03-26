@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Author: Joe Block <jpb@unixorn.net>
+# License: Apache 2.0
+# https://github.com/unixorn/git-extra-commands/blob/master/LICENSE
+#
+# Delete files from the repo that you've deleted with `rm` instead of `git rm`
+
+exec git rm $(git ls-files -d)
