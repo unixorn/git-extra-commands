@@ -99,6 +99,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * Steve Lorek has a blog post explaining [how to shrink a repository](http://stevelorek.com/how-to-shrink-a-git-repository.html).
 
+* Tim Green maintains the excellent [Github Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) collection of tips and aliases.
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like git-filter-branch does, but faster.
