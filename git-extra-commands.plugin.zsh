@@ -54,6 +54,7 @@ zstyle ':completion:*:*:git:*' user-commands \
   run-command-on-revisions:'Runs a given command over a range of Git revisions' \
   shamend:'Amends your staged changes as a fixup to the specified older commit in the current branch' \
   show-overwritten:"Aggregates git blame information about original owners of lines changed or removed in the '<base>...<head>' diff" \
+  sp:"'Simple push', commits and pushes. Use -a flag to add"\
   submodule-rm:'Remove submodules from current repo' \
   thanks:'List authors with commit count' \
   track:'Sets up your branch to track a remote branch' \
