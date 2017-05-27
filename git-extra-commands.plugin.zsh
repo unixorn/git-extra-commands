@@ -16,6 +16,7 @@
 PLUGIN_D=$(dirname "$0")
 export PATH="${PATH}:${PLUGIN_D}/bin"
 alias git-grab='git-incoming-commits'
+alias gitroot='cd $(git rev-parse --show-toplevel) && echo "$_"'
 
 # Skipped:
 #   incoming-commits  (appears to be a dupe of grab)
