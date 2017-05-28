@@ -101,6 +101,8 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 * Tim Green maintains the excellent [Github Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) collection of tips and aliases.
 
+* [firstaidgit.io](http://firstaidgit.io/) is a searchable selection of the most frequently asked Git questions
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like git-filter-branch does, but faster.
