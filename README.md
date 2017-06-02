@@ -16,10 +16,11 @@ If you wrote one of these scripts and want it removed from this collection, plea
   - [oh-my-zsh](#oh-my-zsh)
   - [zgen](#zgen)
   - [Bash / Manual Installation](#bash--manual-installation)
+- [Included Scripts](#included-scripts)
+- [Useful git aliases](#useful-git-aliases)
 - [Other useful git stuff](#other-useful-git-stuff)
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
   - [External Git Utilities](#external-git-utilities)
-- [Included Scripts](#included-scripts)
 - [Contributing](#contributing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
