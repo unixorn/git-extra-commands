@@ -140,6 +140,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows git commits since the last tagged version |
 | `git-up` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
 | `git-upstream-sync` | Joe Block <jpb@unixorn.net> | Fetches upstream/yourforkname and rebases into your local fork, then pushes to your origin  |
+| `git-what-the-hell-just-happened` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-what-the-hell-just-happened) | Show what just happened |
 | `git-when-merged` | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | Find when a commit was merged into one or more branches |
 | `git-where` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows where a particular commit falls between releases |
 | `git-winner` | Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner) | Shows what authors have made the most commits, both by number of commits and by number of lines changed |
