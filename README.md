@@ -154,6 +154,9 @@ Here are some helpful aliases for your `~/.gitconfig`
 | alias | Description |
 | ----- | ----------- |
 | `ahead-of-master = log --oneline origin/master..HEAD` | Show commits that haven't made it to master yet |
+| `fetch-pull-requests = fetch origin '+refs/pull/*/head:refs/remotes/origin/pull/*'` | fetch pull requests from github so you can 'git checkout pull/123' and test them locally |
+| `roots = log --all --oneline --decorate --max-parents=0` | Show the roots |
+| `unpushed = log @{u}..` | Show which commits are safe to amend/rebase |
 | `wip = rebase -i @{u}` | Starts an interactive rebase of all the commits you haven't pushed yet. Handy for collapsing a bunch of WIP snapshots into logical commits before pushing, without having to worry about accidentally squashing a commit someone else has already referred to |
 
 ## Other useful git stuff
