@@ -1,0 +1,6 @@
+#!/bin/sh
+# Usage: git-conflicts
+# Show list of files in a conflict state.
+# Original: https://github.com/megalithic/bits-and-bobs/blob/master/bin/git-conflicts
+# Author: Seth Messer
+git ls-files -u | awk '{print $4}' | sort -u
