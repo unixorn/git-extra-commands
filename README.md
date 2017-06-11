@@ -137,7 +137,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-submodule-rm` | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule` |
 | `git-thanks` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced |
 | `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean origin/localbranchname |
-| `git-trail` | Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail) | Show all branching points in the repo's Git history |
+| `git-trail` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repo's Git history |
 | `git-undo-push` | ? | Undoes your last push to branch ($1) of origin |
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows git commits since the last tagged version |
