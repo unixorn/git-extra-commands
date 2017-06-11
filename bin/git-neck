@@ -1,0 +1,14 @@
+#!/bin/sh -e
+# git neck [-r] [COMMIT] - show commits until first branching point
+#
+# Source: http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
+
+[ "$1" = -r ] && shift && R=-r
+COMMIT=$(git rev-parse --no-flags --default HEAD "$@")
+
+# skip first elements of trail
+TORSO=$(git trail $R $COMMIT | cut -d' ' -f2 | uniq | sed -n 2p)
+
+# fall back to initial commit on empty trail
+: ${TORSO:=$(git rev-list --max-parents=0 HEAD)}
+git log --oneline $(git rev-parse --no-revs "$@") $COMMIT...$TORSO
