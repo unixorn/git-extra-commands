@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Delete untracked files from a git clone tree
+#
+# Copyright 2017, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+
+git status -su | cut -d' ' -f2- | tr '\n' '\0' | xargs -0 rm
