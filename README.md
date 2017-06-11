@@ -183,6 +183,8 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 * [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips
 
+* Christian Neukirchen wrote a great [blog post](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) on git that is the source for several scripts in this collection.
+
 * Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
 
 * And when you manage to get your git working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to man, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway. [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them.
