@@ -78,12 +78,14 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 | Script | Original Source | Description |
 | ------ | --------------- | ----------- |
+| `git-attic` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Displays a list of deleted files in your repo. The output is designed to be copy’n’pasted: Pass the second field to git show to display the file contents, or just select the hash without ^ to see the commit where removal happened. |
 | `git-big-file` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repo larger than a threshold size |
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another |
 | `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | turn `git log` output into a complete Changelog for projects that haven't been maintaining one |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | List authors in the repo in descending commit-count order |
 | `git-churn` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Show which files are getting changed most often in the repository |
 | `git-clone-subset` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Uses `git clone` and `git filter-branch` to remove from the clone all files but the ones requested, along with their associated commit history. |
+| `git-comma` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Adds and commits a file in one command |
 | `git-conflicts` | Seth Messer's [bits and bobs](https://github.com/megalithic/bits-and-bobs/) repo | Show files with conflicts |
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch name to the clipboard (OS X Only) |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit|
@@ -106,6 +108,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-ls-object-refs` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
 | `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repo's pack files as much as possible |
 | `git-move-commits` | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | `git move-commits num-commits correct-branch` moves the last n commits to correct-branch (creating it if necessary) |
+| `git-neck` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show commits from the HEAD until the first branching point. Companion script for `git-trail` |
 | `git-nuke` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Nukes a branch locally and on the origin remote |
 | `git-object-deflate` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Deflate an loose object file and write to standard output |
 | `git-outgoing` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits that are on the local branch that have not been pushed to the tracking branch |
@@ -135,7 +138,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-submodule-rm` | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule` |
 | `git-thanks` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced |
 | `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean origin/localbranchname |
-| `git-trail` | Daniel Hahler's [dotfiles](https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail) | Show all branching points in the repo's Git history |
+| `git-trail` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repo's Git history so you can see how to reach commits in the current branch from other branches |
 | `git-undo-push` | ? | Undoes your last push to branch ($1) of origin |
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows git commits since the last tagged version |
@@ -179,6 +182,8 @@ Here are some helpful aliases for your `~/.gitconfig`
 * Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
 
 * [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips
+
+* Christian Neukirchen wrote a great [blog post](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) on git that is the source for several scripts in this collection.
 
 * Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
 

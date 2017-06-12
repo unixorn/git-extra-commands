@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# https://github.com/blueyed/dotfiles/blob/master/usr/bin/git-trail
+# http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
 #
 # git trail [-r] [-t] [COMMIT] - show all branching points in Git history
 
@@ -22,5 +22,5 @@ COMMIT=$(git rev-parse --no-flags --default HEAD "$@")
           "git name-rev --name-only --refs=\"" mbs[i] "\" " $3 | getline nr
           if (nr != "undefined") print $1, $2, nr   # skip unreachable commits
         }
-      } 
+      }
     }' | git -p column   # paginate output

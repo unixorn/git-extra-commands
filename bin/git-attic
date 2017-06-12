@@ -1,0 +1,18 @@
+#!/bin/sh
+# git-attic [-M] [PATH] - list deleted files of Git repositories
+#
+# Use -M to not show renamed files, and other git-log options as you like.
+#
+# The output is designed to be copy’n’pasted: Pass the second field to
+# git show to display the file contents, or just select the hash without ^ to
+# see the commit where removal happened
+#
+# Source: http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
+
+
+git log --raw --no-renames --date=short --format="%h %cd" "$@" |
+  awk '/^[0-9a-f]/ { commit=$1; date=$2 }
+       /^:/ && $5 == "D" { print date, commit "^:" $6 }' |
+  git -p column
+
+set -o pipefail
