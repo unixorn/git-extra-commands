@@ -168,7 +168,6 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 ### Articles / Blog posts / Books
 
-
 * [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
 * Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of git.
