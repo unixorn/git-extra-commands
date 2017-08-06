@@ -168,6 +168,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 ### Articles / Blog posts / Books
 
+
 * [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
 * Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of git.
@@ -195,6 +196,8 @@ Here are some helpful aliases for your `~/.gitconfig`
 * Tim Green maintains the excellent [Github Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) collection of tips and aliases.
 
 * [firstaidgit.io](http://firstaidgit.io/) is a searchable selection of the most frequently asked Git questions
+
+* [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) - A good essay that explains how git works, focusing on the graph structure underpinnings of git and how they affect its behavior.
 
 ### External Git Utilities
 
