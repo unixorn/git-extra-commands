@@ -196,6 +196,8 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 * [firstaidgit.io](http://firstaidgit.io/) is a searchable selection of the most frequently asked Git questions
 
+* [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) - A good essay that explains how git works, focusing on the graph structure underpinnings of git and how they affect its behavior.
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like git-filter-branch does, but faster.
