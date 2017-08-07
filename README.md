@@ -29,7 +29,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 
 ### Pre-requisites
 
-A relatively recent version of git. The version of git Apple includes in OS X is stale. `brew install git` if you're on OS X.
+A relatively recent version of git. The version of git Apple includes in macOS is stale. `brew install git` if you're on macOS.
 
 ### Antigen
 
@@ -87,7 +87,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-clone-subset` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Uses `git clone` and `git filter-branch` to remove from the clone all files but the ones requested, along with their associated commit history. |
 | `git-comma` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Adds and commits a file in one command |
 | `git-conflicts` | Seth Messer's [bits and bobs](https://github.com/megalithic/bits-and-bobs/) repo | Show files with conflicts |
-| `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch name to the clipboard (OS X Only) |
+| `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch name to the clipboard (macOS Only) |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit|
 | `git-cut-branch` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at HEAD and reset the current branch to the head of its tracking branch |
 | `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into HEAD |
@@ -240,4 +240,4 @@ Here are some helpful aliases for your `~/.gitconfig`
 ## Contributing
 
 * Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly.
-* Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (OS X and CentOS, I'm looking at you) are stale.
+* Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (macOS and CentOS, I'm looking at you) are stale.
