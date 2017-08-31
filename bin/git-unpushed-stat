@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Show the diffstat of everything you haven't pushed yet.
-
+# shellcheck disable=SC2086
 branch=$(git rev-parse --abbrev-ref HEAD)
 count=$(git rev-list --count HEAD origin/$branch...HEAD)
 
