@@ -1,0 +1,43 @@
+---
+engines:
+  pep8:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - "python"
+  fixme:
+    enabled: true
+    exclude_paths:
+      - config/engines.yml
+  pep8:
+    enabled: true
+    checks:
+      E111:
+        enabled: false
+      E501:
+        enabled: false
+  markdownlint:
+    enabled: true
+    checks:
+      MD013:
+        enabled: false
+      MD026:
+        enabled: false
+  shellcheck:
+    enabled: true
+ratings:
+  paths:
+  - "bin/**/*"
+  - "**.py"
+  - "**.md"
+exclude_paths:
+  - .bundle/
+  - benchmarks/**/*
+  - build/
+  - dist/
+  - include/**/*
+  - lib/**/*
+  - License.md
+  - spec/**/*
