@@ -1,4 +1,4 @@
-## Contributing
+# Contributing
 
 **git-extra-commands** is a collection of helper scripts for git and links to git-related articles.
 
