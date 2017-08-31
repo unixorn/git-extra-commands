@@ -7,8 +7,11 @@
 COMMIT=$(git rev-parse --no-flags --default HEAD "$@")
 
 # skip first elements of trail
-TORSO=$(git trail $R $COMMIT | cut -d' ' -f2 | uniq | sed -n 2p)
+TORSO=$(git trail "$R" "$COMMIT" | cut -d' ' -f2 | uniq | sed -n 2p)
 
 # fall back to initial commit on empty trail
+# shellcheck disable=SC2046,SC2086
 : ${TORSO:=$(git rev-list --max-parents=0 HEAD)}
+
+# shellcheck disable=SC2046,SC2086
 git log --oneline $(git rev-parse --no-revs "$@") $COMMIT...$TORSO
