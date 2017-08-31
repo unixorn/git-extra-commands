@@ -12,13 +12,14 @@ username="$1"
 if [ -n "$2" ] ; then
   repo="$2"
 else
+  # shellcheck disable=SC2046
   repo=$(basename $(pwd))
 fi
 
 command="git remote add $username git://github.com/$username/$repo.git"
-echo $command
+echo "$command"
 $command
 
 command="git fetch $username"
-echo $command
+echo "$command"
 $command
