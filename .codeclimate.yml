@@ -21,9 +21,15 @@ engines:
   markdownlint:
     enabled: true
     checks:
+      MD004:
+        enabled: false
       MD013:
         enabled: false
       MD026:
+        enabled: false
+      MD033:
+        enabled: false
+      MD034:
         enabled: false
   shellcheck:
     enabled: true
