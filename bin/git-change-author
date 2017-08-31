@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Author: Michael Demmer https://github.com/demmer
 # License: MIT
 # Original source: https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author
