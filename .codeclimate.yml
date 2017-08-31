@@ -33,6 +33,8 @@ engines:
         enabled: false
       MD034:
         enabled: false
+      MD038:
+        enabled: false
   shellcheck:
     enabled: true
 ratings:
