@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 # Author: Michael Demmer https://github.com/demmer
 # License: MIT
 # Original source: https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author
 
-prog=`basename $0`
+prog=$(basename "$0")
 
 force=
 if [ "$1" == "-f" ] ; then
@@ -28,6 +28,7 @@ export old_email
 export new_author
 export new_email
 
+# shellcheck disable=SC2016,SC2048,SC2086
 git filter-branch $force --env-filter '
 an="$GIT_AUTHOR_NAME"
 am="$GIT_AUTHOR_EMAIL"

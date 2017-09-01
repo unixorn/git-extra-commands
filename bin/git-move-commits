@@ -6,9 +6,11 @@
 # moves the last n commits to correct-branch
 # if correct-branch doesn't exist, it creates it
 # if correct-branch does exist, it merges the commits
+# shellcheck disable=SC2046,SC2143,SC2006,SC2086,SC2063
+
 set -e
 
-if [ $1 ]
+if [ "$1" ]
 then
     if [ ! $(echo "$1" | grep -E "^[0-9]+$") ]
     then
@@ -17,7 +19,7 @@ then
         exit 1;
     else
         # The count is 0 based, so to move the last 1 commit, we need HEAD~0
-        NUM_COMMITS=$1
+        NUM_COMMITS="$1"
         ((NUM_COMMITS--))
         echo "num commits $NUM_COMMITS"
     fi

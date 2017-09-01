@@ -14,6 +14,7 @@
 ## Open current file in vim on line 20:
 ##   :!github-open % 20
 
+# shellcheck disable=SC2002,SC2086
 set -e
 
 FILE="$1"
@@ -34,13 +35,14 @@ die() {
 # figure out relative path to the file from the root
 # of the work tree
 path="$(basename $FILE)"
-cd $(dirname $FILE)
+cd "$(dirname $FILE)"
 while test ! -d .git ;
 do
   test "$(pwd)" = / && {
     echo "error: git repository not found" 1>&2
     exit 1
   }
+  # shellcheck disable=SC2046
   path="$(basename $(pwd))/$path"
   cd ..
 done
