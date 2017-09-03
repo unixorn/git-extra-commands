@@ -24,6 +24,7 @@ inplace=0
 ext=".bak"
 
 message() { printf "%s\n" "$1" >&2 ; }
+# shellcheck disable=SC2104
 skip()    { message "skipping ${2:-$file}${1:+: $1}"; continue ; }
 argerr()  { printf "%s: %s\n" "$myname" "${1:-error}" >&2 ; usage 1 ; }
 invalid() { argerr "invalid option: $1" ; }
@@ -102,6 +103,7 @@ for file in "${files[@]}"; do
 
 	if ((inplace)); then
 		outfile=$(mktemp) || skip "could not create temporary file"
+		# shellcheck disable=SC2064
 		trap "rm -f -- '$outfile'" EXIT
 		cp "$file" "$outfile" || skip
 		exec 3>"$outfile"
