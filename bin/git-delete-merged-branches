@@ -15,4 +15,4 @@ if [[ "${currentBranch}" != "${mergedInto}" ]]; then
   exit 1
 fi
 
-git branch --merged ${mergedInto} | grep -v "\* ${mergedInto}" | xargs -n 1 git branch -d
+git branch --merged "${mergedInto}" | grep -v "\* ${mergedInto}" | xargs -n 1 git branch -d
