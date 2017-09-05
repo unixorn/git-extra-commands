@@ -11,7 +11,7 @@ fail() {
 
 for gitprojpath in $(find . -type d -name .git | sort | sed "s/\/\.git//"); do
   pushd . > /dev/null
-  cd "$gitprojpath" || fail "could not $gitprojpath"
+  cd "$gitprojpath" || fail "could not cd to $gitprojpath"
   isdirty=$(git status -s | grep "^.*")
   if [ -n "$isdirty" ]; then
     echo "DIRTY:" "$gitprojpath"
