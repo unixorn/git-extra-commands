@@ -21,26 +21,30 @@ LINE="$2"
 
 # usage and help
 test -z "$FILE" -o "$FILE" = '--help' && {
-  cat "$0" | grep '^##' | cut -c4- 1>&2
+  grep '^##' "$0" | cut -c4- 1>&2
   exit 1
 }
 
 # bail out with message to stderr and exit status 1
 die() {
-    echo "$(basename $0):" "$@" 1>&2
-    exit 1
+  # shellcheck disable=SC2086
+  echo "$(basename $0):" "$@" 1>&2
+  exit 1
 }
 
 # figure out relative path to the file from the root
 # of the work tree
+# shellcheck disable=SC2086
 path="$(basename $FILE)"
-cd $(dirname $FILE)
+# shellcheck disable=SC2046
+cd $(dirname "$FILE")
 while test ! -d .git ;
 do
   test "$(pwd)" = / && {
     echo "error: git repository not found" 1>&2
     exit 1
   }
+  # shellcheck disable=SC2046
   path="$(basename $(pwd))/$path"
   cd ..
 done
@@ -70,6 +74,7 @@ die "you're not tracking a remote branch"
 
 # at this point we're in root of the work tree and $path is
 # the relative path to file.
+# shellcheck disable=SC2086
 remote_url=$(git config --get remote.$remote.url)
 repo=$(echo "$remote_url" | sed 's/^.*:\(.*\)\.git/\1/')
 url="http://github.com/$repo/blob/$branch/$path"
