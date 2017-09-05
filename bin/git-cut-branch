@@ -10,6 +10,7 @@ set -e
 
 # bail out with message to stderr and exit status 1
 die() {
+    # shellcheck disable=SC2086
     echo "$(basename $0):" "$@" 1>&2
     exit 1
 }
@@ -20,6 +21,7 @@ shortsha() {
 }
 
 # show usage
+# shellcheck disable=SC2166
 [ -z "$1" -o "$1" = "--help" ] && {
     grep '^#/' "$0" |cut -c4-
     exit 2
@@ -44,6 +46,7 @@ remote=$(git config --get "branch.$current.remote" || true)
 merge=$(git config --get "branch.$current.merge" | sed 's@refs/heads/@@')
 
 # build up a sane <remote>/<branch> name
+# shellcheck disable=SC2166
 if [ -n "$remote" -a -n "$merge" ]
 then tracking="$remote/$merge"
 elif [ -n "$merge" ]
@@ -63,5 +66,7 @@ git reset -q --hard "$tracking"
 git checkout -q "$branch"
 git branch --set-upstream "$branch" "$tracking"
 git reset -q --hard "$sha"
+# shellcheck disable=SC2086,SC2046
 echo "[$(shortsha "$sha")...$(shortsha $(git rev-parse $tracking))] $current"
+# shellcheck disable=SC2046
 echo "[0000000...$(shortsha $(git rev-parse HEAD))] $branch"

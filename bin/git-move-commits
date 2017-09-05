@@ -6,6 +6,8 @@
 # moves the last n commits to correct-branch
 # if correct-branch doesn't exist, it creates it
 # if correct-branch does exist, it merges the commits
+# shellcheck disable=SC2046,SC2143,SC2006,SC2086,SC2063
+
 set -e
 
 if [ "$1" ]

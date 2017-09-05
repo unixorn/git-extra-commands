@@ -14,6 +14,7 @@
 ## Open current file in vim on line 20:
 ##   :!github-open % 20
 
+# shellcheck disable=SC2002,SC2086
 set -e
 
 FILE="$1"
@@ -36,6 +37,7 @@ die() {
 # of the work tree
 # shellcheck disable=SC2086
 path="$(basename $FILE)"
+
 # shellcheck disable=SC2046
 cd $(dirname "$FILE")
 while test ! -d .git ;
