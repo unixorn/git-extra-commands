@@ -2,4 +2,4 @@
 #
 # Delete a tag, both locally and from the origin remote
 
-git tag -d $1 && git push origin :refs/tags/$1
+exec git tag -d "$1" && git push origin ":refs/tags/$1"
