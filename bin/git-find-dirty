@@ -4,14 +4,9 @@
 
 IFS=$'\n'
 
-fail() {
-  echo "$@"
-  exit 1
-}
-
 for gitprojpath in $(find . -type d -name .git | sort | sed "s/\/\.git//"); do
   pushd . > /dev/null
-  cd "$gitprojpath" || fail "could not cd to $gitprojpath"
+  cd "$gitprojpath" || continue
   isdirty=$(git status -s | grep "^.*")
   if [ -n "$isdirty" ]; then
     echo "DIRTY:" "$gitprojpath"
