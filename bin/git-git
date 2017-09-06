@@ -9,5 +9,6 @@
 
 if [[ "$1" == 'git' ]]; then
   shift # chop off the extra git
+  # shellcheck disable=SC2068
   exec git $@
 fi

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Original source: http://github.com/rtomayko/dotfiles
 # Usage: git-rel [<ref>]
 # Shows the relationship between the current branch and <ref>. With no <ref>,
@@ -13,7 +13,9 @@
 #   $ git-rel v1.1
 #     230 ahead
 
+# shellcheck disable=SC2046,SC2086
 strip_prefix () {
+    # shellcheck disable=SC2001
     echo "$@" |
     sed 's@refs/heads/@@'
 }
@@ -31,7 +33,7 @@ tracking_branch () {
 
 ref="${1:-$(tracking_branch)}"
 
-git rev-list --left-right --abbrev-commit --abbrev $ref...HEAD |
+git rev-list --left-right --abbrev-commit --abbrev "$ref"...HEAD |
 cut -c1         |
 sort            |
 uniq -c         |

@@ -33,9 +33,9 @@ abort() {
 while [ "$#" -gt 0 ]; do
   case "$1" in
   --color ) colorize=1 ;;
-  --no-color ) colorize= ;;
+  --no-color ) colorize='';;
   --staged ) diff_type='--staged' ;;
-  --unstaged ) diff_type= ;;
+  --unstaged ) diff_type='';;
   -h | --help )
     sed -ne '/^#/!q;s/.\{1,2\}//;1d;p' < "$0"
     exit 0

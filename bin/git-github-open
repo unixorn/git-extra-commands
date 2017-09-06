@@ -22,7 +22,7 @@ LINE="$2"
 
 # usage and help
 test -z "$FILE" -o "$FILE" = '--help' && {
-  cat "$0" | grep '^##' | cut -c4- 1>&2
+  grep '^##' "$0" | cut -c4- 1>&2
   exit 1
 }
 
