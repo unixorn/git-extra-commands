@@ -21,6 +21,7 @@ if [[ ! -d .git ]]; then
 fi
 
 # remove all paths passed as arguments from the history of the repo
+# shellcheck disable=SC2124
 files=$@
 git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch $files" HEAD
 
