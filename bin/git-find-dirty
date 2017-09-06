@@ -6,7 +6,7 @@ IFS=$'\n'
 
 for gitprojpath in $(find . -type d -name .git | sort | sed "s/\/\.git//"); do
   pushd . > /dev/null
-  cd "$gitprojpath"
+  cd "$gitprojpath" || continue
   isdirty=$(git status -s | grep "^.*")
   if [ -n "$isdirty" ]; then
     echo "DIRTY:" "$gitprojpath"
