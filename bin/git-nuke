@@ -9,5 +9,5 @@
 #   git nuke add-git-nuke
 set -o errexit
 
-git branch -D $1
-git push origin :$1
+git branch -D "$1"
+git push origin ":$1"
