@@ -6,10 +6,11 @@
 
 set -e
 
+# shellcheck disable=SC2162,SC2034
 while read action sha other; do
   if [ -n "$action" ]; then
     echo -n "$action "
-    git show $sha --format="%h [%an] %s" -s
+    git show "$sha" --format="%h [%an] %s" -s
   else
     echo
   fi
