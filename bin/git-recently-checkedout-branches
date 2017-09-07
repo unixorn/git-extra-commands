@@ -13,6 +13,7 @@ set -e
 seen=":"
 git_dir="$(git rev-parse --git-dir)"
 
+# shellcheck disable=SC2162
 git reflog -n100 --pretty='%cr|%gs' --grep-reflog='checkout: moving' HEAD | \
   while read line; do
     date="${line%%|*}"
