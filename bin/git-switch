@@ -7,5 +7,5 @@
 #
 # Source: https://github.com/Andrew565/dotfiles
 
-BRANCH=`git branch | grep "$1"`
-exec git checkout $BRANCH
+BRANCH=$(git branch | grep "$1")
+exec git checkout "$BRANCH"
