@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/unixorn/git-extra-commands.svg?branch=master)](https://travis-ci.org/unixorn/git-extra-commands)
 [![Code Climate](https://codeclimate.com/github/unixorn/git-extra-commands/badges/gpa.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![Issue Count](https://codeclimate.com/github/unixorn/git-extra-commands/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
-[![GitHub stars](https://img.shields.io/github/stars/unixorn/bigriver-tools.svg)](https://github.com/unixorn/bigriver-tools/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/unixorn/git-extra-commands.svg)](https://github.com/unixorn/git-extra-commands/stargazers)
 
 A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file.
 
