@@ -222,7 +222,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your git repo's assets in sync with Amazon S3.
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
-* [git-follow](https://github.com/nickolasburr/git-follow) - Perl script that follows lifetime changes of a file through the history of a Git repository
+* [git-follow](https://github.com/nickolasburr/git-follow) - Follow lifetime changes of a pathspec.
 * [git-flow-completion](https://github.com/bobthecow/git-flow-completion) - Bash, Fish and Zsh completion support for [git-flow](http://github.com/nvie/gitflow)
 * [git-graph](https://github.com/jerith666/git-graph) - creates a Graphviz graph showing the high-level structure of a repository's history.
 * [git-gutter](https://github.com/jisaacks/GitGutter) - Plugin for Sublime Text 2/3 to display the git diff in the edit window gutter.
@@ -231,6 +231,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [git-repo-updater](https://github.com/earwig/git-repo-updater) - Allows you to easily update multiple git repositories at once.
 * [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories.
 * [git-standup](https://github.com/kamranahmedse/git-standup) - Recall what you did on the last working day. Can work in a directory full of git repos to see a consolidated view of all work in all the repos.
+* [git-stashd](https://github.com/nickolasburr/git-stashd) - Autostashing daemon for dirty worktrees.
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
 * [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo.
