@@ -2,4 +2,4 @@
 #
 # Show what files are being ignored in the repo
 
-git ls-files --others --i --exclude-standard
+exec git ls-files --others --i --exclude-standard
