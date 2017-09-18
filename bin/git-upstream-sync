@@ -5,6 +5,7 @@
 # https://github.com/unixorn/git-extra-commands/blob/master/LICENSE
 #
 # Sync to upstream/yourforkname and rebase into your local fork. then push
+# back into yourfork/yourforkname
 #
 # Assumes that your upstream fork's remote is named upstream
 
