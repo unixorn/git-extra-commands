@@ -2,4 +2,4 @@
 #
 # Print the root of the git checkout you're in.
 
-git rev-parse --show-toplevel
+exec git rev-parse --show-toplevel

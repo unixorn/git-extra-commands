@@ -7,3 +7,4 @@
 set -o pipefail
 
 git status -su | cut -d' ' -f2- | tr '\n' '\0' | xargs -0 rm
+exit $?
