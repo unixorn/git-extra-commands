@@ -4,36 +4,36 @@
 # Usage: git sp [-a] <message>
 #
 # "Simple push": commit with message and push. Use -a flag to add changed files
-#    to commit. 
+#    to commit.
 #
 # See https://github.com/Schwarzy1/git-sp for more information.
 #
 
 
 usage(){
-	echo "usage: git sp [-a] <message>
+  echo "usage: git sp [-a] <message>
 
-	Commits and pushes to current working branch.
-	-a 	Run 'git add -A' prior to committing."
-	exit 1
+  Commits and pushes to current working branch.
+  -a  Run 'git add -A' prior to committing."
+  exit 1
 }
 
 
 # -a should trigger `git add -A`
 while getopts 'a' flag; do
-	aflag='true'
+  aflag='true'
 done
 
-if test "$#" -lt 1 
+if test "$#" -lt 1
 then
-	usage
+  usage
 else
-	if test $aflag 
-	then
-		git add -A
-		git commit -m "$2"
-	else
-		git commit -m "$1"
-	fi
-	git push 
+  if test $aflag
+  then
+    git add -A
+    git commit -m "$2"
+  else
+    git commit -m "$1"
+  fi
+  git push
 fi
