@@ -13,4 +13,6 @@ else
 fi
 
 git diff --stat origin/$branch..HEAD
+retval=$?
 echo " $count commit$s total"
+exit "$retval"

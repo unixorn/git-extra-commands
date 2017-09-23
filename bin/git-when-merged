@@ -10,7 +10,7 @@
 path=$(which python2 || which python)
 if [ -x "$path" ]
 then
-  PYTHON=$path
+  PYTHON="$path"
 else
   echo 1>&2 "No usable Python interpreter was found!"
   exit 1
