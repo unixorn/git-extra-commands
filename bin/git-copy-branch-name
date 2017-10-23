@@ -1,10 +1,11 @@
 #!/bin/bash
 #
-# Copy the current branch name to the clipboard.
+# Copy the current branch name to the clipboard, or stdout if not on macOS
 
 branch=$(git rev-parse --abbrev-ref HEAD)
-echo "$branch"
 
 if [[ "$(uname -s)" = "Darwin" ]]; then
   echo "$branch" | tr -d '\n' | tr -d ' ' | pbcopy
+else
+  echo "$branch"
 fi
