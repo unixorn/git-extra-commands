@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# Restore a file that was deleted.
+#
+# Usage:
+#   `git-undelete filename`
+
+# shellcheck disable=SC2046
+exec git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
