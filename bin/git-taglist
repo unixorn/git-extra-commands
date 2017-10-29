@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# List tags in a more useful way
+#
+# Copyright 2017, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+
+git tag -l --sort=v:refname | tail -n8
