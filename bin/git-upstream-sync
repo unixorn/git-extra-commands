@@ -7,11 +7,17 @@
 # Sync to upstream/yourforkname and rebase into your local fork. then push
 # back into yourfork/yourforkname
 #
-# Assumes that your upstream fork's remote is named upstream
+# Assumes that your upstream fork's remote is named upstream unless you
+# set upstream-sync.remote with git config
 
 branch_name=$(git symbolic-ref --short -q HEAD)
+upstream_remote=$(git config --get upstream-sync.remote)
+if [[ $? != 0 ]]; then
+  echo 'Using default remote of upstream'
+  upstream_remote='upstream'
+fi
 
-git fetch upstream && \
-  git rebase upstream/${branch_name} && \
+git fetch ${upstream_remote} && \
+  git rebase ${upstream_remote}/${branch_name} && \
   git push && \
   git fetch -p
