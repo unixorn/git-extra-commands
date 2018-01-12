@@ -206,6 +206,8 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 * [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) - A good essay that explains how git works, focusing on the graph structure underpinnings of git and how they affect its behavior.
 
+* [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message.
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like git-filter-branch does, but faster.
