@@ -114,9 +114,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 | `git-incoming-commits` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Adds a remote for the current repository for the given github username. |
 | `git-incoming` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in the tracking branch that are not in the local branch. |
 | `git-ls-object-refs` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
-| `git-maildiff` | Sanjeev Kumar's
-[blogpost](http://www.devilsan.com/blog/my-first-git-command-git-ipush-using-python) | A simple git
-command to email diff in color to reviewer/ co-worker. |
+| `git-maildiff` | Sanjeev Kumar's [blogpost](http://www.devilsan.com/blog/my-first-git-command-git-ipush-using-python) | A simple git command to email diff in color to reviewer/ co-worker. |
 | `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repo's pack files as much as possible. |
 | `git-move-commits` | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | `git move-commits num-commits correct-branch` moves the last n commits to correct-branch (creating it if necessary). |
 | `git-neck` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show commits from the HEAD until the first branching point. Companion script for `git-trail`. |
