@@ -84,6 +84,7 @@ If you aren't using any zsh frameworks, or if you're a bash user, do the followi
 
 | Script | Original Source | Description |
 | ------ | --------------- | ----------- |
+| `git-age` | Kristoffer Gronlund's [wiki](https://github.com/krig/git-age/wiki) | A git-blame viewer, written using PyGTK.| 
 | `git-attic` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Displays a list of deleted files in your repo. The output is designed to be copy and pasted: Pass the second field to `git show` to display the file contents, or just select the hash without ^ to see the commit where removal happened. |
 | `git-big-file` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repo larger than a threshold size. |
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another. |
