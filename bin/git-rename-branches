@@ -1,0 +1,85 @@
+#!/bin/bash
+#
+# git-rename-branches - rename multiple branches that start with a given name
+#
+#    Copyright (C) 2012 Rodrigo Silva (MestreLion) <linux@rodrigosilva.com>
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program. If not, see <http://www.gnu.org/licenses/gpl.html>
+
+usage() {
+cat <<- USAGE
+	Usage: $self [options] BRANCH_PREFIX  NEW_PREFIX
+USAGE
+if [[ "$1" ]] ; then
+	cat <<- USAGE
+		Try '$self --help' for more information.
+	USAGE
+	exit 1
+fi
+cat <<-USAGE
+
+	Batch renames branches with a matching prefix to another prefix
+
+	Options:
+	-h|--help     - show this page.
+	-v|--verbose  - print more details about what is being done.
+	-n|--dry-run  - do not actually renames the branches.
+
+	BRANCH_PREFIX - a prefix that matches the start of branch names
+	NEW_PREFIX    - the new prefix for the branch names
+
+	Examples:
+	$ git-rename-branches bug bugfix
+	bug/128  -> bugfix/128
+	bug_test -> bugfix_test
+
+	$ git-rename-branches ma backup/ma
+	master -> backup/master
+	main   -> backup/main
+
+	Copyright (C) 2012 Rodrigo Silva (MestreLion) <linux@rodrigosilva.com>
+	License: GPLv3 or later. See <http://www.gnu.org/licenses/gpl.html>
+USAGE
+exit 0
+}
+invalid() { echo "$self: invalid option $1" ; usage 1 ; }
+missing() { echo "$self: missing ${1:+$1 }operand" ; usage 1 ; }
+
+self="${0##*/}"
+verbose=0
+dry_run=0
+
+# Loop options
+while (( $# )); do
+	case "$1" in
+	-h|--help     ) usage                ;;
+	-v|--verbose  ) verbose=1            ;;
+	-n|--dry-run  ) dry_run=1            ;;
+	--            ) shift        ; break ;;
+	-*            ) invalid "$1" ; break ;;
+	*             )                break ;;
+	esac
+	shift
+done
+
+[[ "$1" && "$2" ]] || missing
+
+while read -r branch; do
+	if (($dry_run)) ; then
+		(($verbose)) && echo "$branch -> ${2}${branch#$1}"
+	else
+		git branch -m "$branch" "${2}${branch#$1}" &&
+			(($verbose)) && echo "$branch -> ${2}${branch#$1}"
+	fi
+done < <(git branch | awk -v branches="${1/\\/\\\\}" '$NF ~ "^" branches {print $NF}')
