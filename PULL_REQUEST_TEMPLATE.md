@@ -19,5 +19,6 @@
 - [ ] All new and existing tests pass.
 - [ ] Any scripts added use `#!/usr/bin/env interpreter` instead of potentially platform-specific direct paths (`#!/bin/sh` is an ok exception)\
 - [ ] Scripts are marked executable
+- [ ] I have added a credit line to README.md for the script
 - [ ] I have confirmed that the link(s) in my PR are valid.
 - [ ] I have read the **CONTRIBUTING** document.
