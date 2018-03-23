@@ -65,7 +65,7 @@ fi
 git branch "$branch"
 git reset -q --hard "$tracking"
 git checkout -q "$branch"
-git branch --set-upstream "$branch" "$tracking"
+git branch --set-upstream-to "$branch" "$tracking"
 git reset -q --hard "$sha"
 # shellcheck disable=SC2086,SC2046
 echo "[$(shortsha "$sha")...$(shortsha $(git rev-parse $tracking))] $current"
