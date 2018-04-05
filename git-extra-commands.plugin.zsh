@@ -22,6 +22,7 @@ alias gitroot='cd $(git rev-parse --show-toplevel) && echo "$_"'
 #   incoming-commits  (appears to be a dupe of grab)
 #   mark-all-resolved (git: 'conflicts' is not a git command.)
 zstyle ':completion:*:*:git:*' user-commands \
+  age:'A git-blame viewer, written using PyGTK written by Kristoffer Gronlund ' \
   big-file:'List disk size of files in ref' \
   change-author:'Rewrite commits, updating author/email' \
   changes:'List authors/emails with commit count' \
@@ -38,6 +39,7 @@ zstyle ':completion:*:*:git:*' user-commands \
   improved-merge:'Sophisticated git merge with integrated CI check and automatic cleanup upon completion' \
   incoming:'Fetch remote tracking branch, and list incoming commits' \
   ls-object-refs:'Find references to <object> SHA1 in refs, commits, and trees. All of them' \
+  maildiff: 'Simple git command to email diff in color to reviewer/co-worker & optionally attach patch file.' \
   maxpack:'Repack with maximum compression' \
   nuke:'Nukes a branch locally and on the origin remote' \
   object-deflate:'Deflate an loose object file and write to standard output' \
