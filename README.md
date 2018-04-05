@@ -173,7 +173,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 | `fetch-pull-requests = fetch origin '+refs/pull/*/head:refs/remotes/origin/pull/*'` | Fetch pull requests from github so you can `git checkout pull/123` and test them locally. |
 | `roots = log --all --oneline --decorate --max-parents=0` | Show the root commits. |
 | `unpushed = log @{u}..` | Show which commits have not been pushed to the tracking branch and are safe to amend/rebase. |
-| `wip = rebase -i @{u}` | Starts an interactive rebase of all the commits you haven't pushed yet. Handy for collapsing a bunch of WIP snapshots into logical commits before pushing, without having to worry about accidentally squashing a commit someone else has already referred to. |
+| `work-in-progress = rebase -i @{u}` | Starts an interactive rebase of all the commits you haven't pushed yet. Handy for collapsing a bunch of work-in-progress snapshots into logical commits before pushing, without having to worry about accidentally squashing a commit someone else has already referred to. |
 
 ## Other useful git stuff
 
@@ -215,7 +215,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 ### External Git Utilities
 
-* [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like git-filter-branch does, but faster.
+* [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like `git filter-branch` does, but faster.
 * [bitbucket-git-helpers](https://github.com/unixorn/bitbucket-git-helpers.plugin.zsh) - Helper scripts to allow you to create bitbucket PRs from a shell session.
 * [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
@@ -227,6 +227,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches.
 * [git-bump](https://github.com/arrdem/git-bump) - Hook scripts to automatically bump the version file in a repository
 * [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a git repository
+* [git-cop](https://github.com/bkuhlmann/git-cop) - Enforces Git rebase workflow with consistent Git commits for a clean and easy to read/debug project history.
 * [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a git repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
 * [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your git repo's assets in sync with Amazon S3.
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
@@ -245,8 +246,8 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
 * [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo.
+* [git-up (gem)](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
 * [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
-* [git-up](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 * [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your git repositories
