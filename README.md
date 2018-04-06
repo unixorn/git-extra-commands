@@ -8,7 +8,7 @@
 
 A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file.
 
-This collection doesn't actually require zsh, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
+This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
 
 If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repo and I will remove it.
 
@@ -35,14 +35,14 @@ If you wrote one of these scripts and want it removed from this collection, plea
 
 ### Pre-requisites
 
-A relatively recent version of git. The version of git Apple includes in macOS is stale. `brew install git` if you're on macOS.
+A relatively recent version of `git`. The version of `git` Apple includes in macOS is very stale. You should really `brew install git` to get the current version if you're on macOS.
 
 ### Antigen
 
 If you're using [Antigen](https://github.com/zsh-users/antigen):
 
 1. Add `antigen bundle unixorn/git-extra-commands` to your `.zshrc` where you've listed your other plugins.
-2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle unixorn/git-extra-commands` in a running shell to have antigen load the new plugin.
+2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle unixorn/git-extra-commands` in a running shell to have `antigen` load the new plugin.
 
 ### oh-my-zsh
 
@@ -75,7 +75,7 @@ If you're using [zgen](https://github.com/tarjoilija/zgen):
 
 Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
 
-If you aren't using any zsh frameworks, or if you're a bash user, do the following steps:
+If you aren't using any ZSH frameworks, or if you're a `bash` user, do the following steps:
 
 1. git clone this repository
 2. Add `cloneDirectory/bin` to your `$PATH`.
@@ -183,7 +183,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 * Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of git.
 
-* Zach Dennis has a great [blog post](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
+* Zach Dennis has a great blog post - [A Git Walkthrough](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
     * [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
     * [gitimmersion.com/](http://gitimmersion.com/)
 
@@ -195,7 +195,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 * [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips
 
-* Christian Neukirchen wrote a great [blog post](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) on git that is the source for several scripts in this collection.
+* Christian Neukirchen wrote a great blog post, [A Grab Bag of Git Tricks](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) on git that is the source for several scripts in this collection.
 
 * Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
 
@@ -259,4 +259,4 @@ Here are some helpful aliases for your `~/.gitconfig`
 ## Contributing
 
 * Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly.
-* Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (macOS and CentOS, I'm looking at you) are stale.
+* Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (macOS and CentOS, I'm looking at you!) are stale.
