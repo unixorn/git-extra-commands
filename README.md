@@ -14,7 +14,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Table of Contents**
 
 - [Installing](#installing)
   - [Pre-requisites](#pre-requisites)
@@ -27,6 +27,9 @@ If you wrote one of these scripts and want it removed from this collection, plea
 - [Other useful git stuff](#other-useful-git-stuff)
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
   - [External Git Utilities](#external-git-utilities)
+- [Miscellaneous Tips](#miscellaneous-tips)
+  - [Rewrite git:// with https://](#rewrite-git-with-https)
+  - [or replace with `ssh`](#or-replace-with-ssh)
 - [Contributing](#contributing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -257,6 +260,23 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
 * [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
 * [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects
+
+## Miscellaneous Tips
+
+### Rewrite git:// with https://
+
+```sh
+git config --global url."https://github".insteadOf git://github
+```
+
+### or replace with `ssh`
+ Use `ssh` instead of `https://`
+ 
+ ```sh
+ git config --global url."git@github.com:".insteadOf "https://github.com/"
+ ```
+
+**Credit:** [@grawity](https://gist.github.com/grawity/4392747) & [@hansdg1](https://github.com/hansdg1) by way of [Kovrinic](https://gist.github.com/Kovrinic/ea5e7123ab5c97d451804ea222ecd78a)
 
 ## Contributing
 
