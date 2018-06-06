@@ -38,7 +38,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 
 ### Pre-requisites
 
-A relatively recent version of `git`. The version of `git` Apple includes in macOS is very stale. You should really `brew install git` to get the current version if you're on macOS.
+A relatively recent version of `git`. The version of `git` Apple includes in macOS is very stale. You should really `brew install git` to get the current version if you're on macOS - if not for features, for security updates.
 
 ### Antigen
 
@@ -80,7 +80,7 @@ Nothing here actually requires you to use ZSH or zgen, that's just a convenient 
 
 If you aren't using any ZSH frameworks, or if you're a `bash` user, do the following steps:
 
-1. git clone this repository
+1. `git clone` this repository
 2. Add `cloneDirectory/bin` to your `$PATH`.
 
 ## Included Scripts
@@ -196,7 +196,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 * Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
 
-* [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips
+* [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips.
 
 * Christian Neukirchen wrote a great blog post, [A Grab Bag of Git Tricks](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) on git that is the source for several scripts in this collection.
 
@@ -282,5 +282,5 @@ git config --global url."https://github".insteadOf git://github
 
 ## Contributing
 
-* Please include an entry in the credits section of README.md for any scripts in your PRs so authors get their work credited correctly.
+* Please include an entry both in the credits section of README.md for any scripts and a credit comment in the script itself in your PRs so authors get their work credited correctly.
 * Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (macOS and CentOS, I'm looking at you!) are stale.
