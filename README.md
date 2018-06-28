@@ -6,7 +6,9 @@
 [![Issue Count](https://codeclimate.com/github/unixorn/git-extra-commands/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![GitHub stars](https://img.shields.io/github/stars/unixorn/git-extra-commands.svg)](https://github.com/unixorn/git-extra-commands/stargazers)
 
-A zsh plugin that packages some extra git helper scripts I've found. I only wrote a few of these scripts, and the ones I didn't each have whatever licensing is included in the file.
+**git-extra-commands** is a ZSH plugin that packages some extra git helper scripts I've found. This collection (and the scripts that I wrote in it) is licensed with the Apache Version 2 license.
+
+Some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
 
 This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
 
@@ -190,7 +192,7 @@ Here are some helpful aliases for your `~/.gitconfig`
     * [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
     * [gitimmersion.com/](http://gitimmersion.com/)
 
-* There’s a quick [Introduction to git](http://learnxinyminutes.com/docs/git/) on learnxinyminutes.com
+* There’s a quick [Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com)
 
 * There's a more detailed git tutorial on [learnenough.com](http://www.learnenough.com/git-tutorial)
 
