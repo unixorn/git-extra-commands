@@ -263,6 +263,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 * [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your git repositories
+* [gitgo](gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command line (macOS only).
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
 * [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
