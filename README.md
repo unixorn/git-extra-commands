@@ -267,6 +267,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [gitgo](gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command line (macOS only).
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
+* [joe](https://github.com/karan/joe) - Generates `.gitignore` files from the command line for you.
 * [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
 * [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects
 
