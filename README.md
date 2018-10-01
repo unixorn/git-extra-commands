@@ -232,6 +232,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [bitbucket-git-helpers](https://github.com/unixorn/bitbucket-git-helpers.plugin.zsh) - Helper scripts to allow you to create bitbucket PRs from a shell session.
 * [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
+* [commit-helper](https://github.com/andre-filho/commit-helper) - A python script that helps you write commits following commit conventions.
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking git diffs
 * [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's git plugin which you may prefer to the git plugin from oh-my-zsh.
 * [git-also](https://github.com/anvaka/git-also) - Shows what files are most often committed with a given file in the repository.
