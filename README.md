@@ -101,6 +101,7 @@ If you aren't using any ZSH frameworks, or if you're a `bash` user, do the follo
 | `git-conflicts` | Seth Messer's [bits and bobs](https://github.com/megalithic/bits-and-bobs/) repo | Show files with conflicts |
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch's name to the clipboard (macOS Only). |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit. |
+| `git-current-branch` | Joe Block <jpb@unixorn.net> | Prints the name of the current branch, mainly useful in automation scripts. |
 | `git-cut-branch` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at **HEAD** and reset the current branch to the head of its tracking branch |
 | `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into **HEAD**. |
 | `git-delete-merged-branches` | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master). |

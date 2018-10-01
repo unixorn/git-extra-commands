@@ -29,6 +29,7 @@ zstyle ':completion:*:*:git:*' user-commands \
   churn:'List files in ref with change/commit count' \
   copy-branch-name:'Copy the current branch name to the clipboard (pbcopy)' \
   credit:'A very slightly quicker way to credit an author on the latest commit' \
+  current-branch:'Print the name of the current branch, helpful for automation'
   cut-branch:'Create a new named branch pointed at HEAD and reset the current branch to the head of its tracking branch' \
   delete-local-merged:'Delete all local branches that have been merged into HEAD' \
   divergence:'List local/remote (incoming/outgoing) changes for current branch' \

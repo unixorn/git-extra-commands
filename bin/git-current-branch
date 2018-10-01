@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Print the name of the current branch. Useful for automation scripts.
+#
+# Copyright 2018, Joe Block <jpb@unixorn.net>
+
+exec git rev-parse --abbrev-ref HEAD
