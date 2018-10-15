@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+# Create a tag and sign it.
+
+exec git tag -s -m "$1" "$1" "$2"
