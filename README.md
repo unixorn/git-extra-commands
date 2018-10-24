@@ -251,8 +251,8 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
 * [git-extend](https://github.com/nickolasburr/git-extend) - Extend Git builtins with command wrappers.
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
-* [git-follow](https://github.com/nickolasburr/git-follow) - Follow lifetime changes of a pathspec.
 * [git-flow-completion](https://github.com/bobthecow/git-flow-completion) - Bash, Fish and Zsh completion support for [git-flow](http://github.com/nvie/gitflow)
+* [git-follow](https://github.com/nickolasburr/git-follow) - Follow lifetime changes of a pathspec.
 * [git-graph](https://github.com/jerith666/git-graph) - creates a Graphviz graph showing the high-level structure of a repository's history.
 * [git-gutter](https://github.com/jisaacks/GitGutter) - Plugin for Sublime Text 2/3 to display the git diff in the edit window gutter.
 * [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) - Another plugin by Peter Hurford that adds a gitit command that will open your current directory on github, in your current branch.
@@ -269,7 +269,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
 * [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your git repositories
-* [gitgo](gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command line (macOS only).
+* [gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command line (macOS only).
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
 * [joe](https://github.com/karan/joe) - Generates `.gitignore` files from the command line for you.
