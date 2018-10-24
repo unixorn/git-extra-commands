@@ -40,7 +40,9 @@ If you wrote one of these scripts and want it removed from this collection, plea
 
 ### Pre-requisites
 
-A relatively recent version of `git`. The version of `git` Apple includes in macOS is very stale. You should really `brew install git` to get the current version if you're on macOS - if not for features, for security updates.
+* A relatively recent version of `git`. The version of `git` Apple includes in macOS is very stale. You should really `brew install git` to get the current version if you're on macOS - if not for features, for security updates.
+* Python 3+
+* Ruby 2.2+
 
 ### Antigen
 
