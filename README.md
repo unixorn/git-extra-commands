@@ -6,14 +6,6 @@
 [![Issue Count](https://codeclimate.com/github/unixorn/git-extra-commands/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![GitHub stars](https://img.shields.io/github/stars/unixorn/git-extra-commands.svg)](https://github.com/unixorn/git-extra-commands/stargazers)
 
-**git-extra-commands** is a ZSH plugin that packages some extra git helper scripts I've found. This collection (and the scripts that I wrote in it) is licensed with the Apache Version 2 license.
-
-Some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
-
-This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
-
-If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repo and I will remove it.
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
@@ -35,6 +27,14 @@ If you wrote one of these scripts and want it removed from this collection, plea
 - [Contributing](#contributing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+**git-extra-commands** is a ZSH plugin that packages some extra `git` helper scripts I've found. This collection (and the scripts that I wrote in it) is licensed with the Apache Version 2 license.
+
+However, some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
+
+This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
+
+If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repo and I will remove it.
 
 ## Installing
 
