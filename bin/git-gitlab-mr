@@ -87,7 +87,7 @@ http://*)  # HTTP?
   ;;
 esac
 
-: "${mrurl=${scheme}://${domain}${path%.git}${suffix}}"
+: "${mrurl:=${scheme}://${domain}${path%.git}${suffix}}"
 if havecmd open; then
   open "$mrurl"
 elif havecmd xdg-open; then
