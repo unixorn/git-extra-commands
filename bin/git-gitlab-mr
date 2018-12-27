@@ -1,0 +1,98 @@
+#!/usr/bin/env bash
+# Copyright 2018 Noel Cower
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# git-mr: Simple script to open the URL for a new merge request for a GitLab
+# repository.
+#
+# Note: Has no way of knowing something isn't a GitLab repository.
+
+set -e
+
+havecmd() {
+  [ -n "$(command -v "$@" 2>/dev/null)" ]
+}
+
+err() {
+  echo "ERR $*" 1>&2
+  exit 1
+}
+
+uriencode() {
+  jq -Rrns --arg in "$*" \
+    '$in|split("\n")|if last == "" then .[:-1] else . end|join(" ")|@uri'
+}
+
+if ! havecmd jq; then
+  err 'Required program missing: jq'
+fi
+
+ref="$(git rev-parse --abbrev-ref --symbolic-full-name @{u})"
+if [ -z "$ref" ]; then
+  err "No upstream for branch: $(git rev-parse --abbrev-ref --symbolic-full-name @)"
+fi
+repo="${ref%%/*}"
+if [ -z "$repo" ]; then
+  err "Unable to determine repository for ref: $ref"
+fi
+branch="${ref#$repo/}"
+if [ -z "$branch" ]; then
+  err "Unable to determine ref in repository of ref: $ref"
+fi
+uri="$(git remote get-url "$repo")"
+if [ -z "$uri" ]; then
+  err "Unable to determine URI of repository: $repo"
+fi
+
+scheme=https
+suffix="/merge_requests/new?$(uriencode 'merge_request[source_branch]')=$(uriencode "${branch}")"
+case "$uri" in
+*@*:*)     # SSH
+  uri="${uri#*@}"
+  domain="${uri%:*}"
+  path="/${uri#${domain}:}"
+  ;;
+https://*) # HTTPS
+  uri="${uri#https://}"
+  uri="${uri#*@}"
+  domain="${uri%%/*}"
+  path="${uri#${domain}}"
+  ;;
+http://*)  # HTTP?
+  scheme=http # Why? Why do this?
+  uri="${uri#https://}"
+  uri="${uri#*@}"
+  domain="${uri%%/*}"
+  path="${uri#${domain}}"
+  ;;
+*)
+  err "Unrecognized URI: $uri"
+  ;;
+esac
+
+: "${mrurl:=${scheme}://${domain}${path%.git}${suffix}}"
+if havecmd open; then
+  open "$mrurl"
+elif havecmd xdg-open; then
+  xdg-open "$mrurl" >/dev/null 2>&1
+else
+  # Print URL if we can't open it
+  echo "$mrurl"
+fi

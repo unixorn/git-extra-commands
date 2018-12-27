@@ -6,17 +6,9 @@
 [![Issue Count](https://codeclimate.com/github/unixorn/git-extra-commands/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![GitHub stars](https://img.shields.io/github/stars/unixorn/git-extra-commands.svg)](https://github.com/unixorn/git-extra-commands/stargazers)
 
-**git-extra-commands** is a ZSH plugin that packages some extra git helper scripts I've found. This collection (and the scripts that I wrote in it) is licensed with the Apache Version 2 license.
-
-Some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
-
-This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
-
-If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repo and I will remove it.
-
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+## Table of Contents
 
 - [Installing](#installing)
   - [Pre-requisites](#pre-requisites)
@@ -35,6 +27,14 @@ If you wrote one of these scripts and want it removed from this collection, plea
 - [Contributing](#contributing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+**git-extra-commands** is a ZSH plugin that packages some extra `git` helper scripts I've found. This collection (and the scripts that I wrote in it) is licensed with the Apache Version 2 license.
+
+However, some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
+
+This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
+
+If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repo and I will remove it.
 
 ## Installing
 
@@ -117,6 +117,7 @@ If you aren't using any ZSH frameworks, or if you're a `bash` user, do the follo
 | `git-forest` | Jan Engelhardt | Prints a text-based tree visualisation of your repository. Requires [Git.pm](https://metacpan.org/release/Git) |
 | `git-git` | Joe Block <jpb@unixorn.net> | Typing `git git foo` will make git do a `git foo` instead of complaining. |
 | `git-github-open` | ? | Open GitHub file/blob page for FILE on LINE. |
+| `git-gitlab-mr` | Noel Cower's [gist](https://gist.github.com/nilium/ac808ee3729cdce01ec0f3c0a499f099) | Open a merge request on GitLab |
 | `git-ignored` | ? | Show files being ignored by git in the repo. |
 | `git-improved-merge` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Sophisticated git merge with integrated CI check and automatic cleanup. |
 | `git-incoming-commits` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Adds a remote for the current repository for the given github username. |
@@ -170,6 +171,7 @@ If you aren't using any ZSH frameworks, or if you're a `bash` user, do the follo
 | `git-where` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows where a particular commit falls between releases. |
 | `git-whoami` | Peter Eisentraut | Shows what username & email you have configured for the repo you're in |
 | `git-winner` | Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner) | Shows what authors have made the most commits, both by number of commits and by number of lines changed. |
+| `git-wordiness` | Noel Cower | Shows how wordy people's commit messages are. Useful for shaming the folks who commit atrocities like `git commit -m fixup` |
 | `git-wtf` | William Morgan <wmorgan-git-wt-add@masanjin.net> | `git-wtf` displays the state of your repository in a readable, easy-to-scan format. It's useful for getting a summary of how a branch relates to a remote server, and for wrangling many topic branches. |
 | `github-open` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
 
