@@ -10,14 +10,14 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
 
+- [Included Scripts](#included-scripts)
+- [Useful git aliases](#useful-git-aliases)
 - [Installing](#installing)
   - [Pre-requisites](#pre-requisites)
   - [Antigen](#antigen)
   - [oh-my-zsh](#oh-my-zsh)
   - [zgen](#zgen)
   - [Bash / Manual Installation](#bash--manual-installation)
-- [Included Scripts](#included-scripts)
-- [Useful git aliases](#useful-git-aliases)
 - [Other useful git stuff](#other-useful-git-stuff)
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
   - [External Git Utilities](#external-git-utilities)
@@ -35,57 +35,6 @@ However, some of the scripts in this collection came from other sources and may 
 This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
 
 If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repo and I will remove it.
-
-## Installing
-
-### Pre-requisites
-
-* A relatively recent version of `git`. The version of `git` Apple includes in macOS is very stale. You should really `brew install git` to get the current version if you're on macOS - if not for features, for security updates.
-* Python 3+
-* Ruby 2.2+
-
-### Antigen
-
-If you're using [Antigen](https://github.com/zsh-users/antigen):
-
-1. Add `antigen bundle unixorn/git-extra-commands` to your `.zshrc` where you've listed your other plugins.
-2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle unixorn/git-extra-commands` in a running shell to have `antigen` load the new plugin.
-
-### oh-my-zsh
-
-If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
-
-1. In the command line, change to _oh-my-zsh_'s custom plugin directory :
-
-    `cd ~/.oh-my-zsh/custom/plugins/`
-
-2. Clone the repository into a new `git-extra-commands` directory:
-
-    `git clone https://github.com/unixorn/git-extra-commands.git git-extra-commands`
-
-3. Edit your `~/.zshrc` and add `git-extra-commands` – same as clone directory – to the list of plugins to enable:
-
-    `plugins=( ... git-extra-commands )`
-
-4. Then, restart your terminal application to **refresh context** and use the plugin. Alternatively, you can source your current shell configuration:
-
-    `source ~/.zshrc`
-
-### zgen
-
-If you're using [zgen](https://github.com/tarjoilija/zgen):
-
-1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
-2. `zgen reset && zgen save`
-
-### Bash / Manual Installation
-
-Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
-
-If you aren't using any ZSH frameworks, or if you're a `bash` user, do the following steps:
-
-1. `git clone` this repository
-2. Add `cloneDirectory/bin` to your `$PATH`.
 
 ## Included Scripts
 
@@ -186,6 +135,57 @@ Here are some helpful aliases for your `~/.gitconfig`
 | `roots = log --all --oneline --decorate --max-parents=0` | Show the root commits. |
 | `unpushed = log @{u}..` | Show which commits have not been pushed to the tracking branch and are safe to amend/rebase. |
 | `work-in-progress = rebase -i @{u}` | Starts an interactive rebase of all the commits you haven't pushed yet. Handy for collapsing a bunch of work-in-progress snapshots into logical commits before pushing, without having to worry about accidentally squashing a commit someone else has already referred to. |
+
+## Installing
+
+### Pre-requisites
+
+* A relatively recent version of `git`. The version of `git` Apple includes in macOS is very stale. You should really `brew install git` to get the current version if you're on macOS - if not for features, for security updates.
+* Python 3+
+* Ruby 2.2+
+
+### Antigen
+
+If you're using [Antigen](https://github.com/zsh-users/antigen):
+
+1. Add `antigen bundle unixorn/git-extra-commands` to your `.zshrc` where you've listed your other plugins.
+2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle unixorn/git-extra-commands` in a running shell to have `antigen` load the new plugin.
+
+### oh-my-zsh
+
+If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
+
+1. In the command line, change to _oh-my-zsh_'s custom plugin directory :
+
+    `cd ~/.oh-my-zsh/custom/plugins/`
+
+2. Clone the repository into a new `git-extra-commands` directory:
+
+    `git clone https://github.com/unixorn/git-extra-commands.git git-extra-commands`
+
+3. Edit your `~/.zshrc` and add `git-extra-commands` – same as clone directory – to the list of plugins to enable:
+
+    `plugins=( ... git-extra-commands )`
+
+4. Then, restart your terminal application to **refresh context** and use the plugin. Alternatively, you can source your current shell configuration:
+
+    `source ~/.zshrc`
+
+### zgen
+
+If you're using [zgen](https://github.com/tarjoilija/zgen):
+
+1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
+2. `zgen reset && zgen save`
+
+### Bash / Manual Installation
+
+Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
+
+If you aren't using any ZSH frameworks, or if you're a `bash` user, do the following steps:
+
+1. `git clone` this repository
+2. Add `cloneDirectory/bin` to your `$PATH`.
 
 ## Other useful git stuff
 
