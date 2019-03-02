@@ -213,8 +213,6 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 * And when you manage to get your git working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to `man`, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway. [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them.
 
-* Steve Lorek has a blog post explaining [how to shrink a repository](http://stevelorek.com/how-to-shrink-a-git-repository.html).
-
 * Tim Green maintains the excellent [Github Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) collection of tips and aliases.
 
 * [firstaidgit.io](http://firstaidgit.io/) is a searchable selection of the most frequently asked Git questions
