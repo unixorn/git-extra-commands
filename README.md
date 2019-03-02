@@ -1,7 +1,7 @@
 # git-extra-commands
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Build Status](https://travis-ci.org/unixorn/git-extra-commands.svg?branch=master)](https://travis-ci.org/unixorn/git-extra-commands)
+[![CircleCI](https://circleci.com/gh/unixorn/git-extra-commands.svg?style=shield)](https://circleci.com/gh/unixorn/git-extra-commands)
 [![Code Climate](https://codeclimate.com/github/unixorn/git-extra-commands/badges/gpa.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![Issue Count](https://codeclimate.com/github/unixorn/git-extra-commands/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![GitHub stars](https://img.shields.io/github/stars/unixorn/git-extra-commands.svg)](https://github.com/unixorn/git-extra-commands/stargazers)
