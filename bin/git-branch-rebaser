@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Kicks off an interactive rebase of all the commits on your branch
+#
+# Copyright 2019, Vengada Rangaraju https://github.com/KarthikRangaraju
+# License: Apache 2.0
+
+set -o pipefail
+
+exec git rebase -i $(git rev-parse $(git log master..$(git rev-parse --abbrev-ref HEAD) --oneline | tail -1 | awk '{ print $1 }')^)
