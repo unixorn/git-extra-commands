@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#
+# Gives you a list of names with the number of lines last updated by that
+# user in files with the extension specified
+#
+# Copyright 2019, Neil Killeen <nkilleen@castlighthealth.com>
+#
+# Requires GNU sed
+
+set -o pipefail
+
+temp_ifs=$IFS;
+temp_lc_all=$LC_ALL
+IFS="|"
+LC_ALL="C"
+args="$*"
+
+git ls-tree -r HEAD | \
+  gsed -re 's/^.{53}//' | \
+  while read filename; do file "$filename"; done | \
+    grep -E ".*\.(${args})" | \
+    gsed -r -e 's/: .*//' | \
+    while read filename; do git blame -w "$filename"; done | \
+      gsed -r -e 's/.*\((.*)[0-9]{4}-[0-9]{2}-[0-9]{2} .*/\1/' -e 's/ +$//' | \
+      sort -gif | uniq -c
+
+IFS=${temp_ifs}
+LC_ALL=${temp_lc_all}
