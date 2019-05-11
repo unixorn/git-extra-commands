@@ -223,6 +223,8 @@ If you aren't using any ZSH frameworks, or if you're a `bash` user, do the follo
 
 * [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message.
 
+* [Git Rebase in Depth](https://git-rebase.io/) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
+ 
 * [Git Submodules Revisted](https://dev.to/dwd/git-submodules-revisited-1p54) is a good article by Dave Cridland on using submodules in your code.
 
 * [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) - Good article on dealing with reviewing the changes made during a merge.
