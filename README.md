@@ -213,7 +213,7 @@ If you aren't using any ZSH frameworks, or if you're a `bash` user, do the follo
 
 * Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
 
-* And when you manage to get your git working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to `man`, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway. [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them.
+* When you manage to get your git working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to `man`, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway. [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them.
 
 * Tim Green maintains the excellent [Github Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) collection of tips and aliases.
 
@@ -232,6 +232,8 @@ If you aren't using any ZSH frameworks, or if you're a `bash` user, do the follo
 * [Top ten pull request review mistakes](https://blog.scottnonnenberg.com/top-ten-pull-request-review-mistakes/) is a great article by Scott Nonnenberg on how to do better code reviews on PRs.
 
 * [A Tidy, Linear Git History](http://www.bitsnbites.eu/a-tidy-linear-git-history/) - Marcus Geelnard wrote a blog post about the value of a linear commit history.
+
+* [More Productive Git](https://increment.com/open-source/more-productive-git/) by James Turnbull is a quick tutorial for beginning `git` users.
 
 ### External Git Utilities
 
