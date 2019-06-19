@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Copy the current branch name to stdout for use in automation
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+echo "$branch" | tr -d '\n' | tr -d ' '

@@ -1,4 +1,4 @@
-# Copyright 2006-2018 Joseph Block <jpb@apesseekingknowledge.net>
+# Copyright 2006-2019 Joseph Block <jpb@apesseekingknowledge.net>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
