@@ -185,10 +185,10 @@ If you're using [zgen](https://github.com/tarjoilija/zgen):
 
 Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
 
-If you aren't using any ZSH frameworks, or if you're a `bash` user, do the following steps:
+If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or another shell, do the following steps:
 
 1. `git clone` this repository
-2. Add `cloneDirectory/bin` to your `$PATH`.
+2. Add `cloneDirectory/bin` to your `$PATH` in your shell's startup file.
 
 ## Other useful git stuff
 
