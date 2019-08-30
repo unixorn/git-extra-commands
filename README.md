@@ -236,6 +236,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * [More Productive Git](https://increment.com/open-source/more-productive-git/) by James Turnbull is a quick tutorial for beginning `git` users.
 
+* Julia Evans wrote a great blog post about [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/).
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like `git filter-branch` does, but faster.
