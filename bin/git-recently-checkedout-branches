@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Usage: git recently-checkedout-branches
 #
 # Shows timestamp and name of recently checked-out branches in reverse

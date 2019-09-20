@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Original source: http://github.com/rtomayko/dotfiles
 # Usage: git-rel [<ref>]
 # Shows the relationship between the current branch and <ref>. With no <ref>,

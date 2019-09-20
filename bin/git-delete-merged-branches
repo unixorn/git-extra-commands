@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Quick script to purge all the branches that have been merged to a target
 # branch (defaults to master)

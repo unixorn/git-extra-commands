@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Originally from Gary Bernhardt's dotfiles
 # https://github.com/garybernhardt/dotfiles/blob/master/bin/git-what-the-hell-just-happened
 
