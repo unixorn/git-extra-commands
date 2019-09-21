@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # git-rename-branches - rename multiple branches that start with a given name
 #

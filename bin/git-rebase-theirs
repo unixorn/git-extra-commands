@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # git-rebase-theirs - Resolve rebase conflicts by favoring 'theirs' version
 #

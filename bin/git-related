@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Usage: git related <file>
 #
 # Show other files that often get changed in commits that touch `<file>`.
