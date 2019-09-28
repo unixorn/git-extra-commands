@@ -240,6 +240,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * Roger Dudler wrote a good introduction to `git` in his [git, the simple guide](https://rogerdudler.github.io/git-guide/) post.
 
+* Patrick Porto wrote [4 Branching Workflows for git](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf) which discusses the pros and cons of four of the more popular `git` workflows.
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like `git filter-branch` does, but faster.
