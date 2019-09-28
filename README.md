@@ -14,9 +14,9 @@
 - [Useful git aliases](#useful-git-aliases)
 - [Installing](#installing)
   - [Pre-requisites](#pre-requisites)
+  - [zgen](#zgen)
   - [Antigen](#antigen)
   - [oh-my-zsh](#oh-my-zsh)
-  - [zgen](#zgen)
   - [Bash / Manual Installation](#bash--manual-installation)
 - [Other useful git stuff](#other-useful-git-stuff)
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
@@ -147,6 +147,13 @@ Here are some helpful aliases for your `~/.gitconfig`
 * Python 3+
 * Ruby 2.2+
 
+### zgen
+
+If you're using [zgen](https://github.com/tarjoilija/zgen):
+
+1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
+2. `zgen reset && zgen save`
+
 ### Antigen
 
 If you're using [Antigen](https://github.com/zsh-users/antigen):
@@ -174,13 +181,6 @@ If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
 
     `source ~/.zshrc`
 
-### zgen
-
-If you're using [zgen](https://github.com/tarjoilija/zgen):
-
-1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
-2. `zgen reset && zgen save`
-
 ### Bash / Manual Installation
 
 Nothing here actually requires you to use ZSH or zgen, that's just a convenient distribution method for anyone using a ZSH framework.
@@ -196,31 +196,31 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of Github & Git resources.
 
-* Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of git.
+* Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of `git`.
 
 * Zach Dennis has a great blog post - [A Git Walkthrough](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
-    * [gitready.com/](http://gitready.com/) is another great reference which has been collecting information and tips for git since 2009.
+    * [gitready.com/](http://gitready.com/) is a great reference which has been collecting information and tips for `git` since 2009.
     * [gitimmersion.com/](http://gitimmersion.com/)
 
 * There’s a quick [Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com)
 
-* There's a more detailed git tutorial on [learnenough.com](http://www.learnenough.com/git-tutorial)
+* There's a more detailed `git` tutorial on [learnenough.com](http://www.learnenough.com/git-tutorial)
 
-* Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful git usage tips.
+* Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful `git` usage tips.
 
 * [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips.
 
-* Christian Neukirchen wrote a great blog post, [A Grab Bag of Git Tricks](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) on git that is the source for several scripts in this collection.
+* Christian Neukirchen wrote a great blog post, [A Grab Bag of Git Tricks](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) on `git` that is the source for several scripts in this collection.
 
-* Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his git scripts are in this collection.
+* Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his `git` scripts are in this collection.
 
-* When you manage to get your git working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to `man`, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway. [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them.
+* When you manage to get your `git` working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to `man`, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway. [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them.
 
 * Tim Green maintains the excellent [Github Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) collection of tips and aliases.
 
 * [firstaidgit.io](http://firstaidgit.io/) is a searchable selection of the most frequently asked Git questions
 
-* [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) - A good essay that explains how git works, focusing on the graph structure underpinnings of git and how they affect its behavior.
+* [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) - A good essay that explains how git works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
 
 * [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message.
 
@@ -237,6 +237,10 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [More Productive Git](https://increment.com/open-source/more-productive-git/) by James Turnbull is a quick tutorial for beginning `git` users.
 
 * Julia Evans wrote a great blog post about [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/).
+
+* Roger Dudler wrote a good introduction to `git` in his [git, the simple guide](https://rogerdudler.github.io/git-guide/) post.
+
+* Patrick Porto wrote [4 Branching Workflows for git](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf) which discusses the pros and cons of four of the more popular `git` workflows.
 
 ### External Git Utilities
 
