@@ -20,7 +20,7 @@ PULL_ARGS="$@"
 test "$(basename $0)" = "git-reup" &&
 PULL_ARGS="--rebase $PULL_ARGS"
 
-git pull $PULL_ARGS
+git pull "$PULL_ARGS"
 
 # show diffstat of all changes if we're pulling with --rebase. not
 # sure why git-pull only does this when merging.
