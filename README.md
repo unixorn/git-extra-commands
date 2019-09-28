@@ -14,9 +14,9 @@
 - [Useful git aliases](#useful-git-aliases)
 - [Installing](#installing)
   - [Pre-requisites](#pre-requisites)
+  - [zgen](#zgen)
   - [Antigen](#antigen)
   - [oh-my-zsh](#oh-my-zsh)
-  - [zgen](#zgen)
   - [Bash / Manual Installation](#bash--manual-installation)
 - [Other useful git stuff](#other-useful-git-stuff)
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
@@ -147,6 +147,13 @@ Here are some helpful aliases for your `~/.gitconfig`
 * Python 3+
 * Ruby 2.2+
 
+### zgen
+
+If you're using [zgen](https://github.com/tarjoilija/zgen):
+
+1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
+2. `zgen reset && zgen save`
+
 ### Antigen
 
 If you're using [Antigen](https://github.com/zsh-users/antigen):
@@ -173,13 +180,6 @@ If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
 4. Then, restart your terminal application to **refresh context** and use the plugin. Alternatively, you can source your current shell configuration:
 
     `source ~/.zshrc`
-
-### zgen
-
-If you're using [zgen](https://github.com/tarjoilija/zgen):
-
-1. Add `zgen load unixorn/git-extra-commands` to your `.zshrc` along with your other `zgen load` commands.
-2. `zgen reset && zgen save`
 
 ### Bash / Manual Installation
 
@@ -237,6 +237,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [More Productive Git](https://increment.com/open-source/more-productive-git/) by James Turnbull is a quick tutorial for beginning `git` users.
 
 * Julia Evans wrote a great blog post about [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/).
+
+* Roger Dudler wrote a good introduction to `git` in his [git, the simple guide](https://rogerdudler.github.io/git-guide/) post.
 
 ### External Git Utilities
 
