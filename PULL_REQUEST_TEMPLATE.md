@@ -20,6 +20,7 @@
 - [ ] All new and existing tests pass.
 - [ ] Any scripts added use `#!/usr/bin/env interpreter` instead of potentially platform-specific direct paths (`#!/bin/sh` is an ok exception)\
 - [ ] Scripts are marked executable
+- [ ] Scripts _do not_ have a language file extension unless they are meant to be sourced and not run standalone. No one should have to know if a script was written in bash, python, ruby or whatever. Not including file extensions makes it easier to rewrite the script in another language later without having to change every reference to the previous version.
 - [ ] I have added a credit line to README.md for the script
 - [ ] If there was no author credit in a script added in this PR, I have added one.
 - [ ] I have confirmed that the link(s) in my PR are valid.
