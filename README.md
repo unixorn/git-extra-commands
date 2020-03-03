@@ -22,6 +22,7 @@
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
   - [External Git Utilities](#external-git-utilities)
 - [Miscellaneous Tips](#miscellaneous-tips)
+  - [Have git cope with typos](#have-git-cope-with-typos)
   - [Rewrite git:// with https://](#rewrite-git-with-https)
   - [or replace with `ssh`](#or-replace-with-ssh)
 - [Contributing](#contributing)
@@ -291,6 +292,18 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects
 
 ## Miscellaneous Tips
+
+### Have git cope with typos
+
+Do `git config --global help.autocorrect 1`
+
+git will now try to figure out what you meant, for example:
+
+```
+$ git commt
+WARNING: You called a Git command named 'commt', which does not exist.
+Continuing in 0.1 seconds, assuming that you meant 'commit'.
+```
 
 ### Rewrite git:// with https://
 
