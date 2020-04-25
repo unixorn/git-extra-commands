@@ -289,6 +289,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
 * [joe](https://github.com/karan/joe) - Generates `.gitignore` files from the command line for you.
 * [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
+* [switch-git](https://github.com/robin-mbg/switch-git) - Easy switching between `git` repositories. Just type `sgr <some part of you repo's name>`, press enter and you're there.
 * [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects
 
 ## Miscellaneous Tips
