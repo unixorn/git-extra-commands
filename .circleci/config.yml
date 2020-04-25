@@ -13,4 +13,4 @@ jobs:
 
       - run:
           name: Check README.md
-          command: awesome_bot README.md --allow-dupe --allow-redirect --white-list https://github,https://img.shields.io
+          command: awesome_bot README.md --allow-dupe --allow-redirect --request-delay 1 --white-list https://github,https://img.shields.io
