@@ -6,4 +6,4 @@
 #   https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ
 
 # shellcheck disable=SC2046,SC2063
-exec git branch -d $(git branch --merged | grep -v '^*' | tr -d '\n')
+exec git branch -d $(git branch --merged | grep -v '^[*+]' | tr -d '\n')
