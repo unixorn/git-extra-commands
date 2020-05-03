@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Shows the most recently touched branches, with the date, branch name,
+# commit hash, and commit subject.
+
+exec git for-each-ref \
+  --format='%(committerdate:short) %(refname:short) %(objectname:short) %(contents:subject)' \
+  --sort=-committerdate \
+  refs/heads
