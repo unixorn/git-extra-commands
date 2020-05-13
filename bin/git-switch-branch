@@ -7,5 +7,5 @@
 #
 # Source: https://github.com/Andrew565/dotfiles
 
-BRANCH=$(git branch | grep "$1")
+BRANCH=$(git branch | grep -m 1 "$1") # Return only the first match
 exec git checkout "$BRANCH"
