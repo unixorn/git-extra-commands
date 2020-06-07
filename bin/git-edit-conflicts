@@ -1,13 +1,12 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env bash
 
-if ENV.has_key?('VISUAL')
-  edit=ENV['VISUAL']
-elsif ENV.has_key?('EDITOR')
-  edit=ENV['EDITOR']
+if [ -n "$VISUAL" ]; then
+    edit=$VISUAL
+elif  [ -n "$EDITOR" ]; then
+    edit=$EDITOR
 else
-  puts "$VISUAL and $EDITOR are both unset, aborting"
-  exit 1
-end
+    echo "\$VISUAL and \$EDITOR are both unset, aborting"
+    exit 1
+fi
 
-conflicts = `git diff --name-only | uniq`.gsub(/\n/,' ')
-exec("#{edit} #{conflicts}")
+git conflicts | xargs "$edit"
