@@ -50,6 +50,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another. |
 | `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | List authors in the repo in descending commit-count order. |
+| `git-checkout-pr` | Based on [gist.github.com/gnarf/5406589](https://gist.github.com/gnarf/5406589) | Check out a PR locally |
 | `git-churn` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Show which files are getting changed most often in the repository. |
 | `git-clone-subset` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Uses `git clone` and `git filter-branch` to remove from the clone all files but the ones requested, along with their associated commit history. |
 | `git-comma` | Christian Neukirchen's [blog](http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Adds and commits a file in one command |
