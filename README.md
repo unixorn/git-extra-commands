@@ -229,6 +229,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message.
 
+* [Git Koans](http://stevelosh.com/blog/2013/04/git-koans/) - Inspired by the [Vim Koans](http://blog.sanctum.geek.nz/vim-koans/)
+
 * [Git Rebase in Depth](https://git-rebase.io/) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
 
 * [Git Submodules Revisted](https://dev.to/dwd/git-submodules-revisited-1p54) is a good article by Dave Cridland on using submodules in your code.
