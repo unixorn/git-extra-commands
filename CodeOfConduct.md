@@ -1,6 +1,6 @@
 # Contributor Covenant Code of Conduct
 
-TL;DR: Don't be a jerk. Just because it's the internet doesn't mean you get a pass for crappy behavior.
+TL;DR: Don't be a jerk. Just because it's the internet doesn't mean you get a pass for crappy behavior. I'm fine with no contributions from smart assholes.
 
 ## Our Pledge
 
