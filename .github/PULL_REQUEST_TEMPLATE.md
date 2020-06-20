@@ -6,7 +6,7 @@
 
 # Type of changes
 
-<!--- What types of changes does your submission introduce? Put an `x` in all the boxes that apply: -->
+<!--- What types of changes does your submission introduce? Put an `x` in all the boxes that apply: [x] -->
 
 - [ ] A helper script
 - [ ] A link to an external resource like a blog post or video
@@ -14,7 +14,7 @@
 
 # Checklist:
 
-<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. [x] -->
 <!--- If you're unsure about any of these, don't hesitate to ask. I'm happy to help! -->
 
 - [ ] All new and existing tests pass.
