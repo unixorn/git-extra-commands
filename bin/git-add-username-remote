@@ -3,7 +3,7 @@
 # Source: https://github.com/rtomayko/dotfiles/blob/rtomayko/bin/git-grab
 
 [ $# -eq 0 ] && {
-  echo "usage: git-grab username [repo]"
+  echo "usage: git-add-username-remote username [repo]"
   exit 1
 }
 
