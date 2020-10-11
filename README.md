@@ -22,10 +22,12 @@
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
   - [External Git Utilities](#external-git-utilities)
 - [Miscellaneous Tips](#miscellaneous-tips)
+  - [Make it easier to check out default branch](#make-it-easier-to-check-out-default-branch)
   - [Have git cope with typos](#have-git-cope-with-typos)
   - [Rewrite git:// with https://](#rewrite-git-with-https)
   - [or replace with `ssh`](#or-replace-with-ssh)
 - [Contributing](#contributing)
+- [Thanks](#thanks)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -301,6 +303,10 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 ## Miscellaneous Tips
 
+### Make it easier to check out default branch
+
+Many repositories are switching away from using **master** as the default branch name. You can do `git config --global alias.co-default '!'"git checkout \$(git branch -r | awk -F/ '/HEAD/ {print \$NF}')"` to add a co-default alias that will determine what the repository's default branch is for you.
+
 ### Have git cope with typos
 
 Do `git config --global help.autocorrect 1`
@@ -332,3 +338,13 @@ git config --global url."https://github".insteadOf git://github
 
 * Please include an entry both in the credits section of README.md for any scripts and a credit comment in the script itself in your PRs so authors get their work credited correctly.
 * Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (macOS and CentOS, I'm looking at you!) are stale.
+
+## Thanks
+
+Many thanks to all the contributors over the years.
+
+<a href="https://github.com/unixorn/git-extra-commands/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=unixorn/git-extra-commands" />
+</a>
+
+Made with [contributors-img](https://contributors-img.web.app).
