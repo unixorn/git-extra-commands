@@ -27,6 +27,7 @@
   - [Rewrite git:// with https://](#rewrite-git-with-https)
   - [or replace with `ssh`](#or-replace-with-ssh)
 - [Contributing](#contributing)
+- [Thanks](#thanks)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -337,3 +338,13 @@ git config --global url."https://github".insteadOf git://github
 
 * Please include an entry both in the credits section of README.md for any scripts and a credit comment in the script itself in your PRs so authors get their work credited correctly.
 * Please use `#!/usr/bin/env interpreter` instead of a direct path to the interpreter, this makes it easier for people to use more recent versions when the ones packaged with their OS (macOS and CentOS, I'm looking at you!) are stale.
+
+## Thanks
+
+Many thanks to all the contributors over the years.
+
+<a href="https://github.com/unixorn/git-extra-commands/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=unixorn/git-extra-commands" />
+</a>
+
+Made with [contributors-img](https://contributors-img.web.app).
