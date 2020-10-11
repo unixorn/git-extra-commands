@@ -22,6 +22,7 @@
   - [Articles / Blog posts / Books](#articles--blog-posts--books)
   - [External Git Utilities](#external-git-utilities)
 - [Miscellaneous Tips](#miscellaneous-tips)
+  - [Make it easier to check out default branch](#make-it-easier-to-check-out-default-branch)
   - [Have git cope with typos](#have-git-cope-with-typos)
   - [Rewrite git:// with https://](#rewrite-git-with-https)
   - [or replace with `ssh`](#or-replace-with-ssh)
@@ -300,6 +301,10 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects
 
 ## Miscellaneous Tips
+
+### Make it easier to check out default branch
+
+Many repositories are switching away from using **master** as the default branch name. You can do `git config --global alias.co-default '!'"git checkout \$(git branch -r | awk -F/ '/HEAD/ {print \$NF}')"` to add a co-default alias that will determine what the repository's default branch is for you.
 
 ### Have git cope with typos
 
