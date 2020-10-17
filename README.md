@@ -113,6 +113,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-show-overwritten` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Aggregates `git blame` information about the original owners of lines changed or removed in the '<base>...<head>' diff. |
 | `git-shrink-repo` | Based on [gimbo/gimbo-git.zsh](https://github.com/gimbo/gimbo-git.zsh/blob/master/gimbo-git.zsh) | Shrinks your clone of a `git` repo. |
 | `git-sp` | A. Schwarz's [git-sp](https://github.com/Schwarzy1/git-sp) | "Simple push", single short command to commit, and push. Use -a flag to add all files to commit. |
+| `git-sr` | Noel Cower's [git-sr](https://gist.github.com/nilium/2829f6690ad888c25660c15ba3a7c59c) | Use fzf to switch to a different git ref. |
 | `git-switch-branch` | Andrew Steele's [dotfiles](https://github.com/Andrew565/dotfiles) | Make it easier to switch to a branch by a substring of its name. More useful if you are good about deleting branches which have been merged upstream and if your branch names include unique identifiers like ticket/issue numbers or feature names. |
 | `git-submodule-rm` | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) & [Pascal Sommer](https://github.com/pascal-so/) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule`. |
 | `git-tag-and-sign` | ? | Create and sign a new tag |
