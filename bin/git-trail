@@ -1,6 +1,6 @@
 #!/bin/sh -e
 #
-# http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
+# http://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
 #
 # git trail [-r] [-t] [COMMIT] - show all branching points in Git history
 
