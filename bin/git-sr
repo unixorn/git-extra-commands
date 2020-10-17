@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# 
+# Originally from https://gist.github.com/nilium/2829f6690ad888c25660c15ba3a7c59c
+#
+# git sr [query]
+# Use fzf to switch to a different git ref.
+
+# TODO: Add option to hide remotes heads.
+
+ref="$(
+  git for-each-ref --format='%(refname)' refs/heads refs/remotes refs/tags |
+    egrep -ve '/HEAD$' |
+    fzf --filepath-word --preview='git show --color {}' --query="$*"
+)"
+case "$ref" in
+'') exit 1;;
+refs/heads/*)
+  git switch "${ref#refs/heads/}"
+  ;;
+refs/remotes/*/*)
+  git switch --guess "${ref#refs/remotes/*/}"
+  ;;
+*) # Fall back to checkout for other refs.
+  git checkout "${ref}"
+  ;;
+*/HEAD)
+  exit 1
+  ;;
+esac
