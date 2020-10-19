@@ -1,29 +1,319 @@
-#!/usr/bin/env bash
-# 
-# Originally from https://gist.github.com/nilium/2829f6690ad888c25660c15ba3a7c59c
+#!/usr/bin/env ruby
 #
-# git sr [query]
-# Use fzf to switch to a different git ref.
+# Copyright 2020 Noel Cower
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the
+#    distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+# Usage: git-sr [options] [query]
+# Switch to a different git branch or ref (branch or tag right now) using fzf to
+# pick the branch.
 
-# TODO: Add option to hide remotes heads.
+require 'set'
+require 'optparse'
 
-ref="$(
-  git for-each-ref --format='%(refname)' refs/heads refs/remotes refs/tags |
-    egrep -ve '/HEAD$' |
-    fzf --filepath-word --preview='git show --color {}' --query="$*"
-)"
-case "$ref" in
-'') exit 1;;
-refs/heads/*)
-  git switch "${ref#refs/heads/}"
-  ;;
-refs/remotes/*/*)
-  git switch --guess "${ref#refs/remotes/*/}"
-  ;;
-*) # Fall back to checkout for other refs.
-  git checkout "${ref}"
-  ;;
-*/HEAD)
+COMMAND = 'git-sr'
+
+# Whether to disable the preview window. (git-sr.disablePreview)
+DEFAULT_DISABLE_PREVIEW = false
+# Default log format. Not configurable.
+DEFAULT_PREVIEW_LOG_FORMAT = %q[format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s - %an%C(reset)%C(bold yellow)%d%C(reset)']
+# Default preview command for fzf. (git-sr.preview)
+DEFAULT_PREVIEW = %Q[git log --first-parent --format=#{DEFAULT_PREVIEW_LOG_FORMAT} --stat --color {}]
+# Preview window layout for fzf. (git-sr.previewWindow)
+DEFAULT_PREVIEW_WINDOW = 'up:80%'
+# Whether to automatically select the only matching value given the default
+# query. (git-sr.selectOne)
+DEFAULT_SELECT_ONE = true
+# Whether to show local heads. (git-sr.pickLocal)
+DEFAULT_PICK_LOCAL = true
+# Whether to show remote heads. (git-sr.pickRemote)
+DEFAULT_PICK_REMOTE = false
+# Whether to show all remote heads, including those with equivalent local heads.
+# (git-sr.pickAllRemote)
+DEFAULT_PICK_ALL_REMOTE = false
+# Whether to show tags. (git-sr.pickTags)
+DEFAULT_PICK_TAGS = false
+# Whether to show all refs. (git-sr.pickAll)
+DEFAULT_PICK_ALL = false
+
+Filter = Struct.new(:regexp, :keep)
+
+# BOOL_TRUE is a simple regular expression for saying whether something is
+# true-ish.
+BOOL_TRUE = /^(?:t(?:rue)?|\+?[1-9]\d*|yes|on)$/i
+
+# to_b converts an arbitrary value to a boolean.
+def to_b(v)
+  case v
+  when true, false then v
+  when Numeric
+    v != 0
+  when String
+    BOOL_TRUE.match?(v)
+  else
+    !v.nil?
+  end
+end
+
+# config looks up a git-config key and returns the value (or all values if
+# all:true is passed). If no value or an empty value is found, default is
+# returned. If all is set and default is nil, then an empty Array is returned.
+def config(key, default: nil, all: false)
+  if all
+    v = IO.popen([*%w[git config --null --get-all], key]) { |io| io.read }
+    v.chomp("\x00")
+    return (default || []) if v.empty?
+    return v.split("\x00")
+  end
+  v = IO.popen([*%w[git config --null --get-all], key]) { |io| io.read }
+  v.chomp("\x00")
+  v = v.chomp("\x00").split("\x00", 2).first
+  return default if v.nil?
+  v
+end
+
+# names is a convenience function for parsing a sequence of NUL-separated names
+# and applying Filters to them before returning the names as a Set.
+def names(v, filters = [])
+  ary = v.split("\x00").reject { |it| it.empty? || it == "\n" }
+  filters = filters.group_by(&:keep)
+  selects = filters[true]
+  rejects = filters[false]
+  if selects
+    ary.select! do |it|
+      selects.any? { |f| f.regexp.match?(it) }
+    end
+  end
+  if rejects
+    ary.reject! do |it|
+      rejects.any? { |f| f.regexp.match?(it) }
+    end
+  end
+  Set.new(ary)
+end
+
+# each_ref is a convenience function for calling git-for-each-ref and returning
+# the results as a Set of names.
+def each_ref(*paths, format: '%(refname:short)', filters: [])
+  names(
+    IO.popen([*%w[git for-each-ref], "--format=%00#{format}%00", *paths], 'r') { |io| io.read },
+    filters
+  )
+end
+
+# default_include is the default set of include filters taken from git-config.
+default_include = config("#{COMMAND}.exclude", all: true).map do |it|
+  Filter[Regexp.new(it), false]
+end
+
+# default_exclude is the default set of exclude filters taken from git-config.
+default_exclude = config("#{COMMAND}.include", all: true).map do |it|
+  Filter[Regexp.new(it), true]
+end
+
+# filters is the set of default and CLI-provided filters.
+filters = [*default_include, *default_exclude]
+
+# Whether to display local heads.
+pick_locals = to_b config("#{COMMAND}.pickLocal", default: DEFAULT_PICK_LOCAL)
+
+# Whether to display remote heads.
+pick_remotes = to_b config("#{COMMAND}.pickRemote", default: DEFAULT_PICK_REMOTE)
+# Whether to display all remote heads, including those that have equivalent
+# local heads.
+pick_all_remotes = to_b config("#{COMMAND}.pickAllRemote", default: DEFAULT_PICK_ALL_REMOTE)
+if pick_all_remotes then
+  pick_remotes = true
+end
+
+# Whether to display tags.
+pick_tags = to_b config("#{COMMAND}.pickTags", default: DEFAULT_PICK_TAGS)
+
+# If the pickAll config is set, then make all of the above pick_ variables true.
+if to_b config("#{COMMAND}.pickAll", default: DEFAULT_PICK_ALL)
+  pick_locals = true
+  pick_remotes = true
+  pick_all_remotes = true
+  pick_tags = true
+end
+
+# Remote names to omit or only show refs from. If onlyRemote is set, it filters
+# the set of remotes after omit_remotes are filtered out.
+omit_remotes = config("#{COMMAND}.excludeRemote", all: true)
+only_remotes = config("#{COMMAND}.onlyRemote", all: true)
+
+# Parse arguments.
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{COMMAND.sub(/^git-/, 'git ')} [options] [query]"
+
+  opts.on("-a", "--all-refs", "Shorthand for -mrt") do |v|
+    pick_remotes = v
+    pick_all_remotes = v
+    pick_tags = v
+  end
+  opts.on("-l", "--[no-]local", "Pick local refs") do |v|
+    pick_locals = v
+  end
+  opts.on("-L", "--no-local", "Ignore local refs") do |v|
+    pick_locals = v
+  end
+  opts.on("-r", "--[no-]remote", "Select remote heads") do |v|
+    pick_remotes = v
+  end
+  opts.on("-R", "--no-remote", "Do not select remote heads") do |v|
+    pick_remotes = v
+  end
+  opts.on("-m", "--[no-]all-remote", "Select all remote heads") do |v|
+    pick_remotes = true if v
+    pick_all_remotes = v
+  end
+  opts.on("-M", "--no-all-remote", "Do not select all remote heads") do |v|
+    pick_all_remotes = v
+  end
+  opts.on("-t", "--[no-]tags", "Select tags") do |v|
+    pick_tags = v
+  end
+  opts.on("-T", "--no-tags", "Do not select tags") do |v|
+    pick_tags = v
+  end
+  opts.on("-IREMOTE", "--ignore-remote=REMOTE", "Ignore refs from a remote") do |v|
+    omit_remotes.push v
+  end
+  opts.on("-oREMOTE", "--only-remote=REMOTE", "Only list remote refs from a remote") do |v|
+    only_remotes.push v
+  end
+  opts.on("-iREGEXP", "--include=REGEXP", "Include refs matching a regexp") do |v|
+    filters.push Filter[Regexp.new(v), true]
+  end
+  opts.on("-eREGEXP", "--exclude=REGEXP", "Exclude refs matching a regexp") do |v|
+    filters.push Filter[Regexp.new(v), false]
+  end
+end.parse!
+
+# Convert remote filters to sets.
+omit_remotes = Set.new(omit_remotes)
+only_remotes = Set.new(only_remotes)
+
+# Get a set of all remote names and filter them using omit_remotes and
+# only_remotes.
+remotes=names(%x{
+  git config --name-only --null --get-regexp '^remote\..+\.url$'
+}, []).map { |it| it.delete_prefix("remote.").delete_suffix(".url") }
+remotes.reject! { |it| omit_remotes.include? it }
+unless only_remotes.empty?
+  remotes.select! { |it| only_remotes.include?(it) }
+end
+
+# Get all local heads.
+local_refs = Set.new
+if pick_locals
+  local_refs = each_ref('refs/heads', filters: filters)
+end
+
+# Get all remote heads.
+remote_refs = Set.new
+if pick_remotes
+  remote_refs = each_ref(
+    *(remotes.map { |it| "refs/remotes/#{it}/" }),
+    format: '%(refname:lstrip=2)',
+    filters: filters
+  )
+end
+
+# Unless pick_all_remotes is set, filter out any remote refs that line up with
+# a local ref.
+unless pick_all_remotes
+  local_refs.each do |it|
+    remotes.each do |r|
+      remote_refs.delete "#{r}/#{it}"
+    end
+  end
+end
+
+# Get all tag refs.
+tag_refs = Set.new()
+if pick_tags
+  tag_refs = each_ref(
+    'refs/tags',
+    format: '%(refname:lstrip=1)',
+    filters: filters
+  )
+end
+
+# Combine all ref names together in the order local > remote > tags.
+refs=[*local_refs, *remote_refs, *tag_refs]
+
+if refs.empty?
+  $stderr.puts "No refs found."
   exit 1
-  ;;
-esac
+end
+
+optargs = []
+
+# If selectOne is true, then allow selecting the only matching ref.
+if to_b config("#{COMMAND}.selectOne", default: DEFAULT_SELECT_ONE)
+  optargs.push '--select-1'
+end
+
+# Grab preview window config.
+unless to_b config("#{COMMAND}.disablePreview", default: DEFAULT_DISABLE_PREVIEW)
+  preview_window = config("#{COMMAND}.previewWindow", default: DEFAULT_PREVIEW_WINDOW)
+  preview_command = config("#{COMMAND}.preview", default: DEFAULT_PREVIEW)
+  optargs.push(
+    "--preview=#{preview_command}",
+    "--preview-window=#{preview_window}"
+  )
+end
+
+# Pass all ref names to fzf to select one.
+sel = IO.popen(%W[fzf
+    --filepath-word
+    --read0
+    --print0
+    --query=#{ARGV.join ' '}
+] + optargs, 'r+') do |io|
+  io.write(refs.join("\x00"))
+  io.close_write
+  io.read
+end
+
+# Grab the first ref emitted and exec to git checkout to change refs.
+ref = sel.split("\x00").first
+exit 1 if ref.nil? || ref.empty?
+
+case
+when remote_refs.include?(ref)
+  remote, ref = ref.split("/", 2)
+  # Check out the remote ref as a detached head if there's already a branch by
+  # the same name.
+  exec(*%w[git checkout], "refs/remotes/#{remote}/#{ref}") if local_refs.include?(ref)
+  # Check out the remote ref as a new branch.
+  exec(*%w[git checkout --track --branch], ref, "refs/remotes/#{remote}/#{ref}")
+when tag_refs.include?(ref)
+  exec(*%w[git checkout], "refs/tags/#{ref}")
+else
+  exec(*%w[git checkout], ref)
+end
