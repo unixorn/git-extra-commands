@@ -1,7 +1,7 @@
 #!/bin/sh -e
 # git neck [-r] [COMMIT] - show commits until first branching point
 #
-# Source: http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
+# Source: https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
 
 [ "$1" = -r ] && shift && R=-r
 COMMIT=$(git rev-parse --no-flags --default HEAD "$@")

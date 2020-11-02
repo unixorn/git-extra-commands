@@ -2,7 +2,7 @@
 #
 # git comma - like git commit, but adds unknown files automatically
 #
-# Source: http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
+# Source: https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
 
 added=()
 

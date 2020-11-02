@@ -7,7 +7,7 @@
 # git show to display the file contents, or just select the hash without ^ to
 # see the commit where removal happened
 #
-# Source: http://chneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
+# Source: https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html
 
 
 git log --raw --no-renames --date=short --format="%h %cd" "$@" |
