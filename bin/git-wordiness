@@ -1,0 +1,147 @@
+#!/usr/bin/env bash
+#
+# Source: https://gist.github.com/nilium/5083d036576559fb7bb9dafc822adb29
+
+# FIXME: Names with non-ASCII characters can throw off alignment of
+# columns.
+
+usage() {
+    cat <<HELPTXT 1>&2
+git-wordiness [OPTIONS]
+
+List general sums about commit messages (i.e., wc output).
+
+OPTIONS
+-s[PREFIX]
+    Pass all names through sha1sum (with an optional PREFIX).
+    Can be used to mask names, if that's necessary.
+-csv
+    Output results in comma-separated value format.
+-tsv
+    Output results in tab-separated value format.
+-order=ORDER
+    Set the output ordering to one of the following:
+     - commits, c
+       Order by total commits.
+     - wpc, W
+       Order by words-per-commit
+     - lines, l
+       Order by lines used in all commit messages
+       (does not rewrap or unbreak paragraphs).
+     - words, w
+       Order by total words used in all commit messages.
+     - bytes, b
+       Order by bytes used for all commit messages.
+     - name, n
+       Order by committer name.
+HELPTXT
+}
+
+set_order() {
+        local oarg="$1"
+        case "$oarg" in
+        commits|c)
+                 order=1
+                 ;;
+        wpc|W)
+                order=2
+                ;;
+        lines|l)
+                order=3
+                ;;
+        words|w)
+                order=4
+                ;;
+        bytes|b)
+                order=5
+                ;;
+        name|n)
+                order=6
+                ordertype='-d'
+                ;;
+        *)
+                printf "unrecognized ordering '%s'\n" "$oarg" 1>&2
+                exit 1
+                ;;
+        esac
+}
+
+hfmt='%10s %10s %10s %10s %10s %s\n'
+fmt='%10d %10.2f %10d %10d %10d %s\n'
+head=1
+order=1
+ordertype='-n'
+shanames=0
+shaprefix=''
+logargs=(--all)
+while [[ $# -gt 0 ]] ; do
+        arg="$1"
+        shift
+        case "$arg" in
+        -h|-help|--help)
+                usage
+                exit 0
+                ;;
+        -s=*)
+                shanames=1
+                shaprefix="${arg#-s=}"
+                ;;
+        -s*)
+                shanames=1
+                shaprefix="${arg#-s}"
+                ;;
+        -c|-csv|--csv)
+                hfmt='%s,%s,%s,%s,%s,%s\n'
+                fmt='%d,%.2f,%d,%d,%d,%s\n'
+                ;;
+        -t|-tsv|--tsv)
+                hfmt='%s\t%s\t%s\t%s\t%s\t%s\n'
+                fmt='%d\t%.2f\t%d\t%d\t%d\t%s\n'
+                ;;
+        -order=*) set_order "${arg#-order=*}" ;;
+        --order=*) set_order "${arg#--order=*}" ;;
+        -o?) set_order "${arg:2}" ;;
+        -nh|-nohead|--nohead) head=0 ;;
+        --)
+                logargs=("$@")
+                break
+                ;;
+        *)
+                logargs=("$arg" "$@")
+                break
+                ;;
+        esac
+done
+
+export shanames
+export shaprefix
+
+export logquote="$(if [[ "${#logargs[@]}" -gt 0 ]] ; then printf ' %q' "${logargs[@]}" ; fi)"
+
+export fmt
+if [[ $head == 1 ]]
+then
+        printf "$hfmt" COMMITS WPC LINES WORDS BYTES NAME
+fi
+git log --pretty='%aN' --use-mailmap "${logargs[@]}" |
+        sort |
+        uniq |
+        xargs -I @@ \
+                env NAME=@@ REGEX='^@@ <' \
+                bash -c $'
+                    wcout=(
+                        # lines words bytes
+                        $(git log $logquote --use-mailmap --pretty="%B" --author="$REGEX" | wc)
+                    )
+                    commits=$(git log $logquote --use-mailmap --pretty="%H" --author="$REGEX" | wc -l)
+                    comp=(
+                        "$commits"
+                        "$(bc <<< "scale=2; ${wcout[1]}/${commits}")"
+                        "${wcout[@]}"
+                    )
+                    if [ $shanames -eq 1 ]; then
+                        NAME="$(printf %s%s "$shaprefix" "$NAME" | sha1sum | awk \'{print $1}\')"
+                    fi
+                    printf "$fmt" "${comp[@]}" "$NAME"
+                ' | \
+        sort -b $ordertype -k "${order}n"
