@@ -74,4 +74,5 @@ zstyle ':completion:*:*:git:*' user-commands \
   when-merged:'Find when a commit was merged into one or more branches' \
   where:'Shows where a particular commit falls between releases' \
   winner:'Determines "winner" by commit count, and number of lines' \
+  wordiness:'List commit message word and line counts per contributor' \
   wtf:'Displays the state of your repository in a readable, easy-to-scan format'
