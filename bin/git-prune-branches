@@ -14,7 +14,13 @@
 # License: MIT
 # Original source: https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches
 
-merged=$(git branch --no-color --merged master | grep -v master | sed 's/\*/ /')
+PRIMARY_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $3}')
+if [[ -z "$PRIMARY_BRANCH" ]]; then
+  echo "Could not determine primary branch"
+  exit 13
+fi
+
+merged=$(git branch --no-color --merged "$PRIMARY_BRANCH" | grep -v "$PRIMARY_BRANCH" | sed 's/\*/ /')
 
 if [ ! -z "$merged" ] ; then
   echo "Deleting the following merged branches:"
