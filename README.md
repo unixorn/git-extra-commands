@@ -296,6 +296,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your git repositories
 * [gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command line (macOS only).
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
+* [gunstage](https://github.com/LucasLarson/gunstage) - There are at least eight ways to unstage files in a `git` repository. This is a command-line shell plugin for undoing `git add`.
 * [hitch](https://github.com/therubymug/hitch) - Allows developers to be properly credited when Pair Programming and using `git`.
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
 * [joe](https://github.com/karan/joe) - Generates `.gitignore` files from the command line for you.
