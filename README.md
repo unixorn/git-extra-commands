@@ -310,6 +310,15 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 Many repositories are switching away from using **master** as the default branch name. You can do `git config --global alias.co-default '!'"git checkout \$(git branch -r | awk -F/ '/HEAD/ {print \$NF}')"` to add a co-default alias that will determine what the repository's default branch is for you.
 
+Alternatively, add the following aliases from a [tweet by @jnesselr](https://twitter.com/jnesselr/status/1334586152691625985) to your `.gitconfig` file:
+
+```
+cdef = "!git checkout $(git originhead)"
+originhead = "!git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5"
+```
+
+This queries the remote to get the current up to date default branch, so it will work even if the remote's default branch changes after you did your initial checkout.
+
 ### Have git cope with typos
 
 Do `git config --global help.autocorrect 1`
