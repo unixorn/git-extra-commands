@@ -101,7 +101,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-rebase-theirs` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Resolve rebase conflicts by favoring 'theirs' version. |
 | `git-recently-checkedout-branches` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order. |
 | `git-ref-recent` | [Y combinator article](https://news.ycombinator.com/item?id=22796640) | Shows the date, branch name, commit hash, and commit subject of branches, from most recently modified to oldest branches. |
-| `git-rel` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*>*. With no *ref*, the current branch's remote tracking branch is used. |
+| `git-rel` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*. With no *ref*, the current branch's remote tracking branch is used. |
 | `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
 | `git-related` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show other files that often get changed in commits that touch `<file>`. |
 | `git-rename-branches` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Rename multiple branches that start with a given name. |
@@ -208,8 +208,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of `git`.
 
 * Zach Dennis has a great blog post - [A Git Walkthrough](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
-    * [gitready.com/](http://gitready.com/) is a great reference which has been collecting information and tips for `git` since 2009.
-    * [gitimmersion.com/](http://gitimmersion.com/)
+  * [gitready.com/](http://gitready.com/) is a great reference which has been collecting information and tips for `git` since 2009.
+  * [gitimmersion.com/](http://gitimmersion.com/)
 
 * There’s a quick [Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com)
 
@@ -316,7 +316,7 @@ Do `git config --global help.autocorrect 1`
 
 git will now try to figure out what you meant, for example:
 
-```
+```sh
 $ git commt
 WARNING: You called a Git command named 'commt', which does not exist.
 Continuing in 0.1 seconds, assuming that you meant 'commit'.
