@@ -313,7 +313,7 @@ Many repositories are switching away from using **master** as the default branch
 
 Alternatively, add the following aliases from a [tweet by @jnesselr](https://twitter.com/jnesselr/status/1334586152691625985) to your `.gitconfig` file:
 
-```
+```sh
 cdef = "!git checkout $(git originhead)"
 originhead = "!git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5"
 ```
