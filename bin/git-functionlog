@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+#
+# Copyright 2020, Joe Block <jpb@unixorn.net>
+#
+# Show the log of a specific function
+#
+# Based on example in https://twitter.com/tgamblin/status/1340834896432926720
+#
+# You will need to add
+#  *.py diff=python
+#  *.rb diff=ruby
+# to your ~/.gitattributes file to get it to work for python and ruby
+
+usage() {
+  # shellcheck disable=SC2086
+  echo "Usage:"
+  myname=$(basename "$0")
+  echo "$myname function file"
+}
+
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+if [[ $# -ne 2 ]]; then
+  usage "$@"
+  exit 13
+fi
+
+function_name=$1
+filename=$2
+
+if [[ ! -f "$filename" ]]; then
+  echo "$filename is not a file."
+  usage "$@"
+  exit 13
+fi
+
+exec git log -L:"${function_name}:${filename}"
