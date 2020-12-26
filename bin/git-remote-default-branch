@@ -6,13 +6,21 @@
 
 set -o pipefail
 
-echo $#
+usage() {
+  myname=$(basename "$0")
+  echo "Usage: $myname [GIT_REMOTE_NAME]"
+}
 
 if [[ $# -eq 0 ]]; then
   REMOTENAME='origin'
 fi
-if [[ $# -gt 0 ]];then
+if [[ $# -eq 1 ]];then
   REMOTENAME="$1"
+fi
+if [[ $# -gt 1 ]];then
+  # shellcheck disable=SC2068
+  usage $@
+  exit 1
 fi
 
 git remote show "${REMOTENAME}" | awk '/HEAD branch/ {print $3}'
