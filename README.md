@@ -256,6 +256,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * [Tracking diffs by scoping to file, range, function, method, or class changes in Git](https://susanpotter.net/software/tracking-diffs-by-scoping-to-file-range-function-method-or-class-changes-in-git/) is a great article by Susan Potter about making `git` show file-specific diffs, or even function-specific diffs in a language-aware way.
 
+* [A Thorough Introduction to Git's Interactive Patch Mode](https://dev.to/krnsk0/a-thorough-introduction-to-git-s-interactive-patch-mode-4bl6) - An introduction on how to stage just parts of your changes to a commit.
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like `git filter-branch` does, but faster.
