@@ -304,6 +304,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [gunstage](https://github.com/LucasLarson/gunstage) - There are at least eight ways to unstage files in a `git` repository. This is a command-line shell plugin for undoing `git add`.
 * [hitch](https://github.com/therubymug/hitch) - Allows developers to be properly credited when Pair Programming and using `git`.
 * [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
+* [igit](https://github.com/ytakahashi/igit) - Interactively construct `git` commands using [fzf](https://github.com/junegunn/fzf).
 * [joe](https://github.com/karan/joe) - Generates `.gitignore` files from the command line for you.
 * [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
 * [switch-git](https://github.com/robin-mbg/switch-git) - Easy switching between `git` repositories. Just type `sgr <some part of you repo's name>`, press enter and you're there.
