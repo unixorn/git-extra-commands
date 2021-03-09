@@ -262,53 +262,53 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like `git filter-branch` does, but faster.
 * [bitbucket-git-helpers](https://github.com/unixorn/bitbucket-git-helpers.plugin.zsh) - Helper scripts to allow you to create bitbucket PRs from a shell session.
-* [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a git repository.
+* [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a `git` repository.
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
 * [commit-helper](https://github.com/andre-filho/commit-helper) - A python script that helps you write commits following commit conventions.
-* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking git diffs
-* [git zsh plugin](https://github.com/davidde/git) - A replacement for the stock oh-my-zsh git plugin. Provides quite a few useful aliases and functions that are more consistent in their naming that the relatively unintuitive ones in the stock plugin.
-* [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's git plugin which you may prefer to the git plugin from oh-my-zsh.
+* [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking `git` diffs
+* [git zsh plugin](https://github.com/davidde/git) - A replacement for the stock oh-my-zsh `git` plugin. Provides quite a few useful aliases and functions that are more consistent in their naming that the relatively unintuitive ones in the stock plugin.
+* [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's `git` plugin which you may prefer to the `git` plugin from oh-my-zsh.
 * [git-also](https://github.com/anvaka/git-also) - Shows what files are most often committed with a given file in the repository.
 * [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
-* [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A git utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
+* [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A `git` utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
 * [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches.
 * [git-bump](https://github.com/arrdem/git-bump) - Hook scripts to automatically bump the version file in a repository
-* [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a git repository
+* [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a `git` repository
 * [git-complete-urls](https://github.com/rapgenic/zsh-git-complete-urls) - ZSH plugin to enhance git completion to include in the remotes completion (e.g. from `git clone`) any URL in the clipboard.
-* [git-cop](https://github.com/bkuhlmann/git-cop) - Enforces Git rebase workflow with consistent Git commits for a clean and easy to read/debug project history.
-* [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a git repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
-* [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your git repo's assets in sync with Amazon S3.
-* [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for git.
-* [git-extend](https://github.com/nickolasburr/git-extend) - Extend Git builtins with command wrappers.
+* [git-cop](https://github.com/bkuhlmann/git-cop) - Enforces `git` rebase workflow with consistent commits for a clean and easy to read/debug project history.
+* [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a `git` repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
+* [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your `git` repository's assets in sync with Amazon S3.
+* [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for `git`.
+* [git-extend](https://github.com/nickolasburr/git-extend) - Extend `git` builtins with command wrappers.
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 * [git-flow-completion](https://github.com/bobthecow/git-flow-completion) - Bash, Fish and Zsh completion support for [git-flow](http://github.com/nvie/gitflow)
 * [git-follow](https://github.com/nickolasburr/git-follow) - Follow lifetime changes of a pathspec.
 * [git-graph](https://github.com/jerith666/git-graph) - creates a Graphviz graph showing the high-level structure of a repository's history.
-* [git-gutter](https://github.com/jisaacks/GitGutter) - Plugin for Sublime Text 2/3 to display the git diff in the edit window gutter.
-* [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) - Another plugin by Peter Hurford that adds a gitit command that will open your current directory on github, in your current branch.
-* [git-quick-stats](https://github.com/arzzen/git-quick-stats) - A simple and efficient way to access various statistics in git repository.
-* [git-repo-updater](https://github.com/earwig/git-repo-updater) - Allows you to easily update multiple git repositories at once.
-* [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into git repositories.
-* [git-standup](https://github.com/kamranahmedse/git-standup) - Recall what you did on the last working day. Can work in a directory full of git repos to see a consolidated view of all work in all the repos.
+* [git-gutter](https://github.com/jisaacks/GitGutter) - Plugin for Sublime Text 2/3 to display the `git` diff in the edit window gutter.
+* [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) - Another plugin by Peter Hurford that adds a `gitit` command that will open your current directory on github, in your current branch. Also works with private github servers.
+* [git-quick-stats](https://github.com/arzzen/git-quick-stats) - A simple and efficient way to access various statistics in a `git` repository.
+* [git-repo-updater](https://github.com/earwig/git-repo-updater) - Allows you to easily update multiple `git` repositories at once.
+* [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into `git` repositories.
+* [git-standup](https://github.com/kamranahmedse/git-standup) - Recall what you did on the last working day. Can work in a directory full of `git` repos to see a consolidated view of all work in all the repos.
 * [git-stashd](https://github.com/nickolasburr/git-stashd) - Autostashing daemon for dirty worktrees.
-* [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with git submodules easier.
+* [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with `git` submodules easier.
 * [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
 * [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repo.
 * [git-up (gem)](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
 * [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
-* [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's GIT history
-* [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a git repository
-* [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your git repositories
+* [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's `git` history
+* [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a `git` repository
+* [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your `git` repositories
 * [gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command line (macOS only).
-* [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for git. From within gitsh you can issue any git command, even using your local aliases and configuration.
+* [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for `git`. From within gitsh you can issue any git command, even using your local aliases and configuration.
 * [gunstage](https://github.com/LucasLarson/gunstage) - There are at least eight ways to unstage files in a `git` repository. This is a command-line shell plugin for undoing `git add`.
 * [hitch](https://github.com/therubymug/hitch) - Allows developers to be properly credited when Pair Programming and using `git`.
-* [hub](https://github.com/github/hub) - A command line tool that wraps git in order to extend it with extra features and commands that make working with GitHub easier.
+* [hub](https://github.com/github/hub) - A command line tool that wraps `git` in order to extend it with extra features and commands that make working with GitHub easier.
 * [igit](https://github.com/ytakahashi/igit) - Interactively construct `git` commands using [fzf](https://github.com/junegunn/fzf).
 * [joe](https://github.com/karan/joe) - Generates `.gitignore` files from the command line for you.
 * [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
 * [switch-git](https://github.com/robin-mbg/switch-git) - Easy switching between `git` repositories. Just type `sgr <some part of you repo's name>`, press enter and you're there.
-* [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects
+* [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects.
 
 ## Miscellaneous Tips
 
