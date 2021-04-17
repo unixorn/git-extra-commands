@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Fetch PR branches by refspec
+#
+# Copyright 2020, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+
+# Get all Pull Request branches as local remote branches by refspec.
+exec git fetch origin '+refs/pull/*/head:refs/remotes/origin/pr/*'
