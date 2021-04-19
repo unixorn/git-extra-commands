@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#
+# Outputs the SHA of the oldest common ancestor of two branches.
+#
+# The first argument defaults to `master` and the second argument defaults to `HEAD`.
+# 
+# Original source: https://github.com/lee-dohm/dotfiles/blob/main/bin/git-oldest-ancestor
+
+ancestor=$(diff --old-line-format='' --new-line-format='' \
+    <(git rev-list --first-parent "${1:-master}") \
+    <(git rev-list --first-parent "${2:-HEAD}") | \
+    head -1)
+
+exec git rev-parse --short "$ancestor"
