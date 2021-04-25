@@ -177,19 +177,15 @@ If you're using [Antigen](https://github.com/zsh-users/antigen):
 
 If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
 
-1. In the command line, change to _oh-my-zsh_'s custom plugin directory :
+1. Clone the repository into a new `git-extra-commands` directory in oh-my-zsh's plugin folder:
 
-    `cd ~/.oh-my-zsh/custom/plugins/`
+    `git clone https://github.com/unixorn/git-extra-commands.git $ZSH_CUSTOM/plugins/git-extra-commands`
 
-2. Clone the repository into a new `git-extra-commands` directory:
-
-    `git clone https://github.com/unixorn/git-extra-commands.git git-extra-commands`
-
-3. Edit your `~/.zshrc` and add `git-extra-commands` – same as clone directory – to the list of plugins to enable:
+2. Edit your `~/.zshrc` and add `git-extra-commands` – same as clone directory – to the list of plugins to enable:
 
     `plugins=( ... git-extra-commands )`
 
-4. Then, restart your terminal application to **refresh context** and use the plugin. Alternatively, you can source your current shell configuration:
+3. Then, restart your terminal application to **refresh context** and use the plugin. Alternatively, you can source your current shell configuration:
 
     `source ~/.zshrc`
 
