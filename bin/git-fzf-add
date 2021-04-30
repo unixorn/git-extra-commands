@@ -14,7 +14,7 @@ fail() {
 
 if has bat; then
   git-fzf-add() {
-    local selections=$(
+    selections=$(
       git status --porcelain | \
       fzf --ansi \
         --preview 'if (git ls-files --error-unmatch {2} &>/dev/null); then
@@ -23,14 +23,15 @@ if has bat; then
                       bat --color=always --line-range :500 {2}
                   fi'
       )
-    if [[ -n $selections ]]; then
-        git add --verbose $(echo "$selections" | cut -c 4- | tr '\n' ' ')
+    if [[ -n "$selections" ]]; then
+      # shellcheck disable=SC2046
+      git add --verbose $(echo "$selections" | cut -c 4- | tr '\n' ' ')
     fi
   }
 else
   # Use head since bat is missing
   git-fzf-add() {
-    local selections=$(
+    selections=$(
       git status --porcelain | \
       fzf --ansi \
         --preview 'if (git ls-files --error-unmatch {2} &>/dev/null); then
@@ -39,8 +40,9 @@ else
                       head -100 {2}
                   fi'
       )
-    if [[ -n $selections ]]; then
-        git add --verbose $(echo "$selections" | cut -c 4- | tr '\n' ' ')
+    if [[ -n "$selections" ]]; then
+      # shellcheck disable=SC2046
+      git add --verbose $(echo "$selections" | cut -c 4- | tr '\n' ' ')
     fi
   }
 fi

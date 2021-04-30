@@ -22,7 +22,8 @@ git-fzf-log-pickaxe() {
       fzf --ansi --no-sort --no-height \
           --preview "git show --color=always {1}"
     )
-  if [[ -n $selections ]]; then
+  # shellcheck disable=SC2086
+  if [[ -n "$selections" ]]; then
     commits=$(echo "$selections" | cut -d' ' -f1 | tr '\n' ' ')
     git show $commits
   fi
