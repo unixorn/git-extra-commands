@@ -263,6 +263,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) - Great article about using [fzf](https://github.com/junegunn/fzf) with some `git` helper scripts.
 
+* [The Git Pickaxe](http://www.philandstuff.com/2014/02/09/git-pickaxe.html) - Explains how you can use the `git` pickaxe to search easily for strings in commit messages - write good commit messages and it'll be easier to find the commits that actually implement changes.
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like `git filter-branch` does, but faster.
