@@ -74,6 +74,9 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-forest` | Jan Engelhardt | Prints a text-based tree visualisation of your repository. Requires [Git.pm](https://metacpan.org/release/Git) |
 | `git-functionlog` | Joe Block <jpb@unixorn.net> | Allows you to get a log of a particular function, not a file |
 | `git-fzf-add` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to select files to add to `git` |
+| `git-fzf-log-browser` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to browse the repository's `git` log |
+| `git-fzf-pickaxe-browser` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to display a Git log list that has been filtered with [pickaxe](http://www.philandstuff.com/2014/02/09/git-pickaxe.html) for a search term. |
+| `git-fzf-reflog-browser` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to browse the repository's `git` reflog list that can be filtered by entering a fuzzy term at the prompt. Navigation up and down the hash list will preview the changes of each hash. |
 | `git-git` | Joe Block <jpb@unixorn.net> | Typing `git git foo` will make git do a `git foo` instead of complaining. |
 | `git-github-open` | ? | Open GitHub file/blob page for FILE on LINE. |
 | `git-gitlab-mr` | Noel Cower's [gist](https://gist.github.com/nilium/ac808ee3729cdce01ec0f3c0a499f099) | Open a merge request on GitLab |

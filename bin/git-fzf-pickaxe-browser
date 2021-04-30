@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#
+# Original source: https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+git-fzf-log-pickaxe() {
+  if [[ $# == 0 ]]; then
+    echo 'Error: search term was not provided.'
+    return
+  fi
+  selections=$(
+    git log --oneline --color=always -S "$@" |
+      fzf --ansi --no-sort --no-height \
+          --preview "git show --color=always {1}"
+    )
+  if [[ -n $selections ]]; then
+    commits=$(echo "$selections" | cut -d' ' -f1 | tr '\n' ' ')
+    git show $commits
+  fi
+ }
+
+# shellcheck disable=SC2068
+git-fzf-log-pickaxe $@
