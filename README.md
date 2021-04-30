@@ -73,6 +73,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-force-mtimes` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets mtimes of all files in the reprository their last change date based on git's log. Useful to avoid too new dates after a checkout confusing `make` or `rake`. |
 | `git-forest` | Jan Engelhardt | Prints a text-based tree visualisation of your repository. Requires [Git.pm](https://metacpan.org/release/Git) |
 | `git-functionlog` | Joe Block <jpb@unixorn.net> | Allows you to get a log of a particular function, not a file |
+| `git-fzf-add` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to select files to add to `git` |
 | `git-git` | Joe Block <jpb@unixorn.net> | Typing `git git foo` will make git do a `git foo` instead of complaining. |
 | `git-github-open` | ? | Open GitHub file/blob page for FILE on LINE. |
 | `git-gitlab-mr` | Noel Cower's [gist](https://gist.github.com/nilium/ac808ee3729cdce01ec0f3c0a499f099) | Open a merge request on GitLab |

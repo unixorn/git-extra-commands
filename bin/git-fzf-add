@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+#
+# Original source: https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+if has bat; then
+  git-fzf-add() {
+    local selections=$(
+      git status --porcelain | \
+      fzf --ansi \
+        --preview 'if (git ls-files --error-unmatch {2} &>/dev/null); then
+                    git diff --color=always {2}
+                  else
+                      bat --color=always --line-range :500 {2}
+                  fi'
+      )
+    if [[ -n $selections ]]; then
+        git add --verbose $(echo "$selections" | cut -c 4- | tr '\n' ' ')
+    fi
+  }
+else
+  # Use head since bat is missing
+  git-fzf-add() {
+    local selections=$(
+      git status --porcelain | \
+      fzf --ansi \
+        --preview 'if (git ls-files --error-unmatch {2} &>/dev/null); then
+                    git diff --color=always {2}
+                  else
+                      head -100 {2}
+                  fi'
+      )
+    if [[ -n $selections ]]; then
+        git add --verbose $(echo "$selections" | cut -c 4- | tr '\n' ' ')
+    fi
+  }
+fi
+# shellcheck disable=SC2068
+git-fzf-add $@
