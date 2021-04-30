@@ -73,6 +73,10 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-force-mtimes` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets mtimes of all files in the reprository their last change date based on git's log. Useful to avoid too new dates after a checkout confusing `make` or `rake`. |
 | `git-forest` | Jan Engelhardt | Prints a text-based tree visualisation of your repository. Requires [Git.pm](https://metacpan.org/release/Git) |
 | `git-functionlog` | Joe Block <jpb@unixorn.net> | Allows you to get a log of a particular function, not a file |
+| `git-fzf-add` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to select files to add to `git` |
+| `git-fzf-log-browser` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to browse the repository's `git` log |
+| `git-fzf-pickaxe-browser` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to display a Git log list that has been filtered with [pickaxe](http://www.philandstuff.com/2014/02/09/git-pickaxe.html) for a search term. |
+| `git-fzf-reflog-browser` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to browse the repository's `git` reflog list that can be filtered by entering a fuzzy term at the prompt. Navigation up and down the hash list will preview the changes of each hash. |
 | `git-git` | Joe Block <jpb@unixorn.net> | Typing `git git foo` will make git do a `git foo` instead of complaining. |
 | `git-github-open` | ? | Open GitHub file/blob page for FILE on LINE. |
 | `git-gitlab-mr` | Noel Cower's [gist](https://gist.github.com/nilium/ac808ee3729cdce01ec0f3c0a499f099) | Open a merge request on GitLab |
@@ -82,8 +86,8 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-incoming` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in the tracking branch that are not in the local branch. |
 | `git-lines` | [Neil Killeen](https://github.com/kiLLeen) <nkilleen@castlighthealth.com> | Gives you a list of author names with the number of lines last updated by that user in files in the current directory tree with the extension specified. |
 | `git-ls-object-refs` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
-| `git-maildiff` | Sanjeev Kumar's [blogpost](http://www.devilsan.com/blog/my-first-git-command-git-ipush-using-python) | A simple git command to email diff in color to reviewer/ co-worker. |
-| `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repo's pack files as much as possible. |
+| `git-maildiff` | Sanjeev Kumar's blogpost | A simple `git` command to email diff in color to reviewer/ co-worker. |
+| `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repository's pack files as much as possible. |
 | `git-move-commits` | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | `git move-commits num-commits correct-branch` moves the last n commits to correct-branch (creating it if necessary). |
 | `git-neck` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show commits from the HEAD until the first branching point. Companion script for `git-trail`. |
 | `git-nuke` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Nukes a branch locally and on the origin remote. |
@@ -256,6 +260,10 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [Tracking diffs by scoping to file, range, function, method, or class changes in Git](https://susanpotter.net/software/tracking-diffs-by-scoping-to-file-range-function-method-or-class-changes-in-git/) is a great article by Susan Potter about making `git` show file-specific diffs, or even function-specific diffs in a language-aware way.
 
 * [A Thorough Introduction to Git's Interactive Patch Mode](https://dev.to/krnsk0/a-thorough-introduction-to-git-s-interactive-patch-mode-4bl6) - An introduction on how to stage just parts of your changes to a commit.
+
+* [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) - Great article about using [fzf](https://github.com/junegunn/fzf) with some `git` helper scripts.
+
+* [The Git Pickaxe](http://www.philandstuff.com/2014/02/09/git-pickaxe.html) - Explains how you can use the `git` pickaxe to search easily for strings in commit messages - write good commit messages and it'll be easier to find the commits that actually implement changes.
 
 ### External Git Utilities
 
