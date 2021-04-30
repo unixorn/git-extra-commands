@@ -261,6 +261,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * [A Thorough Introduction to Git's Interactive Patch Mode](https://dev.to/krnsk0/a-thorough-introduction-to-git-s-interactive-patch-mode-4bl6) - An introduction on how to stage just parts of your changes to a commit.
 
+* [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) - Great article about using [fzf](https://github.com/junegunn/fzf) with some `git` helper scripts.
+
 ### External Git Utilities
 
 * [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like `git filter-branch` does, but faster.
