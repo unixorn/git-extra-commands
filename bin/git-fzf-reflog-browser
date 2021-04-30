@@ -23,5 +23,10 @@ git-fzf-reflog-browser() {
     git show "$(echo $selection | cut -d' ' -f1)"
   fi
 }
+
+if ! has fzf; then
+  fail "You need fzf (https://github.com/junegunn/fzf) to use this script. "
+fi
+
 # shellcheck disable=SC2068
 git-fzf-reflog-browser $@

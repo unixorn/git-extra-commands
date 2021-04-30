@@ -46,5 +46,10 @@ else
     fi
   }
 fi
+
+if ! has fzf; then
+  fail "You need fzf (https://github.com/junegunn/fzf) to use this script. "
+fi
+
 # shellcheck disable=SC2068
 git-fzf-add $@
