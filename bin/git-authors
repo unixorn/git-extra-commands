@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# https://github.com/cofi/dotfiles/blob/master/bin
+
+WHERE='.'
+if [[ $# == 1 ]]; then
+  WHERE="$1"
+fi
+
+exec git log --pretty=format:'%an <%ae>' "$WHERE" | sort | uniq -c | sort -nr
