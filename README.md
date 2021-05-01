@@ -107,6 +107,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-rank-contributors` | William Morgan <wmorgan-git-wt-add@masanjin.net> | Rummages through the changelog and orders contributors by the size of the diffs they're responsible for. |
 | `git-rebase-authors` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Adds authorship info to interactive `git rebase` output |
 | `git-rebase-theirs` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Resolve rebase conflicts by favoring 'theirs' version. |
+| `git-recent` | Mine | Shows information about most recent commit on all local branches |
 | `git-recently-checkedout-branches` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order. |
 | `git-ref-recent` | [Y combinator article](https://news.ycombinator.com/item?id=22796640) | Shows the date, branch name, commit hash, and commit subject of branches, from most recently modified to oldest branches. |
 | `git-rel` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*. With no *ref*, the current branch's remote tracking branch is used. |
