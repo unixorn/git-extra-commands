@@ -111,8 +111,8 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-recently-checkedout-branches` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order. |
 | `git-ref-recent` | [Y combinator article](https://news.ycombinator.com/item?id=22796640) | Shows the date, branch name, commit hash, and commit subject of branches, from most recently modified to oldest branches. |
 | `git-rel` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*. With no *ref*, the current branch's remote tracking branch is used. |
-| `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
 | `git-related` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show other files that often get changed in commits that touch `<file>`. |
+| `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
 | `git-rename-branches` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Rename multiple branches that start with a given name. |
 | `git-reset-with-fire` | Joe Block <jpb@unixorn.net> | Hard reset the working directory, then zap any files not known to git. |
 | `git-restore-mtime` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Change mtime of files based on commit date of last change. |
@@ -124,15 +124,15 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-shrink-repo` | Based on [gimbo/gimbo-git.zsh](https://github.com/gimbo/gimbo-git.zsh/blob/master/gimbo-git.zsh) | Shrinks your clone of a `git` repo. |
 | `git-sp` | A. Schwarz's [git-sp](https://github.com/Schwarzy1/git-sp) | "Simple push", single short command to commit, and push. Use -a flag to add all files to commit. |
 | `git-sr` | Noel Cower's [git-sr](https://gist.github.com/nilium/2829f6690ad888c25660c15ba3a7c59c) | Use `fzf` to switch to a different git ref. |
-| `git-switch-branch` | Andrew Steele's [dotfiles](https://github.com/Andrew565/dotfiles) | Make it easier to switch to a branch by a substring of its name. More useful if you are good about deleting branches which have been merged upstream and if your branch names include unique identifiers like ticket/issue numbers or feature names. |
 | `git-submodule-rm` | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) & [Pascal Sommer](https://github.com/pascal-so/) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule`. |
+| `git-switch-branch` | Andrew Steele's [dotfiles](https://github.com/Andrew565/dotfiles) | Make it easier to switch to a branch by a substring of its name. More useful if you are good about deleting branches which have been merged upstream and if your branch names include unique identifiers like ticket/issue numbers or feature names. |
 | `git-tag-and-sign` | ? | Create and sign a new tag |
 | `git-thanks` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced. |
 | `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean *origin/localbranchname*. |
 | `git-trail` | Leah Neukirchen's [blog](http://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repo's Git history so you can see how to reach commits in the current branch from other branches. |
 | `git-undelete` | ? | Undeletes a file. |
-| `git-undo` | ? | Undoes your last commit but keeps the changes in place. |
 | `git-undo-push` | ? | Undoes your last push to branch **$1** of origin |
+| `git-undo` | ? | Undoes your last commit but keeps the changes in place. |
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows git commits since the last tagged version. |
 | `git-up` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
