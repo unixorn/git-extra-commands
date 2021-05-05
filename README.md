@@ -276,6 +276,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [commit-helper](https://github.com/andre-filho/commit-helper) - A python script that helps you write commits following commit conventions.
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking `git` diffs
 * [flowr](https://github.com/oubasan/flowr) - Bash, ZSH and fish completion support for [git-flow](http://github.com/nvie/gitflow).
+* [gig](https://dev.to/shihanng/gig-a-gitignore-generator-opc) - a CLI `.gitignore` generator
 * [git ZSH plugin](https://github.com/davidde/git) - A replacement for the stock oh-my-zsh `git` plugin. Provides quite a few useful aliases and functions that are more consistent in their naming that the relatively unintuitive ones in the stock plugin.
 * [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's `git` plugin which you may prefer to the `git` plugin from oh-my-zsh.
 * [git-also](https://github.com/anvaka/git-also) - Shows what files are most often committed with a given file in the repository.
