@@ -31,6 +31,6 @@ FZF-EOF"
 if has fzf; then
   fshow "$@"
 else
-  myname=$(basename $0)
+  myname=$(basename "$0")
   fail "$myname requires fzf, but can't find it in your PATH."
 fi

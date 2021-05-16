@@ -18,6 +18,7 @@ function has() {
   which "$@" > /dev/null 2>&1
 }
 
+# shellcheck disable=SC2120
 function glNoGraph() {
   git log --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr% C(auto)%an" "$@"
 }
@@ -26,8 +27,8 @@ _gitLogLineToHash="echo {} | grep -o '[a-f0-9]\{7\}' | head -1"
 _viewGitLogLine="$_gitLogLineToHash | xargs -I % sh -c 'git show --color=always % | diff-so-fancy'"
 
 # fcoc_preview - checkout git commit with previews
-fcoc_preview() {
-  local commit
+function fcoc_preview() {
+  # shellcheck disable=SC2119,SC2120,SC2146,SC2086,SC2046,SC2001
   commit=$( glNoGraph |
     fzf --no-sort --reverse --tiebreak=index --no-multi \
         --ansi --preview="$_viewGitLogLine" ) &&
@@ -37,6 +38,6 @@ fcoc_preview() {
 if has fzf; then
   fcoc_preview 
 else
-  myname=$(basename $0)
+  myname=$(basename "$0")
   fail "$myname needs fzf and can't find it in $PATH"
 fi
