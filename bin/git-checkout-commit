@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+#
+# Browse through commits with fzf
+#
+# From https://github.com/junegunn/fzf/wiki/examples
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  which "$@" > /dev/null 2>&1
+}
+
+# shellcheck disable=SC2120
+function glNoGraph() {
+  git log --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr% C(auto)%an" "$@"
+}
+
+_gitLogLineToHash="echo {} | grep -o '[a-f0-9]\{7\}' | head -1"
+_viewGitLogLine="$_gitLogLineToHash | xargs -I % sh -c 'git show --color=always % | diff-so-fancy'"
+
+# fcoc_preview - checkout git commit with previews
+function fcoc_preview() {
+  # shellcheck disable=SC2119,SC2120,SC2146,SC2086,SC2046,SC2001
+  commit=$( glNoGraph |
+    fzf --no-sort --reverse --tiebreak=index --no-multi \
+        --ansi --preview="$_viewGitLogLine" ) &&
+  git checkout $(echo "$commit" | sed "s/ .*//")
+}
+
+if has fzf; then
+  fcoc_preview 
+else
+  myname=$(basename "$0")
+  fail "$myname needs fzf and can't find it in $PATH"
+fi
