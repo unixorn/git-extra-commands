@@ -325,6 +325,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
 * [switch-git](https://github.com/robin-mbg/switch-git) - Easy switching between `git` repositories. Just type `sgr <some part of you repo's name>`, press enter and you're there.
 * [ugit](https://github.com/Bhupesh-V/ugit) - Lets you undo your last `git` operation.
+* [worktree](https://github.com/jspears/worktree) - Adds functions that wrap `git worktree`.
 * [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects.
 
 ## Miscellaneous Tips
