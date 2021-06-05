@@ -299,6 +299,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repo on a machine (like a ci box), **git-fastclone** will speed things up considerably.
 * [git-flow-completion](https://github.com/bobthecow/git-flow-completion) - Bash, Fish and ZSH completion support for [git-flow](http://github.com/nvie/gitflow)
 * [git-follow](https://github.com/nickolasburr/git-follow) - Follow lifetime changes of a pathspec.
+* [git-fuzzy](https://github.com/bigH/git-fuzzy) - A CLI interface to `git` that relies heavily on [`fzf`](https://github.com/junegunn/fzf).
 * [git-graph](https://github.com/jerith666/git-graph) - creates a [Graphviz](https://graphviz.org/) graph showing the high-level structure of a repository's history.
 * [git-gutter](https://github.com/jisaacks/GitGutter) - Plugin for [Sublime Text](https://www.sublimetext.com/) 2/3 to display the `git` diff in the edit window gutter.
 * [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) - Another plugin by Peter Hurford that adds a `gitit` command that will open your current directory on github, in your current branch. Also works with private github servers.
