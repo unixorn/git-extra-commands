@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#
+# Clean up dangling commits that are not on any branch
+#
+# http://stackoverflow.com/questions/3765234/listing-and-deleting-git-commits-that-are-under-no-branch-dangling
+
+git reflog expire --expire-unreachable=now --all
+git gc --prune=now
