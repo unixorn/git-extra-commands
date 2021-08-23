@@ -294,7 +294,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [git-bump](https://github.com/arrdem/git-bump) - Hook scripts to automatically bump the version file in a repository
 * [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a `git` repository
 * [git-complete-urls](https://github.com/rapgenic/zsh-git-complete-urls) - ZSH plugin to enhance `git` tab completion to include in the remotes completion (e.g. from `git clone`) any URL in the clipboard.
-* [git-cop](https://github.com/bkuhlmann/git-cop) - Enforces `git` rebase workflow with consistent commits for a clean and easy to read/debug project history.
+* [git-lint](https://github.com/bkuhlmann/git-lint) - Enforces `git` rebase workflow with consistent commits for a clean and easy to read/debug project history.
 * [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a `git` repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
 * [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your `git` repository's assets in sync with Amazon S3.
 * [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for `git`.
