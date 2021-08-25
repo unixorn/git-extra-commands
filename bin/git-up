@@ -14,23 +14,29 @@
 
 set -e
 
+# shellcheck disable=SC2124
 PULL_ARGS="$@"
 
 # when invoked as git-reup, run as `git pull --rebase'
+# shellcheck disable=SC2086,SC2124
 test "$(basename $0)" = "git-reup" &&
 PULL_ARGS="--rebase $PULL_ARGS"
 
+# shellcheck disable=SC2086
 git pull $PULL_ARGS
 
 # show diffstat of all changes if we're pulling with --rebase. not
 # sure why git-pull only does this when merging.
+# shellcheck disable=SC2086
 test "$(basename $0)" = "git-reup" && {
     echo "Diff:"
+    # shellcheck disable=SC1083
     git --no-pager diff --color --stat HEAD@{1}.. |
     sed 's/^/ /'
 }
 
 # show an abbreviated commit log of stuff that was just merged.
 echo "Log:"
+# shellcheck disable=SC1083
 git log --color --pretty=oneline --abbrev-commit HEAD@{1}.. |
 sed 's/^/  /'
