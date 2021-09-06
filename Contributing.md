@@ -11,6 +11,7 @@
 - **To remove a script:** All of the scripts here were either taken from blog posts or had an Open Source license. That said, if you wrote something included here and want it removed, either open an issue to request the removal or submit a pull request.
 
 For each script you add, please:
+
 * Include an entry in the credits section of `README.md` for any scripts in your PRs so authors get their work credited correctly. Please keep the credits in alphabetical order by script name.
 * Add an entry in the `zstyle` (completion) section of `git-extra-commands.plugin.zsh`, so the script gets proper tab completion.
 * Include a link to the original source in the comments at the beginning of your script so people can find their other work.
