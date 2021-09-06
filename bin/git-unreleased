@@ -8,14 +8,14 @@ set -e
 
 paths=""
 num_libfiles="$(git ls-files -- lib libexec | wc -l)"
-if [ $num_libfiles -gt 0 ]; then
+if [ "$num_libfiles" -gt 0 ]; then
   paths="bin lib libexec"
 fi
 
 format='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar)%Creset'
 
 show_log() {
-  git log --graph --format="$format" ${1:+${1}..} -- $paths
+  git log --graph --format="$format" ${1:+${1}..} -- "$paths"
 }
 
 desc="$(git describe --tags HEAD 2>/dev/null)" || {
