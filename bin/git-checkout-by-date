@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#
+# git-checkout-by-date.sh 2012-03-09 Foo Bar Baz
+#
+
+set -e
+
+BASEDIR=$PWD
+DATESPEC="$1"
+shift
+
+DEFAULT_BRANCH=$(git branch -r | awk -F/ '/HEAD/ {print $NF}')
+
+for i in "$@"; do
+	cd "$BASEDIR/$i"
+	if [ "$DATESPEC" == "$DEFAULT_BRANCH" ]; then
+		git checkout master
+	else
+		git checkout "$(git rev-list -n1 --before="$DATESPEC" "$DEFAULT_BRANCH")"
+	fi
+done
+
+cd "$BASEDIR"

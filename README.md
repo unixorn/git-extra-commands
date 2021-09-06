@@ -53,6 +53,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another. |
 | `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Symlink to `git-authors`. List authors in the repo in descending commit-count order. |
+| `git-checkout-by-date` | ? | Lets you checkout several files at once at the version specified by a date. |
 | `git-checkout-commit` |From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to checkout a commit, showing the commit diff as preview. |
 | `git-checkout-default-branch` | I got tired of keeping track of which repos use `main`, `master` or something else as default branch | Checks out the default branch of the `origin` remote so you don't have to remember which repos use `master`, `main` or whatever. |
 | `git-checkout-pr` | Based on [gist.github.com/gnarf/5406589](https://gist.github.com/gnarf/5406589) | Check out a PR locally |
@@ -64,7 +65,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-conflicts` | Seth Messer's [bits and bobs](https://github.com/megalithic/bits-and-bobs/) repo | Show files with conflicts |
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch's name to the clipboard (macOS Only). |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit. |
-| `git-current-branch` | Joe Block <jpb@unixorn.net> | Prints the name of the current branch, mainly useful in automation scripts. |
+| `git-current-branch` | Joe Block <jpb@unixorn.net> | Prints the name of the current branch with no odd characters or formatting, mainly useful in automation scripts. |
 | `git-cut-branch` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at **HEAD** and reset the current branch to the head of its tracking branch |
 | `git-delete-dangling-commits` | [Stack Overflow](http://stackoverflow.com/questions/3765234/listing-and-deleting-git-commits-that-are-under-no-branch-dangling) | Clean up dangling commits that are not on any branch |
 | `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into **HEAD**. |
@@ -77,7 +78,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-fetch-prs` | Pretty sure I saw this on slack, but can't recall which one | Get all Pull Request branches as local remote branches by refspec |
 | `git-find-dirty` | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository | |
 | `git-flush` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your reposistory by dropping all reflogs, stashes, and other cruft that may be bloating your pack files. |
-| `git-force-mtimes` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets mtimes of all files in the reprository their last change date based on git's log. Useful to avoid too new dates after a checkout confusing `make` or `rake`. |
+| `git-force-mtimes` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets modification times of all files in the reprository their last change date based on `git`'s log. Useful to avoid too new dates after a checkout confusing `make` or `rake`. |
 | `git-forest` | Jan Engelhardt | Prints a text-based tree visualisation of your repository. Requires [Git.pm](https://metacpan.org/release/Git) |
 | `git-functionlog` | Joe Block <jpb@unixorn.net> | Allows you to get a `git log` of a particular function, not a file |
 | `git-fzf-add` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to select files to add to `git` |
