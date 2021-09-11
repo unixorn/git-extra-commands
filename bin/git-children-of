@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+# Original source: https://github.com/jwiegley/git-scripts/blob/master/git-children-of
+
+commit=$1
+branch=$2
+
+[ -z "$branch" ] && branch=HEAD
+
+git rev-list --children "$branch" --not "$commit"^@ \
+  awk "/^$commit/ { print \$2 }"
