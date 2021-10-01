@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 #
-# Print the default branch. Not all repos use main or master, after all.
+# git stats
 #
-# Copyright 2021, Joe Block <jpb@unixorn.net>
+# Based on https://blog.jez.io/cli-code-review/
+
 
 set -o pipefail
 if [[ -n "$DEBUG" ]]; then
@@ -25,8 +26,8 @@ function has() {
   which "$@" > /dev/null 2>&1
 }
 
-if has git; then
-  git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5
-else
-  fail "git is not in $PATH"
+if [[ -z "$REVIEW_BASE" ]]; then
+  REVIEW_BASE="$(git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5)"
 fi
+
+exec git diff --stat "$(git merge-base HEAD "$REVIEW_BASE")"
