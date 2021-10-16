@@ -81,8 +81,8 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-fetch-prs` | Pretty sure I saw this on slack, but can't recall which one | Get all Pull Request branches as local remote branches by refspec |
 | `git-files` | Jake Zimmerman's [blog](https://blog.jez.io/cli-code-review/) | List the files different between the current branch and `$REVIEW_BRANCH`, which if unset defaults to the repository's default branch |
 | `git-find-dirty` | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository | |
-| `git-flush` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your reposistory by dropping all reflogs, stashes, and other cruft that may be bloating your pack files. |
-| `git-force-mtimes` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets modification times of all files in the reprository their last change date based on `git`'s log. Useful to avoid too new dates after a checkout confusing `make` or `rake`. |
+| `git-flush` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your repository by dropping all reflogs, stashes, and other cruft that may be bloating your pack files. |
+| `git-force-mtimes` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets modification times of all files in the repository their last change date based on `git`'s log. Useful to avoid too new dates after a checkout confusing `make` or `rake`. |
 | `git-forest` | Jan Engelhardt | Prints a text-based tree visualisation of your repository. Requires [Git.pm](https://metacpan.org/release/Git) |
 | `git-functionlog` | Joe Block <jpb@unixorn.net> | Allows you to get a `git log` of a particular function, not a file |
 | `git-fzf-add` | [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) | Use [fzf](https://github.com/junegunn/fzf) to select files to add to `git` |
