@@ -11,6 +11,7 @@
 - [ ] A helper script
 - [ ] A link to an external resource like a blog post or video
 - [ ] Text cleanups/updates
+- [ ] Test updates
 
 # Checklist:
 
