@@ -330,6 +330,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [git-up (gem)](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
 * [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's `git` history
+* [git-worktree](https://github.com/alexiszamanidis/zsh-git-worktree/) - ZSH plugin that wraps `git worktree` for ease of use.
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a `git` repository
 * [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your `git` repositories
 * [gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command-line (macOS only).
