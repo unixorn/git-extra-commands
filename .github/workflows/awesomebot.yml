@@ -15,4 +15,4 @@ jobs:
     - uses: actions/checkout@v1
     - uses: docker://dkhamsing/awesome_bot:latest
       with:
-        args: /github/workspace/README.md --allow 502,503,504,509,521 --allow-dupe --allow-redirect --request-delay 1 --white-list https://github,https://img.shields.io
+        args: /github/workspace/README.md --allow 500,501,502,503,504,509,521 --allow-dupe --allow-redirect --request-delay 1 --white-list https://github,https://img.shields.io
