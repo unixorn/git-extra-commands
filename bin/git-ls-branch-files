@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+#
+# ls branch files
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+BASENAME=$(basename "${0}")
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function usage() {
+  echo "Usage:"
+  echo
+  echo "  ${BASENAME} <parent branch name>"
+  echo
+  echo "Lists files touched by the specified branch."
+}
+
+if [[ ${#} -ne 1 ]]; then
+  fail "Only one argument required, the branch to compare."
+fi
+
+if [ "$1" == '-h' ] || [ "$1" == '--help' ] ; then
+  usage
+  exit 0
+fi
+
+branch="${1}"
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+mergeSHA=$(git merge-base "${current_branch}" "${branch}")
+
+exec git diff --name-status "${mergeSHA}" "${current_branch}"
