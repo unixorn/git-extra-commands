@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+#
+# List files with conflicts
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+BASENAME=$(basename "${0}")
+
+function debug() {
+  if [[ -n "$DEBUG" ]]; then
+    echo "$@"
+  fi
+}
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function usage() {
+  echo "Usage:"
+  echo
+  echo "  ${BASENAME}"
+  echo
+  echo "List files with merge conflicts"
+}
+
+if [[ $# -eq 1 ]]; then
+  if [ "$1" == '-h' ] || [ "$1" == '--help' ] ; then
+    usage
+    exit 0
+  fi
+fi
+
+if [[ $# -ne 0 ]]; then
+  usage
+  exit 0
+fi
+
+exec git diff --name-only --diff-filter=U
