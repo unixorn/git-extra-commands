@@ -199,7 +199,7 @@ If you're using [Antigen](https://github.com/zsh-users/antigen):
 
 ### oh-my-zsh
 
-If you're using [oh-my-zsh](github.com/robbyrussell/oh-my-zsh):
+If you're using [oh-my-zsh](https://ohmyz.sh):
 
 1. Clone the repository into a new `git-extra-commands` directory in oh-my-zsh's plugin folder:
 
