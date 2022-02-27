@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Funixorn%2Fgit-extra-commands%2Fbadge%3Fref%3Dmain&style=plastic)](https://actions-badge.atrox.dev/unixorn/git-extra-commands/goto?ref=main)
 ![Awesomebot](https://github.com/unixorn/git-extra-commands/actions/workflows/awesomebot.yml/badge.svg)
-![Superlinter](https://github.com/unixorn/git-extra-commands/actions/workflows/superlinter.yml/badge.svg)
+![Megalinter](https://github.com/unixorn/git-extra-commands/actions/workflows/mega-linter.yml/badge.svg)
 [![Code Climate](https://codeclimate.com/github/unixorn/git-extra-commands/badges/gpa.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![Issue Count](https://codeclimate.com/github/unixorn/git-extra-commands/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![GitHub stars](https://img.shields.io/github/stars/unixorn/git-extra-commands.svg)](https://github.com/unixorn/git-extra-commands/stargazers)
@@ -45,7 +45,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 
 | Script | Original Source | Description |
 | ------ | --------------- | ----------- |
-| `git-add-username-remote` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Adds a remote for the current repository for the given GitHub username. |
+| `git-add-username-remote` | Ryan Tomayko's dotfiles | Adds a remote for the current repository for the given GitHub username. |
 | `git-age` | Kristoffer Gronlund's [wiki](https://github.com/krig/git-age/wiki) | A git-blame viewer, written using PyGTK.|
 | `git-attic` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Displays a list of deleted files in your repository. The output is designed to be copy and pasted: Pass the second field to `git show` to display the file contents, or just select the hash without ^ to see the commit where removal happened. |
 | `git-authors` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) (as `git-changes`) | List authors in the repository in descending commit-count order. |
@@ -70,7 +70,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch's name to the clipboard (macOS Only). |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit. |
 | `git-current-branch` | Joe Block <jpb@unixorn.net> | Prints the name of the current branch with no odd characters or formatting, mainly useful in automation scripts. |
-| `git-cut-branch` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Create a new branch pointed at **HEAD** and reset the current branch to the head of its tracking branch |
+| `git-cut-branch` | Ryan Tomayko's dotfiles | Create a new branch pointed at **HEAD** and reset the current branch to the head of its tracking branch |
 | `git-delete-dangling-commits` | [Stack Overflow](http://stackoverflow.com/questions/3765234/listing-and-deleting-git-commits-that-are-under-no-branch-dangling) | Clean up dangling commits that are not on any branch |
 | `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into **HEAD**. |
 | `git-delete-merged-branches` | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master). |
@@ -98,14 +98,14 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-improved-merge` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Sophisticated `git merge` with integrated CI check and automatic cleanup. |
 | `git-incoming` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in the tracking branch that are not in the local branch. |
 | `git-lines` | [Neil Killeen](https://github.com/kiLLeen) <nkilleen@castlighthealth.com> | Gives you a list of author names with the number of lines last updated by that user in files in the current directory tree with the extension specified. |
-| `git-ls-branch-files` | Joe Block | List files changed between a specifed branch and the current branch |
-| `git-ls-object-refs` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
+| `git-ls-branch-files` | Joe Block | List files changed between a specified branch and the current branch |
+| `git-ls-object-refs` | Ryan Tomayko's dotfiles | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
 | `git-maildiff` | Sanjeev Kumar's blogpost | A simple `git` command to email diff in color to reviewer/ co-worker. |
 | `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repository's pack files as much as possible. |
 | `git-move-commits` | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | `git move-commits num-commits correct-branch` moves the last n commits to correct-branch (creating it if necessary). |
 | `git-neck` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show commits from the HEAD until the first branching point. Companion script for `git-trail`. |
 | `git-nuke` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Nukes a branch locally and on the origin remote. |
-| `git-object-deflate` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Deflate an loose object file and write to standard output. |
+| `git-object-deflate` | Ryan Tomayko's dotfiles | Deflate an loose object file and write to standard output. |
 | `git-oldest-common-ancestor` | Lee Dohm's [dotfiles](https://github.com/lee-dohm/dotfiles/blob/main/bin/git-oldest-ancestor) | Finds the oldest common ancestor commit between two branches. |
 | `git-origin-head` | Don't recall, maybe twitter | Prints the name of the origin remote's default branch. Not every repository uses `main` or `master`. |
 | `git-outgoing` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits that are on the local branch that have not been pushed to the tracking branch. |
@@ -114,7 +114,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-plotrepo` | Matthew McCullogh's [scripts collection](https://github.com/matthewmccullough/scripts/blob/master/git-plotrepo.rb) | Uses dot to draw a graph of the repository. |
 | `git-promote` | Trevor's **Improving My git Workflow** blog post (404 now) | Promotes a local topic branch to a remote tracking branch of the same name. |
 | `git-prune-branches` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches) | Deletes each fully merged branch after prompting for confirmation, than asks if you want the deleted branches deleted from your upstream remotes. |
-| `git-pruneall` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Prune branches from specified remotes, or all remotes when no remote is specified. |
+| `git-pruneall` | Ryan Tomayko's dotfiles | Prune branches from specified remotes, or all remotes when no remote is specified. |
 | `git-publish` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | `git publish remote [remote-branch]` |
 | `git-purge-from-history` | David Underhill’s blog | Permanently delete files or folders from your `git` repository. |
 | `git-pylint` | Joe Block <jpb@unixorn.net> | Runs pylint on any .py files modified or added in the `git status` output. |
@@ -124,7 +124,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-recent` | Mine | Shows information about most recent commit on all local branches |
 | `git-recently-checkedout-branches` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order. |
 | `git-ref-recent` | [Y combinator article](https://news.ycombinator.com/item?id=22796640) | Shows the date, branch name, commit hash, and commit subject of branches, from most recently modified to oldest branches. |
-| `git-rel` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*. With no *ref*, the current branch's remote tracking branch is used. |
+| `git-rel` | Ryan Tomayko's dotfiles | Shows the relationship between the current branch and _ref_. With no _ref_, the current branch's remote tracking branch is used. |
 | `git-related` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show other files that often get changed in commits that touch `<file>`. |
 | `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
 | `git-rename-branches` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Rename multiple branches that start with a given name. |
@@ -145,7 +145,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-tag-and-sign` | ? | Create and sign a new tag |
 | `git-tag-diff` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)  | Show the differences between local tags and ones on the remote, if any |
 | `git-thanks` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced. |
-| `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean *origin/localbranchname*. |
+| `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean _origin/localbranchname_. |
 | `git-trail` | Leah Neukirchen's [blog](http://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repository's `git` history so you can see how to reach commits in the current branch from other branches. |
 | `git-undelete` | ? | Undeletes a file. |
 | `git-undo-push` | ? | Undoes your last push to branch **$1** of origin |
@@ -153,7 +153,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows `git` commits since the last tagged version. |
 | `git-up` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Like `git pull` but show a short and sexy log of changes after merging or rebasing. |
-| `git-upstream-sync` | Joe Block <jpb@unixorn.net> | Fetches *upstream/yourforkname* and rebases it into your local fork, then pushes to your origin remote. |
+| `git-upstream-sync` | Joe Block <jpb@unixorn.net> | Fetches _upstream/yourforkname_ and rebases it into your local fork, then pushes to your origin remote. |
 | `git-what-the-hell-just-happened` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-what-the-hell-just-happened) | Show what just happened. |
 | `git-when-merged` | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | Find when a commit was merged into one or more branches. |
 | `git-where` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows where a particular commit falls between releases. |
@@ -161,7 +161,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-winner` | Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner) | Shows what authors have made the most commits, both by number of commits and by number of lines changed. |
 | `git-wordiness` | Noel Cower | Shows how wordy people's commit messages are. Useful for shaming the folks who commit atrocities like `git commit -m fixup` |
 | `git-wtf` | William Morgan <wmorgan-git-wt-add@masanjin.net> | `git-wtf` displays the state of your repository in a readable, easy-to-scan format. It's useful for getting a summary of how a branch relates to a remote server, and for wrangling many topic branches. |
-| `github-open` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | |
+| `github-open` | Ryan Tomayko's dotfiles | |
 
 ## Useful git aliases
 
@@ -296,7 +296,6 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
 * [commit-helper](https://github.com/andre-filho/commit-helper) - A python script that helps you write commits following commit conventions.
 * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking `git` diffs
-* [flowr](https://github.com/oubasan/flowr) - Bash, ZSH and fish completion support for [git-flow](http://github.com/nvie/gitflow).
 * [gig](https://dev.to/shihanng/gig-a-gitignore-generator-opc) - a CLI `.gitignore` generator
 * [git ZSH plugin](https://github.com/davidde/git) - A replacement for the stock oh-my-zsh `git` plugin. Provides quite a few useful aliases and functions that are more consistent in their naming that the relatively unintuitive ones in the stock plugin.
 * [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's `git` plugin which you may prefer to the `git` plugin from oh-my-zsh.
@@ -333,7 +332,6 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's `git` history
 * [git-worktree](https://github.com/alexiszamanidis/zsh-git-worktree/) - ZSH plugin that wraps `git worktree` for ease of use.
 * [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a `git` repository
-* [gitbaby](https://github.com/lordadamson/gitbaby) - Helper scripts to manage your `git` repositories
 * [gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command-line (macOS only).
 * [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for `git`. From within gitsh you can issue any `git` command, even using your local aliases and configuration.
 * [gunstage](https://github.com/LucasLarson/gunstage) - There are at least eight ways to unstage files in a `git` repository. This is a command-line shell plugin for undoing `git add`.
