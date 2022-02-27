@@ -1,3 +1,4 @@
+---
 ###########################
 ###########################
 ## Linter GitHub Actions ##
@@ -16,7 +17,7 @@ name: Lint Code Base
 on:
   push:
     branches-ignore: [main]
-    # Remove the line above to run when pushing to master
+    # Remove the line above to run when pushing to main
   pull_request:
     branches: [main]
 
@@ -26,7 +27,7 @@ on:
 jobs:
   build:
     # Name the Job
-    name: Lint Code Base
+    name: Megalint Code Base
     # Set the agent to run on
     runs-on: ubuntu-latest
 
@@ -47,8 +48,19 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: github/super-linter@v4
+        uses: nvuillam/mega-linter@v5
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DISABLE_LINTERS: SPELL_CSPELL
+
+      # Upload Mega-Linter artifacts. They will be available on Github action page "Artifacts" section
+      - name: Archive production artifacts
+        if: ${{ success() }} || ${{ failure() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: Mega-Linter reports
+          path: |
+            report
+            mega-linter.log
