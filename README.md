@@ -98,7 +98,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-improved-merge` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Sophisticated `git merge` with integrated CI check and automatic cleanup. |
 | `git-incoming` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in the tracking branch that are not in the local branch. |
 | `git-lines` | [Neil Killeen](https://github.com/kiLLeen) <nkilleen@castlighthealth.com> | Gives you a list of author names with the number of lines last updated by that user in files in the current directory tree with the extension specified. |
-| `git-ls-branch-files` | Joe Block | List files changed between a specifed branch and the current branch |
+| `git-ls-branch-files` | Joe Block | List files changed between a specified branch and the current branch |
 | `git-ls-object-refs` | Ryan Tomayko's [dotfiles](https://github.com/rtomayko/dotfiles) | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
 | `git-maildiff` | Sanjeev Kumar's blogpost | A simple `git` command to email diff in color to reviewer/ co-worker. |
 | `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repository's pack files as much as possible. |
@@ -124,7 +124,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-recent` | Mine | Shows information about most recent commit on all local branches |
 | `git-recently-checkedout-branches` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order. |
 | `git-ref-recent` | [Y combinator article](https://news.ycombinator.com/item?id=22796640) | Shows the date, branch name, commit hash, and commit subject of branches, from most recently modified to oldest branches. |
-| `git-rel` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and *ref*. With no *ref*, the current branch's remote tracking branch is used. |
+| `git-rel` | Ryan Tomayko's [dotfiles](http://github.com/rtomayko/dotfiles) | Shows the relationship between the current branch and _ref_. With no _ref_, the current branch's remote tracking branch is used. |
 | `git-related` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show other files that often get changed in commits that touch `<file>`. |
 | `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
 | `git-rename-branches` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Rename multiple branches that start with a given name. |
@@ -145,7 +145,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-tag-and-sign` | ? | Create and sign a new tag |
 | `git-tag-diff` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)  | Show the differences between local tags and ones on the remote, if any |
 | `git-thanks` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced. |
-| `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean *origin/localbranchname*. |
+| `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean _origin/localbranchname_. |
 | `git-trail` | Leah Neukirchen's [blog](http://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repository's `git` history so you can see how to reach commits in the current branch from other branches. |
 | `git-undelete` | ? | Undeletes a file. |
 | `git-undo-push` | ? | Undoes your last push to branch **$1** of origin |
@@ -153,7 +153,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows `git` commits since the last tagged version. |
 | `git-up` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Like `git pull` but show a short and sexy log of changes after merging or rebasing. |
-| `git-upstream-sync` | Joe Block <jpb@unixorn.net> | Fetches *upstream/yourforkname* and rebases it into your local fork, then pushes to your origin remote. |
+| `git-upstream-sync` | Joe Block <jpb@unixorn.net> | Fetches _upstream/yourforkname_ and rebases it into your local fork, then pushes to your origin remote. |
 | `git-what-the-hell-just-happened` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-what-the-hell-just-happened) | Show what just happened. |
 | `git-when-merged` | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | Find when a commit was merged into one or more branches. |
 | `git-where` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows where a particular commit falls between releases. |
