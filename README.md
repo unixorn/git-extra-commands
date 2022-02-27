@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Funixorn%2Fgit-extra-commands%2Fbadge%3Fref%3Dmain&style=plastic)](https://actions-badge.atrox.dev/unixorn/git-extra-commands/goto?ref=main)
 ![Awesomebot](https://github.com/unixorn/git-extra-commands/actions/workflows/awesomebot.yml/badge.svg)
-![Superlinter](https://github.com/unixorn/git-extra-commands/actions/workflows/superlinter.yml/badge.svg)
+![Megalinter](https://github.com/unixorn/git-extra-commands/actions/workflows/mega-linter.yml/badge.svg)
 [![Code Climate](https://codeclimate.com/github/unixorn/git-extra-commands/badges/gpa.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![Issue Count](https://codeclimate.com/github/unixorn/git-extra-commands/badges/issue_count.svg)](https://codeclimate.com/github/unixorn/git-extra-commands)
 [![GitHub stars](https://img.shields.io/github/stars/unixorn/git-extra-commands.svg)](https://github.com/unixorn/git-extra-commands/stargazers)
