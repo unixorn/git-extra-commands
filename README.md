@@ -79,7 +79,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-diff-last` | [Sebastian Schuberth](https://github.com/sschuberth) | Show the last change made to a file in the repository. |
 | `git-divergence` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Shows differences between local branch and its tracking branch. |
 | `git-edit-conflicts` | Joe Block <jpb@unixorn.net> | Edit the files that are marked as conflicted during a merge/rebase in your `$EDITOR/$VISUAL`. |
-| `git-fetch-prs` | Pretty sure I saw this on slack, but can't recall which one | Get all Pull Request branches as local remote branches by refspec |
+| `git-fetch-prs` | Pretty sure I saw this on slack, but can't recall which one | Get all Pull Request branches from a given remote by refspec |
 | `git-files` | Jake Zimmerman's [blog](https://blog.jez.io/cli-code-review/) | List the files different between the current branch and `$REVIEW_BRANCH`, which if unset defaults to the repository's default branch |
 | `git-find-dirty` | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository | |
 | `git-flush` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your repository by dropping all reflogs, stashes, and other cruft that may be bloating your pack files. |
