@@ -1,10 +1,55 @@
 #!/usr/bin/env bash
 #
-# Fetch PR branches by refspec
+# Fetch PR branches by refspec from one of a repository's remotes.
 #
-# Copyright 2020, Joe Block <jpb@unixorn.net>
+# Copyright 2020-2022, Joe Block <jpb@unixorn.net>
 
 set -o pipefail
 
+DEFAULT_REMOTE=${DEFAULT_REMOTE:-"origin"}
+
+function debug() {
+  if [[ -n "$DEBUG" ]]; then
+    echo "$@"
+  fi
+}
+
+function usage() {
+  local myname
+  myname=$(basename "$0")
+  echo "$myname [remote]"
+  echo
+  echo "Pulls all the PR branches from one of your remotes. If remote is not specified, defaults to $DEFAULT_REMOTE."
+}
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+if [[ "$1" == '--help' ]]; then
+  usage
+  exit 0
+fi
+
+debug "DEFAULT_REMOTE: $DEFAULT_REMOTE"
+
+if ! has git; then
+  fail "Couldn't find git in your PATH"
+fi
+
+if [ -z "$1" ]; then
+  echo "Remote not specified, using $DEFAULT_REMOTE."
+  git_remote="$DEFAULT_REMOTE"
+else
+  git_remote="$1"
+fi
+
 # Get all Pull Request branches as local remote branches by refspec.
-exec git fetch origin '+refs/pull/*/head:refs/remotes/origin/pr/*'
+# shellcheck disable=SC2086
+git fetch "$git_remote" +refs/heads/\*:refs/remotes/$git_remote/\* +refs/pull/\*/head:refs/remotes/$git_remote/pr/\*
