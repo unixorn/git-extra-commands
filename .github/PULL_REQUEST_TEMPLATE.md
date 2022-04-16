@@ -8,8 +8,8 @@
 
 <!--- What types of changes does your submission introduce? Put an `x` in all the boxes that apply: [x] -->
 
-- [ ] A helper script
-- [ ] A link to an external resource like a blog post or video
+- [ ] Add/update a helper script
+- [ ] Add/update link to an external resource like a blog post or video
 - [ ] Text cleanups/updates
 - [ ] Test updates
 
@@ -20,9 +20,9 @@
 
 - [ ] All new and existing tests pass.
 - [ ] Any scripts added use `#!/usr/bin/env interpreter` instead of potentially platform-specific direct paths (`#!/bin/sh` is an allowed exception)
-- [ ] Scripts are marked executable
+- [ ] Scripts are marked executable.
 - [ ] Scripts _do not_ have a language file extension unless they are meant to be sourced and not run standalone. No one should have to know if a script was written in bash, python, ruby or whatever. Not including file extensions makes it easier to rewrite the script in another language later without having to change every reference to the previous version.
-- [ ] I have added a credit line to README.md for the script
+- [ ] I have added a credit line to [README.md](https://github.com/unixorn/git-extra-commands/blob/main/README.md) for any new scripts.
 - [ ] If there was no author credit in a script added in this PR, I have added one.
 - [ ] I have confirmed that the link(s) in my PR are valid.
 - [ ] I have read the **CONTRIBUTING** document.
