@@ -97,6 +97,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-ignored` | ? | Show files being ignored by `git` in the repository. |
 | `git-improved-merge` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Sophisticated `git merge` with integrated CI check and automatic cleanup. |
 | `git-incoming` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in the tracking branch that are not in the local branch. |
+| `git-jump` | Cowboy's [dotfiles](https://github.com/cowboy/dotfiles/blob/master/bin/git-jump) | Replays `git` commits by moving forward / backward through a branch's history |
 | `git-lines` | [Neil Killeen](https://github.com/kiLLeen) <nkilleen@castlighthealth.com> | Gives you a list of author names with the number of lines last updated by that user in files in the current directory tree with the extension specified. |
 | `git-ls-branch-files` | Joe Block | List files changed between a specified branch and the current branch |
 | `git-ls-object-refs` | Ryan Tomayko's dotfiles | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
@@ -387,6 +388,7 @@ git config --global url."https://github".insteadOf git://github
  ```
 
 **Credit:** [@grawity](https://gist.github.com/grawity/4392747) & [@hansdg1](https://github.com/hansdg1) by way of [Kovrinic](https://gist.github.com/Kovrinic/ea5e7123ab5c97d451804ea222ecd78a)
+
 
 ## Contributing
 
