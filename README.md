@@ -265,6 +265,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 * [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) - Good article on dealing with reviewing the changes made during a merge.
 
+* [Learn Git Branching](https://learngitbranching.js.org/) is the most visual and interactive way to learn `git` on the web; you'll be challenged with exciting levels, given step-by-step demonstrations of powerful features, and maybe even have a bit of fun along the way.
+
 * [Top ten pull request review mistakes](https://blog.scottnonnenberg.com/top-ten-pull-request-review-mistakes/) is a great article by Scott Nonnenberg on how to do better code reviews on PRs.
 
 * [A Tidy, Linear Git History](http://www.bitsnbites.eu/a-tidy-linear-git-history/) - Marcus Geelnard wrote a blog post about the value of a linear commit history.
@@ -381,6 +383,7 @@ git config --global url."https://github".insteadOf git://github
 ```
 
 ### or replace with `ssh`
+
  Use `ssh` instead of `https://`
 
  ```sh
@@ -388,7 +391,6 @@ git config --global url."https://github".insteadOf git://github
  ```
 
 **Credit:** [@grawity](https://gist.github.com/grawity/4392747) & [@hansdg1](https://github.com/hansdg1) by way of [Kovrinic](https://gist.github.com/Kovrinic/ea5e7123ab5c97d451804ea222ecd78a)
-
 
 ## Contributing
 
