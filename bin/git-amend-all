@@ -14,6 +14,7 @@ set -e
 # User is not in git repository
 if ! git branch > /dev/null 2>&1
 then
+	# shellcheck disable=SC2086
 	echo "E: '$(basename ${PWD})' - Not a Git repository."
 	exit 1
 fi
