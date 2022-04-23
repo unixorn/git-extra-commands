@@ -104,6 +104,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-ls-object-refs` | Ryan Tomayko's dotfiles | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
 | `git-maildiff` | Sanjeev Kumar's blogpost | A simple `git` command to email diff in color to reviewer/ co-worker. |
 | `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repository's pack files as much as possible. |
+| `git-merged-branches` | Sergei Boiko's [Git housekeeping tutorial: clean-up outdated branches in local and remote repositories](https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/) article | Lists all branches that have been merged |
 | `git-move-commits` | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | `git move-commits num-commits correct-branch` moves the last n commits to correct-branch (creating it if necessary). |
 | `git-neck` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show commits from the HEAD until the first branching point. Companion script for `git-trail`. |
 | `git-nuke` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Nukes a branch locally and on the origin remote. |
