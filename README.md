@@ -47,6 +47,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | ------ | --------------- | ----------- |
 | `git-add-username-remote` | Ryan Tomayko's dotfiles | Adds a remote for the current repository for the given GitHub username. |
 | `git-age` | Kristoffer Gronlund's [wiki](https://github.com/krig/git-age/wiki) | A git-blame viewer, written using PyGTK.|
+| `git-amend-all` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Adds all modified and deleted files, except the new files and adds them to the recent commit by amending it |
 | `git-attic` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Displays a list of deleted files in your repository. The output is designed to be copy and pasted: Pass the second field to `git show` to display the file contents, or just select the hash without ^ to see the commit where removal happened. |
 | `git-authors` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) (as `git-changes`) | List authors in the repository in descending commit-count order. |
 | `git-big-file` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repository larger than a threshold size. |
