@@ -51,9 +51,10 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-attic` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Displays a list of deleted files in your repository. The output is designed to be copy and pasted: Pass the second field to `git show` to display the file contents, or just select the hash without ^ to see the commit where removal happened. |
 | `git-authors` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) (as `git-changes`) | List authors in the repository in descending commit-count order. |
 | `git-big-file` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repository larger than a threshold size. |
-| `git-branches-that-touch` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows which branches touch files under a path that are remote, unmerged, have a commit in the last six months and whose name doesn't start with 'enterprise-' |
 | `git-branch-name` | Joe Block <jpb@unixorn.net> | Prints the current branch name in automation-friendly format. |
 | `git-branch-rebaser` | Vengada Rangaraju <krangaraju@castlighthealth.com> | Kicks off an interactive rebase of all the commits on your branch. _Including pushed commits_, so be careful. |
+| `git-branch-status` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Colorized status report on all branches in your repository |
+| `git-branches-that-touch` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows which branches touch files under a path that are remote, unmerged, have a commit in the last six months and whose name doesn't start with 'enterprise-' |
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another. |
 | `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Symlink to `git-authors`. List authors in the repository in descending commit-count order. |
@@ -64,9 +65,9 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-checkout-preview` | From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to checkout a branch, showing what commits diverge between the branches. |
 | `git-children-of` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Shows the children of a given `git` commit |
 | `git-churn` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Show which files are getting changed most often in the repository. |
-| `git-commit-browser` | From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to browse commit history. |
 | `git-clone-subset` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Uses `git clone` and `git filter-branch` to remove from the clone all files but the ones requested, along with their associated commit history. |
 | `git-comma` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Adds and commits a file in one command |
+| `git-commit-browser` | From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to browse commit history. |
 | `git-conflicts` | Seth Messer's [bits and bobs](https://github.com/megalithic/bits-and-bobs/) repository | Show files with conflicts |
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch's name to the clipboard (macOS Only). |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit. |
@@ -164,7 +165,6 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-winner` | Garry Dolley [https://github.com/up_the_irons/git-winner](https://github.com/up_the_irons/git-winner) | Shows what authors have made the most commits, both by number of commits and by number of lines changed. |
 | `git-wordiness` | Noel Cower | Shows how wordy people's commit messages are. Useful for shaming the folks who commit atrocities like `git commit -m fixup` |
 | `git-wtf` | William Morgan <wmorgan-git-wt-add@masanjin.net> | `git-wtf` displays the state of your repository in a readable, easy-to-scan format. It's useful for getting a summary of how a branch relates to a remote server, and for wrangling many topic branches. |
-| `github-open` | Ryan Tomayko's dotfiles | |
 
 ## Useful git aliases
 
