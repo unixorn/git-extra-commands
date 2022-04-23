@@ -58,6 +58,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another. |
 | `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Symlink to `git-authors`. List authors in the repository in descending commit-count order. |
+| `git-checkout-branches` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Checks out all remote branches |
 | `git-checkout-by-date` | ? | Lets you checkout several files at once at the version specified by a date. |
 | `git-checkout-commit` |From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to checkout a commit, showing the commit diff as preview. |
 | `git-checkout-default-branch` | I got tired of keeping track of which repositories use `main`, `master` or something else as default branch | Checks out the default branch of the `origin` remote so you don't have to remember which repositories use `master`, `main` or whatever. |
