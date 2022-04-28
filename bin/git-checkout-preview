@@ -23,7 +23,7 @@ fco_preview() {
     fzf --no-hscroll --no-multi -n 2 \
         --ansi --preview="git --no-pager log -150 --pretty=format:%s '..{2}'") || return
   # shellcheck disable=SC2046
-  git checkout $(awk '{print $2}' <<<"$target" )
+  exec git checkout $(awk '{print $2}' <<<"$target" )
 }
 
 fco_preview

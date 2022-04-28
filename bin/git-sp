@@ -9,7 +9,6 @@
 # See https://github.com/Schwarzy1/git-sp for more information.
 #
 
-
 usage(){
   echo "usage: git sp [-a] <message>
 
@@ -17,7 +16,6 @@ usage(){
   -a  Run 'git add -A' prior to committing."
   exit 1
 }
-
 
 # -a should trigger `git add -A`
 while getopts 'a' flag; do
