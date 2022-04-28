@@ -73,6 +73,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch's name to the clipboard (macOS Only). |
 | `git-credit` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit. |
 | `git-current-branch` | Joe Block <jpb@unixorn.net> | Prints the name of the current branch with no odd characters or formatting, mainly useful in automation scripts. |
+| `git-current-commit` | Joe Block <jpb@unixorn.net> | Prints the hash of the current commit with no odd characters or formatting, mainly useful in automation scripts. |
 | `git-cut-branch` | Ryan Tomayko's dotfiles | Create a new branch pointed at **HEAD** and reset the current branch to the head of its tracking branch |
 | `git-delete-dangling-commits` | [Stack Overflow](http://stackoverflow.com/questions/3765234/listing-and-deleting-git-commits-that-are-under-no-branch-dangling) | Clean up dangling commits that are not on any branch |
 | `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into **HEAD**. |

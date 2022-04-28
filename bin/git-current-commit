@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Print the current commit. Defaults to current branch.
+#
+# Copyright 2018, Joe Block <jpb@unixorn.net>
+
+exec git rev-parse "${1:-HEAD}"
