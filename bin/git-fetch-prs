@@ -52,4 +52,4 @@ fi
 
 # Get all Pull Request branches as local remote branches by refspec.
 # shellcheck disable=SC2086
-git fetch "$git_remote" +refs/heads/\*:refs/remotes/$git_remote/\* +refs/pull/\*/head:refs/remotes/$git_remote/pr/\*
+exec git fetch "$git_remote" +refs/heads/\*:refs/remotes/$git_remote/\* +refs/pull/\*/head:refs/remotes/$git_remote/pr/\*

@@ -40,5 +40,5 @@ done
 # Switch back to current branch
 if [ "$(git branch | awk '/^\* / { print $2 }')" != "${_CURRENT_BRANCH}" ]
 then
-	git checkout "${_CURRENT_BRANCH}"
+	exec git checkout "${_CURRENT_BRANCH}"
 fi
