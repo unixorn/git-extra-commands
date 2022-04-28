@@ -4,8 +4,8 @@
 #
 # Based on https://blog.jez.io/cli-code-review/
 
-
 set -o pipefail
+
 if [[ -n "$DEBUG" ]]; then
   set -x
 fi
