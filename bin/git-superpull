@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#
+# Original source: https://github.com/vmware-archive/git_scripts/blob/master/bin/git-superpull
+# License: MIT - https://github.com/vmware-archive/git_scripts/blob/master/MIT.LICENSE
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+git pull && git submodule init && git submodule update
+exit $?

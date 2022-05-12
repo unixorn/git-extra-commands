@@ -148,6 +148,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-sr` | Noel Cower's [git-sr](https://gist.github.com/nilium/2829f6690ad888c25660c15ba3a7c59c) | Use `fzf` to switch to a different `git` ref. |
 | `git-stats` | Jake Zimmerman's [blog](https://blog.jez.io/cli-code-review/) | Displays stats for the files different between the current branch and `$REVIEW_BRANCH`, which if unset defaults to the repository's default branch |
 | `git-submodule-rm` | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) & [Pascal Sommer](https://github.com/pascal-so/) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule`. |
+| `git-superpull` | Greg V's [vmware-archive/git_scripts](https://github.com/vmware-archive/git_scripts) | Pulls, then does a `git submodule init` and `git submodule update` |
 | `git-switch-branch` | Andrew Steele's [dotfiles](https://github.com/Andrew565/dotfiles) | Make it easier to switch to a branch by a substring of its name. More useful if you are good about deleting branches which have been merged upstream and if your branch names include unique identifiers like ticket/issue numbers or feature names. |
 | `git-tag-and-sign` | ? | Create and sign a new tag |
 | `git-tag-diff` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)  | Show the differences between local tags and ones on the remote, if any |
