@@ -314,6 +314,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 * [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches.
 * [git-bump](https://github.com/arrdem/git-bump) - Hook scripts to automatically bump the version file in a repository
 * [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a `git` repository
+* [git-clean-branch](https://github.com/gobriansteele/git-clean-branch) - Cleans up dead `git` branches.
 * [git-cliff](https://github.com/orhun/git-cliff) - git-cliff can generate changelog files from the Git history by utilizing conventional commits as well as regex-powered custom parsers. The changelog template can be customized with a configuration file to match the desired format.
 * [git-complete-urls](https://github.com/rapgenic/zsh-git-complete-urls) - ZSH plugin to enhance `git` tab completion to include in the remotes completion (e.g. from `git clone`) any URL in the clipboard.
 * [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a `git` repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
