@@ -53,7 +53,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DISABLE_LINTERS: SPELL_CSPELL
+          DISABLE_LINTERS: SPELL_CSPELL,MARKDOWN_MARKDOWN_LINK_CHECK
 
       # Upload Mega-Linter artifacts. They will be available on Github action page "Artifacts" section
       - name: Archive production artifacts
