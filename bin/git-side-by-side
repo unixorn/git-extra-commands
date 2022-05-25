@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#
+# Prints side-by-side git diffs like you're used to seeing on GitHub
+#
+# Based on a snippet by @hefeweisen on the #commandline-fu channel on CoffeeOps
+
+set -o pipefail
+
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+if ! has 'delta'; then
+  # shellcheck disable=SC2086
+  failureMsg="$(basename $0) requires git-delta."
+  if [[ $(uname) != 'Darwin' ]]; then
+    failureMsg="${failureMsg} On macOS you can install it with 'brew install git-delta'."
+  fi
+  fail "$failureMsg"
+fi
+
+exec git -c diff.colorMoved=default \
+  -c merge.conflictsytle=diff3 \
+  -c core.pager=delta \
+  -c interactive.diffFilter='delta --color-only' \
+  -c delta.side-by-side=true \
+  show "$@"
