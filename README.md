@@ -106,6 +106,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-ls-branch-files` | Joe Block | List files changed between a specified branch and the current branch |
 | `git-ls-object-refs` | Ryan Tomayko's dotfiles | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
 | `git-maildiff` | Sanjeev Kumar's blogpost | A simple `git` command to email diff in color to reviewer/ co-worker. |
+| `git-make-gitignore` | #commandline-fu on coffeeops | Prints a language-specific `.gitignore` file using [gitignore.io](https://gitignore.io) |
 | `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repository's pack files as much as possible. |
 | `git-merged-branches` | Sergei Boiko's [Git housekeeping tutorial: clean-up outdated branches in local and remote repositories](https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/) article | Lists all branches that have been merged |
 | `git-move-commits` | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | `git move-commits num-commits correct-branch` moves the last n commits to correct-branch (creating it if necessary). |

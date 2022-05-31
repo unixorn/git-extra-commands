@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#
+# Print a .gitignore file on stdout using templates from gitignore.io
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+myname=$(basename "$0")
+if ! has curl; then
+  fail "$myname requires curl"
+fi
+
+if [[ $# -gt 1 ]]; then
+  fail "$myname requires you to specify a single language"
+fi
+
+if [[ $# != 1 ]]; then
+  fail "$myname requires you to specify a language"
+fi
+
+exec curl -L -s "https://www.gitignore.io/api/$*"
