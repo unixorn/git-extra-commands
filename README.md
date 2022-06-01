@@ -119,6 +119,8 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-overwritten` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Aggregates `git blame` information about original owners of lines changed or removed in the '<base>...<head>' diff. |
 | `git-pie-ify` | JeeBak Kim's [gist](https://gist.github.com/jeebak/f9088cede18d31f2d3a0) | `git pie-ify pattern replacement` |
 | `git-plotrepo` | Matthew McCullogh's [scripts collection](https://github.com/matthewmccullough/scripts/blob/master/git-plotrepo.rb) | Uses dot to draw a graph of the repository. |
+| `git-pr-fetch` | Joe Block <jpb@unixorn.net> | Fetch PR branches by refspec from one of a repository's remotes. |
+| `git-pr-list` | Joe Block <jpb@unixorn.net> | Lists pull requests. Requires `gh` |
 | `git-promote` | Trevor's **Improving My git Workflow** blog post (404 now) | Promotes a local topic branch to a remote tracking branch of the same name. |
 | `git-prune-branches` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches) | Deletes each fully merged branch after prompting for confirmation, than asks if you want the deleted branches deleted from your upstream remotes. |
 | `git-pruneall` | Ryan Tomayko's dotfiles | Prune branches from specified remotes, or all remotes when no remote is specified. |
