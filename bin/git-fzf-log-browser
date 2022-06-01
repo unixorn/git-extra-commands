@@ -12,6 +12,10 @@ fail() {
   exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
 }
 
+function has() {
+  which "$@" > /dev/null 2>&1
+}
+
 git-fzf-log-browser() {
   selections=$(
     git log --graph --format="%C(yellow)%h%C(red)%d%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)" --color=always "$@" |
