@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+#
+# List open PRs for a git repo
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+function debug() {
+  if [[ -n "$DEBUG" ]]; then
+    echo "$@"
+  fi
+}
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit 1
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+myname=$(basename "$0")
+
+if ! has ghx; then
+  msg="$myname requires that gh be installed."
+  if [[ "$(uname -s)" = "Darwin" ]]; then
+    msg="$msg  Try 'brew install gh' or check the install instructions at https://github.com/cli/cli"
+  else
+    msg="$msg  Install instructions are at https://github.com/cli/cli"
+  fi
+  fail "$msg"
+fi
+
+gh api --paginate 'repos/:owner/:repo/pulls?state=open' | jq -r '.[] | [.number, .user.login, .title] | @tsv'
+exit $?
