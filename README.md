@@ -78,6 +78,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-delete-dangling-commits` | [Stack Overflow](http://stackoverflow.com/questions/3765234/listing-and-deleting-git-commits-that-are-under-no-branch-dangling) | Clean up dangling commits that are not on any branch |
 | `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into **HEAD**. |
 | `git-delete-merged-branches` | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master). |
+| `git-delete-remote-branch` | Joe Block <jpb@unixorn.net> | Delete a branch from a specified remote. |
 | `git-delete-squashed-and-merged-branches` | Paul Irish's [dotfiles](https://github.com/paulirish/dotfiles) | Purges all branches that have been squashed and merged to a target branch (defaults to branches merged to master). Requires `pygithub`. |
 | `git-delete-tag` | Joe Block <jpb@unixorn.net> | Delete a tag, both locally and from the origin remote. |
 | `git-diff-last` | [Sebastian Schuberth](https://github.com/sschuberth) | Show the last change made to a file in the repository. |
