@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+#
+# Rewrite all commits with one name to use another
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  which "$@" > /dev/null 2>&1
+}
+
+if [[ ! has git-filter-branch ]]; then
+  myname=$(basename $0)
+  fail "Usage: $myname OLDNAME NEW_NAME NEW_EMAIL"
+fi
+
+DEFAULT_NAME="$(git config user.name)"
+DEFAULT_EMAIL="$(git config user.email)"
+export OLD_NAME="${1:-$DEFAULT_NAME}"
+export NEW_NAME="${2:-$DEFAULT_NAME}"
+export NEW_EMAIL="${3:-$DEFAULT_EMAIL}"
+
+echo "Old:" $OLD_NAME "<*>"
+echo "New:" "$NEW_NAME <$NEW_EMAIL>"
+echo "To undo, use: git reset $(git rev-parse HEAD)"
+
+exec git filter-branch --env-filter \
+'if [ "$GIT_AUTHOR_NAME" = "${OLD_NAME}" ]; then
+    export GIT_AUTHOR_NAME="${NEW_NAME}"
+    export GIT_AUTHOR_EMAIL="${NEW_EMAIL}"
+    export GIT_COMMITTER_NAME="${NEW_NAME}"
+    export GIT_COMMITTER_EMAIL="${NEW_EMAIL}"
+fi'
