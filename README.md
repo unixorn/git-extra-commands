@@ -18,6 +18,7 @@
   - [Pre-requisites](#pre-requisites)
   - [Zgenom](#zgenom)
   - [Antigen](#antigen)
+  - [Fig](#fig)
   - [oh-my-zsh](#oh-my-zsh)
   - [Bash / Manual Installation](#bash--manual-installation)
 - [Other useful git stuff](#other-useful-git-stuff)
@@ -218,7 +219,6 @@ If you're using [Antigen](https://github.com/zsh-users/antigen):
 Install `git-extra-commands` in just one click.
 
 <a href="https://fig.io/plugins/other/git-extra-commands_unixorn" target="_blank"><img src="https://fig.io/badges/install-with-fig.svg" /></a>
-
 
 ### oh-my-zsh
 
