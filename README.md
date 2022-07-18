@@ -346,6 +346,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-gutter](https://github.com/jisaacks/GitGutter) - Plugin for [Sublime Text](https://www.sublimetext.com/) 2/3 to display the `git` diff in the edit window gutter.
 - [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) - Another plugin by Peter Hurford that adds a `gitit` command that will open your current directory on github, in your current branch. Also works with private GitHub servers.
 - [git-lint](https://github.com/bkuhlmann/git-lint) - Enforces `git` rebase workflow with consistent commits for a clean and easy to read/debug project history.
+- [git-prompt-kit](https://github.com/olets/git-prompt-kit) - A configurable set of components for creating feature rich, high performance Git-aware zsh prompts (aka themes) with minimal coding.
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats) - A simple and efficient way to access various statistics in a `git` repository.
 - [git-repo-updater](https://github.com/earwig/git-repo-updater) - Allows you to easily update multiple `git` repositories at once.
 - [git-secrets](https://github.com/awslabs/git-secrets) - Prevents you from committing secrets and credentials into `git` repositories.
