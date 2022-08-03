@@ -137,6 +137,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-ref-recent` | [Y combinator article](https://news.ycombinator.com/item?id=22796640) | Shows the date, branch name, commit hash, and commit subject of branches, from most recently modified to oldest branches. |
 | `git-rel` | Ryan Tomayko's dotfiles | Shows the relationship between the current branch and _ref_. With no _ref_, the current branch's remote tracking branch is used. |
 | `git-related` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show other files that often get changed in commits that touch `<file>`. |
+| `git-release-tag` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Create a GitHub release for a specified tag. The release notes are automatically populated with the contents of git log since the last tagged version |
 | `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
 | `git-remove-conflicts ours|theirs FILES...` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Automatically resolves conflicts by applying the changes from current branch (ours) or remote branch (theirs) |
 | `git-rename-branches` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Rename multiple branches that start with a given name. |
