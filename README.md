@@ -139,7 +139,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-related` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show other files that often get changed in commits that touch `<file>`. |
 | `git-release-tag` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Create a GitHub release for a specified tag. The release notes are automatically populated with the contents of git log since the last tagged version |
 | `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
-| `git-remove-conflicts ours|theirs FILES...` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Automatically resolves conflicts by applying the changes from current branch (ours) or remote branch (theirs) |
+| `git-remove-conflicts ours or theirs FILES...` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Automatically resolves conflicts by applying the changes from current branch (ours) or remote branch (theirs) |
 | `git-rename-branches` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Rename multiple branches that start with a given name. |
 | `git-replace-author` | ? | Uses `git-filter-branch` to rewrite all commits with one name to use another name and email. |
 | `git-reset-with-fire` | Joe Block <jpb@unixorn.net> | Hard reset the working directory, then zap any files not known to `git`. |
