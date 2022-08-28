@@ -340,7 +340,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your `git` repository's assets in sync with Amazon S3.
 - [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for `git`.
 - [git-extend](https://github.com/nickolasburr/git-extend) - Extend `git` builtins with command wrappers.
-- [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repository on a machine (like a ci box), **git-fastclone*- will speed things up considerably.
+- [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repository on a machine (like a ci box), `git-fastclone` will speed things up considerably.
 - [git-flow-completion](https://github.com/bobthecow/git-flow-completion) - Bash, Fish and ZSH completion support for [git-flow](http://github.com/nvie/gitflow)
 - [git-follow](https://github.com/nickolasburr/git-follow) - Follow lifetime changes of a pathspec.
 - [git-fuzzy](https://github.com/bigH/git-fuzzy) - A CLI interface to `git` that relies heavily on [`fzf`](https://github.com/junegunn/fzf).
