@@ -169,6 +169,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows `git` commits since the last tagged version. |
 | `git-up` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Like `git pull` but show a short and sexy log of changes after merging or rebasing. |
+| `git-upstream-name` | Joe Block <jpb@unixorn.net> | Print the name of the current branch's upstream. |
 | `git-upstream-sync` | Joe Block <jpb@unixorn.net> | Fetches _upstream/yourforkname_ and rebases it into your local fork, then pushes to your origin remote. |
 | `git-what-the-hell-just-happened` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-what-the-hell-just-happened) | Show what just happened. |
 | `git-when-merged` | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | Find when a commit was merged into one or more branches. |

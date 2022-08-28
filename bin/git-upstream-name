@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+#
+# Print the upstream of the current branch
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+function debug() {
+  if [[ -n "$DEBUG" ]]; then
+    echo "$@"
+  fi
+}
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+# on_exit and add_on_exit from http://www.linuxjournal.com/content/use-bash-trap-statement-cleanup-temporary-files
+
+# Usage:
+#   add_on_exit rm -f /tmp/foo
+#   add_on_exit echo "I am exiting"
+#   tempfile=$(mktemp)
+#   add_on_exit rm -f "$tempfile"
+
+function on_exit()
+{
+  for i in "${on_exit_items[@]}"
+  do
+    eval $i
+  done
+}
+
+function add_on_exit()
+{
+  local n=${#on_exit_items[*]}
+  on_exit_items[$n]="$*"
+  if [[ $n -eq 0 ]]; then
+    trap on_exit EXIT
+  fi
+}
+
+exec git for-each-ref --format='%(upstream:short)' "$(git symbolic-ref -q HEAD)"
