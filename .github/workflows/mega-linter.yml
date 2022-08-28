@@ -49,12 +49,12 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: nvuillam/mega-linter@v5
+        uses: megalinter/megalinter@v6
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DISABLE_LINTERS: SPELL_CSPELL,MARKDOWN_MARKDOWN_LINK_CHECK
+          DISABLE_LINTERS: SPELL_CSPELL,MARKDOWN_MARKDOWN_LINK_CHECK,TERRAFORM_CHECKOV
 
       # Upload Mega-Linter artifacts.
       # They will be available on Github action page "Artifacts" section
