@@ -169,6 +169,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows `git` commits since the last tagged version. |
 | `git-up` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Like `git pull` but show a short and sexy log of changes after merging or rebasing. |
+| `git-upstream-name` | Joe Block <jpb@unixorn.net> | Print the name of the current branch's upstream. |
 | `git-upstream-sync` | Joe Block <jpb@unixorn.net> | Fetches _upstream/yourforkname_ and rebases it into your local fork, then pushes to your origin remote. |
 | `git-what-the-hell-just-happened` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-what-the-hell-just-happened) | Show what just happened. |
 | `git-when-merged` | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | Find when a commit was merged into one or more branches. |
@@ -339,7 +340,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your `git` repository's assets in sync with Amazon S3.
 - [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for `git`.
 - [git-extend](https://github.com/nickolasburr/git-extend) - Extend `git` builtins with command wrappers.
-- [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repository on a machine (like a ci box), **git-fastclone*- will speed things up considerably.
+- [git-fastclone](https://github.com/square/git-fastclone) - Think `git clone --recursive` on steroids. If you're doing repeated checkouts of a given repository on a machine (like a ci box), `git-fastclone` will speed things up considerably.
 - [git-flow-completion](https://github.com/bobthecow/git-flow-completion) - Bash, Fish and ZSH completion support for [git-flow](http://github.com/nvie/gitflow)
 - [git-follow](https://github.com/nickolasburr/git-follow) - Follow lifetime changes of a pathspec.
 - [git-fuzzy](https://github.com/bigH/git-fuzzy) - A CLI interface to `git` that relies heavily on [`fzf`](https://github.com/junegunn/fzf).
