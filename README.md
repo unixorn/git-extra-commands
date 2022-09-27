@@ -315,6 +315,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 - [Conditional .gitconfig](https://utf9k.net/blog/conditional-gitconfig/) - Marcus Crane wrote a blog post on how to have different `.gitconfig` settings based on where the checkout is located. This makes it easy to have a work directory with work settings applied to all repositories in it, and a personal one with different settings.
 
+- [5 types of Git workflows that will help you deliver better code](https://buddy.works/blog/5-types-of-git-workflows) - Shows five different Git workflows and the way they tackle various aspects of code collaboration: introducing changes, solving conflicts, using branches, and more.
+
 ### External Git Utilities
 
 - [bfg repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - Removes large or troublesome blobs like `git filter-branch` does, but faster.
