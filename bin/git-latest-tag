@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#
+# Display latest tag name
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+git fetch --all --tags --quiet && exec git describe --tags "$(git rev-list --tags --max-count=1)"

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+# Checkout latest tag as a branch
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+set -e
+
+git fetch --all --tags
+latest_tag=$(git rev-list --tags --max-count=1)
+exec git checkout "tags/${latest_tag}" -b "${latest_tag}"

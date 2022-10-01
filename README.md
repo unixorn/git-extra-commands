@@ -65,6 +65,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-checkout-default-branch` | I got tired of keeping track of which repositories use `main`, `master` or something else as default branch | Checks out the default branch of the `origin` remote so you don't have to remember which repositories use `master`, `main` or whatever. |
 | `git-checkout-pr` | Based on [gist.github.com/gnarf/5406589](https://gist.github.com/gnarf/5406589) | Check out a PR locally |
 | `git-checkout-preview` | From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to checkout a branch, showing what commits diverge between the branches. |
+| `git-checkout-tag` | Joe Block <jpb@unixorn.net> | Check out a tag into a branch named after the tag. |
 | `git-children-of` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Shows the children of a given `git` commit |
 | `git-churn` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Show which files are getting changed most often in the repository. |
 | `git-clone-subset` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Uses `git clone` and `git filter-branch` to remove from the clone all files but the ones requested, along with their associated commit history. |
@@ -104,6 +105,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-improved-merge` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Sophisticated `git merge` with integrated CI check and automatic cleanup. |
 | `git-incoming` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in the tracking branch that are not in the local branch. |
 | `git-jump` | Cowboy's [dotfiles](https://github.com/cowboy/dotfiles/blob/master/bin/git-jump) | Replays `git` commits by moving forward / backward through a branch's history |
+| `git-latest-tag` | Joe Block <jpb@unixorn.net> | Fetch tags from all remotes and show the most recent tag name. |
 | `git-lines` | [Neil Killeen](https://github.com/kiLLeen) <nkilleen@castlighthealth.com> | Gives you a list of author names with the number of lines last updated by that user in files in the current directory tree with the extension specified. |
 | `git-ls-branch-files` | Joe Block | List files changed between a specified branch and the current branch |
 | `git-ls-object-refs` | Ryan Tomayko's dotfiles | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
