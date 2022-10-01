@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#
+# Show the log for a single file
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+
+if [[ -n "$DEBUG" ]]; then
+  set -x
+fi
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2:-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+if [[ ! -f "$1" ]]; then
+  fail "No such file: $1"
+fi
+exec git log --follow -p "$1"
