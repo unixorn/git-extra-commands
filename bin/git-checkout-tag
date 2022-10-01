@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#
+# Checkout a tag as a branch
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
+
+set -e
+
+git fetch --all --tags && exec git checkout "tags/$1" -b "$1"
