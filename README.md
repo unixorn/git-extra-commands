@@ -107,6 +107,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-jump` | Cowboy's [dotfiles](https://github.com/cowboy/dotfiles/blob/master/bin/git-jump) | Replays `git` commits by moving forward / backward through a branch's history |
 | `git-latest-tag` | Joe Block <jpb@unixorn.net> | Fetch tags from all remotes and show the most recent tag name. |
 | `git-lines` | [Neil Killeen](https://github.com/kiLLeen) <nkilleen@castlighthealth.com> | Gives you a list of author names with the number of lines last updated by that user in files in the current directory tree with the extension specified. |
+| `git-log-single-file` | Joe Block <jpb@unixorn.net> | Show the log for a single file |
 | `git-ls-branch-files` | Joe Block | List files changed between a specified branch and the current branch |
 | `git-ls-object-refs` | Ryan Tomayko's dotfiles | Find references to an object with SHA1 in refs, commits, and trees. All of them. |
 | `git-maildiff` | Sanjeev Kumar's blogpost | A simple `git` command to email diff in color to reviewer/ co-worker. |
