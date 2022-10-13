@@ -190,6 +190,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 | alias | Description |
 | ----- | ----------- |
 | `ahead-of-master = log --oneline origin/master..HEAD` | Show commits that haven't made it to master yet. |
+| `checkout-default = !git checkout $(git branch -r | awk -F/ '/HEAD/ {print $NF}')` | Not all repos have `master` as their default branch, and it's a pain trying to remember what each repo uses. `git checkout-default` will figure it out and switch to the default branch for you. |
 | `fetch-pull-requests = fetch origin '+refs/pull/*/head:refs/remotes/origin/pull/*'` | Fetch pull requests from GitHub so you can `git checkout pull/123` and test them locally. |
 | `roots = log --all --oneline --decorate --max-parents=0` | Show the root commits. |
 | `unpushed = log @{u}..` | Show which commits have not been pushed to the tracking branch and are safe to amend/rebase. |
