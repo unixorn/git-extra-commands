@@ -254,73 +254,41 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 ### Articles / Blog posts / Books
 
-- [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of GitHub & Git resources.
-
-- Scott Chacon's [Pro Git](http://git-scm.com/book) book is a great resource for getting more out of `git`.
-
-- Zach Dennis has a great blog post - [A Git Walkthrough](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) - it's worth reading on it's own, but here are a couple of good sites I found through it:
-  - [gitready.com/](http://gitready.com/) is a great reference which has been collecting information and tips for `git` since 2009.
-  - [gitimmersion.com/](http://gitimmersion.com/)
-
-- There’s a quick [Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com)
-
-- There's a more detailed `git` tutorial on [learnenough.com](http://www.learnenough.com/git-tutorial)
-
-- Kate Hudson maintains the [git flight rules](https://github.com/k88hudson/git-flight-rules) collection of useful `git` usage tips.
-
-- [git-tips/tips](https://github.com/git-tips/tips) is a collection of git tips.
-
-- Leah Neukirchen wrote a great blog post, [A Grab Bag of Git Tricks](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) on `git` that is the source for several scripts in this collection.
-
-- Mislav Marohnić has a good article on git tips on his [blog](http://mislav.net/2010/07/git-tips/). Several of his `git` scripts are in this collection.
-
-- When you manage to get your `git` working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to `man`, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway. [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them.
-
-- Tim Green maintains the excellent [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) collection of tips and aliases.
-
-- [firstaidgit.io](http://firstaidgit.io/) is a searchable selection of the most frequently asked Git questions
-
-- [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) - A good essay that explains how git works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
-
-- [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message.
-
+-  [A Grab Bag of Git Tricks](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) by Leah Neukirchen is a great blog post on `git` that is the source for several scripts in this collection.
+- [4 Branching Workflows for git](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf) by Patrick Porto discusses the pros and cons of four of the more popular `git` workflows.
+- [5 types of Git workflows that will help you deliver better code](https://buddy.works/blog/5-types-of-git-workflows) explains five different Git workflows and the way they tackle various aspects of code collaboration: introducing changes, solving conflicts, using branches, and more.
+- [A Git Walkthrough](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) by Zach Dennis is a great blog post
+- [A Thorough Introduction to Git's Interactive Patch Mode](https://dev.to/krnsk0/a-thorough-introduction-to-git-s-interactive-patch-mode-4bl6) is an introduction on how to stage just parts of your changes to a commit.
+- [A Tidy, Linear Git History](http://www.bitsnbites.eu/a-tidy-linear-git-history/) by Marcus Geelnard is a blog post about the value of a linear commit history.
+- [Conditional .gitconfig](https://utf9k.net/blog/conditional-gitconfig/) by Marcus Crane explains how to have different `.gitconfig` settings based on where the checkout is located. This makes it easy to have a work directory with work settings applied to all repositories in it, and a personal one with different settings.
+- [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) is a great article about using [fzf](https://github.com/junegunn/fzf) with some `git` helper scripts.
+- [Fuzzy Git Checkout](https://polothy.github.io/post/2019-08-19-fzf-git-checkout/) by Mark Nielsen explains how to use [fzf](https://github.com/junegunn/fzf) for `git` checkouts.
+- [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans.
+- [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) explains how `git` works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
 - [Git Koans](http://stevelosh.com/blog/2013/04/git-koans/) - Inspired by the [Vim Koans](http://blog.sanctum.geek.nz/vim-koans/)
-
 - [Git Rebase in Depth](https://git-rebase.io/) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
-
 - [Git Submodules Revisted](https://dev.to/dwd/git-submodules-revisited-1p54) is a good article by Dave Cridland on using submodules in your code.
-
-- [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) - Good article on dealing with reviewing the changes made during a merge.
-
+- [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) is an excellent collection of tips and aliases maintained by Tim Green.
+- [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) is a good article on dealing with reviewing the changes made during a merge.
 - [Learn Git Branching](https://learngitbranching.js.org/) is the most visual and interactive way to learn `git` on the web; you'll be challenged with exciting levels, given step-by-step demonstrations of powerful features, and maybe even have a bit of fun along the way.
-
-- [Top ten pull request review mistakes](https://blog.scottnonnenberg.com/top-ten-pull-request-review-mistakes/) is a great article by Scott Nonnenberg on how to do better code reviews on PRs.
-
-- [A Tidy, Linear Git History](http://www.bitsnbites.eu/a-tidy-linear-git-history/) - Marcus Geelnard wrote a blog post about the value of a linear commit history.
-
 - [More Productive Git](https://increment.com/open-source/more-productive-git/) by James Turnbull is a quick tutorial for beginning `git` users.
-
-- Julia Evans wrote a great blog post about [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/).
-
-- Roger Dudler wrote a good introduction to `git` in his [git, the simple guide](https://rogerdudler.github.io/git-guide/) post.
-
-- Patrick Porto wrote [4 Branching Workflows for git](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf) which discusses the pros and cons of four of the more popular `git` workflows.
-
-- [Tracking diffs by scoping to file, range, function, method, or class changes in Git](https://susanpotter.net/software/tracking-diffs-by-scoping-to-file-range-function-method-or-class-changes-in-git/) is a great article by Susan Potter about making `git` show file-specific diffs, or even function-specific diffs in a language-aware way.
-
-- [A Thorough Introduction to Git's Interactive Patch Mode](https://dev.to/krnsk0/a-thorough-introduction-to-git-s-interactive-patch-mode-4bl6) - An introduction on how to stage just parts of your changes to a commit.
-
-- [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) - Great article about using [fzf](https://github.com/junegunn/fzf) with some `git` helper scripts.
-
-- [The Git Pickaxe](http://www.philandstuff.com/2014/02/09/git-pickaxe.html) - Explains how you can use the `git` pickaxe to search easily for strings in commit messages - write good commit messages and it'll be easier to find the commits that actually implement changes.
-
-- [Fuzzy Git Checkout](https://polothy.github.io/post/2019-08-19-fzf-git-checkout/) - Mark Nielsen wrote a good blog post showing how to use [fzf](https://github.com/junegunn/fzf) for `git` checkouts.
-
-- [Conditional .gitconfig](https://utf9k.net/blog/conditional-gitconfig/) - Marcus Crane wrote a blog post on how to have different `.gitconfig` settings based on where the checkout is located. This makes it easy to have a work directory with work settings applied to all repositories in it, and a personal one with different settings.
-
-- [5 types of Git workflows that will help you deliver better code](https://buddy.works/blog/5-types-of-git-workflows) - Shows five different Git workflows and the way they tackle various aspects of code collaboration: introducing changes, solving conflicts, using branches, and more.
-
+- [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them . When you manage to get your `git` working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to `man`, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway.
 - [Platform Specific Gitconfigs and the Wonderful includeif](https://medium.com/doing-things-right/platform-specific-gitconfigs-and-the-wonderful-includeif-7376cd44994d) by Mike Mackintosh explains how to have different gitconfig settings based on what platform you're on or what directory you're in. Makes it easier to have personal and work repos on the same machine.
+- [Pro Git](http://git-scm.com/book) by Scott Chacon is a great resource for getting more out of `git`.
+- [The Git Pickaxe](http://www.philandstuff.com/2014/02/09/git-pickaxe.html) explains how you can use the `git` pickaxe to search easily for strings in commit messages - write good commit messages and it'll be easier to find the commits that actually implement changes.
+- [Top ten pull request review mistakes](https://blog.scottnonnenberg.com/top-ten-pull-request-review-mistakes/) is a great article by Scott Nonnenberg on how to do better code reviews on PRs.
+- [Tracking diffs by scoping to file, range, function, method, or class changes in Git](https://susanpotter.net/software/tracking-diffs-by-scoping-to-file-range-function-method-or-class-changes-in-git/) is a great article by Susan Potter about making `git` show file-specific diffs, or even function-specific diffs in a language-aware way.
+- [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of GitHub & Git resources.
+- [firstaidgit.io](http://firstaidgit.io/) is a searchable selection of the most frequently asked `git` questions
+- [git flight rules](https://github.com/k88hudson/git-flight-rules) by Kate Hudson is a collection of useful `git` usage tips.
+- [git, the simple guide](https://rogerdudler.github.io/git-guide/) by Roger Dudler is a good introduction to `git`.
+- [git-tips/tips](https://github.com/git-tips/tips) is a collection of `git` tips.
+- [git-tips](http://mislav.net/2010/07/git-tips/) by Mislav Marohnić is a good article on `git` tips. Several of his `git` scripts are in this collection.
+- [gitimmersion.com/](http://gitimmersion.com/) is a guided tour that walks through the fundamentals of Git, inspired by the premise that to know a thing is to do it.
+- [gitready.com/](http://gitready.com/) is a great reference which has been collecting information and tips for `git` since 2009.
+- [learnenough.com](http://www.learnenough.com/git-tutorial) has a more detailed `git` tutorial on
+- [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message, no matter what source control system you're using.
+-[Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com) is a quick intro.
 
 ### External Git Utilities
 
