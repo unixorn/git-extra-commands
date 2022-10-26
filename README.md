@@ -214,7 +214,7 @@ If you're using [Zgenom](https://github.com/jandamm/zgenom):
 
 If you're using [Antigen](https://github.com/zsh-users/antigen):
 
-1. Add `antigen bundle unixorn/git-extra-commands` to your `.zshrc` where you've listed your other plugins.
+1. Add `antigen bundle unixorn/git-extra-commands@main` to your `.zshrc` where you've listed your other plugins.
 2. Close and reopen your Terminal/iTerm window to **refresh context** and use the plugin. Alternatively, you can run `antigen bundle unixorn/git-extra-commands` in a running shell to have `antigen` load the new plugin.
 
 ### Fig
