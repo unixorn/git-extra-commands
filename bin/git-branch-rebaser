@@ -8,4 +8,4 @@
 set -o pipefail
 
 # shellcheck disable=SC2046
-exec git rebase -i $(git rev-parse $(git log master..$(git rev-parse --abbrev-ref HEAD) --oneline | tail -1 | awk '{ print $1 }')^)
+exec git rebase -i $(git rev-parse $(git log $(git origin-head)..$(git rev-parse --abbrev-ref HEAD) --oneline | tail -1 | awk '{ print $1 }')^)
