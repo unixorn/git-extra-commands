@@ -33,14 +33,20 @@ brightblack = '\u001b[30;1m'
 reset = '\033[0m'
 DRY_RUN = len(sys.argv) > 1 and sys.argv[1] == '--dry-run'
 
+token = None
 tokenpath = os.path.expanduser('~/.githubtoken')
-tokenfile = open(tokenpath)
-token = tokenfile.read().strip();
+if os.path.exists(tokenpath):
+    with open(tokenpath) as tokenfile:
+        token = tokenfile.read().strip();
 
+def get_default_branch():
+    '''Returns the repository's default branch'''
+    return subprocess.check_output(["git", "origin-head"], encoding='utf-8').rstrip()
 
 def get_branch_heads():
     '''Returns an Array<[branchname, SHA]> of local branches.'''
     branch_to_sha = []
+    default_branch = get_default_branch()
     # %09 is a tab, which we later split on
     refsoutput = subprocess.check_output(["git", "for-each-ref", "--sort=-committerdate", "refs/heads/", "--format=%(refname)%09%(objectname)"])
     lines = refsoutput.decode().split('\n')
@@ -50,7 +56,7 @@ def get_branch_heads():
             continue
         objectname,sha = line.split('\t')
         branch_name = objectname.replace('refs/heads/', '')
-        if branch_name != 'master':
+        if branch_name != default_branch:
             branch_to_sha.append([branch_name, sha])
     return branch_to_sha
 
