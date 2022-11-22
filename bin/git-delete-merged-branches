@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
 # Quick script to purge all the branches that have been merged to a target
-# branch (defaults to master)
+# branch (defaults to the repository's default branch)
 
 if [[ $# != 1 ]]; then
-  mergedInto="master"
+  mergedInto="$(git origin-head)"
 else
   mergedInto="$1"
 fi
