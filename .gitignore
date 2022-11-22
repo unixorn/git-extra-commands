@@ -6,3 +6,4 @@
 *.sublime-workspace
 .*.swp
 .idea
+**/venv
