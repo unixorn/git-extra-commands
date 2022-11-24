@@ -255,7 +255,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 ### Articles / Blog posts / Books
 
--  [A Grab Bag of Git Tricks](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) by Leah Neukirchen is a great blog post on `git` that is the source for several scripts in this collection.
+- [A Grab Bag of Git Tricks](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) by Leah Neukirchen is a great blog post on `git` that is the source for several scripts in this collection.
 - [4 Branching Workflows for git](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf) by Patrick Porto discusses the pros and cons of four of the more popular `git` workflows.
 - [5 types of Git workflows that will help you deliver better code](https://buddy.works/blog/5-types-of-git-workflows) explains five different Git workflows and the way they tackle various aspects of code collaboration: introducing changes, solving conflicts, using branches, and more.
 - [A Git Walkthrough](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) by Zach Dennis is a great blog post
