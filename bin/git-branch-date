@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#
+# Script skeleton
+#
+# Copyright 2022, Your Name <yourname@yourdomain.com>
+
+
+exec git branch -v -r --sort=-committerdate
