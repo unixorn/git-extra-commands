@@ -120,6 +120,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-nuke` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Nukes a branch locally and on the origin remote. |
 | `git-object-deflate` | Ryan Tomayko's dotfiles | Deflate an loose object file and write to standard output. |
 | `git-oldest-common-ancestor` | Lee Dohm's [dotfiles](https://github.com/lee-dohm/dotfiles/blob/main/bin/git-oldest-ancestor) | Finds the oldest common ancestor commit between two branches. |
+| `git-open-jira` | If the branch name starts with `JIRAPROJECT-NNNN`, will open that issue in jira. Assumes that your JIRA server location is in `~/.jira-server` or in the `$JIRA_SERVER` environment variable. |
 | `git-origin-head` | Don't recall, maybe twitter | Prints the name of the origin remote's default branch. Not every repository uses `main` or `master`. |
 | `git-outgoing` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits that are on the local branch that have not been pushed to the tracking branch. |
 | `git-overwritten` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Aggregates `git blame` information about original owners of lines changed or removed in the '<base>...<head>' diff. |

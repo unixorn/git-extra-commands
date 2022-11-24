@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+#
+# If you name your branches JIRATICKET-something-or-other, will open the jira for you automagically
+#
+# Copyright 2022, Joe Bock <jpb@unixorn.net>
+
+set -o pipefail
+if [[ -n "$TRACE" ]]; then
+  set -x
+fi
+
+function debug() {
+  if [[ -n "$DEBUG" ]]; then
+    echo "$@"
+  fi
+}
+
+function fail() {
+  printf '%s\n' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+function get-jira-server() {
+  JIRA_SERVER_F=${JIRA_SERVER_F:-"$HOME/.jira-server"}
+  debug "JIRA_SERVER_F: $JIRA_SERVER_F"
+  if [[ -n "$JIRA_SERVER" ]]; then
+    if [[ -r "$JIRA_SERVER_F" ]]; then
+      JIRA_SERVER=$(cat "$JIRA_SERVER_F")
+      debug "JIRA_SERVER: $JIRA_SERVER"
+    else
+      fail "JIRA_SERVER not in environment, and can't read it from $JIRA_SERVER_F"
+    fi
+  fi
+  if [[ -z "$JIRA_SERVER" ]]; then
+    fail "JIRA_SERVER unset, failing"
+  fi
+  debug "JIRA_SERVER: $JIRA_SERVER"
+}
+
+function get-jira-ticket(){
+  echo $(git rev-parse --abbrev-ref HEAD | cut -f 1,2 -d -)
+}
+
+function jira-open(){
+  open "${1}/browse/${$2}"
+}
+
+if !has open; then
+  fail "Could not find 'open' in your PATH"
+fi
+
+jiraticket=$(get-jira-ticket)
+if [[ -z "$jiraticket" ]]; then
+  branch=$(git rev-parse --abbrev-ref HEAD)
+  fail "$branch is not prefixed with a JIRA ticket id"
+fi
+debug "jiraticket: $jiraticket"
+
+get-jira-server
+jira-open "$JIRA_SERVER" "$jiraticket"
