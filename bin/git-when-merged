@@ -1,23 +1,4 @@
-#!/bin/sh
-# -*- mode: python; coding: utf-8 -*-
-
-# This file is used as both a shell script and as a Python script.
-
-""":"
-# This part is run by the shell.  It looks for an appropriate Python
-# interpreter then uses it to re-exec this script.
-
-path=$(which python2 || which python)
-if [ -x "$path" ]
-then
-  PYTHON="$path"
-else
-  echo 1>&2 "No usable Python interpreter was found!"
-  exit 1
-fi
-
-exec $PYTHON "$0" "$@"
-" """
+#!/usr/bin/env python
 
 # Copyright (c) 2013 Michael Haggerty
 #
@@ -104,13 +85,6 @@ import re
 import subprocess
 import optparse
 
-
-# This upper end of this test doesn't actually work, because the
-# syntax of this script is not valid Python 3.
-if not (0x02050000 <= sys.hexversion < 0x03000000):
-    sys.exit('Python 2, version 2.5 or later is required')
-
-
 # Backwards compatibility:
 try:
     from subprocess import CalledProcessError
@@ -153,7 +127,7 @@ class Failure(Exception):
 def read_refpatterns(name):
     key = 'whenmerged.%s.pattern' % (name,)
     try:
-        out = check_output(['git', 'config', '--get-all', '--null', key])
+        out = check_output(['git', 'config', '--get-all', '--null', key]).decode('UTF-8')
     except CalledProcessError:
         raise Failure('There is no configuration setting for %r!' % (key,))
     retval = []
@@ -161,7 +135,7 @@ def read_refpatterns(name):
         if value:
             try:
                 retval.append(re.compile(value))
-            except re.error, e:
+            except (re.error, e):
                 sys.stderr.write(
                     'Error compiling branch pattern %r; ignoring: %s\n'
                     % (value, e.message,)
@@ -183,7 +157,7 @@ def iter_commit_refs():
         stdout=subprocess.PIPE,
         )
     for line in process.stdout:
-        words = line.strip().split()
+        words = line.strip().decode('UTF-8').split()
         refname = words.pop(0)
         if words == ['commit'] or words == ['tag', 'commit']:
             yield refname
@@ -207,7 +181,7 @@ def rev_parse(arg, abbrev=None):
         cmd = ['git', 'rev-parse', '--verify', '-q', arg]
 
     try:
-        return check_output(cmd).strip()
+        return check_output(cmd).strip().decode('UTF-8')
     except CalledProcessError:
         raise Failure('%r is not a valid commit!' % (arg,))
 
@@ -218,7 +192,7 @@ def rev_list(*args):
         stdout=subprocess.PIPE,
         )
     for line in process.stdout:
-        yield line.strip()
+        yield line.strip().decode('UTF-8')
 
     retcode = process.wait()
     if retcode:
@@ -235,7 +209,7 @@ def find_merge(commit, branch, abbrev):
 
     try:
         branch_sha1 = rev_parse(branch)
-    except Failure, e:
+    except (Failure, e):
         sys.stdout.write(FORMAT % dict(refname=branch, msg='Is not a valid commit!'))
         return None
 
@@ -286,7 +260,7 @@ def get_full_name(branch):
     try:
         full = check_output(
             ['git', 'rev-parse', '--verify', '-q', '--symbolic-full-name', branch]
-            ).strip()
+            ).strip().decode('UTF-8')
         # The above call exits successfully, with no output, if branch
         # is not a reference at all.  So only use the value if it is
         # not empty.
@@ -311,7 +285,7 @@ def main(args):
 
     try:
         default_abbrev = int(
-            check_output(['git', 'config', '--int', 'whenmerged.abbrev']).strip()
+            check_output(['git', 'config', '--int', 'whenmerged.abbrev']).strip().decode('UTF-8')
             )
     except CalledProcessError:
         default_abbrev = None
@@ -374,7 +348,7 @@ def main(args):
     # Convert commit into a SHA1:
     try:
         commit = rev_parse(commit)
-    except Failure, e:
+    except (Failure, e):
         sys.exit(e.message)
 
     refpatterns = []
@@ -382,7 +356,7 @@ def main(args):
     for value in options.patterns:
         try:
             refpatterns.append(re.compile(value))
-        except re.error, e:
+        except (re.error, e):
             sys.stderr.write(
                 'Error compiling pattern %r; ignoring: %s\n'
                 % (value, e.message,)
@@ -391,7 +365,7 @@ def main(args):
     for value in options.names:
         try:
             refpatterns.extend(read_refpatterns(value))
-        except Failure, e:
+        except (Failure, e):
             sys.exit(e.message)
 
     branches = set()
@@ -406,7 +380,7 @@ def main(args):
     for branch in args:
         try:
             branches.add(get_full_name(branch))
-        except Failure, e:
+        except (Failure, e):
             sys.exit(e.message)
 
     if not branches:
@@ -415,7 +389,7 @@ def main(args):
     for branch in sorted(branches):
         try:
             merge = find_merge(commit, branch, options.abbrev)
-        except Failure, e:
+        except (Failure, e):
             sys.stderr.write('%s\n' % (e.message,))
             continue
 
