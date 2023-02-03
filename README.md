@@ -381,7 +381,7 @@ WARNING: You called a Git command named 'commt', which does not exist.
 Continuing in 0.1 seconds, assuming that you meant 'commit'.
 ```
 
-### Rewrite git:// with https://
+### Rewrite `git://` with `https://`
 
 ```sh
 git config --global url."https://github".insteadOf git://github
