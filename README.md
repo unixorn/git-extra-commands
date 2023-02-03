@@ -395,7 +395,7 @@ git config --global url."https://github".insteadOf git://github
  git config --global url."git@github.com:".insteadOf "https://github.com/"
  ```
 
-**Credit:** [@grawity](https://gist.github.com/grawity/4392747) & [@hansdg1](https://github.com/hansdg1) by way of [Kovrinic](https://gist.github.com/Kovrinic/ea5e7123ab5c97d451804ea222ecd78a)
+**Credit:** [@grawity](https://github.com/grawity/) & [@hansdg1](https://github.com/hansdg1) by way of [@Kovrinic's gist](https://gist.github.com/Kovrinic/ea5e7123ab5c97d451804ea222ecd78a)
 
 ## Contributing
 
