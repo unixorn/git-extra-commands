@@ -22,7 +22,7 @@ gitdb==4.0.9
 github3.py==3.2.0
 GitPython==3.1.31
 idna==3.4
-inquirer==2.10.0
+inquirer==3.1.2
 Jinja2==3.1.2
 jmespath==1.0.1
 jsonschema==4.17.0
