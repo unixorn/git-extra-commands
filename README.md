@@ -268,7 +268,6 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Fuzzy Git Checkout](https://polothy.github.io/post/2019-08-19-fzf-git-checkout/) by Mark Nielsen explains how to use [fzf](https://github.com/junegunn/fzf) for `git` checkouts.
 - [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans.
 - [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) explains how `git` works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
-- [Git Koans](http://stevelosh.com/blog/2013/04/git-koans/) - Inspired by the [Vim Koans](http://blog.sanctum.geek.nz/vim-koans/)
 - [Git Rebase in Depth](https://git-rebase.io/) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
 - [Git Submodules Revisted](https://dev.to/dwd/git-submodules-revisited-1p54) is a good article by Dave Cridland on using submodules in your code.
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) is an excellent collection of tips and aliases maintained by Tim Green.
