@@ -257,10 +257,10 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 ### Articles / Blog posts / Books
 
-- [A Grab Bag of Git Tricks](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) by Leah Neukirchen is a great blog post on `git` that is the source for several scripts in this collection.
 - [4 Branching Workflows for git](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf) by Patrick Porto discusses the pros and cons of four of the more popular `git` workflows.
 - [5 types of Git workflows that will help you deliver better code](https://buddy.works/blog/5-types-of-git-workflows) explains five different Git workflows and the way they tackle various aspects of code collaboration: introducing changes, solving conflicts, using branches, and more.
 - [A Git Walkthrough](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) by Zach Dennis is a great blog post
+- [A Grab Bag of Git Tricks](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) by Leah Neukirchen is a great blog post on `git` that is the source for several scripts in this collection.
 - [A Thorough Introduction to Git's Interactive Patch Mode](https://dev.to/krnsk0/a-thorough-introduction-to-git-s-interactive-patch-mode-4bl6) is an introduction on how to stage just parts of your changes to a commit.
 - [A Tidy, Linear Git History](http://www.bitsnbites.eu/a-tidy-linear-git-history/) by Marcus Geelnard is a blog post about the value of a linear commit history.
 - [Conditional .gitconfig](https://utf9k.net/blog/conditional-gitconfig/) by Marcus Crane explains how to have different `.gitconfig` settings based on where the checkout is located. This makes it easy to have a work directory with work settings applied to all repositories in it, and a personal one with different settings.
@@ -268,10 +268,12 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Fuzzy Git Checkout](https://polothy.github.io/post/2019-08-19-fzf-git-checkout/) by Mark Nielsen explains how to use [fzf](https://github.com/junegunn/fzf) for `git` checkouts.
 - [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans.
 - [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) explains how `git` works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
+- [Git Koans](http://stevelosh.com/blog/2013/04/git-koans/) - Inspired by the [Vim Koans](http://blog.sanctum.geek.nz/vim-koans/)
 - [Git Rebase in Depth](https://git-rebase.io/) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
 - [Git Submodules Revisted](https://dev.to/dwd/git-submodules-revisited-1p54) is a good article by Dave Cridland on using submodules in your code.
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) is an excellent collection of tips and aliases maintained by Tim Green.
 - [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) is a good article on dealing with reviewing the changes made during a merge.
+- [Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com) is a quick intro.
 - [Learn Git Branching](https://learngitbranching.js.org/) is the most visual and interactive way to learn `git` on the web; you'll be challenged with exciting levels, given step-by-step demonstrations of powerful features, and maybe even have a bit of fun along the way.
 - [More Productive Git](https://increment.com/open-source/more-productive-git/) by James Turnbull is a quick tutorial for beginning `git` users.
 - [Oh Shit, Git!](http://ohshitgit.com/) has a collection of bad situations explained in plain English and how to get yourself out of them . When you manage to get your `git` working directory in a sad state, you can run into the chicken-egg problem where if you just knew what command to `man`, you could dig yourself out of the hole, but if you knew that, you wouldn't be in the bad place anyway.
@@ -290,7 +292,6 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [gitready.com/](http://gitready.com/) is a great reference which has been collecting information and tips for `git` since 2009.
 - [learnenough.com](http://www.learnenough.com/git-tutorial) has a more detailed `git` tutorial on
 - [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message, no matter what source control system you're using.
--[Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com) is a quick intro.
 
 ### External Git Utilities
 
