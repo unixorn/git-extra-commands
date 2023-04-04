@@ -62,7 +62,7 @@ typing_extensions==4.5.0
 uritemplate==4.1.1
 urllib3==1.26.14
 wcwidth==0.2.5
-websocket-client==1.4.2
+websocket-client==1.5.1
 Werkzeug==2.2.3
 wrapt==1.14.1
 xmltodict==0.13.0
