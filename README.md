@@ -283,7 +283,6 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Top ten pull request review mistakes](https://blog.scottnonnenberg.com/top-ten-pull-request-review-mistakes/) is a great article by Scott Nonnenberg on how to do better code reviews on PRs.
 - [Tracking diffs by scoping to file, range, function, method, or class changes in Git](https://susanpotter.net/software/tracking-diffs-by-scoping-to-file-range-function-method-or-class-changes-in-git/) is a great article by Susan Potter about making `git` show file-specific diffs, or even function-specific diffs in a language-aware way.
 - [awesome-github](https://github.com/fffaraz/awesome-github) - Faraz Fallahi maintains a curated list of GitHub & Git resources.
-- [firstaidgit.io](http://firstaidgit.io/) is a searchable selection of the most frequently asked `git` questions
 - [git flight rules](https://github.com/k88hudson/git-flight-rules) by Kate Hudson is a collection of useful `git` usage tips.
 - [git, the simple guide](https://rogerdudler.github.io/git-guide/) by Roger Dudler is a good introduction to `git`.
 - [git-tips/tips](https://github.com/git-tips/tips) is a collection of `git` tips.
