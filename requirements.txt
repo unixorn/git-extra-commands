@@ -19,7 +19,7 @@ docopt==0.6.2
 fastjsonschema==2.16.3
 future @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/python3/python3-124/future-0.18.2-py3-none-any.whl
 gitdb==4.0.10
-github3.py==3.2.0
+github3.py==4.0.1
 GitPython==3.1.31
 idna==3.4
 inquirer==3.1.3
