@@ -1,10 +1,10 @@
 altgraph @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/python3/python3-124/altgraph-0.17.2-py2.py3-none-any.whl
-ansible==7.5.0
+ansible==7.6.0
 ansible-core==2.14.5
 attrs==23.1.0
 black==23.3.0
 blessed==1.20.0
-boto3==1.26.137
+boto3==1.26.142
 botocore==1.29.142
 certifi==2023.5.7
 cffi==1.15.1
@@ -38,7 +38,7 @@ pigar==2.0.6
 pipreqs==0.4.11
 platformdirs==3.5.0
 pycparser==2.21
-PyGithub==1.58.1
+PyGithub==1.58.2
 PyJWT==2.6.0
 PyNaCl==1.5.0
 pyparsing==3.0.9
