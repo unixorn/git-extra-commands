@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
 # Copy the current branch name to stdout for use in automation
+#
+# Copyright 2019-2023 Joe Block <jpb@unixorn.net>
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 
