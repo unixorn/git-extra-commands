@@ -47,7 +47,7 @@ python-dateutil==2.8.2
 python-editor==1.0.4
 pytz==2023.3
 PyYAML==6.0
-readchar==4.0.3
+readchar==4.0.5
 requests==2.31.0
 resolvelib==1.0.1
 responses==0.23.1
