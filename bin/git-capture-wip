@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# git capture-wip - make a wip commit to capture intermediate changes
+#
+# Author: [@Hefeweizen](https://github.com/Hefeweizen)
+#
+#
+# if current branch is foo, then foo-wip is created.
+#
+# Do note, a side-effect of this action is to reset the index.
+#
+# The impetus for this was to capture more ephemeral or in-progress edits. An
+# example of this is this addition I made to my .vimrc, that captures a wip
+# commit on every file edit:
+# ```vim
+# autocmd BufWritePost * silent execute ":!if git ls-files --error-unmatch % 1>/dev/null 2>&1; then git wip; fi" | redraw!
+# ```
+
+
+# if env var found, then abort saving wip
+#
+# This was specifically added to have git not interfere
+# with --interactive patching/rebasing.
+# ```
+# $ g config core.editor
+# NO_GIT_WIP=1 vim
+# ```
+if [[ ${NO_GIT_WIP} -eq 1 ]]; then
+    exit
+fi
+
+current_branch_name=$(git rev-parse --abbrev-ref HEAD)
+
+if git rev-parse --verify ${current_branch_name}-wip >/dev/null 2>&1; then
+    git branch --delete --force ${current_branch_name}-wip >/dev/null
+fi
+git checkout -b ${current_branch_name}-wip >/dev/null 2>&1
+git commit --all -m "wip" >/dev/null
+git checkout @{-1} >/dev/null 2>&1
+git restore --worktree --source=${current_branch_name}-wip -- .

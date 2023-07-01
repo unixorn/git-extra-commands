@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# git brcl - branch clean
+#
+# Author: [@Hefeweizen](https://github.com/Hefeweizen)
+#
+# assumes working in a githubflow model with feature branches in either the
+# main repo, or in a forked copy of that repo.
+#
+# This was initial written to clean up branches in a personal fork, but it
+# has been extended to clean up foo-wip branches from `git-qip` in this repo.
+
+# in an environment where PRs are made from personal forks, adjust this as necessary
+# example, at previous company, this was <username>
+github_source=origin
+
+target_branch_name=$1
+
+git branch --delete --force ${target_branch_name}
+
+# clean up '<branch>-wip'
+if git rev-parse --verify ${target_branch_name}-wip >/dev/null 2>&1; then
+    git branch --delete --force ${target_branch_name}-wip >/dev/null
+fi
+
+# clean up remote copies
+if git rev-parse --verify ${github_source}/${target_branch_name} >/dev/null 2>&1; then
+    git push ${github_source} --delete ${target_branch_name}
+fi
