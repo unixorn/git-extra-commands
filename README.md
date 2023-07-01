@@ -27,7 +27,7 @@
 - [Miscellaneous Tips](#miscellaneous-tips)
   - [Make it easier to check out default branch](#make-it-easier-to-check-out-default-branch)
   - [Have git cope with typos](#have-git-cope-with-typos)
-  - [Rewrite git:// with https://](#rewrite-git-with-https)
+  - [Rewrite `git://` with `https://`](#rewrite-git-with-https)
   - [or replace with `ssh`](#or-replace-with-ssh)
 - [Contributing](#contributing)
 - [Thanks](#thanks)
@@ -52,12 +52,14 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-attic` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Displays a list of deleted files in your repository. The output is designed to be copy and pasted: Pass the second field to `git show` to display the file contents, or just select the hash without ^ to see the commit where removal happened. |
 | `git-authors` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) (as `git-changes`) | List authors in the repository in descending commit-count order. |
 | `git-big-file` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show files in the repository larger than a threshold size. |
+| `git-branch-clean` | [@Hefeweizen](https://github.com/Hefeweizen) | "branch clean" - rm various copies of a branch (e.g. foo-wip; origin/foo) |
 | `git-branch-date` | Joe Block <jpb@unixorn.net> | List branches in commit-date order |
 | `git-branch-diff` | Joe Block <jpb@unixorn.net> | Diffs your current HEAD with the default branch of the origin remote |
 | `git-branch-name` | Joe Block <jpb@unixorn.net> | Prints the current branch name in automation-friendly format. |
 | `git-branch-rebaser` | Vengada Rangaraju <krangaraju@castlighthealth.com> | Kicks off an interactive rebase of all the commits on your branch. _Including pushed commits_, so be careful. |
 | `git-branch-status` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Colorized status report on all branches in your repository |
 | `git-branches-that-touch` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows which branches touch files under a path that are remote, unmerged, have a commit in the last six months and whose name doesn't start with 'enterprise-' |
+| `git-capture-wip` | [@Hefeweizen](https://github.com/Hefeweizen) | capture in-progress file changes |
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another. |
 | `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Symlink to `git-authors`. List authors in the repository in descending commit-count order. |
