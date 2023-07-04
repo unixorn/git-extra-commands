@@ -583,7 +583,6 @@ function Reset
   RemoteColors=()
 }
 
-
 ## main entry ##
 
 Init $*
