@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 #
-# Script skeleton
+# Sort branches by recent commit
 #
-# Copyright 2022, Your Name <yourname@yourdomain.com>
-
+# I can never remember the command for this, so I wrapped it
+#
+# Copyright 2022, Joe Block <jpb@unixorn.net>
 
 exec git branch -v -r --sort=-committerdate
