@@ -3,7 +3,7 @@
 # Outputs the SHA of the oldest common ancestor of two branches.
 #
 # The first argument defaults to `master` and the second argument defaults to `HEAD`.
-# 
+#
 # Original source: https://github.com/lee-dohm/dotfiles/blob/main/bin/git-oldest-ancestor
 
 ancestor=$(diff --old-line-format='' --new-line-format='' \

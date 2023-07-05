@@ -36,7 +36,7 @@ function fcoc_preview() {
 }
 
 if has fzf; then
-  fcoc_preview 
+  fcoc_preview
 else
   myname=$(basename "$0")
   fail "$myname needs fzf and can't find it in $PATH"
