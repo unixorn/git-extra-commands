@@ -1,5 +1,5 @@
 altgraph @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/python3/python3-124/altgraph-0.17.2-py2.py3-none-any.whl
-ansible==8.2.0
+ansible==8.3.0
 ansible-core==2.15.2
 attrs==23.1.0
 black==23.7.0
