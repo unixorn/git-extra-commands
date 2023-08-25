@@ -13,8 +13,7 @@
 # limitations under the License.
 
 # Add our plugin's bin diretory to user's path
-PLUGIN_D=$(dirname "$0")
-export PATH="${PATH}:${PLUGIN_D}/bin"
+path+=("${0:h}/bin")
 
 alias git-grab='git-incoming-commits'
 alias gitroot='cd $(git rev-parse --show-toplevel) && echo "$_"'
