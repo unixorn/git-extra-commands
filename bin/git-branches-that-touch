@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Original source: https://github.com/mislav/dotfiles/blob/master/bin/git-branches-that-touch
 #
