@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # git-attic [-M] [PATH] - list deleted files of Git repositories
 #
 # Use -M to not show renamed files, and other git-log options as you like.
