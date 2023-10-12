@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Usage: git where-pr [--print] <ref>
 #
 # Opens the Pull Request on GitHub where the commit originated.

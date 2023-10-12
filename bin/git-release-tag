@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Usage: release-tag <git-tag> [-- <source-files>...]
 #
 # Create a GitHub release for a specified tag. The release notes are
