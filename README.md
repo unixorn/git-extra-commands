@@ -18,7 +18,6 @@
   - [Pre-requisites](#pre-requisites)
   - [Zgenom](#zgenom)
   - [Antigen](#antigen)
-  - [Fig](#fig)
   - [oh-my-zsh](#oh-my-zsh)
   - [Bash / Manual Installation](#bash--manual-installation)
 - [Other useful git stuff](#other-useful-git-stuff)
