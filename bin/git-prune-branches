@@ -22,7 +22,7 @@ fi
 
 merged=$(git branch --no-color --merged "$PRIMARY_BRANCH" | grep -v "$PRIMARY_BRANCH" | sed 's/\*/ /')
 
-if [ ! -z "$merged" ] ; then
+if [ -n "$merged" ] ; then
   echo "Deleting the following merged branches:"
   for branch in $merged ; do
     echo "    " "$branch"

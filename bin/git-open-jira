@@ -50,7 +50,7 @@ function jira-open(){
   open "${1}/browse/${$2}"
 }
 
-if !has open; then
+if ! has open; then
   fail "Could not find 'open' in your PATH"
 fi
 

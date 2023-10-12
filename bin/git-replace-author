@@ -16,8 +16,8 @@ function has() {
   which "$@" > /dev/null 2>&1
 }
 
-if [[ ! has git-filter-branch ]]; then
-  myname=$(basename $0)
+if ! has git-filter-branch; then
+  myname=$(basename "$0")
   fail "Usage: $myname OLDNAME NEW_NAME NEW_EMAIL"
 fi
 
