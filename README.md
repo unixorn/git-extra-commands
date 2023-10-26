@@ -259,7 +259,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Conditional .gitconfig](https://utf9k.net/blog/conditional-gitconfig/) by Marcus Crane explains how to have different `.gitconfig` settings based on where the checkout is located. This makes it easy to have a work directory with work settings applied to all repositories in it, and a personal one with different settings.
 - [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) is a great article about using [fzf](https://github.com/junegunn/fzf) with some `git` helper scripts.
 - [Fuzzy Git Checkout](https://polothy.github.io/post/2019-08-19-fzf-git-checkout/) by Mark Nielsen explains how to use [fzf](https://github.com/junegunn/fzf) for `git` checkouts.
-- [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans.
+- [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans. She also covers some other miscellaneous `git` facts [here](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/).
 - [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) explains how `git` works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
 - [Git Log Customization](https://www.justinjoyce.dev/customizing-git-log-format/) - Good tutorial about customizing the format of `git log`.
 - [Git Rebase in Depth](https://git-rebase.io/) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
