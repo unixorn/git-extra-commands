@@ -63,7 +63,7 @@ uritemplate==4.1.1
 urllib3==2.0.7
 wcwidth==0.2.8
 websocket-client==1.6.4
-Werkzeug==2.3.7
+Werkzeug==3.0.1
 wrapt==1.15.0
 xmltodict==0.13.0
 yarg==0.1.9
