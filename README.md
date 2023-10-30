@@ -263,6 +263,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) explains how `git` works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
 - [Git Log Customization](https://www.justinjoyce.dev/customizing-git-log-format/) - Good tutorial about customizing the format of `git log`.
 - [Git Rebase in Depth](https://git-rebase.io/) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
+- [Git Spelunking with Bisect](https://erikarow.land/notes/git-spelunking-bisect) - A brief introduction to `git bisect`.
 - [Git Submodules Revisted](https://dev.to/dwd/git-submodules-revisited-1p54) is a good article by Dave Cridland on using submodules in your code.
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) is an excellent collection of tips and aliases maintained by Tim Green.
 - [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) is a good article on dealing with reviewing the changes made during a merge.
