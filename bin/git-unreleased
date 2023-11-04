@@ -34,7 +34,7 @@ else
   tag="$desc"
 fi
 
-if [ $num_commits -gt 0 ]; then
+if [ "$num_commits" -gt 0 ]; then
   echo "${num_commits} commits since ${tag}"
   show_log "$tag"
 else

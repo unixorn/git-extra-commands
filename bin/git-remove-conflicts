@@ -52,7 +52,7 @@ for item in "$@"; do
 	    git ls-files -z -u "$item" | xargs -0 "$0" --recursed $wipe
 	fi
     elif [[ -f "$item" ]]; then
-	echo Removing $wipe from: $item
+	echo "Removing $wipe from: $item"
 	if [[ $wipe == ours ]]; then
 	    perl -i -ne 'print unless /<<<<<</ .. /======/ or />>>>>>/;' "$item"
 	elif [[ $wipe == theirs ]]; then

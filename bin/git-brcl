@@ -15,14 +15,14 @@ github_source=origin
 
 target_branch_name=$1
 
-git branch --delete --force ${target_branch_name}
+git branch --delete --force "${target_branch_name}"
 
 # clean up '<branch>-wip'
-if git rev-parse --verify ${target_branch_name}-wip >/dev/null 2>&1; then
-    git branch --delete --force ${target_branch_name}-wip >/dev/null
+if git rev-parse --verify "${target_branch_name}-wip" >/dev/null 2>&1; then
+    git branch --delete --force "${target_branch_name}-wip" >/dev/null
 fi
 
 # clean up remote copies
-if git rev-parse --verify ${github_source}/${target_branch_name} >/dev/null 2>&1; then
-    git push ${github_source} --delete ${target_branch_name}
+if git rev-parse --verify "${github_source}/${target_branch_name}" >/dev/null 2>&1; then
+    git push ${github_source} --delete "${target_branch_name}"
 fi

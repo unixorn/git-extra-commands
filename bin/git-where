@@ -4,7 +4,8 @@
 # Shows where a particular commit falls between releases.
 set -e
 
-[[ -z $1 ]] && abort=1 || abort=0
+abort=0
+[[ -z $1 ]] && abort=1
 
 if [[ $abort -gt 0 || $1 = "-h" || $1 = "--help" ]]; then
   sed -ne '/^#/!q;s/.\{1,2\}//;1d;p' < "$0" >&$((abort+1))

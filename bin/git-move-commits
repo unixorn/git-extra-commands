@@ -40,8 +40,7 @@ fi
 CURRENT_BRANCH=$(git branch | grep '*' | perl -e '<STDIN> =~ /^..(.+)$/;print $1')
 
 # If the branch already exists, we have to merge it with the current branch
-# shellcheck disable=SC2143,SC2046
-if ! [ -z $(git branch -a | grep "$BRANCH") ]
+if [ -n "$(git branch -a | grep "$BRANCH")" ]
 then
     echo "$BRANCH already exists. Switching to it and merging $CURRENT_BRANCH"
     git checkout "$BRANCH"

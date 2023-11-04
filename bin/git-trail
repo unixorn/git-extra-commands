@@ -12,7 +12,7 @@ COMMIT=$(git rev-parse --no-flags --default HEAD "$@")
   git log --date=short --format="%cd %h %H" "$@"
 } | awk '
     $2 == "commit" || $2 == "tag" {
-      "git merge-base '$COMMIT' " $1 | getline mb
+      "git merge-base '"$COMMIT"' " $1 | getline mb
       merge[mb] = merge[mb] " " $3
     }
     {

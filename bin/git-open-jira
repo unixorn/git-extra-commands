@@ -43,7 +43,7 @@ function get-jira-server() {
 }
 
 function get-jira-ticket(){
-  echo $(git rev-parse --abbrev-ref HEAD | cut -f 1,2 -d -)
+  git rev-parse --abbrev-ref HEAD | cut -f 1,2 -d -
 }
 
 function jira-open(){

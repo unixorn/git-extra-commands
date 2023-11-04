@@ -31,4 +31,4 @@ function has() {
 
 DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5)
 
-exec git diff ${DEFAULT_BRANCH}..HEAD "$@"
+exec git diff "${DEFAULT_BRANCH}..HEAD" "$@"
