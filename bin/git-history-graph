@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
 # Graph git commit history
+#
+# From https://stackoverflow.com/a/1838938
 
 exec git log --graph \
   --full-history \

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 #
 # Rewrite all commits with one name to use another
+#
+# From https://stackoverflow.com/a/40565934
 
 set -o pipefail
 if [[ -n "$DEBUG" ]]; then

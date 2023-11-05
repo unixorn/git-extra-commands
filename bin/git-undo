@@ -1,5 +1,7 @@
 #!/bin/sh
 #
 # Undo your last commit, but don't throw away your changes
+#
+# From: https://stackoverflow.com/a/24569160
 
 exec git reset --soft HEAD^

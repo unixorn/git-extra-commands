@@ -63,7 +63,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Symlink to `git-authors`. List authors in the repository in descending commit-count order. |
 | `git-checkout-branches` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Checks out all remote branches. |
-| `git-checkout-by-date` | ? | Lets you checkout several files at once at the version specified by a date. |
+| `git-checkout-by-date` | [Stack Overflow](https://stackoverflow.com/a/6990682) | Lets you checkout several files at once at the version specified by a date. |
 | `git-checkout-commit` |From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to checkout a commit, showing the commit diff as preview. |
 | `git-checkout-default-branch` | I got tired of keeping track of which repositories use `main`, `master` or something else as default branch | Checks out the default branch of the `origin` remote so you don't have to remember which repositories use `master`, `main` or whatever. |
 | `git-checkout-pr` | Based on [gist.github.com/gnarf/5406589](https://gist.github.com/gnarf/5406589) | Check out a PR locally. |
@@ -103,7 +103,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-git` | Joe Block <jpb@unixorn.net> | Typing `git git foo` will make `git` do a `git foo` instead of complaining. |
 | `git-github-open` | ? | Open GitHub file/blob page for FILE on LINE. |
 | `git-gitlab-mr` | Noel Cower's [gist](https://gist.github.com/nilium/ac808ee3729cdce01ec0f3c0a499f099) | Open a merge request on GitLab. |
-| `git-history-graph` | ? | Pretty `git` log, single line per commit, with branch graphing. |
+| `git-history-graph` | [Stack Overflow](https://stackoverflow.com/a/1838938) | Pretty `git` log, single line per commit, with branch graphing. |
 | `git-ignored` | ? | Show files being ignored by `git` in the repository. |
 | `git-improved-merge` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Sophisticated `git merge` with integrated CI check and automatic cleanup. |
 | `git-incoming` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Show commits in the tracking branch that are not in the local branch. |
@@ -148,7 +148,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
 | `git-remove-conflicts ours or theirs FILES...` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Automatically resolves conflicts by applying the changes from current branch (ours) or remote branch (theirs). |
 | `git-rename-branches` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Rename multiple branches that start with a given name. |
-| `git-replace-author` | ? | Uses `git-filter-branch` to rewrite all commits with one name to use another name and email. |
+| `git-replace-author` | [Stack Overflow](https://stackoverflow.com/a/40565934) | Uses `git-filter-branch` to rewrite all commits with one name to use another name and email. |
 | `git-reset-with-fire` | Joe Block <jpb@unixorn.net> | Hard reset the working directory, then zap any files not known to `git`. |
 | `git-restore-mtime` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Change mtime of files based on commit date of last change. |
 | `git-reup` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Like `git pull` but show a short and sexy log of changes after merging or rebasing. |
@@ -172,7 +172,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-trail` | Leah Neukirchen's [blog](http://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repository's `git` history so you can see how to reach commits in the current branch from other branches. |
 | `git-undelete` | ? | Undeletes a file. |
 | `git-undo-push` | ? | Undoes your last push to branch **$1** of origin.|
-| `git-undo` | ? | Undoes your last commit but keeps the changes in place. |
+| `git-undo` | [Stack Overflow](https://stackoverflow.com/a/24569160) | Undoes your last commit but keeps the changes in place. |
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet. |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows `git` commits since the last tagged version. |
 | `git-up` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Like `git pull` but show a short and sexy log of changes after merging or rebasing. |
