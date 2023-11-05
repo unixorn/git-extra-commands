@@ -18,7 +18,7 @@ if [[ $? != 0 ]]; then
   upstream_remote='upstream'
 fi
 
-git fetch ${upstream_remote} && \
+git fetch "${upstream_remote}" && \
   git rebase "${upstream_remote}/${branch_name}" && \
   git push && \
   git fetch -p

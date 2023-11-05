@@ -191,7 +191,7 @@ function GetRefs # (refs_dir)
 {
   local refs_dir=$1
 
-  git for-each-ref --format="%(refname:short) %(upstream:short)" $refs_dir 2> /dev/null
+  git for-each-ref --format="%(refname:short) %(upstream:short)" "$refs_dir" 2> /dev/null
 }
 
 function GetLocalRefs
@@ -203,7 +203,7 @@ function GetRemoteRefs # (remote_repo_name)
 {
   local remote_repo=$1
 
-  GetRefs refs/remotes/$remote_repo
+  GetRefs "refs/remotes/$remote_repo"
 }
 
 function GetStatus # (base_commit compare_commit)

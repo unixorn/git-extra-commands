@@ -60,7 +60,7 @@ function git_repo_toplevel() {
 
 # Get subject of specified commit
 function git_commit_subject() {
-  git log --format='%s' -n 1 $1
+  git log --format='%s' -n 1 "$1"
 }
 
 # Save changes for later retrieval
@@ -78,7 +78,7 @@ function save() {
     status="*"
     git tag -f "git-jump-$head_sha" >/dev/null
   fi
-  echo "Previous HEAD was $head_sha$status, $(git_commit_subject $head_sha)"
+  echo "Previous HEAD was $head_sha$status, $(git_commit_subject "$head_sha")"
 }
 
 # Restore previously-saved changes
@@ -99,7 +99,7 @@ function restore() {
     # Otherwise, just restore the original commit
     git checkout "$1" 2>/dev/null
   fi
-  echo "HEAD is now $1$status, $(git_commit_subject $1)"
+  echo "HEAD is now $1$status, $(git_commit_subject "$1")"
 }
 
 # Clean (permanently) current changes and remove the current saved tag
