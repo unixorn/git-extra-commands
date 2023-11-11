@@ -23,10 +23,10 @@
 <!--- If you're unsure about any of these, don't hesitate to ask. I'm happy to help! -->
 
 - [ ] I have read the **CONTRIBUTING** document.
+- [ ] I have confirmed that the link(s) in my PR are valid.
 - [ ] All new and existing tests pass.
 - [ ] Any scripts added use `#!/usr/bin/env interpreter` instead of potentially platform-specific direct paths (`#!/bin/sh` is an allowed exception)
 - [ ] Scripts added/updated in this PR are all marked executable.
 - [ ] Scripts added/updated in this PR _do not_ have a language file extension unless they are meant to be sourced and not run standalone. No one should have to know if a script was written in bash, python, ruby or whatever. Not including file extensions makes it easier to rewrite the script in another language later without having to change every reference to the previous version.
 - [ ] I have added a credit line to [README.md](https://github.com/unixorn/git-extra-commands/blob/main/README.md) for any new scripts.
 - [ ] If there was no author credit inside a script added in this PR, I have added one.
-- [ ] I have confirmed that the link(s) in my PR are valid.
