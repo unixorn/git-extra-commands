@@ -61,7 +61,7 @@ types-toml==0.10.8.7
 typing_extensions==4.8.0
 uritemplate==4.1.1
 urllib3==2.1.0
-wcwidth==0.2.9
+wcwidth==0.2.12
 websocket-client==1.6.4
 Werkzeug==3.0.1
 wrapt==1.15.0
