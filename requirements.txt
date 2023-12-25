@@ -33,7 +33,7 @@ moto==4.2.12
 mypy-extensions==1.0.0
 nbformat==5.9.2
 packaging==23.2
-pathspec==0.11.2
+pathspec==0.12.1
 pigar==2.1.1
 pipreqs==0.4.13
 platformdirs==4.1.0
