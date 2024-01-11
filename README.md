@@ -295,7 +295,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [blackbox](https://github.com/StackExchange/blackbox) - Tom Limoncelli open sourced the tool they use at Stack Exchange to use GPG to store secrets in a `git` repository.
 - [branch-manager](https://github.com/elstgav/branch-manager) - ZSH plugin for branch management
 - [commit-helper](https://github.com/andre-filho/commit-helper) - A python script that helps you write commits following commit conventions.
-- [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking `git` diffs
+- [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking `git` diffs.
+- [dunk](https://github.com/darrenburns/dunk) - Another tool for prettier `git` diffs.
 - [gig](https://dev.to/shihanng/gig-a-gitignore-generator-opc) - a CLI `.gitignore` generator
 - [git ZSH plugin](https://github.com/davidde/git) - A replacement for the stock oh-my-zsh `git` plugin. Provides quite a few useful aliases and functions that are more consistent in their naming that the relatively unintuitive ones in the stock plugin.
 - [git-absorb](https://github.com/tummychow/git-absorb) - Essentially, when your working directory has uncommitted changes on top of draft changesets, you can run `git absorb` and the uncommitted modifications are automagically folded ("absorbed") into the appropriate draft ancestor commits. The command essentially looks at the lines that were modified, finds a commit modifying those lines, and amends that commit to include your uncommitted changes. If the changes can't be made without conflicts, they remain uncommitted. This workflow is insanely useful for things like applying review feedback.
