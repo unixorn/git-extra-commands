@@ -262,7 +262,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans. She also covers some other miscellaneous `git` facts [here](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/).
 - [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) explains how `git` works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
 - [Git Log Customization](https://www.justinjoyce.dev/customizing-git-log-format/) - Good tutorial about customizing the format of `git log`.
-- [Git Rebase in Depth](https://git-rebase.io/) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
+- [Git Rebase in Depth](http://archive.today/9MpWr) is a good tutorial on `git rebase` that covers the common use cases for rebasing.
 - [Git Rebase: What Can Go Wrong](https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/) - Another good explanation by Julia Evans.
 - [Git Spelunking with Bisect](https://erikarow.land/notes/git-spelunking-bisect) - A brief introduction to `git bisect`.
 - [Git Submodules Revisted](https://dev.to/dwd/git-submodules-revisited-1p54) is a good article by Dave Cridland on using submodules in your code.
