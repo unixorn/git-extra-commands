@@ -8,8 +8,8 @@
 
 <!--- What types of changes does your submission introduce? Put an `x` in all the boxes that apply: [x] -->
 
-- [ ] Add/update a helper script or `git` alias
-- [ ] Add/update link to an external resource like a blog post or video
+- [ ] Add/Remove/Update a helper script or `git` alias
+- [ ] Add/Remove/Update link to an external resource like a blog post or video
 - [ ] Text cleanups/updates
 - [ ] Test updates
 
