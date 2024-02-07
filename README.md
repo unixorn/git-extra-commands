@@ -284,7 +284,6 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-tips/tips](https://github.com/git-tips/tips) is a collection of `git` tips.
 - [git-tips](http://mislav.net/2010/07/git-tips/) by Mislav Marohnić is a good article on `git` tips. Several of his `git` scripts are in this collection.
 - [gitimmersion.com/](http://gitimmersion.com/) is a guided tour that walks through the fundamentals of Git, inspired by the premise that to know a thing is to do it.
-- [gitready.com/](http://gitready.com/) is a great reference which has been collecting information and tips for `git` since 2009.
 - [learnenough.com](http://www.learnenough.com/git-tutorial) has a more detailed `git` tutorial on
 - [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message, no matter what source control system you're using.
 
