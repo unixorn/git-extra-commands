@@ -45,7 +45,7 @@ pyparsing==3.1.1
 pyrsistent==0.20.0
 python-dateutil==2.8.2
 python-editor==1.0.4
-pytz==2023.3.post1
+pytz==2024.1
 PyYAML==6.0.1
 readchar==4.0.5
 requests==2.31.0
