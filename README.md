@@ -35,9 +35,9 @@
 
 **git-extra-commands** is a ZSH plugin that packages some extra `git` helper scripts I've found. This collection (and the scripts that I wrote in it) is licensed with the Apache Version 2 license.
 
-However, some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
-
 This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
+
+However, some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
 
 If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repository and I will remove it.
 
