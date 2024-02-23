@@ -20,4 +20,4 @@ jobs:
         fetch-depth: 0
     - uses: docker://dkhamsing/awesome_bot:latest
       with:
-        args: /github/workspace/README.md --allow-ssl --allow 500,501,502,503,504,509,521 --allow-dupe --allow-redirect --request-delay 1 --white-list https://github,https://img.shields.io,https://twitter.com,https://medium.com,https://stackoverflow.com
+        args: /github/workspace/README.md --allow-ssl --allow 202,500,501,502,503,504,509,521 --allow-dupe --allow-redirect --request-delay 1 --white-list https://github,https://img.shields.io,https://twitter.com,https://medium.com,https://stackoverflow.com
