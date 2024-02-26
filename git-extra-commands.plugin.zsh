@@ -12,8 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Add our plugin's bin diretory to user's path
-path+=("${0:h}/bin")
+# Add our plugin's bin diretory to user's path per
+# https://zdharma-continuum.github.io/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html#zero-handling
+
+0="${ZERO:-${${0:#$ZSH_ARGZERO}:-${(%):-%N}}}"
+0="${${(M)0:#/*}:-$PWD/$0}"
+
+local git_extra_commands_bin="${0:h}/bin"
+
+if [[ -z "${path[(r)${git_extra_commands_bin}]}" ]]; then
+    path+=( "${git_extra_commands_bin}" )
+fi
 
 alias git-grab='git-incoming-commits'
 alias gitroot='cd $(git rev-parse --show-toplevel) && echo "$_"'

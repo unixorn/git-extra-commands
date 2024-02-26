@@ -10,6 +10,7 @@
 
 - [ ] Add/Remove/Update a helper script or `git` alias
 - [ ] Add/Remove/Update link to an external resource like a blog post or video
+- [ ] Plugin file updates - functions added here probably should be standalone scripts in `/bin`
 - [ ] Text cleanups/updates
 - [ ] Test updates
 
