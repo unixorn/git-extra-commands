@@ -58,7 +58,7 @@ toml==0.10.2
 tomli==2.0.1
 traitlets==5.14.1
 types-toml==0.10.8.7
-typing_extensions==4.9.0
+typing_extensions==4.10.0
 uritemplate==4.1.1
 urllib3==2.2.1
 wcwidth==0.2.13
