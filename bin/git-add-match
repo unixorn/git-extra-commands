@@ -1,0 +1,32 @@
+#!/usr/bin/env expect -f
+#
+# Original source: https://choly.ca/post/git-programmatic-staging
+
+# Set timeout to prevent the script from hanging
+set timeout -1
+
+# Get the search pattern as a command line argument
+if {[llength $argv] != 0} {
+   set pattern [lindex $argv 0]
+} else {
+   puts "Error: search pattern not provided"
+   exit 1
+}
+
+# Open the interaction with git add -p
+spawn git add -p
+
+# This is the main loop that handles the user interaction
+expect {
+  # This expect block is for the hunk that contains the provided pattern
+  "*$pattern*Stage this hunk*" {
+    send "y\r"
+    exp_continue
+  }
+  # This expect block is for continuing to the next hunk
+  "*Stage this hunk*" {
+    send "n\r"
+    exp_continue
+  }
+  eof
+}
