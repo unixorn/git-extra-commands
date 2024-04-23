@@ -31,7 +31,7 @@ macholib @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveB
 MarkupSafe==2.1.5
 moto==5.0.5
 mypy-extensions==1.0.0
-nbformat==5.10.3
+nbformat==5.10.4
 packaging==24.0
 pathspec==0.12.1
 pigar==2.1.4
