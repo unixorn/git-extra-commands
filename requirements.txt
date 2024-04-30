@@ -36,7 +36,7 @@ packaging==24.0
 pathspec==0.12.1
 pigar==2.1.4
 pipreqs==0.5.0
-platformdirs==4.2.0
+platformdirs==4.2.1
 pycparser==2.22
 PyGithub==2.3.0
 PyJWT==2.8.0
