@@ -47,7 +47,7 @@ python-dateutil==2.9.0.post0
 python-editor==1.0.4
 pytz==2024.1
 PyYAML==6.0.1
-readchar==4.0.6
+readchar==4.1.0
 requests==2.32.0
 resolvelib==1.0.1
 responses==0.25.0
