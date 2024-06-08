@@ -270,6 +270,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Git Spelunking with Bisect](https://erikarow.land/notes/git-spelunking-bisect) - A brief introduction to `git bisect`.
 - [Git Submodules Revisted](https://dev.to/dwd/git-submodules-revisited-1p54) is a good article by Dave Cridland on using submodules in your code.
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) is an excellent collection of tips and aliases maintained by Tim Green.
+- [How Does Git Work?](https://phoenixnap.com/kb/how-git-works) - A basic introduction to `git`.
 - [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) is a good article on dealing with reviewing the changes made during a merge.
 - [Ignoring bulk change commits with `git blame`](https://moxio.com/blog/ignoring-bulk-change-commits-with-git-blame/) - Shows how to ignore certain commits in your repository in `git blame` output. Very useful for ignoring commits with large changes created by automated tools like [black](https://github.com/psf/black).
 - [Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com) is a quick intro.
