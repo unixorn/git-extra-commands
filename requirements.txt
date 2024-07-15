@@ -34,7 +34,7 @@ mypy-extensions==1.0.0
 nbformat==5.10.4
 packaging==24.1
 pathspec==0.12.1
-pigar==2.1.4
+pigar==2.1.6
 pipreqs==0.5.0
 platformdirs==4.2.2
 pycparser==2.22
