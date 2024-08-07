@@ -1,6 +1,7 @@
 # git-extra-commands
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/license/Apache-2.0)
+[![Contributors](https://img.shields.io/github/contributors/unixorn/git-extra-commands.svg)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Funixorn%2Fgit-extra-commands%2Fbadge%3Fref%3Dmain&style=plastic)](https://actions-badge.atrox.dev/unixorn/git-extra-commands/goto?ref=main)
 ![Awesomebot](https://github.com/unixorn/git-extra-commands/actions/workflows/awesomebot.yml/badge.svg)
 ![Megalinter](https://github.com/unixorn/git-extra-commands/actions/workflows/mega-linter.yml/badge.svg)
@@ -291,6 +292,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [gitimmersion.com/](http://gitimmersion.com/) is a guided tour that walks through the fundamentals of Git, inspired by the premise that to know a thing is to do it.
 - [learnenough.com](http://www.learnenough.com/git-tutorial) has a more detailed `git` tutorial on
 - [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message, no matter what source control system you're using.
+- [Tracing the evolution of a Python function with git log](https://nerderati.com/tracing-the-evolution-of-a-python-function-with-git-log/) - Nice tutorial on making `git log` output more useful when you're only interested in the changes in a specific function.
 
 ### External Git Utilities
 
