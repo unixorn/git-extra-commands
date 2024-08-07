@@ -291,6 +291,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [gitimmersion.com/](http://gitimmersion.com/) is a guided tour that walks through the fundamentals of Git, inspired by the premise that to know a thing is to do it.
 - [learnenough.com](http://www.learnenough.com/git-tutorial) has a more detailed `git` tutorial on
 - [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message, no matter what source control system you're using.
+- [Tracing the evolution of a Python function with git log](https://nerderati.com/tracing-the-evolution-of-a-python-function-with-git-log/) - Nice tutorial on making `git log` output more useful when you're only interested in the changes in a specific function.
 
 ### External Git Utilities
 
