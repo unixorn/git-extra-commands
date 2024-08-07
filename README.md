@@ -1,6 +1,7 @@
 # git-extra-commands
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/license/Apache-2.0)
+[![Contributors](https://img.shields.io/github/contributors/unixorn/git-extra-commands.svg)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Funixorn%2Fgit-extra-commands%2Fbadge%3Fref%3Dmain&style=plastic)](https://actions-badge.atrox.dev/unixorn/git-extra-commands/goto?ref=main)
 ![Awesomebot](https://github.com/unixorn/git-extra-commands/actions/workflows/awesomebot.yml/badge.svg)
 ![Megalinter](https://github.com/unixorn/git-extra-commands/actions/workflows/mega-linter.yml/badge.svg)
