@@ -60,7 +60,7 @@ traitlets==5.14.3
 types-toml==0.10.8.20240310
 typing_extensions==4.12.2
 uritemplate==4.1.1
-urllib3==2.2.2
+urllib3==2.2.3
 wcwidth==0.2.13
 websocket-client==1.8.0
 Werkzeug==3.0.4
