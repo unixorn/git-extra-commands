@@ -312,6 +312,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-also](https://github.com/anvaka/git-also) - Shows what files are most often committed with a given file in the repository.
 - [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
 - [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A `git` utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
+- [gitql](https://github.com/filhodanuvem/gitql) - Gitql is a `git` query language.
 - [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches.
 - [git-bump](https://github.com/arrdem/git-bump) - Hook scripts to automatically bump the version file in a repository
 - [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a `git` repository
