@@ -266,6 +266,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Fixing commits with git commit --fixup and git rebase --autosquash](https://jordanelver.co.uk/blog/2020/06/04/fixing-commits-with-git-commit-fixup-and-git-rebase-autosquash/) - Jordan wrote a good summary of how to use fixup commits in your workflow.
 - [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) is a great article about using [fzf](https://github.com/junegunn/fzf) with some `git` helper scripts.
 - [Fuzzy Git Checkout](https://polothy.github.io/post/2019-08-19-fzf-git-checkout/) by Mark Nielsen explains how to use [fzf](https://github.com/junegunn/fzf) for `git` checkouts.
+- [Git Config](https://blog.izissise.net/posts/gitconfig/) - Instructions for using directory-specific `git` configurations. Automatically switching email addresses based on what directory a `git` repository is in.
 - [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans. She also covers some other miscellaneous `git` facts [here](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/).
 - [git flight rules](https://github.com/k88hudson/git-flight-rules) by Kate Hudson is a collection of useful `git` usage tips.
 - [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) explains how `git` works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
