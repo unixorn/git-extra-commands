@@ -12,13 +12,14 @@
 
 branch_name=$(git symbolic-ref --short -q HEAD)
 upstream_remote=$(git config --get upstream-sync.remote)
+
 # shellcheck disable=SC2181
 if [[ $? != 0 ]]; then
-  echo 'Using default remote of upstream'
-  upstream_remote='upstream'
+  if [[ -n "$upstream_remote" ]]; then
+    upstream_remote=$(git remote show | head -1)
+  fi
 fi
 
-git fetch "${upstream_remote}" && \
+git fetch "${upstream_remote}" -p && \
   git rebase "${upstream_remote}/${branch_name}" && \
-  git push && \
-  git fetch -p
+  git push
