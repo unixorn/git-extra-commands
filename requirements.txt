@@ -38,7 +38,7 @@ pigar==2.1.6
 pipreqs==0.5.0
 platformdirs==4.3.6
 pycparser==2.22
-PyGithub==2.4.0
+PyGithub==2.5.0
 PyJWT==2.9.0
 PyNaCl==1.5.0
 pyparsing==3.2.0
