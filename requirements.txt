@@ -13,7 +13,7 @@ click==8.1.7
 codenamize==1.2.3
 colorama==0.4.6
 cryptography==43.0.3
-Deprecated==1.2.14
+Deprecated==1.2.15
 docker==7.1.0
 docopt==0.6.2
 fastjsonschema==2.20.0
