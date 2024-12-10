@@ -255,10 +255,10 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 
 ### Articles / Blog posts / Books
 
+- [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message, no matter what source control system you're using.
 - [4 Branching Workflows for git](https://medium.com/@patrickporto/4-branching-workflows-for-git-30d0aaee7bf) by Patrick Porto discusses the pros and cons of four of the more popular `git` workflows.
 - [5 types of Git workflows that will help you deliver better code](https://buddy.works/blog/5-types-of-git-workflows) explains five different Git workflows and the way they tackle various aspects of code collaboration: introducing changes, solving conflicts, using branches, and more.
 - [A Git Walkthrough](http://www.mutuallyhuman.com/blog/2012/06/22/a-git-walkthrough/) by Zach Dennis is a great blog post
-- [“Git” it together: Some tips on commit etiquette and best practices for junior developers](https://hackernoon.com/git-it-together-some-tips-on-commit-etiquette-and-best-practices-for-junior-developers-1f147b8dfd56) is a good article explaining some best practices on how to write a _good_ commit message, no matter what source control system you're using.
 - [A Grab Bag of Git Tricks](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) by Leah Neukirchen is a great blog post on `git` that is the source for several scripts in this collection.
 - [A Thorough Introduction to Git's Interactive Patch Mode](https://dev.to/krnsk0/a-thorough-introduction-to-git-s-interactive-patch-mode-4bl6) is an introduction on how to stage just parts of your changes to a commit.
 - [A Tidy, Linear Git History](http://www.bitsnbites.eu/a-tidy-linear-git-history/) by Marcus Geelnard is a blog post about the value of a linear commit history.
@@ -282,6 +282,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) is an excellent collection of tips and aliases maintained by Tim Green.
 - [gitimmersion.com/](http://gitimmersion.com/) is a guided tour that walks through the fundamentals of Git, inspired by the premise that to know a thing is to do it.
 - [How Does Git Work?](https://phoenixnap.com/kb/how-git-works) - A basic introduction to `git`.
+- [How I configure my Git identities](https://www.benji.dog/articles/git-config/) - How to use `includeif` to (among other tricks) automatically change what email is credited as author depending on what git repository you're working on.
 - [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) is a good article on dealing with reviewing the changes made during a merge.
 - [Ignoring bulk change commits with `git blame`](https://moxio.com/blog/ignoring-bulk-change-commits-with-git-blame/) - Shows how to ignore certain commits in your repository in `git blame` output. Very useful for ignoring commits with large changes created by automated tools like [black](https://github.com/psf/black).
 - [Introduction to git](https://learnxinyminutes.com/docs/git/) on [learnxinyminutes.com](https://learnxinyminutes.com) is a quick intro.
