@@ -29,7 +29,7 @@ jsonschema==4.23.0
 jupyter_core==5.7.2
 macholib @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/python3/python3-124/macholib-1.15.2-py2.py3-none-any.whl
 MarkupSafe==3.0.2
-moto==5.0.22
+moto==5.0.23
 mypy-extensions==1.0.0
 nbformat==5.10.4
 packaging==24.2
