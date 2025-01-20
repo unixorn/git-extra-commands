@@ -4,7 +4,7 @@ ansible-core==2.18.1
 attrs==24.3.0
 black==24.10.0
 blessed==1.20.0
-boto3==1.35.90
+boto3==1.36.2
 botocore==1.35.93
 certifi==2024.12.14
 cffi==1.17.1
