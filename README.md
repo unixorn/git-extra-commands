@@ -282,6 +282,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git, the simple guide](https://rogerdudler.github.io/git-guide/) by Roger Dudler is a good introduction to `git`.
 - [GitHub Cheat Sheet](https://github.com/tiimgreen/github-cheat-sheet) is an excellent collection of tips and aliases maintained by Tim Green.
 - [gitimmersion.com/](http://gitimmersion.com/) is a guided tour that walks through the fundamentals of Git, inspired by the premise that to know a thing is to do it.
+- [How Core Git Developers Configure Git](https://blog.gitbutler.com/how-git-core-devs-configure-git/) - What `git config` settings should be defaults by now? Here are some settings that even the core developers change.
 - [How Does Git Work?](https://phoenixnap.com/kb/how-git-works) - A basic introduction to `git`.
 - [How I configure my Git identities](https://www.benji.dog/articles/git-config/) - How to use `includeif` to (among other tricks) automatically change what email is credited as author depending on what git repository you're working on.
 - [How to Review a Merge Commit](https://haacked.com/archive/2014/02/21/reviewing-merge-commits/) is a good article on dealing with reviewing the changes made during a merge.
