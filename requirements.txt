@@ -41,7 +41,7 @@ pycparser==2.22
 PyGithub==2.6.1
 PyJWT==2.10.1
 PyNaCl==1.5.0
-pyparsing==3.2.2
+pyparsing==3.2.3
 pyrsistent==0.20.0
 python-dateutil==2.9.0.post0
 python-editor==1.0.4
