@@ -3,7 +3,7 @@ ansible==11.3.0
 ansible-core==2.18.2
 attrs==25.3.0
 black==25.1.0
-blessed==1.20.0
+blessed==1.21.0
 boto3==1.37.38
 botocore==1.38.8
 certifi==2025.1.31
