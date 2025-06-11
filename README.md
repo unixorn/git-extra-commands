@@ -363,6 +363,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [ugit](https://github.com/Bhupesh-V/ugit) - Lets you undo your last `git` operation.
 - [worktree](https://github.com/jspears/worktree) - Adds functions that wrap `git worktree`.
 - [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects.
+- [zwirl](https://github.com/chordflower/zwirl) - Adds aliases for `git` and `eza`.
 
 ## Miscellaneous Tips
 
