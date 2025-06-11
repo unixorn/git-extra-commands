@@ -1,9 +1,10 @@
+.*.swp
 .DS_Store
+.idea
 *.*.un~
+*.dc.md
 *.pyc
 *.pyo
 *.sublime-project
 *.sublime-workspace
-.*.swp
-.idea
 **/venv
