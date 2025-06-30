@@ -49,7 +49,7 @@ pytz==2025.2
 PyYAML==6.0.2
 readchar==4.2.1
 requests==2.32.4
-resolvelib==1.1.0
+resolvelib==1.2.0
 responses==0.25.7
 s3transfer==0.13.0
 six @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/python3/python3-124/six-1.15.0-py2.py3-none-any.whl
