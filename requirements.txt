@@ -5,7 +5,7 @@ attrs==25.3.0
 black==25.1.0
 blessed==1.21.0
 boto3==1.39.3
-botocore==1.39.1
+botocore==1.39.4
 certifi==2025.6.15
 cffi==1.17.1
 charset-normalizer==3.4.2
