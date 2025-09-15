@@ -16,7 +16,7 @@ cryptography==45.0.5
 Deprecated==1.2.18
 docker==7.1.0
 docopt==0.6.2
-fastjsonschema==2.21.1
+fastjsonschema==2.21.2
 future @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/python3/python3-124/future-0.18.2-py3-none-any.whl
 gitdb==4.0.12
 github3.py==4.0.1
