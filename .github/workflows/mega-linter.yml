@@ -49,7 +49,7 @@ jobs:
       # Run Linter against code base #
       ################################
       - name: Lint Code Base
-        uses: megalinter/megalinter@v8
+        uses: megalinter/megalinter@v9
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: main
