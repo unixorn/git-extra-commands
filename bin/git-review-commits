@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+#
+# bin/git-review-commits
+#
+# Based on https://jvns.ca/til/fzf-preview-git-commits/
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  # shellcheck disable=SC2086
+  if [[ "$(echo $DEBUG | tr '[:upper:]' '[:lower:]')" == "verbose" ]]; then
+    set -x
+  fi
+fi
+
+function echo-stderr() {
+  printf '%s
+' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+}
+
+function debug() {
+  if [[ -n "$DEBUG" ]]; then
+      echo-stderr "$@"
+  fi
+}
+
+function fail() {
+  echo-stderr "$1"
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+function check-dependency() {
+  if ! (builtin command -V "$1" >/dev/null 2>&1); then
+    fail "missing dependency: can't find $1 in your PATH"
+  fi
+}
+
+function check-dependencies() {
+  debug "Checking dependencies..."
+  # shellcheck disable=SC2041
+  # Placeholders for whatever programs you really need
+  for dep in "$@"
+  do
+    if ! has "$dep"; then
+      fail "Can't find $dep in your $PATH"
+    else
+      debug "- Found $dep"
+    fi
+  done
+}
+
+# If you need to restrict to a specific os, use
+# only-run-on Darwin
+# or
+# only-run-on Linux
+
+# Placeholders for your script's real dependencies
+check-dependencies fzf git grep
+
+commit=${1:-HEAD}
+git show --stat=120 --format="" "$commit" | \
+  grep -E '^\s*\S+.*\|' | \
+  fzf --ansi \
+      --disabled \
+      --bind 'j:down,k:up,q:abort' \
+      --preview="echo {} | sed 's/|.*//' | xargs -I% git show --color=always $commit -- %" \
+      --preview-window=right:60%
