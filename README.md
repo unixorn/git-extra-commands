@@ -132,7 +132,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-plotrepo` | Matthew McCullogh's [scripts collection](https://github.com/matthewmccullough/scripts/blob/master/git-plotrepo.rb) | Uses dot to draw a graph of the repository. |
 | `git-pr-fetch` | Joe Block <jpb@unixorn.net> | Fetch PR branches by refspec from one of a repository's remotes. |
 | `git-pr-list` | Joe Block <jpb@unixorn.net> | Lists pull requests. Requires `gh`. |
-| `git-preview-commits` | Julia Evans'[blog](https://jvns.ca/til/fzf-review-git-commits/) | Use [fzf](https://github.com/junegunn/fzf) topreview commits |
+| `git-review-commits` | Julia Evans'[blog](https://jvns.ca/til/fzf-preview-git-commits/) | Use [fzf](https://github.com/junegunn/fzf) topreview commits |
 | `git-promote` | Trevor's **Improving My git Workflow** blog post (404 now) | Promotes a local topic branch to a remote tracking branch of the same name. |
 | `git-prune-branches` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches) | Deletes each fully merged branch after prompting for confirmation, than asks if you want the deleted branches deleted from your upstream remotes. |
 | `git-pruneall` | Ryan Tomayko's dotfiles | Prune branches from specified remotes, or all remotes when no remote is specified. |
