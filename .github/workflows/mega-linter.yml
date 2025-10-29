@@ -63,7 +63,7 @@ jobs:
       # They will be available on Github action page "Artifacts" section
       - name: Archive production artifacts
         if: ${{ success() }} || ${{ failure() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: Mega-Linter reports
           path: |
