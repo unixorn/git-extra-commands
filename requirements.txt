@@ -2,7 +2,7 @@ altgraph @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveB
 ansible==12.1.0
 ansible-core==2.19.3
 attrs==25.4.0
-black==25.9.0
+black==25.11.0
 blessed==1.23.0
 boto3==1.40.50
 botocore==1.40.66
