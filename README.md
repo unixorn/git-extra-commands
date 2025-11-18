@@ -350,8 +350,10 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repository.
 - [git-up (gem)](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
 - [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
+- [git-user-switch](https://github.com/dipodidae/zsh-plugin-git-user-switch) - ZSH plugin that lets you switch between multiple GitHub user accounts. It automatically updates both your SSH configuration and GitHub CLI (`gh`) authentication.
 - [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's `git` history
-- [git-worktree](https://github.com/alexiszamanidis/zsh-git-worktree/) - ZSH plugin that wraps `git worktree` for ease of use.
+- [git-worktree (alexiszamanidis)](https://github.com/alexiszamanidis/zsh-git-worktree) - Wraps some `git worktree` operations for simplicity and productivity. Includes [fzf](https://github.com/junegunn/fzf) tooling.
+- [git-worktree (trthomps)](https://github.com/trthomps/git-worktree-zsh-plugin) - Enhanced git worktree management with bare repository support. This plugin provides convenient commands for working with git worktrees, making it easy to work on multiple branches simultaneously.
 - [gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command-line (macOS only).
 - [gitql](https://github.com/filhodanuvem/gitql) - Gitql is a `git` query language.
 - [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for `git`. From within gitsh you can issue any `git` command, even using your local aliases and configuration.
