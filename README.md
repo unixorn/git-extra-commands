@@ -313,17 +313,18 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [fzf-git-worktree](https://github.com/banyan/zsh-fzf-git-worktree) - Manage `git` worktrees with [fzf](https://github.com/junegunn/fzf) integration.
 - [gig](https://dev.to/shihanng/gig-a-gitignore-generator-opc) - a CLI `.gitignore` generator
 - [git ZSH plugin](https://github.com/davidde/git) - A replacement for the stock oh-my-zsh `git` plugin. Provides quite a few useful aliases and functions that are more consistent in their naming that the relatively unintuitive ones in the stock plugin.
+- [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a `git` repository
 - [git-absorb](https://github.com/tummychow/git-absorb) - Essentially, when your working directory has uncommitted changes on top of draft changesets, you can run `git absorb` and the uncommitted modifications are automagically folded ("absorbed") into the appropriate draft ancestor commits. The command essentially looks at the lines that were modified, finds a commit modifying those lines, and amends that commit to include your uncommitted changes. If the changes can't be made without conflicts, they remain uncommitted. This workflow is insanely useful for things like applying review feedback.
 - [git-activity](https://github.com/aaossa/git-activity) - Displays an activity graph (like the contribution graph on GitHub) for the current git repository and branch.
 - [git-aliases.zsh](https://github.com/peterhurford/git-aliases.zsh) - Peter Hurford's `git` plugin which you may prefer to the `git` plugin from oh-my-zsh.
 - [git-also](https://github.com/anvaka/git-also) - Shows what files are most often committed with a given file in the repository.
 - [git-amend](https://github.com/colinodell/git-amend-old) - Bash script to amend older commits with staged changes.
 - [git-branch-status](https://github.com/dmcgowan/git-branch-status) - A `git` utility to make managing large number of branches either across many remotes easier. Branch status allows comparing all branches against their upstream or any arbitrary branch to show the number of commit differences.
-- [gitql](https://github.com/filhodanuvem/gitql) - Gitql is a `git` query language.
 - [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches.
 - [git-bump](https://github.com/arrdem/git-bump) - Hook scripts to automatically bump the version file in a repository
 - [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a `git` repository
 - [git-clean-branch](https://github.com/gobriansteele/git-clean-branch) - Cleans up dead `git` branches.
+- [git-cleanbranches](https://github.com/wu9o/ohmyzsh-cleanbranches) - A powerful unified clean up tool for `git` branches that uses [fzf](https://github.com/junegunn/fzf) to find all branches that are safe to delete.
 - [git-cliff](https://github.com/orhun/git-cliff) - git-cliff can generate changelog files from the Git history by utilizing conventional commits as well as regex-powered custom parsers. The changelog template can be customized with a configuration file to match the desired format.
 - [git-complete-urls](https://github.com/rapgenic/zsh-git-complete-urls) - ZSH plugin to enhance `git` tab completion to include in the remotes completion (e.g. from `git clone`) any URL in the clipboard.
 - [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a `git` repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
@@ -351,8 +352,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
 - [git-wayback-machine](https://github.com/MadRabbit/git-wayback-machine) - A simple script to quickly navigate a project's state through it's `git` history
 - [git-worktree](https://github.com/alexiszamanidis/zsh-git-worktree/) - ZSH plugin that wraps `git worktree` for ease of use.
-- [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a `git` repository
 - [gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command-line (macOS only).
+- [gitql](https://github.com/filhodanuvem/gitql) - Gitql is a `git` query language.
 - [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for `git`. From within gitsh you can issue any `git` command, even using your local aliases and configuration.
 - [gunstage](https://github.com/LucasLarson/gunstage) - There are at least eight ways to unstage files in a `git` repository. This is a command-line shell plugin for undoing `git add`.
 - [hitch](https://github.com/therubymug/hitch) - Allows developers to be properly credited when Pair Programming and using `git`.
