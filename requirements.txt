@@ -40,7 +40,7 @@ platformdirs==4.5.1
 pycparser==2.23
 PyGithub==2.8.1
 PyJWT==2.10.1
-PyNaCl==1.6.1
+PyNaCl==1.6.2
 pyparsing==3.3.1
 pyrsistent==0.20.0
 python-dateutil==2.9.0.post0
