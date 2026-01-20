@@ -323,6 +323,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-branches](https://github.com/shurcooL/git-branches) - Prints the commit behind/ahead counts for branches.
 - [git-bump](https://github.com/arrdem/git-bump) - Hook scripts to automatically bump the version file in a repository
 - [git-chart](https://github.com/flashcode/gitchart) - A python script that builds charts from a `git` repository
+- [git-cl](https://github.com/BHFock/git-cl) - SVN-style changelists for Git. Organise files by intent, commit by changelist, create branches from changelists.
 - [git-clean-branch](https://github.com/gobriansteele/git-clean-branch) - Cleans up dead `git` branches.
 - [git-cleanbranches](https://github.com/wu9o/ohmyzsh-cleanbranches) - A powerful unified clean up tool for `git` branches that uses [fzf](https://github.com/junegunn/fzf) to find all branches that are safe to delete.
 - [git-cliff](https://github.com/orhun/git-cliff) - git-cliff can generate changelog files from the Git history by utilizing conventional commits as well as regex-powered custom parsers. The changelog template can be customized with a configuration file to match the desired format.
