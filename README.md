@@ -348,6 +348,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-stashd](https://github.com/nickolasburr/git-stashd) - Autostashing daemon for dirty worktrees.
 - [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with `git` submodules easier.
 - [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
+- [git-to-jj](https://github.com/elithrar/zsh-git-to-jj) - A ZSH plugin that helps you progressively learn [Jujutsu](https://github.com/jj-vcs/jj) (aka `jj`) porcelain as you use `git` commands.
 - [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repository.
 - [git-up (gem)](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
 - [git-up (python)](https://pypi.python.org/pypi/git-up) - Python implementation of Aanand's original ruby gem
