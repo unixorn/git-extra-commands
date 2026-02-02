@@ -37,7 +37,7 @@ pathspec==1.0.3
 pigar==2.2.0
 pipreqs==0.5.0
 platformdirs==4.5.1
-pycparser==2.23
+pycparser==3.0
 PyGithub==2.8.1
 PyJWT==2.10.1
 PyNaCl==1.6.2
