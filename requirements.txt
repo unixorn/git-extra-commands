@@ -64,6 +64,6 @@ urllib3==2.6.3
 wcwidth==0.5.3
 websocket-client==1.9.0
 Werkzeug==3.1.5
-wrapt==2.0.1
+wrapt==2.1.1
 xmltodict==1.0.2
 yarg==0.1.10
