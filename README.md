@@ -359,6 +359,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [gitgo](https://github.com/ltj/gitgo) - Open a GitHub/Gitlab hosted repository in your browser via the command-line (macOS only).
 - [gitql](https://github.com/filhodanuvem/gitql) - Gitql is a `git` query language.
 - [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for `git`. From within gitsh you can issue any `git` command, even using your local aliases and configuration.
+- [gitty](https://github.com/Omibranch/gitty) - Single-binary CLI for Git and GitHub with short, human-readable commands. `gitty up` stages, commits, and pushes in one step.
 - [gunstage](https://github.com/LucasLarson/gunstage) - There are at least eight ways to unstage files in a `git` repository. This is a command-line shell plugin for undoing `git add`.
 - [hitch](https://github.com/therubymug/hitch) - Allows developers to be properly credited when Pair Programming and using `git`.
 - [hub](https://github.com/github/hub) - A command-line tool that wraps `git` in order to extend it with extra features and commands that make working with GitHub easier.
