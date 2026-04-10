@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+#
+# bin/git-firefights
+#
+# Copyright 2026, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  # shellcheck disable=SC2086
+  if [[ "$(echo $DEBUG | tr '[:upper:]' '[:lower:]')" == "verbose" ]]; then
+    set -x
+  fi
+fi
+
+function echo-stderr() {
+  printf '%s' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+}
+
+function debug() {
+  if [[ -n "$DEBUG" ]]; then
+    echo-stderr "$@"
+  fi
+}
+
+function fail() {
+  echo-stderr "$1"
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+function get-default-settings() {
+  # Make it easy to override settings from CLI or by setting an
+  # environment variable
+  NUM_FILES=${NUM_FILES:-"20"}
+}
+
+function check-dependencies() {
+  debug "Checking dependencies..."
+  # shellcheck disable=SC2041
+  # Placeholders for whatever programs you really need
+  for dep in "$@"
+  do
+    if ! has "$dep"; then
+      fail "Can't find $dep in your $PATH"
+    else
+      debug "- Found $dep"
+    fi
+  done
+}
+
+function my-name() {
+  basename "$0"
+}
+
+function usage() {
+  echo "Usage: $(my-name)"
+  echo
+  echo "Based on https://piechowski.io/post/git-commands-before-reading-code/"
+  echo
+  echo "Shows frequency of emergency, hotfix, revert and rollback commits. A handful over a year is normal. Reverts every couple of weeks means the team doesn’t trust its deploy process. They’re evidence of a deeper issue: unreliable tests, missing staging, or a deploy pipeline that makes rollbacks harder than they should be. Zero results is also a signal; either the team is stable, or nobody writes descriptive commit messages."
+}
+
+check-dependencies git grep
+get-default-settings
+
+# parse arguments
+
+while :
+do
+  if [[ $# == 0 ]]; then
+    break
+  fi
+  case "$1" in
+    --help | -h)
+      usage
+      exit 0
+      ;;
+    -- )
+      shift;
+      break
+      ;;
+    *)
+      echo-stderr "Unexpected option: $1"
+      usage
+      fail "Invalid CLI argument: '$1'"
+      ;;
+  esac
+done
+
+git log --oneline \
+  --since="1 year ago" | \
+  grep -iE 'revert|hotfix|emergency|rollback'
+exit $?

@@ -119,6 +119,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-make-gitignore` | #commandline-fu on coffeeops | Prints a language-specific `.gitignore` file using [gitignore.io](https://gitignore.io). |
 | `git-maxpack` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compress a repository's pack files as much as possible. |
 | `git-merged-branches` | Sergei Boiko's [Git housekeeping tutorial: clean-up outdated branches in local and remote repositories](https://railsware.com/blog/git-housekeeping-tutorial-clean-up-outdated-branches-in-local-and-remote-repositories/) article | Lists all branches that have been merged. |
+| `git-mostchanged` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | `git mostchanged --numfiles INTEGER` shows the number of files with the most changes over the last year. |
 | `git-move-commits` | Corey Oordt's [git-scripts](https://github.com/coordt/git-scripts/blob/master/git-move-commits) | `git move-commits num-commits correct-branch` moves the last n commits to correct-branch (creating it if necessary). |
 | `git-neck` | Leah Neukirchen's [blog](https://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show commits from the HEAD until the first branching point. Companion script for `git-trail`. |
 | `git-nuke` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Nukes a branch locally and on the origin remote. |
@@ -176,6 +177,9 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-thanks` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced. |
 | `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean _origin/localbranchname_. |
 | `git-trail` | Leah Neukirchen's [blog](http://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repository's `git` history so you can see how to reach commits in the current branch from other branches. |
+| `git-bug-clusters` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Shows the files that have the most bugfix comments in commits affecting them. |
+| `git-velocity` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Commit count by month, for the entire history of the repo |
+| `git-firefights` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Shows revert and hotfix frequency |
 | `git-undelete` | ? | Undeletes a file. |
 | `git-undo-push` | ? | Undoes your last push to branch **$1** of origin.|
 | `git-undo` | [Stack Overflow](https://stackoverflow.com/a/24569160) | Undoes your last commit but keeps the changes in place. |
@@ -296,6 +300,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Platform Specific Gitconfigs and the Wonderful includeif](https://medium.com/doing-things-right/platform-specific-gitconfigs-and-the-wonderful-includeif-7376cd44994d) by Mike Mackintosh explains how to have different gitconfig settings based on what platform you're on or what directory you're in. Makes it easier to have personal and work repos on the same machine.
 - [Pro Git](http://git-scm.com/book) by Scott Chacon is a great resource for getting more out of `git`.
 - [So You Think You Know Git?](https://www.youtube.com/watch?v=aolI_Rz0ZqY) - Scott Chacon's FOSDEM 2024 talk on Git Tips and Tricks.
+- [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) - Five `git` commands that tell you where a codebase hurts before you open a single file. Churn hotspots, bus factor, bug clusters, and crisis patterns.
 - [The Git Pickaxe](http://www.philandstuff.com/2014/02/09/git-pickaxe.html) explains how you can use the `git` pickaxe to search easily for strings in commit messages - write good commit messages and it'll be easier to find the commits that actually implement changes.
 - [Top ten pull request review mistakes](https://blog.scottnonnenberg.com/top-ten-pull-request-review-mistakes/) is a great article by Scott Nonnenberg on how to do better code reviews on PRs.
 - [Tracing the evolution of a Python function with git log](https://nerderati.com/tracing-the-evolution-of-a-python-function-with-git-log/) - Nice tutorial on making `git log` output more useful when you're only interested in the changes in a specific function.

@@ -1,0 +1,113 @@
+#!/usr/bin/env bash
+#
+# bin/git-bug-clusters
+#
+# Copyright 2026, Joe Block <jpb@unixorn.net>
+
+set -o pipefail
+if [[ -n "$DEBUG" ]]; then
+  # shellcheck disable=SC2086
+  if [[ "$(echo $DEBUG | tr '[:upper:]' '[:lower:]')" == "verbose" ]]; then
+    set -x
+  fi
+fi
+
+function echo-stderr() {
+  printf '%s' "$1" >&2  ## Send message to stderr. Exclude >&2 if you don't want it that way.
+}
+
+function debug() {
+  if [[ -n "$DEBUG" ]]; then
+    echo-stderr "$@"
+  fi
+}
+
+function fail() {
+  echo-stderr "$1"
+  exit "${2-1}"  ## Return a code specified by $2 or 1 by default.
+}
+
+function has() {
+  # Check if a command is in $PATH
+  which "$@" > /dev/null 2>&1
+}
+
+function get-default-settings() {
+  # Make it easy to override settings from CLI or by setting an
+  # environment variable
+  NUM_FILES=${NUM_FILES:-"20"}
+}
+
+function check-dependency() {
+  if ! (builtin command -V "$1" >/dev/null 2>&1); then
+    fail "Missing dependency: can't find $1 in your PATH"
+  fi
+}
+
+function check-dependencies() {
+  debug "Checking dependencies..."
+  # shellcheck disable=SC2041
+  # Placeholders for whatever programs you really need
+  for dep in "$@"
+  do
+    if ! has "$dep"; then
+      fail "Can't find $dep in your $PATH"
+    else
+      debug "- Found $dep"
+    fi
+  done
+}
+
+function my-name() {
+  basename "$0"
+}
+
+function usage() {
+  echo "Usage: $(my-name) --n|--num-files <number of files to show, default: $NUM_FILES>"
+  echo
+  echo "Based on https://piechowski.io/post/git-commands-before-reading-code/"
+  echo
+  echo "Shows the $NUM_FILES most changed files in the last year that have fix, bug, or broken in their commit message, sorted by number of commits that changed them."
+}
+
+check-dependencies git head sort uniq
+get-default-settings
+
+# parse arguments
+
+while :
+do
+  if [[ $# == 0 ]]; then
+    break
+  fi
+  case "$1" in
+    --help | -h)
+      usage
+      exit 0
+      ;;
+    --num-files | --numfiles | -n)
+      shift
+      NUM_FILES="$1"
+      shift
+      ;;
+    -- )
+      shift;
+      break
+      ;;
+    *)
+      echo-stderr "Unexpected option: $1"
+      usage
+      fail "Invalid CLI argument: '$1'"
+      ;;
+  esac
+done
+
+git log -i -E \
+  --grep="fix|bug|broken" \
+  --name-only --format='' | \
+  sort | \
+  uniq -c | \
+  sort -nr | \
+  head -n "$NUM_FILES"
+
+exit $?
