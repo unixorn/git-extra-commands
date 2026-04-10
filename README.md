@@ -60,6 +60,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-branch-rebaser` | Vengada Rangaraju <krangaraju@castlighthealth.com> | Kicks off an interactive rebase of all the commits on your branch. _Including pushed commits_, so be careful. |
 | `git-branch-status` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Colorized status report on all branches in your repository. |
 | `git-branches-that-touch` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows which branches touch files under a path that are remote, unmerged, have a commit in the last six months and whose name doesn't start with 'enterprise-'. |
+| `git-bug-clusters` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Shows the files that have the most bugfix comments in commits affecting them. |
 | `git-capture-wip` | [@Hefeweizen](https://github.com/Hefeweizen) | Capture in-progress file changes. |
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another. |
 | `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
@@ -94,6 +95,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-fetch-prs` | Pretty sure I saw this on slack, but can't recall which one | Get all Pull Request branches from a given remote by refspec. |
 | `git-files` | Jake Zimmerman's [blog](https://blog.jez.io/cli-code-review/) | List the files different between the current branch and `$REVIEW_BRANCH`, which if unset defaults to the repository's default branch. |
 | `git-find-dirty` | Matthew McCullough's [scripts](https://github.com/matthewmccullough/scripts/) repository. | |
+| `git-firefights` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Shows revert and hotfix frequency |
 | `git-flush` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Compact your repository by dropping all reflogs, stashes, and other cruft that may be bloating your pack files. |
 | `git-force-mtimes` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Sets modification times of all files in the repository their last change date based on `git`'s log. Useful to avoid too new dates after a checkout confusing `make` or `rake`. |
 | `git-forest` | Jan Engelhardt | Prints a text-based tree visualisation of your repository. Requires [Git.pm](https://metacpan.org/release/Git). |
@@ -133,7 +135,6 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-plotrepo` | Matthew McCullogh's [scripts collection](https://github.com/matthewmccullough/scripts/blob/master/git-plotrepo.rb) | Uses dot to draw a graph of the repository. |
 | `git-pr-fetch` | Joe Block <jpb@unixorn.net> | Fetch PR branches by refspec from one of a repository's remotes. |
 | `git-pr-list` | Joe Block <jpb@unixorn.net> | Lists pull requests. Requires `gh`. |
-| `git-review-commits` | Julia Evans'[blog](https://jvns.ca/til/fzf-preview-git-commits/) | Use [fzf](https://github.com/junegunn/fzf) topreview commits |
 | `git-promote` | Trevor's **Improving My git Workflow** blog post (404 now) | Promotes a local topic branch to a remote tracking branch of the same name. |
 | `git-prune-branches` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-prune-branches) | Deletes each fully merged branch after prompting for confirmation, than asks if you want the deleted branches deleted from your upstream remotes. |
 | `git-pruneall` | Ryan Tomayko's dotfiles | Prune branches from specified remotes, or all remotes when no remote is specified. |
@@ -156,6 +157,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-reset-with-fire` | Joe Block <jpb@unixorn.net> | Hard reset the working directory, then zap any files not known to `git`. |
 | `git-restore-mtime` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Change mtime of files based on commit date of last change. |
 | `git-reup` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Like `git pull` but show a short and sexy log of changes after merging or rebasing. |
+| `git-review-commits` | Julia Evans'[blog](https://jvns.ca/til/fzf-preview-git-commits/) | Use [fzf](https://github.com/junegunn/fzf) topreview commits |
 | `git-rm-deleted-from-repo` | Joe Block <jpb@unixorn.net> | Removes files you deleted with `rm` from the repository for you. |
 | `git-root-directory` | Joe Block <jpb@unixorn.net> | Prints the path to the root of the `git` repository you're in. |
 | `git-run-command-on-revisions` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles) | Runs a given command over a range of `git` revisions. |
@@ -177,9 +179,6 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-thanks` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced. |
 | `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean _origin/localbranchname_. |
 | `git-trail` | Leah Neukirchen's [blog](http://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repository's `git` history so you can see how to reach commits in the current branch from other branches. |
-| `git-bug-clusters` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Shows the files that have the most bugfix comments in commits affecting them. |
-| `git-velocity` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Commit count by month, for the entire history of the repo |
-| `git-firefights` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Shows revert and hotfix frequency |
 | `git-undelete` | ? | Undeletes a file. |
 | `git-undo-push` | ? | Undoes your last push to branch **$1** of origin.|
 | `git-undo` | [Stack Overflow](https://stackoverflow.com/a/24569160) | Undoes your last commit but keeps the changes in place. |
@@ -188,6 +187,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-up` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Like `git pull` but show a short and sexy log of changes after merging or rebasing. |
 | `git-upstream-name` | Joe Block <jpb@unixorn.net> | Print the name of the current branch's upstream. |
 | `git-upstream-sync` | Joe Block <jpb@unixorn.net> | Fetches _upstream/yourforkname_ and rebases it into your local fork, then pushes to your origin remote. |
+| `git-velocity` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Commit count by month, for the entire history of the repo |
 | `git-what-the-hell-just-happened` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-what-the-hell-just-happened) | Show what just happened. |
 | `git-when-merged` | Michael Haggerty [git-when-merged](https://github.com/mhagger/git-when-merged) | Find when a commit was merged into one or more branches. |
 | `git-where-pr` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Opens the Pull Request on GitHub where a specified commit originated. |
@@ -345,6 +345,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-gutter](https://github.com/jisaacks/GitGutter) - Plugin for [Sublime Text](https://www.sublimetext.com/) 2/3 to display the `git` diff in the edit window gutter.
 - [git-it-on.zsh](https://github.com/peterhurford/git-it-on.zsh) - Another plugin by Peter Hurford that adds a `gitit` command that will open your current directory on github, in your current branch. Also works with private GitHub servers.
 - [git-lint](https://github.com/bkuhlmann/git-lint) - Enforces `git` rebase workflow with consistent commits for a clean and easy to read/debug project history.
+- [git-profile](https://github.com/nemezo/zsh-git-profile) - Manage multiple `git` accounts in ZSH by auto-switching `user.name`, `user.email`, and signing keys based on directory path or repository remote URL. Never push a commit under the wrong identity again.
 - [git-prompt-kit](https://github.com/olets/git-prompt-kit) - A configurable set of components for creating feature rich, high performance Git-aware zsh prompts (aka themes) with minimal coding.
 - [git-quick-stats](https://github.com/arzzen/git-quick-stats) - A simple and efficient way to access various statistics in a `git` repository.
 - [git-repo-updater](https://github.com/earwig/git-repo-updater) - Allows you to easily update multiple `git` repositories at once.
