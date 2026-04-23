@@ -22,7 +22,7 @@ repos:
         args: ["--ignore", "LICENSE.md", "--disable", "~MD013"]
 
   - repo: https://github.com/thlorenz/doctoc
-    rev: v2.4.0
+    rev: v2.4.1
     hooks:
       - id: doctoc
         args: ["--update-only"]
