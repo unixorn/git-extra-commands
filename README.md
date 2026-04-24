@@ -38,7 +38,7 @@
 
 This collection doesn't actually require ZSH, but packaging it as a ZSH plugin makes it more convenient for people using a ZSH framework to use this collection.
 
-However, some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
+Some of the scripts in this collection came from other sources and may have different licensing - if they do, their license information is included inline in the script source.
 
 If you wrote one of these scripts and want it removed from this collection, please either make a PR and/or file an issue against the repository and I will remove it.
 
@@ -144,13 +144,13 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-rank-contributors` | William Morgan <wmorgan-git-wt-add@masanjin.net> | Rummages through the changelog and orders contributors by the size of the diffs they're responsible for. |
 | `git-rebase-authors` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Adds authorship info to interactive `git rebase` output. |
 | `git-rebase-theirs` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Resolve rebase conflicts by favoring 'theirs' version. |
-| `git-recent` | Mine | Shows information about most recent commit on all local branches. |
+| `git-recent` | Joe Block <jpb@unixorn.net> | Shows information about most recent commit on all local branches. |
 | `git-recently-checkedout-branches` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows timestamp and name of recently checked-out branches in reverse chronological order. |
 | `git-ref-recent` | [Y combinator article](https://news.ycombinator.com/item?id=22796640) | Shows the date, branch name, commit hash, and commit subject of branches, from most recently modified to oldest branches. |
 | `git-rel` | Ryan Tomayko's dotfiles | Shows the relationship between the current branch and _ref_. With no _ref_, the current branch's remote tracking branch is used. |
 | `git-related` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Show other files that often get changed in commits that touch `<file>`. |
 | `git-release-tag` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Create a GitHub release for a specified tag. The release notes are automatically populated with the contents of git log since the last tagged version. |
-| `git-remote-default-branch` | Mine | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
+| `git-remote-default-branch` | Joe Block <jpb@unixorn.net> | Shows the default branch for a specified remote, defaults to origin when no remote is specified. |
 | `git-remove-conflicts ours or theirs FILES...` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Automatically resolves conflicts by applying the changes from current branch (ours) or remote branch (theirs). |
 | `git-rename-branches` | Rodrigo Silva (MestreLion) <linux@rodrigosilva.com> | Rename multiple branches that start with a given name. |
 | `git-replace-author` | [Stack Overflow](https://stackoverflow.com/a/40565934) | Uses `git-filter-branch` to rewrite all commits with one name to use another name and email. |
@@ -203,7 +203,7 @@ Here are some helpful aliases for your `~/.gitconfig`
 
 | alias | Description |
 | ----- | ----------- |
-| `ahead-of-master = log --oneline origin/master..HEAD` | Show commits that haven't made it to master yet. |
+| `ahead-of-main = log --oneline origin/main..HEAD` | Show commits that haven't made it to main yet. |
 | `fetch-pull-requests = fetch origin '+refs/pull/*/head:refs/remotes/origin/pull/*'` | Fetch pull requests from GitHub so you can `git checkout pull/123` and test them locally. |
 | `roots = log --all --oneline --decorate --max-parents=0` | Show the root commits. |
 | `unpushed = log @{u}..` | Show which commits have not been pushed to the tracking branch and are safe to amend/rebase. |
@@ -254,7 +254,7 @@ Nothing here actually requires you to use ZSH or zgen, that's just a convenient 
 If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or another shell, do the following steps:
 
 1. `git clone` this repository
-2. Add `cloneDirectory/bin` to your `$PATH` in your shell's startup file.
+2. Add `/path/to/git-extra-commands/bin` to your `$PATH` in your shell's startup files.
 
 ## Other useful git stuff
 
