@@ -32,7 +32,7 @@ MarkupSafe==3.0.3
 moto==5.1.22
 mypy-extensions==1.1.0
 nbformat==5.10.4
-packaging==26.1
+packaging==26.2
 pathspec==1.0.4
 pigar==2.2.0
 pipreqs==0.5.0
