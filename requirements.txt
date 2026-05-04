@@ -57,7 +57,7 @@ smmap==5.0.3
 toml==0.10.2
 tomli==2.4.1
 traitlets==5.14.3
-types-toml==0.10.8.20240310
+types-toml==0.10.8.20260408
 typing_extensions==4.15.0
 uritemplate==4.2.0
 urllib3==2.6.3
