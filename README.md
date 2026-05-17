@@ -316,6 +316,8 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - Better looking `git` diffs.
 - [dunk](https://github.com/darrenburns/dunk) - Another tool for prettier `git` diffs.
 - [fzf-git-worktree](https://github.com/banyan/zsh-fzf-git-worktree) - Manage `git` worktrees with [fzf](https://github.com/junegunn/fzf) integration.
+- [gh-dash](https://www.gh-dash.dev/) - A rich terminal UI for GitHub that doesn't break your flow
+- [ghq-worktree](https://github.com/liquidcatmofu/zsh-ghq-worktree) - A ZSH plugin that integrates `ghq`, [fzf](https://github.com/junegunn/fzf), and `git worktree` to minimize context-switching cost in multi-repository development.
 - [gig](https://dev.to/shihanng/gig-a-gitignore-generator-opc) - a CLI `.gitignore` generator
 - [git ZSH plugin](https://github.com/davidde/git) - A replacement for the stock oh-my-zsh `git` plugin. Provides quite a few useful aliases and functions that are more consistent in their naming that the relatively unintuitive ones in the stock plugin.
 - [git_history_visualizer](https://github.com/kidpixo/git_history_visualizer) - python script to visualize the history of files in a `git` repository
