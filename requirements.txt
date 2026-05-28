@@ -21,7 +21,7 @@ future @ file:///System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot1/ActiveBui
 gitdb==4.0.12
 github3.py==4.0.1
 GitPython==3.1.50
-idna==3.11
+idna==3.15
 inquirer==3.4.1
 Jinja2==3.1.6
 jmespath==1.1.0
