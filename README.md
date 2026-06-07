@@ -336,6 +336,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-cliff](https://github.com/orhun/git-cliff) - git-cliff can generate changelog files from the Git history by utilizing conventional commits as well as regex-powered custom parsers. The changelog template can be customized with a configuration file to match the desired format.
 - [git-complete-urls](https://github.com/rapgenic/zsh-git-complete-urls) - ZSH plugin to enhance `git` tab completion to include in the remotes completion (e.g. from `git clone`) any URL in the clipboard.
 - [git-crypt](https://www.agwa.name/projects/git-crypt/) - Enables transparent encryption and decryption of files in a `git` repository. Files which you choose to protect are encrypted when committed, and decrypted when checked out.
+- [git-delete-merged-branches](https://github.com/hartwork/git-delete-merged-branches) - A convenient command-line tool helping you keep repositories clean. Supports pruning squash merges and other more complex scenarios than the script in this repository does.
 - [git-deploy-s3](https://github.com/bradt/git-deploy-s3) - Keeps your `git` repository's assets in sync with Amazon S3.
 - [git-diffall](https://github.com/thenigan/git-diffall) - Provides a directory based diff mechanism for `git`.
 - [git-extend](https://github.com/nickolasburr/git-extend) - Extend `git` builtins with command wrappers.
