@@ -1,0 +1,1072 @@
+#compdef git
+# Copyright 2006-2026 Joseph Block <jpb@apesseekingknowledge.net>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# Zsh completion functions for git-extra-commands
+
+# Register subcommand descriptions for 'git <TAB>'
+# Symlinks (aliases to other commands) are included so they complete too:
+#   git-branch-clean -> git-brcl
+#   git-changes -> git-authors
+#   git-credit-author -> git-credit
+#   git-current-branch -> git-branch-name
+#   git-delete-local-merged -> git-delete-merged-branches
+#   git-list-semvers -> git-semvers
+#   git-most-changed -> git-mostchanged
+#   git-pr-fetch -> git-fetch-prs
+#   git-reup -> git-up
+zstyle ':completion:*:*:git:*' user-commands \
+  add-match:'Use expect to automatically stage hunks matching a search term' \
+  add-username-remote:'Add a remote for the current repository for the given GitHub username' \
+  amend-all:'Add all modified and deleted files and amend them to the recent commit' \
+  attic:'Display a list of deleted files in your repository' \
+  authors:'List authors in the repository in descending commit-count order' \
+  big-file:'Show files in the repository larger than a threshold size' \
+  branch-clean:'Remove various copies of a branch' \
+  branch-date:'List branches in commit-date order' \
+  branch-diff:'Diff your current HEAD with the default branch of the origin remote' \
+  branch-name:'Print the current branch name in automation-friendly format' \
+  branch-rebaser:'Kick off an interactive rebase of all commits on your branch' \
+  branch-status:'Colorized status report on all branches in your repository' \
+  branches:'List all branches' \
+  branches-that-touch:'Show branches that touch files under a given path' \
+  brcl:'Remove various copies of a branch' \
+  bug-clusters:'Show files with the most bugfix comments in commits' \
+  capture-wip:'Capture in-progress file changes' \
+  change-author:'Change one author/email in the history to another' \
+  changelog:'Transform git log output into a Changelog' \
+  changes:'List authors in the repository in descending commit-count order' \
+  checkout-branches:'Check out all remote branches' \
+  checkout-by-date:'Check out files at the version specified by a date' \
+  checkout-commit:'Use fzf to checkout a commit with diff preview' \
+  checkout-default-branch:'Check out the default branch of the origin remote' \
+  checkout-latest-tag:'Check out the latest tag' \
+  checkout-pr:'Check out a PR locally' \
+  checkout-preview:'Use fzf to checkout a branch with divergence preview' \
+  checkout-tag:'Check out a tag into a branch named after the tag' \
+  children-of:'Show the children of a given git commit' \
+  churn:'Show which files are getting changed most often in the repository' \
+  clone-subset:'Clone and filter-branch to keep only specified files and history' \
+  comma:'Add and commit a file in one command' \
+  commit-browser:'Use fzf to browse commit history' \
+  commit-count:'Get the number of commits on the current branch' \
+  commits-per-day:'Show the average number of commits per day' \
+  compact:'Compact a git repo aggressively' \
+  conflicts:'Show files with conflicts' \
+  copy-branch-name:'Copy the current branch name to the clipboard' \
+  credit:'Quicker way to assign credit to another author on the latest commit' \
+  credit-author:'Quicker way to assign credit to another author on the latest commit' \
+  current-branch:'Print the name of the current branch for use in automation' \
+  current-commit:'Print the hash of the current commit for use in automation' \
+  cut-branch:'Create a new named branch pointed at HEAD and reset the current branch to the head of its tracking branch' \
+  delete-dangling-commits:'Clean up dangling commits that are not on any branch' \
+  delete-local-merged:'Delete all local branches that have been merged into HEAD' \
+  delete-merged-branches:'Purge all branches that have been merged to a target branch' \
+  delete-remote-branch:'Delete a branch from a specified remote' \
+  delete-squashed-and-merged-branches:'Purge branches that have been squashed and merged to a target branch' \
+  delete-tag:'Delete a tag locally and from the origin remote' \
+  diff-last:'Show the last change made to a file in the repository' \
+  divergence:'Show differences between local branch and its tracking branch' \
+  edit-conflicts:'Edit conflicted files in your editor' \
+  fetch-prs:'Get all Pull Request branches from a given remote by refspec' \
+  files:'List files different between the current branch and the default branch' \
+  find-dirty:'Recurse current directory, listing dirty git clones' \
+  firefights:'Show revert and hotfix frequency' \
+  flush:'Compact your repository by dropping all reflogs, stashes, and cruft' \
+  force-mtimes:'Set modification times of all files to their last change date' \
+  forest:'Print a text-based tree visualization of your repository' \
+  functionlog:'Get a git log of a particular function, not a file' \
+  fzf-add:'Use fzf to select files to add to git' \
+  fzf-log-browser:'Use fzf to browse the git log' \
+  fzf-pickaxe-browser:'Use fzf to display a git log filtered with pickaxe for a search term' \
+  fzf-reflog-browser:'Use fzf to browse the git reflog' \
+  git:'Make git git foo do a git foo instead of complaining' \
+  github-open:'Open GitHub file/blob page for FILE on LINE' \
+  gitlab-mr:'Open a merge request on GitLab' \
+  history-eraser:'Permanently delete files/folders from your git repository' \
+  history-graph:'Pretty git log, single line per commit, with branch graphing' \
+  ignored:'Show files being ignored by git in the repository' \
+  improved-merge:'Sophisticated git merge with integrated CI check and automatic cleanup' \
+  incoming:'Show commits in the tracking branch that are not in the local branch' \
+  jump:'Replay git commits by moving forward/backward through branch history' \
+  latest-tag:'Fetch tags from all remotes and show the most recent tag name' \
+  lines:'List author names with line counts for files with a specified extension' \
+  list-semvers:'List all semver-compliant tags in the repo' \
+  log-single-file:'Show the log for a single file' \
+  ls-branch-files:'List files changed between a specified branch and the current branch' \
+  ls-conflicts:'List files with conflicts' \
+  ls-object-refs:'Find references to an object SHA1 in refs, commits, and trees' \
+  make-gitignore:'Print a language-specific .gitignore file using gitignore.io' \
+  mark-all-resolved:'Mark all conflicted files as resolved' \
+  maxpack:'Compress a repository pack files as much as possible' \
+  merged-branches:'List all branches that have been merged' \
+  most-changed:'Show files with the most changes' \
+  mostchanged:'Show the files with the most changes over the last year' \
+  move-commits:'Move the last n commits to a different branch' \
+  neck:'Show commits from HEAD until the first branching point' \
+  nuke:'Nuke a branch locally and on the origin remote' \
+  nuke-untracked-files:'Delete untracked files from a git clone tree' \
+  object-deflate:'Deflate a loose object file and write to standard output' \
+  oldest-common-ancestor:'Find the oldest common ancestor commit between two branches' \
+  open-jira:'Open the JIRA issue from the branch name in your browser' \
+  origin-head:'Print the name of the origin remote default branch' \
+  outgoing:'Show commits on the local branch that have not been pushed' \
+  overwritten:'Aggregate git blame info about original owners of changed lines' \
+  pie-ify:'Apply perl pie on the fly' \
+  plotrepo:'Use dot to draw a graph of the repository' \
+  pr-fetch:'Fetch PR branches by refspec from a remote' \
+  pr-list:'List pull requests (requires gh)' \
+  promote:'Promote a local topic branch to a remote tracking branch of the same name' \
+  prune-branches:'Delete each fully merged branch after prompting for confirmation' \
+  pruneall:'Prune branches from specified remotes, or all remotes when none specified' \
+  publish:'Push/publish current branch to specified remote' \
+  purge-from-history:'Permanently delete files or folders from your git repository' \
+  pylint:'Run pylint on .py files modified or added in git status output' \
+  rank-contributors:'Rank contributors by the total size of the diffs they are responsible for' \
+  rebase-authors:'Add authorship info to interactive git rebase output' \
+  rebase-theirs:'Resolve rebase conflicts by favoring theirs version' \
+  rebase-work-in-progress:'Interactive rebase of unpushed commits on the current branch' \
+  recent:'Show information about the most recent commit on all local branches' \
+  recently-checkedout-branches:'Show timestamp and name of recently checked-out branches' \
+  ref-recent:'Show date, branch name, hash, and subject of branches by recency' \
+  rel:'Show the relationship between the current branch and a ref' \
+  related:'Show other files that often get changed in commits that touch a file' \
+  release-tag:'Create a GitHub release for a specified tag' \
+  remote-default-branch:'Show the default branch for a specified remote' \
+  remove-conflicts:'Automatically resolve conflicts by applying ours or theirs' \
+  rename-branches:'Rename multiple branches that start with a given name' \
+  replace-author:'Rewrite all commits with one name to use another name and email' \
+  reset-with-fire:'Hard reset the working directory and zap files not known to git' \
+  restore-mtime:'Change mtime of files based on commit date of last change' \
+  review-commits:'Use fzf to preview commits' \
+  rm-deleted-from-repo:'Remove files you deleted with rm from the repository' \
+  root-directory:'Print the path to the root of the git repository' \
+  roots:'Show all parentless commits in the repository' \
+  run-command-on-revisions:'Run a given command over a range of git revisions' \
+  semvers:'List all semver-compliant tags in the repo' \
+  shamend:'Amend staged changes as a fixup to the specified older commit' \
+  show-overwritten:'Aggregate git blame info about original owners of changed lines' \
+  shrink-repo:'Shrink your clone of a git repository' \
+  side-by-side:'Do a side-by-side diff similar to GitHub PRs' \
+  sp:'Simple push - commit and push. Use -a flag to add all files' \
+  sr:'Use fzf to switch to a different git ref' \
+  stashes:'List stash entries' \
+  stats:'Display stats for files different between current branch and default branch' \
+  submodule-ls:'List all submodules in your project' \
+  submodule-paths:'Show path to all submodules with their current commit SHA' \
+  submodule-rm:'Remove a submodule easily' \
+  superpull:'Pull, then run submodule init and submodule update' \
+  switch-branch:'Switch to a branch by a substring of its name' \
+  tag-and-sign:'Create and sign a new tag' \
+  tag-diff:'Show differences between local tags and ones on the remote' \
+  taglist:'List tags sorted by version, showing the most recent' \
+  tags:'List tags with their annotations' \
+  thanks:'List contributors in descending commit order' \
+  track:'Set up your branch to track a remote branch' \
+  trail:'Show all branching points in the repository git history' \
+  undelete:'Undelete a file' \
+  undo:'Undo the last commit but keep the changes in place' \
+  undo-push:'Undo your last push to a branch of origin' \
+  unpushed:'Show the diff of everything you have not pushed yet' \
+  unpushed-stat:'Show the diffstat of everything you have not pushed yet' \
+  unreleased:'Show git commits since the last tagged version' \
+  up:'Like git pull but show a short and sexy log of changes after merging or rebasing' \
+  up-old:'Like git pull but show a short and sexy log of changes after merging or rebasing' \
+  upstream-name:'Print the name of the current branch upstream' \
+  upstream-sync:'Fetch upstream/yourforkname and rebase into your local fork, then push' \
+  velocity:'Show commit count by month for the entire history of the repo' \
+  what-the-hell-just-happened:'Show what just happened' \
+  when-merged:'Find when a commit was merged into one or more branches' \
+  where:'Show where a particular commit falls between releases' \
+  where-pr:'Open the Pull Request on GitHub where a specified commit originated' \
+  whoami:'Show what username and email you have configured for the repository' \
+  winner:'Show what authors have made the most commits by count and lines changed' \
+  wordiness:'Show how wordy commit messages are per contributor' \
+  wtf:'Display the state of your repository in a readable, easy-to-scan format'
+
+# Helper: complete git branch names
+__git_extra_branch_names() {
+  local -a branches
+  branches=(${${(f)"$(git branch --format='%(refname:short)' 2>/dev/null)"}})
+  _describe 'branch' branches
+}
+
+# Helper: complete git remote branch names
+__git_extra_remote_branch_names() {
+  local -a branches
+  branches=(${${(f)"$(git branch -r --format='%(refname:short)' 2>/dev/null)"}})
+  _describe 'remote branch' branches
+}
+
+# Helper: complete git remote names
+__git_extra_remote_names() {
+  local -a remotes
+  remotes=(${${(f)"$(git remote 2>/dev/null)"}})
+  _describe 'remote' remotes
+}
+
+# Helper: complete git tag names
+__git_extra_tag_names() {
+  local -a tags
+  tags=(${${(f)"$(git tag -l 2>/dev/null)"}})
+  _describe 'tag' tags
+}
+
+# Helper: complete tracked files
+__git_extra_tracked_files() {
+  local -a files
+  files=(${${(f)"$(git ls-files 2>/dev/null)"}})
+  _describe 'file' files
+}
+
+# Helper: complete modified files
+__git_extra_modified_files() {
+  local -a files
+  files=(${${(f)"$(git diff --name-only 2>/dev/null)"}})
+  _describe 'modified file' files
+}
+
+# Helper: complete conflicted files
+__git_extra_conflicted_files() {
+  local -a files
+  files=(${${(f)"$(git diff --name-only --diff-filter=U 2>/dev/null)"}})
+  _describe 'conflicted file' files
+}
+
+# Helper: complete commit refs
+__git_extra_commits() {
+  _alternative \
+    'branches:branch:__git_extra_branch_names' \
+    'tags:tag:__git_extra_tag_names'
+}
+
+# --- Individual command completions ---
+
+_git-add-match() {
+  _arguments \
+    '1:search pattern:'
+}
+
+_git-add-username-remote() {
+  _arguments \
+    '1:github username:'
+}
+
+_git-amend-all() {
+  _message 'no arguments'
+}
+
+_git-attic() {
+  _message 'no arguments'
+}
+
+_git-authors() {
+  _arguments \
+    '1::path - limit to commits touching this path:_files'
+}
+
+_git-big-file() {
+  _arguments \
+    '1::ref:__git_extra_commits' \
+    '2::threshold in MB:'
+}
+
+_git-branch-clean() {
+  _arguments \
+    '1:branch name:__git_extra_branch_names'
+}
+
+_git-branch-date() {
+  _message 'no arguments'
+}
+
+_git-branch-diff() {
+  _arguments \
+    '1::branch:__git_extra_branch_names'
+}
+
+_git-branch-name() {
+  _message 'no arguments'
+}
+
+_git-branch-rebaser() {
+  _arguments \
+    '1::branch:__git_extra_branch_names'
+}
+
+_git-branch-status() {
+  _message 'no arguments'
+}
+
+_git-branches() {
+  _message 'no arguments'
+}
+
+_git-branches-that-touch() {
+  _arguments \
+    '1:path:_files'
+}
+
+_git-brcl() {
+  _arguments \
+    '1:branch name:__git_extra_branch_names'
+}
+
+_git-bug-clusters() {
+  _message 'no arguments'
+}
+
+_git-capture-wip() {
+  _message 'no arguments'
+}
+
+_git-change-author() {
+  _arguments \
+    '1:old author name or email:' \
+    '2:new author name:' \
+    '3:new author email:'
+}
+
+_git-changelog() {
+  _message 'no arguments'
+}
+
+_git-changes() {
+  _arguments \
+    '1::path - limit to commits touching this path:_files'
+}
+
+_git-checkout-branches() {
+  _message 'no arguments'
+}
+
+_git-checkout-by-date() {
+  _arguments \
+    '1:date (YYYY-MM-DD):' \
+    '*:files:__git_extra_tracked_files'
+}
+
+_git-checkout-commit() {
+  _message 'interactive fzf selection'
+}
+
+_git-checkout-default-branch() {
+  _message 'no arguments'
+}
+
+_git-checkout-latest-tag() {
+  _message 'no arguments'
+}
+
+_git-checkout-pr() {
+  _arguments \
+    '1:PR number or "clean":' \
+    '2::remote:__git_extra_remote_names'
+}
+
+_git-checkout-preview() {
+  _message 'interactive fzf selection'
+}
+
+_git-checkout-tag() {
+  _arguments \
+    '1:tag:__git_extra_tag_names'
+}
+
+_git-children-of() {
+  _arguments \
+    '1:commit:__git_extra_commits'
+}
+
+_git-churn() {
+  _arguments \
+    '*:git log arguments (e.g. --since="1 month ago" or paths):'
+}
+
+_git-clone-subset() {
+  _arguments \
+    '(-h --help)'{-h,--help}'[show help]' \
+    '1:repository URL or path:_files -/' \
+    '2:destination directory:_files -/' \
+    '3:file pattern:'
+}
+
+_git-comma() {
+  _arguments \
+    '*:files:_files'
+}
+
+_git-commit-browser() {
+  _message 'interactive fzf selection'
+}
+
+_git-commit-count() {
+  _message 'no arguments'
+}
+
+_git-commits-per-day() {
+  _message 'no arguments'
+}
+
+_git-compact() {
+  _message 'no arguments'
+}
+
+_git-conflicts() {
+  _message 'no arguments'
+}
+
+_git-copy-branch-name() {
+  _message 'no arguments'
+}
+
+_git-credit() {
+  _arguments \
+    '1:author name:' \
+    '2:author email:'
+}
+
+_git-credit-author() {
+  _arguments \
+    '1:author name:' \
+    '2:author email:'
+}
+
+_git-current-branch() {
+  _message 'no arguments'
+}
+
+_git-current-commit() {
+  _message 'no arguments'
+}
+
+_git-cut-branch() {
+  _arguments \
+    '1:new branch name:'
+}
+
+_git-delete-dangling-commits() {
+  _message 'no arguments'
+}
+
+_git-delete-local-merged() {
+  _message 'no arguments'
+}
+
+_git-delete-merged-branches() {
+  _arguments \
+    '1::target branch:__git_extra_branch_names'
+}
+
+_git-delete-remote-branch() {
+  _arguments \
+    '1:remote:__git_extra_remote_names' \
+    '2:branch name:__git_extra_remote_branch_names'
+}
+
+_git-delete-squashed-and-merged-branches() {
+  _arguments \
+    '1::target branch:__git_extra_branch_names'
+}
+
+_git-delete-tag() {
+  _arguments \
+    '1:tag:__git_extra_tag_names'
+}
+
+_git-diff-last() {
+  _arguments \
+    '1:file:__git_extra_tracked_files'
+}
+
+_git-divergence() {
+  _arguments \
+    '1::local branch:__git_extra_branch_names' \
+    '2::remote branch:__git_extra_remote_branch_names'
+}
+
+_git-edit-conflicts() {
+  _message 'no arguments'
+}
+
+_git-fetch-prs() {
+  _arguments \
+    '1::remote:__git_extra_remote_names'
+}
+
+_git-files() {
+  _message 'no arguments'
+}
+
+_git-find-dirty() {
+  _arguments \
+    '1::directory:_files -/'
+}
+
+_git-firefights() {
+  _message 'no arguments'
+}
+
+_git-flush() {
+  _message 'no arguments'
+}
+
+_git-force-mtimes() {
+  _message 'no arguments'
+}
+
+_git-forest() {
+  _arguments \
+    '--all[show all branches]' \
+    '--no-color[disable color output]' \
+    '--no-rebase[do not show rebase info]' \
+    '-a[show author names]' \
+    '--reverse[reverse output order]' \
+    '--sha[show commit SHA alongside messages]' \
+    '--style=[graph style 1, 2, 10, or 15]:style:(1 2 10 15)' \
+    '--svdepth=[subvine depth]:depth:' \
+    '--pretty=[format string (must be format:...)]:format:' \
+    '*:git log arguments:'
+}
+
+_git-functionlog() {
+  _arguments \
+    '1:function name:' \
+    '2:file:__git_extra_tracked_files'
+}
+
+_git-fzf-add() {
+  _message 'interactive fzf selection'
+}
+
+_git-fzf-log-browser() {
+  _message 'interactive fzf selection'
+}
+
+_git-fzf-pickaxe-browser() {
+  _arguments \
+    '1:search term:'
+}
+
+_git-fzf-reflog-browser() {
+  _message 'interactive fzf selection'
+}
+
+_git-git() {
+  _arguments '*:git arguments:'
+}
+
+_git-github-open() {
+  _arguments \
+    '1:file:__git_extra_tracked_files' \
+    '2::line number:'
+}
+
+_git-gitlab-mr() {
+  _arguments \
+    '1::target branch:__git_extra_branch_names'
+}
+
+_git-history-eraser() {
+  _arguments \
+    '*:paths to delete:_files'
+}
+
+_git-history-graph() {
+  _message 'no arguments'
+}
+
+_git-ignored() {
+  _message 'no arguments'
+}
+
+_git-improved-merge() {
+  _arguments \
+    '1::branch:__git_extra_branch_names'
+}
+
+_git-incoming() {
+  _arguments \
+    '1::remote/branch:__git_extra_remote_branch_names'
+}
+
+_git-jump() {
+  _arguments \
+    '1:direction:(forward backward)'
+}
+
+_git-latest-tag() {
+  _message 'no arguments'
+}
+
+_git-lines() {
+  _arguments \
+    '1:file extension:'
+}
+
+_git-list-semvers() {
+  _message 'no arguments'
+}
+
+_git-log-single-file() {
+  _arguments \
+    '1:file:__git_extra_tracked_files'
+}
+
+_git-ls-branch-files() {
+  _arguments \
+    '1::branch:__git_extra_branch_names'
+}
+
+_git-ls-conflicts() {
+  _message 'no arguments'
+}
+
+_git-ls-object-refs() {
+  _arguments \
+    '1:object SHA1:'
+}
+
+_git-make-gitignore() {
+  _arguments \
+    '*:language/framework:'
+}
+
+_git-mark-all-resolved() {
+  _message 'no arguments'
+}
+
+_git-maxpack() {
+  _message 'no arguments'
+}
+
+_git-merged-branches() {
+  _message 'no arguments'
+}
+
+_git-most-changed() {
+  _arguments \
+    '(-h --help)'{-h,--help}'[show help]' \
+    '(-n --num-files --numfiles)'{-n,--num-files,--numfiles}'[number of files to show]:number:'
+}
+
+_git-mostchanged() {
+  _arguments \
+    '(-h --help)'{-h,--help}'[show help]' \
+    '(-n --num-files --numfiles)'{-n,--num-files,--numfiles}'[number of files to show]:number:'
+}
+
+_git-move-commits() {
+  _arguments \
+    '1:number of commits:' \
+    '2:target branch:__git_extra_branch_names'
+}
+
+_git-neck() {
+  _arguments \
+    '1::commit:__git_extra_commits'
+}
+
+_git-nuke() {
+  _arguments \
+    '1:branch:__git_extra_branch_names'
+}
+
+_git-nuke-untracked-files() {
+  _message 'no arguments'
+}
+
+_git-object-deflate() {
+  _arguments \
+    '1:object file:_files'
+}
+
+_git-oldest-common-ancestor() {
+  _arguments \
+    '1:branch A:__git_extra_branch_names' \
+    '2:branch B:__git_extra_branch_names'
+}
+
+_git-open-jira() {
+  _message 'no arguments'
+}
+
+_git-origin-head() {
+  _message 'no arguments'
+}
+
+_git-outgoing() {
+  _arguments \
+    '1::remote/branch:__git_extra_remote_branch_names'
+}
+
+_git-overwritten() {
+  _arguments \
+    '1::base ref:__git_extra_commits' \
+    '2::head ref:__git_extra_commits'
+}
+
+_git-pie-ify() {
+  _arguments \
+    '1:search pattern:' \
+    '2:replacement:'
+}
+
+_git-plotrepo() {
+  _message 'no arguments'
+}
+
+_git-pr-fetch() {
+  _arguments \
+    '1::remote:__git_extra_remote_names'
+}
+
+_git-pr-list() {
+  _message 'no arguments'
+}
+
+_git-promote() {
+  _arguments \
+    '1::remote:__git_extra_remote_names' \
+    '2::branch:__git_extra_branch_names'
+}
+
+_git-prune-branches() {
+  _message 'no arguments'
+}
+
+_git-pruneall() {
+  _arguments \
+    '*::remote:__git_extra_remote_names'
+}
+
+_git-publish() {
+  _arguments \
+    '1:remote:__git_extra_remote_names' \
+    '2::remote branch:'
+}
+
+_git-purge-from-history() {
+  _arguments \
+    '*:paths to delete:_files'
+}
+
+_git-pylint() {
+  _message 'no arguments'
+}
+
+_git-rank-contributors() {
+  _arguments \
+    '-v[verbose - show line counts]' \
+    '-o[obfuscate email addresses]'
+}
+
+_git-rebase-authors() {
+  _message 'no arguments'
+}
+
+_git-rebase-theirs() {
+  _arguments \
+    '*:files:__git_extra_conflicted_files'
+}
+
+_git-rebase-work-in-progress() {
+  _message 'no arguments'
+}
+
+_git-recent() {
+  _message 'no arguments'
+}
+
+_git-recently-checkedout-branches() {
+  _message 'no arguments'
+}
+
+_git-ref-recent() {
+  _message 'no arguments'
+}
+
+_git-rel() {
+  _arguments \
+    '1::ref:__git_extra_commits'
+}
+
+_git-related() {
+  _arguments \
+    '1:file:__git_extra_tracked_files'
+}
+
+_git-release-tag() {
+  _arguments \
+    '1:tag:__git_extra_tag_names'
+}
+
+_git-remote-default-branch() {
+  _arguments \
+    '1::remote:__git_extra_remote_names'
+}
+
+_git-remove-conflicts() {
+  _arguments \
+    '1:strategy:(ours theirs)' \
+    '*:files:__git_extra_conflicted_files'
+}
+
+_git-rename-branches() {
+  _arguments \
+    '(-h --help)'{-h,--help}'[show help]' \
+    '(-v --verbose)'{-v,--verbose}'[print more details]' \
+    '(-n --dry-run)'{-n,--dry-run}'[do not actually rename]' \
+    '1:branch prefix:' \
+    '2:new prefix:'
+}
+
+_git-replace-author() {
+  _arguments \
+    '1:old name:' \
+    '2:new name:' \
+    '3:new email:'
+}
+
+_git-reset-with-fire() {
+  _message 'no arguments'
+}
+
+_git-restore-mtime() {
+  _arguments \
+    '*::files:__git_extra_tracked_files'
+}
+
+_git-review-commits() {
+  _message 'interactive fzf selection'
+}
+
+_git-rm-deleted-from-repo() {
+  _message 'no arguments'
+}
+
+_git-root-directory() {
+  _message 'no arguments'
+}
+
+_git-roots() {
+  _message 'no arguments'
+}
+
+_git-run-command-on-revisions() {
+  _arguments \
+    '-v[verbose output]' \
+    '1:start ref:__git_extra_commits' \
+    '2:end ref:__git_extra_commits' \
+    '3:command to run:'
+}
+
+_git-semvers() {
+  _message 'no arguments'
+}
+
+_git-shamend() {
+  _arguments \
+    '(-h --help)'{-h,--help}'[show help]' \
+    '(-a --all)'{-a,--all}'[commit unchanged files]' \
+    '1::revision:__git_extra_commits'
+}
+
+_git-show-overwritten() {
+  _arguments \
+    '1::base ref:__git_extra_commits' \
+    '2::head ref:__git_extra_commits'
+}
+
+_git-shrink-repo() {
+  _message 'no arguments'
+}
+
+_git-side-by-side() {
+  _arguments \
+    '*:files:__git_extra_tracked_files'
+}
+
+_git-sp() {
+  _arguments \
+    '-a[add all files before committing]' \
+    '1:commit message:'
+}
+
+_git-sr() {
+  _message 'interactive fzf selection'
+}
+
+_git-stashes() {
+  _message 'no arguments'
+}
+
+_git-stats() {
+  _message 'uses $REVIEW_BASE env var or origin default branch'
+}
+
+_git-submodule-ls() {
+  _message 'no arguments'
+}
+
+_git-submodule-paths() {
+  _message 'no arguments'
+}
+
+_git-submodule-rm() {
+  _arguments \
+    '1:submodule path:_files -/'
+}
+
+_git-superpull() {
+  _message 'no arguments'
+}
+
+_git-switch-branch() {
+  _arguments \
+    '1:branch substring:'
+}
+
+_git-tag-and-sign() {
+  _arguments \
+    '1:tag name:' \
+    '2::tag message:'
+}
+
+_git-tag-diff() {
+  _message 'no arguments'
+}
+
+_git-taglist() {
+  _message 'no arguments'
+}
+
+_git-tags() {
+  _message 'no arguments'
+}
+
+_git-thanks() {
+  _arguments \
+    '1::revision range (e.g. 0.9.0..master):__git_extra_commits'
+}
+
+_git-track() {
+  _message 'no arguments'
+}
+
+_git-trail() {
+  _arguments \
+    '1::ref:__git_extra_commits'
+}
+
+_git-undelete() {
+  _arguments \
+    '1:file path:'
+}
+
+_git-undo() {
+  _message 'no arguments'
+}
+
+_git-undo-push() {
+  _arguments \
+    '1:branch:__git_extra_branch_names'
+}
+
+_git-unpushed() {
+  _message 'no arguments'
+}
+
+_git-unpushed-stat() {
+  _message 'no arguments'
+}
+
+_git-unreleased() {
+  _message 'shows commits since last tag, no arguments needed'
+}
+
+_git-up() {
+  _arguments \
+    '*:git pull arguments:'
+}
+
+_git-up-old() {
+  _arguments \
+    '*:git pull arguments:'
+}
+
+_git-upstream-name() {
+  _message 'no arguments'
+}
+
+_git-upstream-sync() {
+  _message 'no arguments'
+}
+
+_git-velocity() {
+  _message 'no arguments'
+}
+
+_git-what-the-hell-just-happened() {
+  _message 'no arguments'
+}
+
+_git-when-merged() {
+  _arguments \
+    '1:commit:__git_extra_commits' \
+    '*::branch:__git_extra_branch_names'
+}
+
+_git-where() {
+  _arguments \
+    '1:commit:__git_extra_commits'
+}
+
+_git-where-pr() {
+  _arguments \
+    '1:commit:__git_extra_commits'
+}
+
+_git-whoami() {
+  _message 'no arguments'
+}
+
+_git-winner() {
+  _arguments \
+    '(-h --help)'{-h,--help}'[show help]' \
+    '1::date - show activity after this date (MM-DD-YYYY):'
+}
+
+_git-wordiness() {
+  _arguments \
+    '(-h --help -help)'{-h,--help,-help}'[show help]' \
+    '-s=-[hash author names with optional prefix]:prefix:' \
+    '(-c -csv --csv)'{-c,-csv,--csv}'[output in CSV format]' \
+    '(-t -tsv --tsv)'{-t,-tsv,--tsv}'[output in TSV format]' \
+    '(-nh -nohead --nohead)'{-nh,-nohead,--nohead}'[omit header row]' \
+    '--order=[sort order]:order:(commits c wpc W lines l words w bytes b name n)' \
+    '*:git log arguments:'
+}
+
+_git-wtf() {
+  _arguments \
+    '(-l --long)'{-l,--long}'[include author info and date for each commit]' \
+    '(-a --all)'{-a,--all}'[show all branches across all remote repos]' \
+    '(-A --all-commits)'{-A,--all-commits}'[show all commits, not just the first 5]' \
+    '(-s --short)'{-s,--short}'[do not show commits]' \
+    '(-k --key)'{-k,--key}'[show key]' \
+    '(-r --relations)'{-r,--relations}'[show relation to features / integration branches]' \
+    '--dump-config[print current configuration and exit]' \
+    '*::branch:__git_extra_branch_names'
+}
