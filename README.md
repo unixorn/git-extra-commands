@@ -67,7 +67,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Symlink to `git-authors`. List authors in the repository in descending commit-count order. |
 | `git-checkout-branches` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Checks out all remote branches. |
 | `git-checkout-by-date` | [Stack Overflow](https://stackoverflow.com/a/6990682) | Lets you checkout several files at once at the version specified by a date. |
-| `git-checkout-commit` |From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to checkout a commit, showing the commit diff as preview. |
+| `git-checkout-commit` | From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to checkout a commit, showing the commit diff as preview. |
 | `git-checkout-default-branch` | I got tired of keeping track of which repositories use `main`, `master` or something else as default branch | Checks out the default branch of the `origin` remote so you don't have to remember which repositories use `master`, `main` or whatever. |
 | `git-checkout-pr` | Based on [gist.github.com/gnarf/5406589](https://gist.github.com/gnarf/5406589) | Check out a PR locally. |
 | `git-checkout-preview` | From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to checkout a branch, showing what commits diverge between the branches. |
@@ -79,7 +79,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-commit-browser` | From the [fzf wiki](https://github.com/junegunn/fzf/wiki/examples) | Uses [fzf](https://github.com/junegunn/fzf) to browse commit history. |
 | `git-conflicts` | Seth Messer's [bits and bobs](https://github.com/megalithic/bits-and-bobs/) repository | Show files with conflicts. |
 | `git-copy-branch-name` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Copy the current branch's name to the clipboard (macOS Only). |
-| `git-credit` | `git-credit-author` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit. |
+| `git-credit` & `git-credit-author` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Quicker way to assign credit to another author on the latest commit. |
 | `git-current-branch` | Joe Block <jpb@unixorn.net> | Prints the name of the current branch with no odd characters or formatting, mainly useful in automation scripts. |
 | `git-current-commit` | Joe Block <jpb@unixorn.net> | Prints the hash of the current commit with no odd characters or formatting, mainly useful in automation scripts. |
 | `git-cut-branch` | Ryan Tomayko's dotfiles | Create a new branch pointed at **HEAD** and reset the current branch to the head of its tracking branch. |
@@ -165,7 +165,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-shamend` | Danielle Sucher's [git-shamend](http://www.daniellesucher.com/2014/05/08/git-shamend/) blog post | Amends your staged changes as a fixup (keeping the pre-existing commit message) to the specified commit, or HEAD if no revision is specified. |
 | `git-show-overwritten` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Aggregates `git blame` information about the original owners of lines changed or removed in the '<base>...<head>' diff. |
 | `git-shrink-repo` | Based on [gimbo/gimbo-git.zsh](https://github.com/gimbo/gimbo-git.zsh/blob/master/gimbo-git.zsh) | Shrinks your clone of a `git` repository. |
-| `git-side-by-side` | Greg V's [vmware-archive/git_scripts](https://github.com/vmware-archive/git_scripts) | @hefeweizen on the coffeeops slack | Does a side-by-side diff similar to GitHub PRs |
+| `git-side-by-side` | Greg V's [vmware-archive/git_scripts](https://github.com/vmware-archive/git_scripts) via @hefeweizen on the coffeeops slack | Does a side-by-side diff similar to GitHub PRs |
 | `git-sp` | A. Schwarz's [git-sp](https://github.com/Schwarzy1/git-sp) | "Simple push", single short command to commit, and push. Use `-a` flag to add all files to commit. |
 | `git-sr` | Noel Cower's [git-sr](https://gist.github.com/nilium/2829f6690ad888c25660c15ba3a7c59c) | Use `fzf` to switch to a different `git` ref. |
 | `git-stats` | Jake Zimmerman's [blog](https://blog.jez.io/cli-code-review/) | Displays stats for the files different between the current branch and `$REVIEW_BRANCH`, which if unset defaults to the repository's default branch. |
@@ -175,12 +175,12 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-superpull` | Greg V's [vmware-archive/git_scripts](https://github.com/vmware-archive/git_scripts) | Pulls, then does a `git submodule init` and `git submodule update`. |
 | `git-switch-branch` | Andrew Steele's [dotfiles](https://github.com/Andrew565/dotfiles) | Make it easier to switch to a branch by a substring of its name. More useful if you are good about deleting branches which have been merged upstream and if your branch names include unique identifiers like ticket/issue numbers or feature names. |
 | `git-tag-and-sign` | ? | Create and sign a new tag. |
-| `git-tag-diff` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts)  | Show the differences between local tags and ones on the remote, if any. |
+| `git-tag-diff` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Show the differences between local tags and ones on the remote, if any. |
 | `git-thanks` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | List the contributors to a repository in descending commit order, even if their contribution has been completely replaced. |
 | `git-track` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Sets up your branch to track a remote branch. Assumes you mean _origin/localbranchname_. |
 | `git-trail` | Leah Neukirchen's [blog](http://leahneukirchen.org/blog/archive/2013/01/a-grab-bag-of-git-tricks.html) | Show all branching points in the repository's `git` history so you can see how to reach commits in the current branch from other branches. |
 | `git-undelete` | ? | Undeletes a file. |
-| `git-undo-push` | ? | Undoes your last push to branch **$1** of origin.|
+| `git-undo-push` | ? | Undoes your last push to branch **$1** of origin. |
 | `git-undo` | [Stack Overflow](https://stackoverflow.com/a/24569160) | Undoes your last commit but keeps the changes in place. |
 | `git-unpushed` | Zach Holman's [dotfiles](https://github.com/holman/dotfiles) | Show the diff of everything you haven't pushed to the origin remote yet. |
 | `git-unreleased` | Mislav Marohnić's [dotfiles](https://github.com/mislav/dotfiles) | Shows `git` commits since the last tagged version. |
@@ -274,7 +274,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [Fuzzy Finding in Bash with fzf](https://bluz71.github.io/2018/11/26/fuzzy-finding-in-bash-with-fzf.html) is a great article about using [fzf](https://github.com/junegunn/fzf) with some `git` helper scripts.
 - [Fuzzy Git Checkout](https://polothy.github.io/post/2019-08-19-fzf-git-checkout/) by Mark Nielsen explains how to use [fzf](https://github.com/junegunn/fzf) for `git` checkouts.
 - [Git Config](https://blog.izissise.net/posts/gitconfig/) - Instructions for using directory-specific `git` configurations. Automatically switching email addresses based on what directory a `git` repository is in.
-- [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans. She also covers some other miscellaneous `git` facts [here](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/).
+- [Git Exercises](https://jvns.ca/blog/2019/08/30/git-exercises--navigate-a-repository/) is a great blog post by Julia Evans. She also covers some other miscellaneous `git` facts in her [Some Miscellaneous git facts](https://jvns.ca/blog/2023/10/20/some-miscellaneous-git-facts/) post.
 - [git flight rules](https://github.com/k88hudson/git-flight-rules) by Kate Hudson is a collection of useful `git` usage tips.
 - [Git From the Inside Out](https://maryrosecook.com/blog/post/git-from-the-inside-out) explains how `git` works, focusing on the graph structure underpinnings of `git` and how they affect its behavior.
 - [Git Log Customization](https://www.justinjoyce.dev/customizing-git-log-format/) - Good tutorial about customizing the format of `git log`.
@@ -434,7 +434,7 @@ git config --global url."https://github".insteadOf git://github
 Many thanks to all the contributors over the years.
 
 <a href="https://github.com/unixorn/git-extra-commands/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=unixorn/git-extra-commands" />
+  <img src="https://contributors-img.web.app/image?repo=unixorn/git-extra-commands" alt="Contributors graph"/>
 </a>
 
 Made with [contributors-img](https://contributors-img.web.app).
