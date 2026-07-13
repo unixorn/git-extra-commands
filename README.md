@@ -171,7 +171,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-stats` | Jake Zimmerman's [blog](https://blog.jez.io/cli-code-review/) | Displays stats for the files different between the current branch and `$REVIEW_BRANCH`, which if unset defaults to the repository's default branch. |
 | `git-submodule-ls` | | List all submodules in your project |
 | `git-submodule-paths` | `git-submodule --help` | Show path to all submodules in your checkout, with their current commit SHA |
-| `git-submodule-rm` | Greg V's [dotfiles](https://github.com/myfreeweb/dotfiles) & [Pascal Sommer](https://github.com/pascal-so/) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule`. |
+| `git-submodule-rm` | Greg V's dotfiles & [Pascal Sommer](https://github.com/pascal-so/) | Allows you to remove a submodule easily with `git submodule-rm path/to/submodule`. |
 | `git-superpull` | Greg V's [vmware-archive/git_scripts](https://github.com/vmware-archive/git_scripts) | Pulls, then does a `git submodule init` and `git submodule update`. |
 | `git-switch-branch` | Andrew Steele's [dotfiles](https://github.com/Andrew565/dotfiles) | Make it easier to switch to a branch by a substring of its name. More useful if you are good about deleting branches which have been merged upstream and if your branch names include unique identifiers like ticket/issue numbers or feature names. |
 | `git-tag-and-sign` | ? | Create and sign a new tag. |
@@ -357,7 +357,6 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [git-stashd](https://github.com/nickolasburr/git-stashd) - Autostashing daemon for dirty worktrees.
 - [git-submodule-tools](https://github.com/kollerma/git-submodule-tools) - A collection of scripts that should help make life with `git` submodules easier.
 - [git-sweep](https://github.com/arc90/git-sweep) - A utility script to remove branches that have been merged to master.
-- [git-tidy](https://github.com/silee9019/git-tidy) - Plugin for safely reviewing and removing local branches whose upstream branch is marked [gone].
 - [git-to-jj](https://github.com/elithrar/zsh-git-to-jj) - A ZSH plugin that helps you progressively learn [Jujutsu](https://github.com/jj-vcs/jj) (aka `jj`) porcelain as you use `git` commands.
 - [git-todo](https://github.com/ibolmo/git-todo/blob/master/git-todo) - helper script to show all the todo entries in your repository.
 - [git-up (gem)](https://github.com/aanand/git-up) - Fetch and rebase all locally-tracked remote branches.
@@ -381,7 +380,6 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [ugit](https://github.com/Bhupesh-V/ugit) - Lets you undo your last `git` operation.
 - [worktree](https://github.com/jspears/worktree) - Adds functions that wrap `git worktree`.
 - [xcode-build-scripts](https://github.com/indirect/xcode-git-build-scripts) - Helper scripts to use with XCode projects.
-- [zwirl](https://github.com/chordflower/zwirl) - Adds aliases for `git` and `eza`.
 
 ## Miscellaneous Tips
 
