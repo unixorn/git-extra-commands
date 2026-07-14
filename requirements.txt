@@ -7,7 +7,7 @@ boto3==1.43.34
 blessed==1.47.0
 botocore==1.43.46
 certifi==2026.6.17
-cffi==2.0.0
+cffi==2.1.0
 charset-normalizer==3.4.7
 click==8.4.2
 codenamize==1.2.3
