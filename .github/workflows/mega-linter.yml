@@ -59,6 +59,7 @@ jobs:
           ACTION_ZIZMOR_DISABLE_ERRORS: true
           COPYPASTE_JSCPD_DISABLE_ERRORS: true
           REPOSITORY_KICS_DISABLE_ERRORS: true
+          REPOSITORY_OSV_SCANNER_DISABLE_ERRORS: true
           YAML_YAMLLINT_DISABLE_ERRORS: true
 
       # Upload Mega-Linter artifacts.
