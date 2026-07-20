@@ -63,7 +63,7 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-bug-clusters` | [The Git Commands I Run Before Reading Any Code](https://piechowski.io/post/git-commands-before-reading-code/) | Shows the files that have the most bugfix comments in commits affecting them. |
 | `git-capture-wip` | [@Hefeweizen](https://github.com/Hefeweizen) | Capture in-progress file changes. |
 | `git-change-author` | Michael Demmer in [jut-io/git-scripts](https://github.com/jut-io/git-scripts/blob/master/bin/git-change-author) | Change one author/email in the history to another. |
-| `git-change-log` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
+| `git-changelog` | John Wiegley's [git-scripts](https://github.com/jwiegley/git-scripts) | Transform `git log` output into a complete Changelog for projects that haven't been maintaining one. |
 | `git-changes` | Michael Markert's [dotfiles](https://github.com/cofi/dotfiles) | Symlink to `git-authors`. List authors in the repository in descending commit-count order. |
 | `git-checkout-branches` | John Wiegley's [git scripts](https://github.com/jwiegley/git-scripts) | Checks out all remote branches. |
 | `git-checkout-by-date` | [Stack Overflow](https://stackoverflow.com/a/6990682) | Lets you checkout several files at once at the version specified by a date. |
@@ -85,9 +85,9 @@ If you wrote one of these scripts and want it removed from this collection, plea
 | `git-cut-branch` | Ryan Tomayko's dotfiles | Create a new branch pointed at **HEAD** and reset the current branch to the head of its tracking branch. |
 | `git-delete-dangling-commits` | [Stack Overflow](http://stackoverflow.com/questions/3765234/listing-and-deleting-git-commits-that-are-under-no-branch-dangling) | Clean up dangling commits that are not on any branch. |
 | `git-delete-local-merged` | From a deleted post by @tekkub | Delete all local branches that have been merged into **HEAD**. |
-| `git-delete-merged-branches` | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to master). |
+| `git-delete-merged-branches` | ? | Purges all branches that have been merged to a target branch (defaults to branches merged to default branch of the `origin` remote). |
 | `git-delete-remote-branch` | Joe Block <jpb@unixorn.net> | Delete a branch from a specified remote. |
-| `git-delete-squashed-and-merged-branches` | Paul Irish's [dotfiles](https://github.com/paulirish/dotfiles) | Purges all branches that have been squashed and merged to a target branch (defaults to branches merged to master). Requires `pygithub`. |
+| `git-delete-squashed-and-merged-branches` | Paul Irish's [dotfiles](https://github.com/paulirish/dotfiles) | Purges all branches that have been squashed and merged to a target branch (defaults to branches merged to default branch of the `origin` remote). Requires `pygithub`. |
 | `git-delete-tag` | Joe Block <jpb@unixorn.net> | Delete a tag, both locally and from the origin remote. |
 | `git-diff-last` | [Sebastian Schuberth](https://github.com/sschuberth) | Show the last change made to a file in the repository. |
 | `git-divergence` | Gary Bernhardt's [dotfiles](https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn) | Shows differences between local branch and its tracking branch. |
