@@ -6,7 +6,7 @@ black==26.3.1
 boto3==1.43.61
 blessed==1.47.0
 botocore==1.43.51
-certifi==2026.6.17
+certifi==2026.7.22
 cffi==2.1.0
 charset-normalizer==3.4.9
 click==8.4.2
