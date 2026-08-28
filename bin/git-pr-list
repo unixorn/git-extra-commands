@@ -27,7 +27,7 @@ function has() {
 
 myname=$(basename "$0")
 
-if ! has ghx; then
+if ! has gh; then
   msg="$myname requires that gh be installed."
   if [[ "$(uname -s)" = "Darwin" ]]; then
     msg="$msg  Try 'brew install gh' or check the install instructions at https://github.com/cli/cli"
