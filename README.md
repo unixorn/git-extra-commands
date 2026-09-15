@@ -376,6 +376,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [joe](https://github.com/karan/joe) - Generates `.gitignore` files from the command-line for you.
 - [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
 - [more-hooks-for-git](https://github.com/capsulescodes/more-hooks-for-git) - Adds extra hooks for `git add`, `git diff` and `git status`.
+- [relnote](https://github.com/loki-inu/relnote) - Offline stdlib Python CLI and GitHub Action for conventional-commit release notes with no API and no config.
 - [switch-git](https://github.com/robin-mbg/switch-git) - Easy switching between `git` repositories. Just type `sgr <some part of you repo's name>`, press enter and you're there.
 - [ugit](https://github.com/Bhupesh-V/ugit) - Lets you undo your last `git` operation.
 - [worktree](https://github.com/jspears/worktree) - Adds functions that wrap `git worktree`.
@@ -438,3 +439,4 @@ Many thanks to all the contributors over the years.
 </a>
 
 Made with [contributors-img](https://contributors-img.web.app).
+
