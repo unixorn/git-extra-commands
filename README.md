@@ -375,6 +375,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [hub](https://github.com/github/hub) - A command-line tool that wraps `git` in order to extend it with extra features and commands that make working with GitHub easier.
 - [igit](https://github.com/ytakahashi/igit) - Interactively construct `git` commands using [fzf](https://github.com/junegunn/fzf).
 - [joe](https://github.com/karan/joe) - Generates `.gitignore` files from the command-line for you.
+- [ls-branch-label](https://github.com/freddi-kit/zsh-ls-branch-label) - ZSH plugin that shows the current `git` branch next to repository directories when you run a plain `ls`.
 - [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
 - [more-hooks-for-git](https://github.com/capsulescodes/more-hooks-for-git) - Adds extra hooks for `git add`, `git diff` and `git status`.
 - [relnote](https://github.com/loki-inu/relnote) - Offline stdlib Python CLI and GitHub Action for conventional-commit release notes with no API and no config.
