@@ -369,6 +369,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [gitql](https://github.com/filhodanuvem/gitql) - Gitql is a `git` query language.
 - [gitsh](https://github.com/thoughtbot/gitsh) - An interactive shell for `git`. From within gitsh you can issue any `git` command, even using your local aliases and configuration.
 - [gitspace](https://github.com/softspark/gitspace) - Bind a `git` identity to a directory. The wrong account fails loudly instead of signing a commit quietly.
+- [gitstats](https://github.com/shenxianpeng/gitstats) - Generates an HTML report of a `git` repository's history: activity, authors, code ownership, hotspots, tags and lines of code.
 - [gitty](https://github.com/Omibranch/gitty) - Single-binary CLI for Git and GitHub with short, human-readable commands. `gitty up` stages, commits, and pushes in one step.
 - [gunstage](https://github.com/LucasLarson/gunstage) - There are at least eight ways to unstage files in a `git` repository. This is a command-line shell plugin for undoing `git add`.
 - [hitch](https://github.com/therubymug/hitch) - Allows developers to be properly credited when Pair Programming and using `git`.
