@@ -8,6 +8,7 @@ if [[ $# != 1 ]]; then
 else
   mergedInto="$1"
 fi
+defaultBranch="$(git origin-head)"
 
 currentBranch=$(git symbolic-ref --short HEAD)
 if [[ "${currentBranch}" != "${mergedInto}" ]]; then
@@ -15,4 +16,9 @@ if [[ "${currentBranch}" != "${mergedInto}" ]]; then
   exit 1
 fi
 
-git branch --merged "${mergedInto}" | grep -v "^[*+]" | xargs -n 1 git branch -d
+git branch --format='%(refname:short)' --merged "${mergedInto}" | while IFS= read -r branch; do
+  if [[ "${branch}" == "${currentBranch}" || "${branch}" == "${defaultBranch}" ]]; then
+    continue
+  fi
+  git branch -d "${branch}"
+done
