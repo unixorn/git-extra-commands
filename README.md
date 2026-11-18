@@ -379,6 +379,7 @@ If you aren't using any ZSH frameworks, or if you're using `bash`, `fish` or ano
 - [ls-branch-label](https://github.com/freddi-kit/zsh-ls-branch-label) - ZSH plugin that shows the current `git` branch next to repository directories when you run a plain `ls`.
 - [mergepbx](https://github.com/simonwagner/mergepbx) - Helper script for merging XCode project files.
 - [more-hooks-for-git](https://github.com/capsulescodes/more-hooks-for-git) - Adds extra hooks for `git add`, `git diff` and `git status`.
+- [release-notes-action](https://github.com/kalmwerk/release-notes-action) - GitHub Action that fills in a release's notes from the matching `CHANGELOG.md` section, or from the Conventional Commits since the previous tag when there is no changelog.
 - [relnote](https://github.com/loki-inu/relnote) - Offline stdlib Python CLI and GitHub Action for conventional-commit release notes with no API and no config.
 - [switch-git](https://github.com/robin-mbg/switch-git) - Easy switching between `git` repositories. Just type `sgr <some part of you repo's name>`, press enter and you're there.
 - [ugit](https://github.com/Bhupesh-V/ugit) - Lets you undo your last `git` operation.
