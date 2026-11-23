@@ -9,7 +9,7 @@ botocore==1.43.114
 certifi==2026.10.23
 cffi==2.1.1
 charset-normalizer==3.5.2
-click==8.5.0
+click==8.5.1
 codenamize==1.2.3
 colorama==0.4.6
 cryptography==50.0.2
